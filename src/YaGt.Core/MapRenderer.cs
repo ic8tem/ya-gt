@@ -118,9 +118,9 @@ public sealed class MapRenderer
         // --- 7. percorsi
         if (st.LayerPaths)
         {
-            if (st.LayerHeardMe) foreach (var s in f.HeardMe) DrawPath(g, st.Home, s.Pos, Theme.WithAlpha(ColHeardMe, 90), offs);
-            if (st.LayerIHeard) foreach (var s in f.IHeard) DrawPath(g, st.Home, s.Pos, Theme.WithAlpha(ColIHeard, 90), offs);
-            if (st.LayerDecodes) foreach (var d in f.Decodes) DrawPath(g, st.Home, d.Pos, Theme.WithAlpha(ColDecode, 90), offs);
+            if (st.LayerHeardMe) foreach (var s in f.HeardMe) DrawPath(g, st.Home, s.Pos, Theme.WithAlpha(ColHeardMe, 160), offs);
+            if (st.LayerIHeard) foreach (var s in f.IHeard) DrawPath(g, st.Home, s.Pos, Theme.WithAlpha(ColIHeard, 160), offs);
+            if (st.LayerDecodes) foreach (var d in f.Decodes) DrawPath(g, st.Home, d.Pos, Theme.WithAlpha(ColDecode, 160), offs);
         }
 
         // --- 8. QLog
@@ -366,7 +366,7 @@ public sealed class MapRenderer
     {
         var pts = Geo.GreatCircle(a, b, 48);
         foreach (var seg in Proj.ProjectLine(pts))
-            foreach (var off in offs) g.DrawPolyline(Proj.ToScreen(seg, off), col, 1.2);
+            foreach (var off in offs) g.DrawPolyline(Proj.ToScreen(seg, off), col, 1.5);
     }
 
     void DrawQLog(ICanvas g, Frame f, List<double> offs)
