@@ -75,7 +75,7 @@ public sealed class MainWindow : Window
 
     Control BuildToolbar()
     {
-        var bar = new StackPanel { Orientation = Orientation.Horizontal, Spacing = 6 };
+        var bar = new WrapPanel { Orientation = Orientation.Horizontal };
         bar.Children.Add(new Image { Source = Ui.Icon(), Width = 30, Height = 30, Margin = new Thickness(0, 0, 4, 0) });
         bar.Children.Add(new StackPanel
         {
@@ -84,7 +84,7 @@ public sealed class MainWindow : Window
         });
         bar.Children.Add(new Border { Width = 14 });
 
-        TextBlock L(string t) => Ui.Label(t, 12, false, Ui.Th.BandFg);
+        TextBlock L(string t) { var l = Ui.Label(t, 12, false, Ui.Th.BandFg); l.Margin = new Thickness(8, 0, 3, 0); return l; }
         bar.Children.Add(L("Proiezione"));
         bar.Children.Add(Ui.Combo(new[] { "Mercatore", "Azimutale" }, _st.Proj == ProjKind.Azimuthal ? 1 : 0, i =>
         {
@@ -101,7 +101,7 @@ public sealed class MainWindow : Window
         bar.Children.Add(Ui.Button("Vista intera", () => _map.ResetView()));
         bar.Children.Add(Ui.Button("Impostazioni", () => new SettingsWindow(_st, () => _map.InvalidateVisual()).ShowDialog(this)));
         bar.Children.Add(Ui.Button("About", () => new AboutWindow().ShowDialog(this)));
-        return new Border { Background = Ui.B(Ui.Th.Band), Padding = new Thickness(8, 5), Child = new ScrollViewer { Content = bar, HorizontalScrollBarVisibility = ScrollBarVisibility.Auto, VerticalScrollBarVisibility = ScrollBarVisibility.Disabled } };
+        return new Border { Background = Ui.B(Ui.Th.Band), Padding = new Thickness(8, 5), Child = bar };
     }
 
     // ------------------------------------------------------------------ livelli e fonti
@@ -140,7 +140,7 @@ public sealed class MainWindow : Window
         _lotwTag.SelectionChanged += (_, _) => { if (_lotwTag.SelectedItem is ComboBoxItem it && it.Tag is string tag) { _st.LotwTag = tag; Rebuild(); } };
         p.Children.Add(Indent(_lotwTag));
         p.Children.Add(Indent(Ui.Check("Solo confermati", _st.LotwOnlyConfirmed, v => { _st.LotwOnlyConfirmed = v; Rebuild(); })));
-        p.Children.Add(Indent(Ui.Check("Solo EME (PROP_MODE)", _st.LotwOnlyEme, v => { _st.LotwOnlyEme = v; Rebuild(); })));
+        p.Children.Add(Indent(Ui.Check("Solo EME (PROP__MODE)", _st.LotwOnlyEme, v => { _st.LotwOnlyEme = v; Rebuild(); })));
         p.Children.Add(Indent(new WrapPanel
         {
             Children =

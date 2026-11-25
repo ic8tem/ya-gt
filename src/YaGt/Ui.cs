@@ -38,7 +38,7 @@ public static class Ui
 
     public static CheckBox Check(string t, bool value, Action<bool> changed, string tip = null)
     {
-        var c = new CheckBox { Content = t, IsChecked = value, FontSize = 12, Foreground = B(Th.Text), Margin = new Thickness(0, 0, 0, -4) };
+        var c = new CheckBox { Content = t, IsChecked = value, FontSize = 12, Foreground = B(Th.Text), Margin = new Thickness(0, 0, 0, -2), MinHeight = 24, Padding = new Thickness(4, 0, 0, 0) };
         c.IsCheckedChanged += (_, _) => changed(c.IsChecked == true);
         if (tip != null) ToolTip.SetTip(c, tip);
         return c;

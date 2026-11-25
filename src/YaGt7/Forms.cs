@@ -214,7 +214,7 @@ public sealed class MainForm : Form
 
     Control BuildToolbar()
     {
-        var bar = new FlowLayoutPanel { Dock = DockStyle.Top, Height = 40, BackColor = W.C(W.Th.Band), Padding = new Padding(6, 4, 6, 2), WrapContents = false, AutoScroll = false };
+        var bar = new FlowLayoutPanel { Dock = DockStyle.Top, AutoSize = true, AutoSizeMode = AutoSizeMode.GrowAndShrink, BackColor = W.C(W.Th.Band), Padding = new Padding(6, 4, 6, 2), WrapContents = true, AutoScroll = false };
         bar.Controls.Add(new PictureBox { Image = W.Logo(), SizeMode = PictureBoxSizeMode.Zoom, Size = new Size(28, 28), Margin = new Padding(2, 2, 4, 2) });
         bar.Controls.Add(new Label { Text = "YA-GT  " + _st.MyCall + " " + _st.MyLoc, Font = new Font("Segoe UI", 10f, FontStyle.Bold), ForeColor = W.C(W.Th.BandFg), AutoSize = true, Margin = new Padding(2, 8, 14, 2) });
         Label L(string t) => new Label { Text = t, ForeColor = W.C(W.Th.BandFg), AutoSize = true, Margin = new Padding(3, 8, 2, 2) };
