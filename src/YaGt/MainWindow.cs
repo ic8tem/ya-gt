@@ -27,7 +27,7 @@ public sealed class MainWindow : Window
         Background = Ui.B(Ui.Th.Page);
         if (Environment.GetEnvironmentVariable("YAGT_MAXIMIZED") == "1") WindowState = WindowState.Maximized;
 
-        _map = new MapControl { State = st, Theme = Theme.Get(st.ThemeKey) };
+        _map = new MapControl { State = st, MapTheme = YaGt.Core.Theme.Get(st.ThemeKey) };
         _status = Ui.Label("", 11, false, Ui.Th.Muted);
         _conn = Ui.Label("", 11, false, Ui.Th.Text);
         _hover = Ui.Label("", 11, false, Ui.Th.Text);
@@ -162,7 +162,7 @@ public sealed class MainWindow : Window
         p.Children.Add(Ui.Check("Decodifiche UDP (WSJT-X/MSHV)", _st.UdpEnabled, v => { _st.UdpEnabled = v; _st.SaveSettings(); _st.ApplySources(); }, "Porta e inoltro UDP in Impostazioni"));
 
         p.Children.Add(Ui.Section("Tema"));
-        p.Children.Add(Ui.Combo(new[] { "Chiaro (YA-NEC)", "Notte" }, _st.ThemeKey == "notte" ? 1 : 0, i => { _st.ThemeKey = i == 1 ? "notte" : "chiaro"; _map.Theme = Theme.Get(_st.ThemeKey); Redraw(); }, 170));
+        p.Children.Add(Ui.Combo(new[] { "Chiaro (YA-NEC)", "Notte" }, _st.ThemeKey == "notte" ? 1 : 0, i => { _st.ThemeKey = i == 1 ? "notte" : "chiaro"; _map.MapTheme = YaGt.Core.Theme.Get(_st.ThemeKey); Redraw(); }, 170));
         return p;
     }
 

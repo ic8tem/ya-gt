@@ -10,7 +10,7 @@ public sealed class MapControl : Control
 {
     public readonly MapRenderer Renderer = new MapRenderer();
     public AppState State;
-    public Theme Theme = Theme.Get("chiaro");
+    public Theme MapTheme = YaGt.Core.Theme.Get("chiaro");
     /// <summary>Testo dell'elemento sotto il mouse ("" se niente).</summary>
     public event Action<string> HoverChanged;
 
@@ -30,7 +30,7 @@ public sealed class MapControl : Control
         if (State == null) return;
         try
         {
-            Renderer.Render(new AvaloniaCanvas(context), State, Theme, Bounds.Width, Bounds.Height);
+            Renderer.Render(new AvaloniaCanvas(context), State, MapTheme, Bounds.Width, Bounds.Height);
         }
         catch (Exception ex) { ErrorLog.Write("disegno della mappa", ex); }
     }
