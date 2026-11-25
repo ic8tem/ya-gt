@@ -1,0 +1,5 @@
+  Determining projects to restore...
+  Restored D:\a\ya-gt\ya-gt\src\YaGt\YaGt.csproj (in 19.42 sec).
+D:\a\ya-gt\ya-gt\src\YaGt\MapControl.cs(13,18): warning CS0108: 'MapControl.Theme' hides inherited member 'StyledElement.Theme'. Use the new keyword if hiding was intended. [D:\a\ya-gt\ya-gt\src\YaGt\YaGt.csproj]
+D:\a\ya-gt\ya-gt\src\YaGt\MainWindow.cs(30,59): error CS0411: The type arguments for method 'NameScopeExtensions.Get<T>(INameScope, string)' cannot be inferred from the usage. Try specifying the type arguments explicitly. [D:\a\ya-gt\ya-gt\src\YaGt\YaGt.csproj]
+D:\a\ya-gt\ya-gt\src\YaGt\MainWindow.cs(165,174): error CS0411: The type arguments for method 'NameScopeExtensions.Get<T>(INameScope, string)' cannot be inferred from the usage. Try specifying the type arguments explicitly. [D:\a\ya-gt\ya-gt\src\YaGt\YaGt.csproj]

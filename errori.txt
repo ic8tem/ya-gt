@@ -1,0 +1,2 @@
+D:\a\ya-gt\ya-gt\src\YaGt\MainWindow.cs(165,174): error CS0411: The type arguments for method 'NameScopeExtensions.Get<T>(INameScope, string)' cannot be inferred from the usage. Try specifying the type arguments explicitly. [D:\a\ya-gt\ya-gt\src\YaGt\YaGt.csproj]
+D:\a\ya-gt\ya-gt\src\YaGt\MainWindow.cs(30,59): error CS0411: The type arguments for method 'NameScopeExtensions.Get<T>(INameScope, string)' cannot be inferred from the usage. Try specifying the type arguments explicitly. [D:\a\ya-gt\ya-gt\src\YaGt\YaGt.csproj]
