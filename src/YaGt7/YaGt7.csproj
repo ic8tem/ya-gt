@@ -1,0 +1,53 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    YA-GT per Windows 7 SP1 e 8.1: .NET Framework 4.8 (presente o installabile su Windows 7) e WinForms, come la versione
+    Windows 7 di LIVETROPOVHF. Il motore e il disegno della mappa (cartella YaGt.Core) sono gli stessi file della versione
+    .NET 10 + Avalonia: qui si collegano e si disegnano con GDI+ (GdiCanvas). La finestra è scritta in WinForms.
+  -->
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <AssemblyName>YA-GT</AssemblyName>
+    <RootNamespace>YaGt</RootNamespace>
+    <Version>1.0.0</Version>
+    <Product>YA-GT</Product>
+    <Authors>Costantino Cerrotta IC8TEM</Authors>
+    <Description>YA-GT per Windows 7 - mappa a livelli degli spot di un nominativo</Description>
+    <ApplicationIcon>..\..\assets\ya-gt.ico</ApplicationIcon>
+    <DefineConstants>$(DefineConstants);WIN7;NET48</DefineConstants>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+    <SatelliteResourceLanguages>it;en</SatelliteResourceLanguages>
+    <Prefer32Bit>false</Prefer32Bit>
+    <NoWarn>$(NoWarn);NU1603;NU1701;CS0618;CS0162;CS1998;CS8632;CS0649;CS0414;CS0169</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Numerics" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MQTTnet" Version="4.3.*" />
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="9.0.*" />
+    <PackageReference Include="System.Text.Json" Version="9.0.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\YaGt.Core\*.cs" Link="Core\%(Filename)%(Extension)" />
+    <EmbeddedResource Include="..\YaGt.Core\Assets\*.txt" Link="Assets\%(Filename)%(Extension)" LogicalName="YaGt.Assets.%(Filename)%(Extension)" />
+    <EmbeddedResource Include="..\..\assets\ya-gt-256.png;..\..\assets\ya-gt.ico" Link="Assets\%(Filename)%(Extension)" LogicalName="YaGt.Assets.%(Filename)%(Extension)" />
+    <None Include="..\..\CALL3.TXT" Link="CALL3.TXT" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <None Include="..\..\cty.dat" Link="cty.dat" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

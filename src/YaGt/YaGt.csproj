@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- YA-GT per Windows 10 e 11 (e Linux/Mac in futuro): .NET 10 + Avalonia. Il motore e il disegno della mappa stanno in
+       ..\YaGt.Core e sono gli stessi file della versione per Windows 7 (cartella YaGt7, .NET Framework 4.8 + WinForms). -->
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <AssemblyName>YA-GT</AssemblyName>
+    <RootNamespace>YaGt</RootNamespace>
+    <Version>1.0.0</Version>
+    <Product>YA-GT</Product>
+    <Authors>Costantino Cerrotta IC8TEM</Authors>
+    <Description>YA-GT - mappa a livelli degli spot di un nominativo (PSKReporter, RBN, DM4X), LoTW, QLog, decodifiche UDP, greyline, KC2G, aurora NOAA</Description>
+    <ApplicationIcon>..\..\assets\ya-gt.ico</ApplicationIcon>
+    <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+    <SatelliteResourceLanguages>it;en</SatelliteResourceLanguages>
+    <InvariantGlobalization>false</InvariantGlobalization>
+    <NoWarn>$(NoWarn);NU1603;CS0618;CS1998;CS8632</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="11.3.*" />
+    <PackageReference Include="Avalonia.Desktop" Version="11.3.*" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.3.*" />
+    <PackageReference Include="MQTTnet" Version="4.3.*" />
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="9.0.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\YaGt.Core\*.cs" Link="Core\%(Filename)%(Extension)" />
+    <EmbeddedResource Include="..\YaGt.Core\Assets\*.txt" Link="Assets\%(Filename)%(Extension)" LogicalName="YaGt.Assets.%(Filename)%(Extension)" />
+    <EmbeddedResource Include="..\..\assets\ya-gt-256.png;..\..\assets\ya-gt.ico" Link="Assets\%(Filename)%(Extension)" LogicalName="YaGt.Assets.%(Filename)%(Extension)" />
+    <!-- database nominativi e prefissi accanto al programma -->
+    <None Include="..\..\CALL3.TXT" Link="CALL3.TXT" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <None Include="..\..\cty.dat" Link="cty.dat" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>
