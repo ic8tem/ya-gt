@@ -2,6 +2,8 @@
 
 # YA-GT
 
+![YA-GT](assets/screenshot-linux.jpg)
+
 **Italiano** · [English](#english)
 
 YA-GT mostra su una mappa del mondo chi riceve il tuo nominativo e chi ricevi tu, con un **fumetto ben visibile con il valore SNR** per ogni stazione, insieme ai tuoi QSO di LoTW e di QLog, alle tue decodifiche UDP, alla greyline, alla propagazione KC2G e all'aurora del NOAA. **Ogni funzione è un livello della mappa** e si accende o si spegne a scelta.
