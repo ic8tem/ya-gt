@@ -74,6 +74,10 @@ YA-GT legge il database di [QLog](https://github.com/foldynl/QLog) (`qlog.db`, t
 
 Tutti i dati restano accanto al programma (`YA-GT.ini`, `CALL3.TXT`, cartella `Dati`): **niente in AppData**.
 
+## Licenza
+
+GNU GPL versione 3 (come LIVETROPOVHF e YA-NEC, da cui riprende codice). Copyright © 2026 Costantino Cerrotta IC8TEM.
+
 ## Riconoscimenti
 
 PSKReporter (Philip Gladstone N1DQ) · Reverse Beacon Network · cluster DM4X · DXMAPS (EA6VQ) · prop.kc2g.com (Andrew Rodland KC2G) · NOAA SWPC (OVATION Prime) · ARRL LoTW · QLog (Ladislav Foldyna OK1MLG) · protocollo UDP di WSJT-X (K1JT e WSJT Development Group), JTDX, MSHV (LZ2HV) · CALL3.TXT: WSJT-X Improved (DG2YCB), W7GJ, JTDX, MSHV-IC8TEM, LIVETROPOVHF · G7VRD · cty.dat (AD1C) · Natural Earth · Avalonia UI, MQTTnet, Microsoft.Data.Sqlite. Codice ripreso da LIVETROPOVHF e LoTW Grid Map v2 (IC8TEM).
