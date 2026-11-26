@@ -127,7 +127,7 @@ public sealed class MainWindow : Window
             Orientation = Orientation.Horizontal,
             Children =
             {
-                Ui.Combo(new[] { "MUF(3000)", "foF2" }, _st.Kc2gMetric == "fof2" ? 1 : 0, i => { _st.Kc2gMetric = i == 1 ? "fof2" : "mufd"; _st.SaveSettings(); if (_st.LayerKc2g) _st.RefreshNow(); }, 105),
+                Ui.Combo(new[] { "MUF(3000)", "foF2" }, _st.Kc2gMetric == "fof2" ? 1 : 0, i => { _st.Kc2gMetric = i == 1 ? "fof2" : "mufd"; _st.SaveSettings(); if (_st.LayerKc2g) _st.RefreshNow(); }, 125),
                 Slider(_st.Kc2gAlpha, v => { _st.Kc2gAlpha = v; Redraw(); }),
             }
         }));

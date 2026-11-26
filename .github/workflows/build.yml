@@ -17,7 +17,21 @@ env:
   DOTNET_CLI_TELEMETRY_OPTOUT: true
 
 jobs:
+  prepare:
+    if: startsWith(github.ref, 'refs/tags/v') || github.ref == 'refs/heads/release'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Crea la Release (se manca)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          V="$(tr -d ' \r\n' < VERSION)"
+          gh release view "v$V" > /dev/null 2>&1 || gh release create "v$V" --title "YA-GT $V" --notes-file RELEASE_NOTES.md --target "$GITHUB_SHA"
+
   windows:
+    needs: [ prepare ]
+    if: ${{ !cancelled() }}
     runs-on: windows-latest
     strategy:
       fail-fast: false
@@ -129,12 +143,19 @@ jobs:
         run: |
           New-Item -ItemType Directory -Force dist | Out-Null
           Compress-Archive -Path publish\${{ matrix.flavor }}-${{ matrix.arch }}\* -DestinationPath dist\YA-GT-${{ env.VER }}-${{ matrix.flavor }}-${{ matrix.arch }}-portatile.zip
-      - uses: actions/upload-artifact@v4
-        with:
-          name: ${{ matrix.flavor }}-${{ matrix.arch }}
-          path: dist/*
+      # niente "artifact" (lo spazio dei repository privati è limitato): i pacchetti vanno direttamente nella Release
+      - name: Pacchetti nella Release
+        if: startsWith(github.ref, 'refs/tags/v') || github.ref == 'refs/heads/release'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          shopt -s nullglob
+          gh release upload "v${{ env.VER }}" dist/*.zip installer/Output/*.exe dist/*.exe --clobber
 
   linux:
+    needs: [ prepare ]
+    if: ${{ !cancelled() }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -179,7 +200,7 @@ jobs:
           sleep 15; import -window root shots/01-mercatore.png
           sleep 18; import -window root shots/02-kc2g-aurora.png
           sleep 15; import -window root shots/03-azimutale.png
-          if kill -0 $PID 2>/dev/null; then echo "in esecuzione: True" > shots/stato.txt; kill $PID; else echo "in esecuzione: False" > shots/stato.txt; fi
+          ALIVE=0; if kill -0 $PID 2>/dev/null; then ALIVE=1; echo "in esecuzione: True" > shots/stato.txt; kill $PID; else echo "in esecuzione: False" > shots/stato.txt; fi
           for f in errore-avvio.txt Dati/errori.txt; do [ -f "$D/$f" ] && cp "$D/$f" shots/ || true; done
           git config user.name "IC8TEM"; git config user.email "ic8tem@users.noreply.github.com"
           git checkout --orphan ci-shot-linux
@@ -188,32 +209,13 @@ jobs:
           git commit -m "prova di avvio linux ($GITHUB_SHA)"
           git push -f origin ci-shot-linux
           git checkout -f $GITHUB_SHA
-          grep -q True shots/stato.txt
+          [ "$ALIVE" = "1" ]
       - name: Archivio tar.gz
         run: |
           mkdir -p dist
           tar -C publish -czf dist/YA-GT-${{ env.VER }}-${{ matrix.rid }}.tar.gz YA-GT
-      - uses: actions/upload-artifact@v4
-        with:
-          name: ${{ matrix.rid }}
-          path: dist/*
-
-  release:
-    if: startsWith(github.ref, 'refs/tags/v') || github.ref == 'refs/heads/release'
-    needs: [ windows, linux ]
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Versione
-        run: echo "VER=$(tr -d ' \r\n' < VERSION)" >> $GITHUB_ENV
-      - uses: actions/download-artifact@v4
-        with:
-          path: dist
-          merge-multiple: true
-      - uses: softprops/action-gh-release@v2
-        with:
-          name: YA-GT ${{ env.VER }}
-          tag_name: v${{ env.VER }}
-          target_commitish: ${{ github.sha }}
-          body_path: RELEASE_NOTES.md
-          files: dist/*
+      - name: Pacchetto nella Release
+        if: startsWith(github.ref, 'refs/tags/v') || github.ref == 'refs/heads/release'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release upload "v${{ env.VER }}" dist/*.tar.gz --clobber
