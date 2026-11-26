@@ -25,6 +25,9 @@ public sealed class Decode
 /// <summary>
 /// Ascolta i pacchetti UDP del protocollo WSJT-X (anche JTDX e MSHV), ne ricava le decodifiche e li ripete identici
 /// verso gli indirizzi di inoltro (es. QLog, GridTracker, JTAlert): "host:porta" separati da virgola o punto e virgola.
+/// Il rimbalzo è nei due sensi: ogni destinazione ha la sua porta e quello che risponde (Reply, Highlight, Halt,
+/// FreeText, Location...) torna al programma digitale dalla porta d'ascolto, come se parlasse direttamente con lui.
+/// I QSO registrati (QSO Logged, Logged ADIF) passano così come sono, quindi QLog li scrive nel suo log da solo.
 /// </summary>
 public sealed class WsjtxUdp
 {
@@ -38,14 +41,19 @@ public sealed class WsjtxUdp
     public string ProgramId = "";
     public double DialHz;
     public string DialMode = "";
-    public long Packets, Forwarded, Decodes;
+    public long Packets, Forwarded, Returned, Decodes, Logged;
 
     public event Action StateChanged;
     public event Action<Decode> Decoded;
+    /// <summary>Un QSO appena registrato dal programma digitale (messaggio QSO Logged).</summary>
+    public event Action<QsoRecord> QsoLogged;
 
-    UdpClient _rx, _tx;
+    UdpClient _rx;
     CancellationTokenSource _cts;
-    List<IPEndPoint> _targets = new List<IPEndPoint>();
+    readonly List<Relay> _relays = new List<Relay>();
+    volatile IPEndPoint _source;   // ultimo indirizzo del programma digitale (dove rimandare le risposte)
+
+    sealed class Relay { public IPEndPoint Target; public UdpClient Sock; }
 
     public string CurrentBand => DialHz > 0 ? Bands.FromMHz(DialHz / 1e6) : "";
 
@@ -77,19 +85,31 @@ public sealed class WsjtxUdp
         Stop();
         try
         {
-            _targets = ParseTargets(ForwardTo, out var err);
-            if (err != "") LastError = err;
+            var targets = ParseTargets(ForwardTo, out var err);
+            LastError = Forward ? err : "";
             var listenIp = IPAddress.Parse(ListenAddress.Trim());
             bool multicast = listenIp.AddressFamily == AddressFamily.InterNetwork && (listenIp.GetAddressBytes()[0] & 0xF0) == 0xE0;
             _rx = new UdpClient(AddressFamily.InterNetwork);
-            _rx.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
-            _rx.Client.Bind(new IPEndPoint(multicast ? IPAddress.Any : listenIp, ListenPort));
+            // la porta condivisa solo in multicast: in unicast due programmi sulla stessa porta si "rubano" i pacchetti
+            if (multicast) _rx.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
+            try { _rx.Client.Bind(new IPEndPoint(multicast ? IPAddress.Any : listenIp, ListenPort)); }
+            catch (SocketException)
+            {
+                throw new Exception($"porta UDP {ListenPort} già occupata (forse da QLog o GridTracker): metti quel programma su un'altra porta, es. 2238, e scrivila tra gli inoltri");
+            }
             if (multicast) _rx.JoinMulticastGroup(listenIp);
-            _tx = new UdpClient(AddressFamily.InterNetwork);
             _cts = new CancellationTokenSource();
             var ct = _cts.Token;
+            _relays.Clear();
+            if (Forward)
+                foreach (var t in targets)
+                {
+                    if (t.Port == ListenPort && (IPAddress.IsLoopback(t.Address) || t.Address.Equals(listenIp))) { LastError = "l'inoltro non può puntare alla porta d'ascolto " + ListenPort; continue; }
+                    var r = new Relay { Target = t, Sock = new UdpClient(new IPEndPoint(IPAddress.Any, 0)) };
+                    _relays.Add(r);
+                    Task.Run(() => ReturnLoop(r, ct));
+                }
             Running = true;
-            if (err == "") LastError = "";
             StateChanged?.Invoke();
             Task.Run(() => Loop(ct));
         }
@@ -105,8 +125,9 @@ public sealed class WsjtxUdp
     {
         try { _cts?.Cancel(); } catch { }
         try { _rx?.Close(); } catch { }
-        try { _tx?.Close(); } catch { }
-        _rx = null; _tx = null;
+        foreach (var r in _relays) try { r.Sock.Close(); } catch { }
+        _relays.Clear();
+        _rx = null;
         if (Running) { Running = false; StateChanged?.Invoke(); }
     }
 
@@ -119,15 +140,30 @@ public sealed class WsjtxUdp
             catch { break; }
             Interlocked.Increment(ref Packets);
             var data = res.Buffer;
-            if (Forward && _tx != null)
-                foreach (var ep in _targets)
-                {
-                    try { await _tx.SendAsync(data, data.Length, ep); Interlocked.Increment(ref Forwarded); } catch { }
-                }
+            _source = res.RemoteEndPoint;
+            foreach (var r in _relays.ToArray())
+            {
+                try { await r.Sock.SendAsync(data, data.Length, r.Target); Interlocked.Increment(ref Forwarded); } catch { }
+            }
             try { Parse(data); } catch { }
         }
         Running = false;
         StateChanged?.Invoke();
+    }
+
+    /// <summary>Le risposte di una destinazione (QLog, JTAlert, GridTracker) tornano al programma digitale.</summary>
+    async Task ReturnLoop(Relay r, CancellationToken ct)
+    {
+        while (!ct.IsCancellationRequested)
+        {
+            UdpReceiveResult res;
+            try { res = await Compat.Receive(r.Sock, ct); }
+            catch (SocketException) { if (ct.IsCancellationRequested) break; continue; } // ICMP "porta chiusa": la destinazione non è ancora aperta
+            catch { break; }
+            var src = _source; var rx = _rx;
+            if (src == null || rx == null) continue;
+            try { await rx.SendAsync(res.Buffer, res.Buffer.Length, src); Interlocked.Increment(ref Returned); } catch { }
+        }
     }
 
     sealed class Reader
@@ -145,6 +181,17 @@ public sealed class WsjtxUdp
             Array.Copy(_b, _p, t, 0, 8); _p += 8;
             if (BitConverter.IsLittleEndian) Array.Reverse(t);
             return BitConverter.ToDouble(t, 0);
+        }
+        public byte U8() => _b[_p++];
+        /// <summary>QDateTime serializzato: giorno giuliano, millisecondi, tipo di ora (2 = con scarto).</summary>
+        public DateTime QDateTime()
+        {
+            long jd = (long)U64();
+            uint ms = U32();
+            byte spec = U8();
+            if (spec == 2) I32();
+            if (jd <= 0) return DateTime.MinValue;
+            return new DateTime(1858, 11, 17, 0, 0, 0, DateTimeKind.Utc).AddDays(jd - 2400001).AddMilliseconds(ms);
         }
         public string Utf8()
         {
@@ -184,6 +231,31 @@ public sealed class WsjtxUdp
                 ExtractStation(msg, d);
                 Interlocked.Increment(ref Decodes);
                 if (d.Call != "") Decoded?.Invoke(d);
+                break;
+            }
+            case 5: // QSO Logged
+            {
+                r.QDateTime();                 // fine QSO
+                string call = r.Utf8().Trim().ToUpperInvariant();
+                string grid = r.Utf8().Trim().ToUpperInvariant();
+                ulong freq = r.U64();
+                string mode = r.Utf8();
+                r.Utf8(); r.Utf8(); r.Utf8(); r.Utf8(); r.Utf8(); // rapporti, potenza, commento, nome
+                var on = r.QDateTime();
+                string prop = "";
+                try { r.Utf8(); r.Utf8(); r.Utf8(); r.Utf8(); r.Utf8(); if (!r.Eof) prop = r.Utf8(); } catch { }
+                if (call == "") break;
+                if (on == DateTime.MinValue) on = DateTime.UtcNow;
+                var q = new QsoRecord
+                {
+                    Call = call, Grid = grid, Mode = mode, PropMode = prop,
+                    Band = freq > 0 ? Bands.FromMHz(freq / 1e6) : CurrentBand,
+                    Date = on.ToString("yyyyMMdd", CultureInfo.InvariantCulture), Time = on.ToString("HHmmss", CultureInfo.InvariantCulture),
+                };
+                q.AddGrid(grid);
+                Interlocked.Increment(ref Logged);
+                QsoLogged?.Invoke(q);
+                StateChanged?.Invoke();
                 break;
             }
         }

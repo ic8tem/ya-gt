@@ -216,6 +216,7 @@ public sealed class AppState
         Mqtt.Spot += OnSpot;
         Mqtt.StateChanged += () => ConnectionsChanged?.Invoke();
         Udp.Decoded += d => { Decodes.Add(d); };
+        Udp.QsoLogged += q => { lock (_live) _live.Add(q); };
         Udp.StateChanged += () => ConnectionsChanged?.Invoke();
         // cluster telnet: indirizzi fissi (DM4X come in LIVETROPOVHF; secondo cluster DXMAPS con la rete skimmer attivabile)
         AddFeed("rbn", "RBN", "telnet.reversebeacon.net", 7000, "");
@@ -386,14 +387,15 @@ public sealed class AppState
         {
             var tag = EffectiveLotwTag;
             // i quadrati si colorano con LoTW/ADIF e, se c'è, anche con il log di QLog
-            f.Squares = Lotw.BuildSquares(tag, LotwOnlyConfirmed, LotwOnlyEme, QLog.Qsos.Count > 0 ? QLog.Qsos : null);
+            var logQ = LogQsos();
+            f.Squares = Lotw.BuildSquares(tag, LotwOnlyConfirmed, LotwOnlyEme, logQ.Count > 0 ? logQ : null);
             f.SquaresGrey = LotwLog.GreyTab(tag);
             f.SquaresTitle = tag == "ALL" ? "tutte le bande" : tag == "G:1" ? "HF 80-10 m" : tag == "G:2" ? "VHF" : tag == "G:3" ? "UHF e oltre" : tag.Substring(2);
         }
         f.Stats = ComputeStats(f);
         if (LayerQLog)
         {
-            var qs = QLog.Qsos;
+            var qs = LogQsos();
             if (BandFilter != "") qs = qs.Where(q => q.Band == BandFilter).ToList();
             foreach (var g in qs.GroupBy(q => q.Call))
             {
@@ -407,6 +409,21 @@ public sealed class AppState
             }
         }
         Current = f;
+    }
+
+    readonly List<QsoRecord> _live = new List<QsoRecord>();
+
+    /// <summary>Il log di QLog più i QSO appena registrati arrivati via UDP (finché QLog non li ha nel database).</summary>
+    public List<QsoRecord> LogQsos()
+    {
+        var baseList = QLog.Qsos;
+        List<QsoRecord> live;
+        lock (_live) live = _live.ToList();
+        if (live.Count == 0) return baseList;
+        var have = new HashSet<string>(baseList.Select(q => q.Key));
+        var list = baseList.ToList();
+        foreach (var q in live) if (have.Add(q.Key)) list.Add(q);
+        return list;
     }
 
     /// <summary>Gruppo dei quadrati: "BAND" segue la banda scelta in alto (tutte le bande se non è scelta).</summary>
@@ -473,7 +490,7 @@ public sealed class AppState
             On(Feeds["rbn"].Wanted, Feeds["rbn"].Connected || Feeds["rbn2"].Connected, "RBN"),
             On(Feeds["dm4x"].Wanted, Feeds["dm4x"].Connected, "DM4X"),
             On(Feeds["cl2"].Wanted, Feeds["cl2"].Connected, "DXMAPS" + (Cl2Skimmer ? "+skimmer" : "")),
-            UdpEnabled ? (Udp.Running ? $"UDP {Udp.ListenPort} ●" + (Udp.Forward ? " → inoltro" : "") : "UDP ○ " + Udp.LastError) : "",
+            UdpEnabled ? (Udp.Running ? $"UDP {Udp.ListenPort} ●" + (Udp.Forward ? $" ⇄ inoltro {Udp.Forwarded}/{Udp.Returned}" : "") + (Udp.Logged > 0 ? $" · QSO {Udp.Logged}" : "") + (Udp.LastError != "" ? " ⚠ " + Udp.LastError : "") : "UDP ○ " + Udp.LastError) : "",
         };
         return string.Join("   ", l.Where(x => x != ""));
     }

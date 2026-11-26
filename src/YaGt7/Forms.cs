@@ -348,7 +348,7 @@ public sealed class SettingsForm : Form
         FormBorderStyle = FormBorderStyle.FixedDialog; MaximizeBox = false; MinimizeBox = false;
         StartPosition = FormStartPosition.CenterParent;
         AutoScaleMode = AutoScaleMode.Dpi;
-        ClientSize = new Size(560, 500);
+        ClientSize = new Size(560, 514);
         Font = W.Ui;
         BackColor = W.C(W.Th.Page);
         int y = 12;
@@ -359,13 +359,14 @@ public sealed class SettingsForm : Form
         Lab("porta", 252, y + 3);
         var port = new TextBox { Text = st.Udp.ListenPort.ToString(CultureInfo.InvariantCulture), Location = new Point(300, y), Width = 70 }; Controls.Add(port);
         y += 32;
-        var fwd = new CheckBox { Text = "Ritrasmetti (inoltra) i pacchetti UDP ricevuti", Checked = st.Udp.Forward, Location = new Point(14, y), AutoSize = true }; Controls.Add(fwd);
+        var fwd = new CheckBox { Text = "Rimbalzo UDP: inoltra i pacchetti e riporta indietro le risposte", Checked = st.Udp.Forward, Location = new Point(14, y), AutoSize = true }; Controls.Add(fwd);
         y += 28;
         Lab("Verso", 14, y + 3);
         var fwdTo = new TextBox { Text = st.Udp.ForwardTo, Location = new Point(100, y), Width = 420 }; Controls.Add(fwdTo);
         y += 28;
-        Lab("Uno o più host:porta separati da virgola (es. QLog 127.0.0.1:2238, GridTracker, JTAlert).", 14, y, false, 520).ForeColor = W.C(W.Th.Muted);
-        y += 44;
+        var hint = Lab("Uno o più host:porta separati da virgola (es. QLog 127.0.0.1:2238, GridTracker, JTAlert). Passano anche i QSO registrati, quindi QLog scrive il QSO da solo; le risposte tornano al programma digitale. In QLog metti la porta WSJT-X a 2238.", 14, y, false, 520);
+        hint.ForeColor = W.C(W.Th.Muted); hint.Size = new Size(520, 48);
+        y += 56;
         Lab("Log di QLog", 14, y, true).ForeColor = W.C(W.Th.Accent); y += 26;
         var qlog = new TextBox { Text = st.QLogPath, Location = new Point(14, y), Width = 420 }; Controls.Add(qlog);
         var browse = new Button { Text = "Sfoglia…", Location = new Point(442, y - 2), Size = new Size(90, 26) }; Controls.Add(browse);
@@ -384,8 +385,8 @@ public sealed class SettingsForm : Form
         now.Click += async (_, _) => await Updater.CheckAsync(true);
         y += 36;
         var err = Lab("", 14, y, false, 520); err.ForeColor = Color.Firebrick;
-        var ok = new Button { Text = "Salva", Location = new Point(452, 456), Size = new Size(90, 30), BackColor = W.C(W.Th.Accent), ForeColor = Color.White, FlatStyle = FlatStyle.Flat };
-        var cancel = new Button { Text = "Annulla", Location = new Point(354, 456), Size = new Size(90, 30), DialogResult = DialogResult.Cancel };
+        var ok = new Button { Text = "Salva", Location = new Point(452, 470), Size = new Size(90, 30), BackColor = W.C(W.Th.Accent), ForeColor = Color.White, FlatStyle = FlatStyle.Flat };
+        var cancel = new Button { Text = "Annulla", Location = new Point(354, 470), Size = new Size(90, 30), DialogResult = DialogResult.Cancel };
         Controls.Add(ok); Controls.Add(cancel);
         AcceptButton = ok; CancelButton = cancel;
         ok.Click += (_, _) =>

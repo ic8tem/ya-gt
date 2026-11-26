@@ -44,7 +44,7 @@ La scala dei colori dell'SNR va dal rosso (forte) al blu (debole); per l'RBN in 
 - **Reverse Beacon Network**: `telnet.reversebeacon.net` porte 7000 (CW/RTTY) e 7001 (FT8/FT4).
 - **DM4X**: cluster telnet `dm4x.ddns.net:8500` (indirizzo fisso).
 - **DXMAPS**: secondo cluster telnet `dxmaps.com:7300` (indirizzo fisso) con la **rete skimmer attivabile** (`set/skimmer`).
-- **UDP**: protocollo WSJT-X (porta predefinita 2237, indirizzo configurabile anche multicast) con **ritrasmissione** dei pacchetti verso uno o più indirizzi `host:porta` (es. QLog, GridTracker, JTAlert).
+- **UDP**: protocollo WSJT-X (porta predefinita 2237, indirizzo configurabile anche multicast) con **rimbalzo UDP nei due sensi** verso uno o più indirizzi `host:porta` (es. QLog, GridTracker, JTAlert): i pacchetti passano identici, QSO registrati compresi, così QLog scrive il QSO da solo, e le risposte (doppio clic, evidenziazioni) tornano al programma digitale. Con QLog: WSJT-X manda a YA-GT sulla 2237, YA-GT inoltra a `127.0.0.1:2238`, in QLog la porta WSJT-X va messa a 2238. I QSO appena registrati colorano subito i quadrati.
 
 ## Posizione delle stazioni: CALL3.TXT
 
@@ -100,7 +100,7 @@ By **Costantino Cerrotta • IC8TEM** — ccerrotta@gmail.com · ic8tem@gmail.co
 - **Start window**: callsign and 6-character locator (centre of the azimuthal map, distance and bearing of every spot).
 - **Map**: Mercator or azimuthal equidistant centred on your locator; wheel zoom, drag to pan, double click for the whole view; hover a bubble for details. **Data refresh** drop-down: 1, 3, 5, 10, 15 or 30 minutes.
 - **Layers**: heard me (rectangular SNR bubbles, blue border) · I heard (purple border) · my UDP decodes (oval thought bubble, a different shape) · great-circle paths · Maidenhead grid · greyline · KC2G MUF/foF2 · NOAA aurora (OVATION) · LoTW squares · QLog QSOs.
-- **Sources**: PSKReporter MQTT (plus last-hour HTTP history), Reverse Beacon Network (ports 7000/7001), DM4X telnet cluster `dm4x.ddns.net:8500`, second telnet cluster DXMAPS `dxmaps.com:7300` with switchable skimmer network, WSJT-X UDP protocol with **UDP re-transmission** to one or more `host:port` targets.
+- **Sources**: PSKReporter MQTT (plus last-hour HTTP history), Reverse Beacon Network (ports 7000/7001), DM4X telnet cluster `dm4x.ddns.net:8500`, second telnet cluster DXMAPS `dxmaps.com:7300` with switchable skimmer network, WSJT-X UDP protocol with **two-way UDP relay** to one or more `host:port` targets: packets pass unchanged (logged QSOs included, so QLog logs the QSO itself) and replies go back to the digital-mode program.
 - **Station positions**: the bundled ~18 MB **CALL3.TXT** (LIVETROPOVHF merged with the MSHV-IC8TEM locator databases), one universal file; web corrections are written into it; automatic look-ups (G7VRD) every 6 hours; cty.dat country position as a last resort.
 - **LoTW** (from LoTW Grid Map v2): orange = worked, green = LoTW confirmed, blue = QSL only, grey = confirmed on **each** of 80, 40, 30, 20, 17, 15, 12 and 10 m (60 m excluded); groups All, HF 80-10 m, VHF, UHF and single bands. The password is never stored.
 - **QLog**: reads a copy of `qlog.db` (table `contacts`), never modifies QLog's file.

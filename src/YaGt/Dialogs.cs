@@ -15,13 +15,13 @@ public sealed class SettingsWindow : Window
     {
         Title = "YA-GT — impostazioni";
         Icon = Ui.WindowIcon();
-        Width = 580; Height = 560; CanResize = false;
+        Width = 580; Height = 590; CanResize = false;
         WindowStartupLocation = WindowStartupLocation.CenterOwner;
         Background = Ui.B(Ui.Th.Page);
 
         var addr = new TextBox { Text = st.Udp.ListenAddress, Width = 160 };
         var port = new TextBox { Text = st.Udp.ListenPort.ToString(CultureInfo.InvariantCulture), Width = 80 };
-        var fwd = new CheckBox { Content = "Ritrasmetti (inoltra) i pacchetti UDP ricevuti", IsChecked = st.Udp.Forward };
+        var fwd = new CheckBox { Content = "Rimbalzo UDP: inoltra i pacchetti e riporta indietro le risposte", IsChecked = st.Udp.Forward };
         var fwdTo = new TextBox { Text = st.Udp.ForwardTo, Width = 330, Watermark = "127.0.0.1:2238, 192.168.1.20:2237" };
         var qlog = new TextBox { Text = st.QLogPath, Width = 380, Watermark = QLogDb.DefaultPath() };
         var err = Ui.Label("", 12, false, 0xFFB22222);
@@ -32,7 +32,7 @@ public sealed class SettingsWindow : Window
         p.Children.Add(Ui.Label("Per l'indirizzo multicast (es. 224.0.0.1) YA-GT si unisce al gruppo; con 127.0.0.1 la porta non può essere la stessa di un altro programma in ascolto.", 11, false, Ui.Th.Muted));
         p.Children.Add(fwd);
         p.Children.Add(new StackPanel { Orientation = Orientation.Horizontal, Spacing = 8, Children = { Ui.Label("Verso"), fwdTo } });
-        p.Children.Add(Ui.Label("Uno o più indirizzi host:porta separati da virgola (es. QLog 127.0.0.1:2238, GridTracker, JTAlert). I pacchetti vengono ripetuti identici.", 11, false, Ui.Th.Muted));
+        p.Children.Add(Ui.Label("Uno o più host:porta separati da virgola (es. QLog 127.0.0.1:2238, GridTracker, JTAlert). I pacchetti passano identici, QSO registrati compresi, quindi QLog scrive il QSO da solo; le risposte (doppio clic, evidenziazioni) tornano al programma digitale. In QLog metti la porta WSJT-X a 2238.", 11, false, Ui.Th.Muted));
 
         p.Children.Add(Ui.Section("Log di QLog"));
         p.Children.Add(new StackPanel

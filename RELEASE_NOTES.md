@@ -8,6 +8,8 @@
 Tutti i dati restano accanto al programma (`YA-GT.ini`, `CALL3.TXT`, cartella `Dati`): niente in AppData. La password LoTW non viene mai salvata.
 *All data stays next to the program: nothing in AppData. The LoTW password is never stored.*
 
-**1.0.1**: durata degli spot anche di 3 e 5 minuti; prima versione per Linux. / *Spot window also 3 and 5 minutes; first Linux build.*
+**1.0.3**: rimbalzo UDP nei due sensi (i QSO arrivano a QLog, le risposte tornano a WSJT-X/JTDX/MSHV), avviso chiaro se la porta è già occupata, i QSO appena registrati colorano subito i quadrati. / *Two-way UDP relay (QSOs reach QLog, replies go back to WSJT-X/JTDX/MSHV), clear warning when the port is busy, freshly logged QSOs colour the squares at once.*
 
 **1.0.2**: aggiornamento automatico dal GitHub (ogni 3 minuti, pacchetti con impronta e firma, come YA-NEC); riquadro delle statistiche in alto a destra (stazioni, quadrati, paesi, più lontana, miglior SNR, fonti, quadrati confermati); i quadrati si colorano per la banda scelta in alto e uniscono LoTW, ADIF e QLog. / *Automatic updates from GitHub (every 3 minutes, signed packages, as in YA-NEC); statistics box at top right; squares coloured for the band selected at the top, merging LoTW, ADIF and QLog.*
+
+**1.0.1**: durata degli spot anche di 3 e 5 minuti; prima versione per Linux. / *Spot window also 3 and 5 minutes; first Linux build.*
