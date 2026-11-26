@@ -17,7 +17,7 @@ Alla prima apertura si inseriscono **nominativo** e **locatore a 6 caratteri** (
 - **Mercatore** oppure **azimutale equidistante** centrata sul tuo locatore (menu *Proiezione*).
 - Rotella = zoom sul punto, trascinamento = spostamento, doppio clic = vista intera. Passando sopra un fumetto si leggono i dettagli (SNR, banda, modo, fonte, ora, distanza, azimut).
 - **Aggiornamento dei dati** con il menu a tendina: 1, 3, 5, 10, 15 o 30 minuti, più il pulsante *Aggiorna ora*.
-- Filtri: banda e durata degli spot (15 min - 6 h).
+- Filtri: banda e durata degli spot (3 min - 6 h).
 
 ## Livelli
 
@@ -69,6 +69,7 @@ YA-GT legge il database di [QLog](https://github.com/foldynl/QLog) (`qlog.db`, t
 ## Installazione
 
 - **Windows 10 e 11**: `YA-GT-…-windows-x64-setup.exe` (installa in `C:\YA-GT`) oppure lo zip portatile.
+- **Linux** x86_64 e aarch64: archivio `tar.gz` con .NET incluso; si estrae e si avvia `YA-GT/YA-GT`. Il database di QLog si cerca in `~/.local/share/hamradio/QLog/qlog.db`.
 - **Windows 7 SP1 e 8.1**: pacchetti `-windows7-x64-` o `-windows7-x86-` (setup o zip), per Microsoft .NET Framework 4.8; la mappa e le funzioni sono le stesse, la finestra è in WinForms.
 
 Tutti i dati restano accanto al programma (`YA-GT.ini`, `CALL3.TXT`, cartella `Dati`): **niente in AppData**.
@@ -93,6 +94,6 @@ By **Costantino Cerrotta • IC8TEM** — ccerrotta@gmail.com · ic8tem@gmail.co
 - **Station positions**: the bundled ~18 MB **CALL3.TXT** (LIVETROPOVHF merged with the MSHV-IC8TEM locator databases), one universal file; web corrections are written into it; automatic look-ups (G7VRD) every 6 hours; cty.dat country position as a last resort.
 - **LoTW** (from LoTW Grid Map v2): orange = worked, green = LoTW confirmed, blue = QSL only, grey = confirmed on **each** of 80, 40, 30, 20, 17, 15, 12 and 10 m (60 m excluded); groups All, HF 80-10 m, VHF, UHF and single bands. The password is never stored.
 - **QLog**: reads a copy of `qlog.db` (table `contacts`), never modifies QLog's file.
-- **Install**: Windows 10/11 setup or portable zip; Windows 7 SP1/8.1 packages for .NET Framework 4.8. All data stays next to the program, nothing in AppData.
+- **Install**: Windows 10/11 setup or portable zip; Linux x86_64/aarch64 tar.gz; Windows 7 SP1/8.1 packages for .NET Framework 4.8. All data stays next to the program, nothing in AppData.
 
 Credits as listed above.

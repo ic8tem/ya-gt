@@ -63,7 +63,7 @@ public sealed class AppState
     public int AgeMin = 30;
     public int RefreshMin = 3;
     public static readonly int[] RefreshChoices = { 1, 3, 5, 10, 15, 30 };
-    public static readonly int[] AgeChoices = { 15, 30, 60, 120, 360 };
+    public static readonly int[] AgeChoices = { 3, 5, 15, 30, 60, 120, 360 };
     public ProjKind Proj = ProjKind.Mercator;
     public string ThemeKey = "chiaro";
     public string QLogPath = "";

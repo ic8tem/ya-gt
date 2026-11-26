@@ -1,4 +1,4 @@
-# YA-GT - compilazione, prova di avvio e pacchetti per Windows 10/11 (.NET 10 + Avalonia) e Windows 7 SP1/8.1 (.NET Framework 4.8 + WinForms).
+# YA-GT - compilazione, prova di avvio e pacchetti per Windows 10/11 e Linux (.NET 10 + Avalonia) e Windows 7 SP1/8.1 (.NET Framework 4.8 + WinForms).
 # A ogni push su main: compilazione e prova di avvio con fotografie dello schermo (rami ci-shot-*); gli errori di compilazione
 # finiscono nel ramo ci-log. Con un tag vX.Y.Z, un push sul ramo release o l'avvio a mano: installatori, zip portatili e Release.
 name: build
@@ -134,9 +134,73 @@ jobs:
           name: ${{ matrix.flavor }}-${{ matrix.arch }}
           path: dist/*
 
+  linux:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        rid: [ linux-x64, linux-arm64 ]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: Versione
+        run: |
+          if [[ "$GITHUB_REF" == refs/tags/v* ]]; then V="${GITHUB_REF#refs/tags/v}"; else V="$(tr -d ' \r\n' < VERSION)"; fi
+          echo "VER=$V" >> $GITHUB_ENV
+      - name: Compila
+        run: |
+          set -o pipefail
+          dotnet publish src/YaGt/YaGt.csproj -c Release -r ${{ matrix.rid }} --self-contained true -p:Version=${{ env.VER }} -p:DebugType=none -o publish/YA-GT -clp:NoSummary 2>&1 | tee build.log
+          chmod +x publish/YA-GT/YA-GT
+      - name: Errori di compilazione (ramo ci-log-linux)
+        if: failure() && matrix.rid == 'linux-x64'
+        run: |
+          grep -E ": error |error NU|error MSB" build.log | sort -u > errori.txt || true
+          cp build.log tutto.txt
+          git config user.name "IC8TEM"; git config user.email "ic8tem@users.noreply.github.com"
+          git checkout --orphan ci-log-linux
+          git rm -rf --cached . > /dev/null
+          git add -f errori.txt tutto.txt
+          git commit -m "errori di compilazione linux ($GITHUB_SHA)"
+          git push -f origin ci-log-linux
+      - name: Prova di avvio (Xvfb)
+        if: matrix.rid == 'linux-x64'
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq xvfb imagemagick fonts-dejavu > /dev/null
+          Xvfb :99 -screen 0 1366x768x24 & sleep 3
+          export DISPLAY=:99
+          mkdir -p shots
+          D=$RUNNER_TEMP/prova; cp -r publish/YA-GT $D
+          printf 'call=IC8TEM\nloc=JN70cn\nsrc_rbn=0\nsrc_dm4x=0\nsrc_cl2=0\nrefresh_min=1\n' > $D/YA-GT.ini
+          YAGT_SKIPSTART=1 YAGT_DEMO=1 YAGT_TOUR=15 YAGT_MAXIMIZED=1 $D/YA-GT > shots/console.txt 2>&1 &
+          PID=$!
+          sleep 15; import -window root shots/01-mercatore.png
+          sleep 18; import -window root shots/02-kc2g-aurora.png
+          sleep 15; import -window root shots/03-azimutale.png
+          if kill -0 $PID 2>/dev/null; then echo "in esecuzione: True" > shots/stato.txt; kill $PID; else echo "in esecuzione: False" > shots/stato.txt; fi
+          for f in errore-avvio.txt Dati/errori.txt; do [ -f "$D/$f" ] && cp "$D/$f" shots/ || true; done
+          git config user.name "IC8TEM"; git config user.email "ic8tem@users.noreply.github.com"
+          git checkout --orphan ci-shot-linux
+          git rm -rf --cached . > /dev/null
+          git add -f shots
+          git commit -m "prova di avvio linux ($GITHUB_SHA)"
+          git push -f origin ci-shot-linux
+          git checkout -f $GITHUB_SHA
+          grep -q True shots/stato.txt
+      - name: Archivio tar.gz
+        run: |
+          mkdir -p dist
+          tar -C publish -czf dist/YA-GT-${{ env.VER }}-${{ matrix.rid }}.tar.gz YA-GT
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.rid }}
+          path: dist/*
+
   release:
     if: startsWith(github.ref, 'refs/tags/v') || github.ref == 'refs/heads/release'
-    needs: [ windows ]
+    needs: [ windows, linux ]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
