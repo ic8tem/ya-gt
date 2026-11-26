@@ -57,7 +57,27 @@ public sealed class MainWindow : Window
         _tick = new DispatcherTimer { Interval = TimeSpan.FromSeconds(1) };
         _tick.Tick += (_, _) => Tick();
         _tick.Start();
-        Opened += (_, _) => { st.Start(); _conn.Text = st.ConnectionsText(); };
+        Opened += (_, _) =>
+        {
+            st.Start(); _conn.Text = st.ConnectionsText();
+            if (!string.IsNullOrEmpty(st.UpdateMessage)) _hover.Text = "YA-GT " + st.UpdateMessage;
+        };
+        Updater.Ready += v => Dispatcher.UIThread.Post(() =>
+        {
+            var w = new Window
+            {
+                Title = "YA-GT — aggiornamento", Width = 420, Height = 160, CanResize = false, Icon = Ui.WindowIcon(),
+                WindowStartupLocation = WindowStartupLocation.CenterOwner, Background = Ui.B(Ui.Th.Page),
+            };
+            var ok = Ui.Button("OK", () => w.Close(), true);
+            ok.HorizontalAlignment = HorizontalAlignment.Right;
+            w.Content = new StackPanel
+            {
+                Margin = new Thickness(16), Spacing = 12,
+                Children = { Ui.Label($"È stata installata la versione {v} di YA-GT.\nEntra in funzione al prossimo avvio del programma.", 13), ok }
+            };
+            w.ShowDialog(this);
+        });
         StartTour();
     }
 

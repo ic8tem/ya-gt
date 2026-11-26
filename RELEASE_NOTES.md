@@ -10,4 +10,4 @@ Tutti i dati restano accanto al programma (`YA-GT.ini`, `CALL3.TXT`, cartella `D
 
 **1.0.1**: durata degli spot anche di 3 e 5 minuti; prima versione per Linux. / *Spot window also 3 and 5 minutes; first Linux build.*
 
-**1.0.2**: riquadro delle statistiche in alto a destra (stazioni, quadrati, paesi, più lontana, miglior SNR, fonti, quadrati confermati); i quadrati si colorano per la banda scelta in alto e uniscono LoTW, ADIF e QLog. / *Statistics box at top right; squares coloured for the band selected at the top, merging LoTW, ADIF and QLog.*
+**1.0.2**: aggiornamento automatico dal GitHub (ogni 3 minuti, pacchetti con impronta e firma, come YA-NEC); riquadro delle statistiche in alto a destra (stazioni, quadrati, paesi, più lontana, miglior SNR, fonti, quadrati confermati); i quadrati si colorano per la banda scelta in alto e uniscono LoTW, ADIF e QLog. / *Automatic updates from GitHub (every 3 minutes, signed packages, as in YA-NEC); statistics box at top right; squares coloured for the band selected at the top, merging LoTW, ADIF and QLog.*

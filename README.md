@@ -68,6 +68,10 @@ Gruppi: Tutte le bande, **HF 80-10 m** (senza 160 m e 6 m), VHF 6 m-1,25 m, UHF 
 
 YA-GT legge il database di [QLog](https://github.com/foldynl/QLog) (`qlog.db`, tabella `contacts`): su Windows è in `%LOCALAPPDATA%\hamradio\QLog\qlog.db`, oppure si sceglie in *Impostazioni*. Il file di QLog non viene mai modificato: si copia (con i file `-wal` e `-shm`) nella cartella `Dati` e si legge la copia.
 
+## Aggiornamento automatico
+
+Come YA-NEC, YA-GT controlla ogni 3 minuti se su GitHub c'è una versione nuova; se c'è, scarica il pacchetto portatile della tua piattaforma, ne controlla l'impronta SHA-256 e la firma digitale e lo installa: la versione nuova parte al prossimo avvio. Non vengono mai toccati `YA-GT.ini`, `CALL3.TXT` e la cartella `Dati`; la versione precedente resta in `Dati/aggiornamenti`. Si spegne in *Impostazioni*.
+
 ## Installazione
 
 - **Windows 10 e 11**: `YA-GT-…-windows-x64-setup.exe` (installa in `C:\YA-GT`) oppure lo zip portatile.
@@ -100,6 +104,7 @@ By **Costantino Cerrotta • IC8TEM** — ccerrotta@gmail.com · ic8tem@gmail.co
 - **Station positions**: the bundled ~18 MB **CALL3.TXT** (LIVETROPOVHF merged with the MSHV-IC8TEM locator databases), one universal file; web corrections are written into it; automatic look-ups (G7VRD) every 6 hours; cty.dat country position as a last resort.
 - **LoTW** (from LoTW Grid Map v2): orange = worked, green = LoTW confirmed, blue = QSL only, grey = confirmed on **each** of 80, 40, 30, 20, 17, 15, 12 and 10 m (60 m excluded); groups All, HF 80-10 m, VHF, UHF and single bands. The password is never stored.
 - **QLog**: reads a copy of `qlog.db` (table `contacts`), never modifies QLog's file.
+- **Automatic updates** from GitHub every 3 minutes (signed packages; YA-GT.ini, CALL3.TXT and Dati are never touched).
 - **Install**: Windows 10/11 setup or portable zip; Linux x86_64/aarch64 tar.gz; Windows 7 SP1/8.1 packages for .NET Framework 4.8. All data stays next to the program, nothing in AppData.
 
 Credits as listed above.

@@ -201,7 +201,12 @@ public sealed class MainForm : Form
         _tick = new Timer { Interval = 1000 };
         _tick.Tick += (_, _) => Tick();
         _tick.Start();
-        Shown += (_, _) => { st.Start(); _conn.Text = st.ConnectionsText(); StartTour(); };
+        Shown += (_, _) =>
+        {
+            st.Start(); _conn.Text = st.ConnectionsText(); StartTour();
+            if (!string.IsNullOrEmpty(st.UpdateMessage)) _hover.Text = "YA-GT " + st.UpdateMessage;
+        };
+        Updater.Ready += v => { try { BeginInvoke((Action)(() => MessageBox.Show(this, $"È stata installata la versione {v} di YA-GT.\nEntra in funzione al prossimo avvio del programma.", "YA-GT — aggiornamento", MessageBoxButtons.OK, MessageBoxIcon.Information))); } catch { } };
     }
 
     void Tick()
@@ -343,7 +348,7 @@ public sealed class SettingsForm : Form
         FormBorderStyle = FormBorderStyle.FixedDialog; MaximizeBox = false; MinimizeBox = false;
         StartPosition = FormStartPosition.CenterParent;
         AutoScaleMode = AutoScaleMode.Dpi;
-        ClientSize = new Size(560, 400);
+        ClientSize = new Size(560, 500);
         Font = W.Ui;
         BackColor = W.C(W.Th.Page);
         int y = 12;
@@ -368,9 +373,19 @@ public sealed class SettingsForm : Form
         y += 30;
         Lab("Vuoto = posizione standard di QLog (%LOCALAPPDATA%\\hamradio\\QLog\\qlog.db). Si legge una copia: il file di QLog non viene mai modificato.", 14, y, false, 520).ForeColor = W.C(W.Th.Muted);
         y += 44;
+        Lab("Aggiornamento automatico", 14, y, true).ForeColor = W.C(W.Th.Accent); y += 24;
+        var auto = new CheckBox { Text = "Aggiornamento automatico dal GitHub (ogni " + Updater.IntervalMinutes + " minuti)", Checked = Updater.Enabled, Location = new Point(14, y), AutoSize = true }; Controls.Add(auto);
+        var now = new Button { Text = "Controlla adesso", Location = new Point(400, y - 3), Size = new Size(130, 26) }; Controls.Add(now);
+        y += 28;
+        var upd = Lab("Stato: " + Updater.Status, 14, y, false, 520); upd.ForeColor = W.C(W.Th.Muted);
+        Action<string> onChange = m => { try { if (!upd.IsDisposed) upd.BeginInvoke((Action)(() => upd.Text = "Stato: " + m)); } catch { } };
+        Updater.Changed += onChange;
+        FormClosed += (_, _) => Updater.Changed -= onChange;
+        now.Click += async (_, _) => await Updater.CheckAsync(true);
+        y += 36;
         var err = Lab("", 14, y, false, 520); err.ForeColor = Color.Firebrick;
-        var ok = new Button { Text = "Salva", Location = new Point(452, 356), Size = new Size(90, 30), BackColor = W.C(W.Th.Accent), ForeColor = Color.White, FlatStyle = FlatStyle.Flat };
-        var cancel = new Button { Text = "Annulla", Location = new Point(354, 356), Size = new Size(90, 30), DialogResult = DialogResult.Cancel };
+        var ok = new Button { Text = "Salva", Location = new Point(452, 456), Size = new Size(90, 30), BackColor = W.C(W.Th.Accent), ForeColor = Color.White, FlatStyle = FlatStyle.Flat };
+        var cancel = new Button { Text = "Annulla", Location = new Point(354, 456), Size = new Size(90, 30), DialogResult = DialogResult.Cancel };
         Controls.Add(ok); Controls.Add(cancel);
         AcceptButton = ok; CancelButton = cancel;
         ok.Click += (_, _) =>
@@ -381,6 +396,9 @@ public sealed class SettingsForm : Form
             if (fwd.Checked && e2 != "") { err.Text = "Inoltro: " + e2; return; }
             st.Udp.ListenAddress = addr.Text.Trim(); st.Udp.ListenPort = pr; st.Udp.Forward = fwd.Checked; st.Udp.ForwardTo = fwdTo.Text.Trim();
             st.QLogPath = qlog.Text.Trim();
+            bool wasOn = Updater.Enabled;
+            Updater.Enabled = auto.Checked;
+            if (Updater.Enabled && !wasOn) Updater.Start(); else if (!Updater.Enabled) Updater.Stop();
             st.SaveSettings();
             st.RestartUdp();
             if (st.LayerQLog) st.RefreshNow();

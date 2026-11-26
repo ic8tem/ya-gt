@@ -92,6 +92,8 @@ public sealed class AppState
     public DateTime NextRefresh = DateTime.MinValue;
     public string Status = "";
     public string Call3Status = "";
+    /// <summary>"aggiornato da … a …" se un aggiornamento automatico è appena entrato in funzione.</summary>
+    public string UpdateMessage;
 
     /// <summary>Dati pronti per un nuovo disegno (chiamato da un thread qualsiasi).</summary>
     public event Action Updated;
@@ -160,6 +162,7 @@ public sealed class AppState
         Proj = S.Get("proj", "merc") == "azi" ? ProjKind.Azimuthal : ProjKind.Mercator;
         ThemeKey = S.Get("theme", "chiaro");
         QLogPath = S.Get("qlog_path", "");
+        Updater.Enabled = S.GetBool("auto_update", true);
     }
 
     public void SaveSettings()
@@ -175,7 +178,7 @@ public sealed class AppState
         S.SetBool("udp", UdpEnabled); S.Set("udp_addr", Udp.ListenAddress); S.SetInt("udp_port", Udp.ListenPort);
         S.SetBool("udp_forward", Udp.Forward); S.Set("udp_forward_to", Udp.ForwardTo);
         S.Set("band", BandFilter); S.SetInt("age_min", AgeMin); S.SetInt("refresh_min", RefreshMin);
-        S.Set("proj", Proj == ProjKind.Azimuthal ? "azi" : "merc"); S.Set("theme", ThemeKey); S.Set("qlog_path", QLogPath);
+        S.Set("proj", Proj == ProjKind.Azimuthal ? "azi" : "merc"); S.Set("theme", ThemeKey); S.Set("qlog_path", QLogPath); S.SetBool("auto_update", Updater.Enabled);
         S.Save();
     }
 
@@ -222,6 +225,8 @@ public sealed class AppState
         if (Environment.GetEnvironmentVariable("YAGT_DEMO") == "1") InjectDemo();
         ApplySources();
         ScheduleTimer();
+        UpdateMessage = Updater.CleanAfterStart();
+        Updater.Start();
     }
 
     void AddFeed(string id, string src, string host, int port, string cmds)
@@ -566,6 +571,7 @@ public sealed class AppState
         foreach (var f in Feeds.Values) try { f.Disconnect(); } catch { }
         try { Udp.Stop(); } catch { }
         try { CallDb.Save(true); } catch { }
+        try { Updater.Stop(); } catch { }
         SaveSettings();
     }
 }

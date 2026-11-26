@@ -15,7 +15,7 @@ public sealed class SettingsWindow : Window
     {
         Title = "YA-GT — impostazioni";
         Icon = Ui.WindowIcon();
-        Width = 560; Height = 470; CanResize = false;
+        Width = 580; Height = 560; CanResize = false;
         WindowStartupLocation = WindowStartupLocation.CenterOwner;
         Background = Ui.B(Ui.Th.Page);
 
@@ -50,6 +50,12 @@ public sealed class SettingsWindow : Window
             }
         });
         p.Children.Add(Ui.Label("Vuoto = posizione standard di QLog (%LOCALAPPDATA%\\hamradio\\QLog\\qlog.db). Il file di QLog non viene mai modificato: si legge una copia.", 11, false, Ui.Th.Muted));
+        p.Children.Add(Ui.Section("Aggiornamento automatico"));
+        var auto = new CheckBox { Content = "Aggiornamento automatico dal GitHub (ogni " + Updater.IntervalMinutes + " minuti)", IsChecked = Updater.Enabled };
+        var upd = Ui.Label("Stato: " + Updater.Status, 11, false, Ui.Th.Muted);
+        Updater.Changed += m => Dispatcher.UIThread.Post(() => upd.Text = "Stato: " + m);
+        p.Children.Add(new StackPanel { Orientation = Orientation.Horizontal, Spacing = 8, Children = { auto, Ui.Button("Controlla adesso", async () => await Updater.CheckAsync(true)) } });
+        p.Children.Add(upd);
         p.Children.Add(err);
 
         var ok = Ui.Button("Salva", () =>
@@ -60,6 +66,9 @@ public sealed class SettingsWindow : Window
             if (fwd.IsChecked == true && e2 != "") { err.Text = "Inoltro: " + e2; return; }
             st.Udp.ListenAddress = addr.Text.Trim(); st.Udp.ListenPort = pr; st.Udp.Forward = fwd.IsChecked == true; st.Udp.ForwardTo = (fwdTo.Text ?? "").Trim();
             st.QLogPath = (qlog.Text ?? "").Trim();
+            bool wasOn = Updater.Enabled;
+            Updater.Enabled = auto.IsChecked == true;
+            if (Updater.Enabled && !wasOn) Updater.Start(); else if (!Updater.Enabled) Updater.Stop();
             st.SaveSettings();
             st.RestartUdp();
             if (st.LayerQLog) st.RefreshNow();

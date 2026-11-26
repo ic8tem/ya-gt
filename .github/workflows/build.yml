@@ -143,6 +143,11 @@ jobs:
         run: |
           New-Item -ItemType Directory -Force dist | Out-Null
           Compress-Archive -Path publish\${{ matrix.flavor }}-${{ matrix.arch }}\* -DestinationPath dist\YA-GT-${{ env.VER }}-${{ matrix.flavor }}-${{ matrix.arch }}-portatile.zip
+      - name: Impronta e firma per l'aggiornamento automatico
+        shell: bash
+        env:
+          UPDATE_SIGNING_KEY: ${{ secrets.UPDATE_SIGNING_KEY }}
+        run: python tools/firma.py dist/*-portatile.zip
       # niente "artifact" (lo spazio dei repository privati è limitato): i pacchetti vanno direttamente nella Release
       - name: Pacchetti nella Release
         if: startsWith(github.ref, 'refs/tags/v') || github.ref == 'refs/heads/release'
@@ -151,7 +156,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           shopt -s nullglob
-          gh release upload "v${{ env.VER }}" dist/*.zip installer/Output/*.exe dist/*.exe --clobber
+          gh release upload "v${{ env.VER }}" dist/*.zip dist/*.exe dist/*.sha256 dist/*.sig --clobber
 
   linux:
     needs: [ prepare ]
@@ -214,8 +219,14 @@ jobs:
         run: |
           mkdir -p dist
           tar -C publish -czf dist/YA-GT-${{ env.VER }}-${{ matrix.rid }}.tar.gz YA-GT
+      - name: Impronta e firma per l'aggiornamento automatico
+        env:
+          UPDATE_SIGNING_KEY: ${{ secrets.UPDATE_SIGNING_KEY }}
+        run: python3 tools/firma.py dist/*.tar.gz
       - name: Pacchetto nella Release
         if: startsWith(github.ref, 'refs/tags/v') || github.ref == 'refs/heads/release'
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release upload "v${{ env.VER }}" dist/*.tar.gz --clobber
+        run: |
+          shopt -s nullglob
+          gh release upload "v${{ env.VER }}" dist/*.tar.gz dist/*.sha256 dist/*.sig --clobber
