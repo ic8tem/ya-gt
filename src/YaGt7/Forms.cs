@@ -242,6 +242,7 @@ public sealed class MainForm : Form
         Control Ind(Control c) { c.Margin = new Padding(22, c.Margin.Top, 3, c.Margin.Bottom); return c; }
 
         p.Controls.Add(Sec("Livelli della mappa"));
+        p.Controls.Add(W.Check("Statistiche (in alto a destra)", _st.LayerStats, v => { _st.LayerStats = v; Redraw(); }));
         p.Controls.Add(W.Check("Chi mi sente (spot)", _st.LayerHeardMe, v => { _st.LayerHeardMe = v; Redraw(); }, _tips, "Stazioni che ricevono il tuo segnale: fumetto con l'SNR, bordo blu"));
         p.Controls.Add(W.Check("Chi sento io (spot)", _st.LayerIHeard, v => { _st.LayerIHeard = v; Redraw(); }, _tips, "Stazioni che tu ricevi: bordo viola"));
         p.Controls.Add(W.Check("Le mie decodifiche (UDP)", _st.LayerDecodes, v => { _st.LayerDecodes = v; Redraw(); }, _tips, "Decodifiche di WSJT-X/JTDX/MSHV via UDP: nuvoletta ovale"));
@@ -254,7 +255,7 @@ public sealed class MainForm : Form
         p.Controls.Add(Ind(Track(_st.Kc2gAlpha, v => { _st.Kc2gAlpha = v; Redraw(); })));
         p.Controls.Add(W.Check("Aurora NOAA (OVATION)", _st.LayerAurora, v => { _st.LayerAurora = v; _st.SaveSettings(); if (v) _st.RefreshNow(); else _map.Invalidate(); }));
         p.Controls.Add(Ind(Track(_st.AuroraAlpha, v => { _st.AuroraAlpha = v; Redraw(); })));
-        p.Controls.Add(W.Check("Quadrati LoTW", _st.LayerLotw, v => { _st.LayerLotw = v; Rebuild(); }, _tips, "Arancio = lavorato, verde = LoTW, blu = QSL, grigio = confermato su tutte le bande 80-10 m (esclusi i 60 m)"));
+        p.Controls.Add(W.Check("Quadrati (LoTW + QLog)", _st.LayerLotw, v => { _st.LayerLotw = v; _st.SaveSettings(); if (v) _st.RefreshNow(); else _st.Rebuild(); }, _tips, "Arancio = lavorato, verde = LoTW, blu = QSL, grigio = confermato su tutte le bande 80-10 m (esclusi i 60 m)"));
         _lotwTag = new ComboBox { DropDownStyle = ComboBoxStyle.DropDownList, Width = 190 };
         FillLotwTags();
         _lotwTag.SelectedIndexChanged += (_, _) => { if (_lotwTag.SelectedIndex >= 0 && _lotwTag.SelectedIndex < _lotwTags.Count) { _st.LotwTag = _lotwTags[_lotwTag.SelectedIndex]; Rebuild(); } };
@@ -291,8 +292,8 @@ public sealed class MainForm : Form
         var keep = _st.LotwTag;
         _lotwTag.Items.Clear(); _lotwTags.Clear();
         void Add(string tag, string title) { _lotwTags.Add(tag); _lotwTag.Items.Add(title); }
-        Add("ALL", "Tutte le bande"); Add("G:1", "HF 80-10 m"); Add("G:2", "VHF 6 m-1,25 m"); Add("G:3", "UHF e oltre");
-        foreach (var b in _st.Lotw.BandsPresent()) Add("B:" + b, b);
+        Add("BAND", "Banda scelta in alto"); Add("ALL", "Tutte le bande"); Add("G:1", "HF 80-10 m"); Add("G:2", "VHF 6 m-1,25 m"); Add("G:3", "UHF e oltre");
+        foreach (var b in _st.Lotw.BandsPresent(_st.QLog.Qsos)) Add("B:" + b, b);
         var idx = _lotwTags.IndexOf(keep);
         _lotwTag.SelectedIndex = idx >= 0 ? idx : 0;
     }

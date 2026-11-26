@@ -22,7 +22,26 @@ public sealed class Frame
     public List<Decode> Decodes = new List<Decode>();
     public Dictionary<string, SquareInfo> Squares = new Dictionary<string, SquareInfo>();
     public bool SquaresGrey;
+    public string SquaresTitle = "";
     public List<QLogPoint> QLog = new List<QLogPoint>();
+    public FrameStats Stats = new FrameStats();
+}
+
+/// <summary>Statistiche del riquadro in alto a destra.</summary>
+public sealed class DirStats
+{
+    public int Stations, Squares, Countries;
+    public double MaxKm; public string MaxCall = "";
+    public int? BestSnr; public string BestCall = "";
+}
+
+public sealed class FrameStats
+{
+    public string Band = "";
+    public DirStats HeardMe = new DirStats(), IHeard = new DirStats(), Decodes = new DirStats();
+    public Dictionary<string, int> BySource = new Dictionary<string, int>();
+    public int SqWorked, SqConfirmed, SqLotw, SqAllHf;
+    public bool HasSquares;
 }
 
 /// <summary>Stato del programma: impostazioni, fonti, archivi, livelli della mappa e aggiornamento periodico.</summary>
@@ -48,10 +67,10 @@ public sealed class AppState
     public LatLon Home;
 
     // --- livelli (tutti attivabili a scelta)
-    public bool LayerGrid, LayerGreyline, LayerKc2g, LayerAurora, LayerHeardMe, LayerIHeard, LayerDecodes, LayerLotw, LayerQLog, LayerPaths;
+    public bool LayerStats, LayerGrid, LayerGreyline, LayerKc2g, LayerAurora, LayerHeardMe, LayerIHeard, LayerDecodes, LayerLotw, LayerQLog, LayerPaths;
     public string Kc2gMetric = "mufd";
     public int Kc2gAlpha = 85, AuroraAlpha = 70;   // percento
-    public string LotwTag = "ALL";
+    public string LotwTag = "BAND";   // BAND = la banda scelta in alto
     public bool LotwOnlyConfirmed, LotwOnlyEme;
     public bool BubbleCalls = true;
 
@@ -119,7 +138,8 @@ public sealed class AppState
         Kc2gMetric = S.Get("kc2g_metric", "mufd");
         Kc2gAlpha = S.GetInt("kc2g_alpha", 85);
         AuroraAlpha = S.GetInt("aurora_alpha", 70);
-        LotwTag = S.Get("lotw_tag", "ALL");
+        LotwTag = S.GetBool("lotw_tag_v2", false) ? S.Get("lotw_tag", "BAND") : "BAND";   // 1.0.2: i quadrati seguono la banda scelta in alto
+        LayerStats = S.GetBool("layer_stats", true);
         LotwOnlyConfirmed = S.GetBool("lotw_only_confirmed", false);
         LotwOnlyEme = S.GetBool("lotw_only_eme", false);
         BubbleCalls = S.GetBool("bubble_calls", true);
@@ -149,7 +169,7 @@ public sealed class AppState
         S.SetBool("layer_aurora", LayerAurora); S.SetBool("layer_heardme", LayerHeardMe); S.SetBool("layer_iheard", LayerIHeard);
         S.SetBool("layer_decodes", LayerDecodes); S.SetBool("layer_lotw", LayerLotw); S.SetBool("layer_qlog", LayerQLog); S.SetBool("layer_paths", LayerPaths);
         S.Set("kc2g_metric", Kc2gMetric); S.SetInt("kc2g_alpha", Kc2gAlpha); S.SetInt("aurora_alpha", AuroraAlpha);
-        S.Set("lotw_tag", LotwTag); S.SetBool("lotw_only_confirmed", LotwOnlyConfirmed); S.SetBool("lotw_only_eme", LotwOnlyEme);
+        S.Set("lotw_tag", LotwTag); S.SetBool("lotw_tag_v2", true); S.SetBool("layer_stats", LayerStats); S.SetBool("lotw_only_confirmed", LotwOnlyConfirmed); S.SetBool("lotw_only_eme", LotwOnlyEme);
         S.SetBool("bubble_calls", BubbleCalls);
         S.SetBool("src_psk", SrcPsk); S.SetBool("src_rbn", SrcRbn); S.SetBool("src_dm4x", SrcDm4x); S.SetBool("src_cl2", SrcCl2); S.SetBool("cl2_skimmer", Cl2Skimmer);
         S.SetBool("udp", UdpEnabled); S.Set("udp_addr", Udp.ListenAddress); S.SetInt("udp_port", Udp.ListenPort);
@@ -286,7 +306,7 @@ public sealed class AppState
                     jobs.Add(Task.Run(async () => { foreach (var s in await PskHttp.FetchAsync(Http, MyCall, Math.Max(15, Math.Min(AgeMin, 120)), ct)) OnSpot(s); }));
                 if (LayerKc2g) jobs.Add(Kc2g.LoadAsync(Http, Kc2gMetric, ct));
                 if (LayerAurora) jobs.Add(Aurora.LoadAsync(Http, ct));
-                if (LayerQLog) jobs.Add(Task.Run(() => QLog.Load(QLogPath)));
+                if (LayerQLog || LayerLotw) jobs.Add(Task.Run(() => QLog.Load(QLogPath)));
                 try { await Task.WhenAll(jobs); } catch { }
                 Spots.Prune(DateTime.UtcNow, Math.Max(AgeMin, 120));
                 Decodes.Prune(DateTime.UtcNow, Math.Max(AgeMin, 120));
@@ -359,9 +379,13 @@ public sealed class AppState
         }
         if (LayerLotw)
         {
-            f.Squares = Lotw.BuildSquares(LotwTag, LotwOnlyConfirmed, LotwOnlyEme);
-            f.SquaresGrey = LotwLog.GreyTab(LotwTag);
+            var tag = EffectiveLotwTag;
+            // i quadrati si colorano con LoTW/ADIF e, se c'è, anche con il log di QLog
+            f.Squares = Lotw.BuildSquares(tag, LotwOnlyConfirmed, LotwOnlyEme, QLog.Qsos.Count > 0 ? QLog.Qsos : null);
+            f.SquaresGrey = LotwLog.GreyTab(tag);
+            f.SquaresTitle = tag == "ALL" ? "tutte le bande" : tag == "G:1" ? "HF 80-10 m" : tag == "G:2" ? "VHF" : tag == "G:3" ? "UHF e oltre" : tag.Substring(2);
         }
+        f.Stats = ComputeStats(f);
         if (LayerQLog)
         {
             var qs = QLog.Qsos;
@@ -378,6 +402,47 @@ public sealed class AppState
             }
         }
         Current = f;
+    }
+
+    /// <summary>Gruppo dei quadrati: "BAND" segue la banda scelta in alto (tutte le bande se non è scelta).</summary>
+    public string EffectiveLotwTag => LotwTag == "BAND" ? (BandFilter == "" ? "ALL" : "B:" + BandFilter) : LotwTag;
+
+    DirStats Dir(IEnumerable<(string call, LatLon pos, bool approx, double km, int? snr)> items)
+    {
+        var d = new DirStats();
+        var sq = new HashSet<string>(); var cty = new HashSet<string>();
+        foreach (var it in items)
+        {
+            d.Stations++;
+            var g4 = Locator.FromLatLon(it.pos.Lat, it.pos.Lon); if (!it.approx && g4.Length >= 4) sq.Add(g4.Substring(0, 4).ToUpperInvariant());
+            if (Cty.TryLookup(it.call, out _, out var c)) cty.Add(c);
+            if (it.km > d.MaxKm) { d.MaxKm = it.km; d.MaxCall = it.call; }
+            if (it.snr.HasValue && (!d.BestSnr.HasValue || it.snr.Value > d.BestSnr.Value)) { d.BestSnr = it.snr; d.BestCall = it.call; }
+        }
+        d.Squares = sq.Count; d.Countries = cty.Count;
+        return d;
+    }
+
+    FrameStats ComputeStats(Frame f)
+    {
+        var s = new FrameStats { Band = BandFilter == "" ? "tutte le bande" : BandFilter };
+        s.HeardMe = Dir(f.HeardMe.Select(x => (x.Other, x.Pos, x.PosApprox, x.Km, x.Snr)));
+        s.IHeard = Dir(f.IHeard.Select(x => (x.Other, x.Pos, x.PosApprox, x.Km, x.Snr)));
+        s.Decodes = Dir(f.Decodes.Select(x => (x.Call, x.Pos, x.PosApprox, x.Km, (int?)x.Snr)));
+        foreach (var x in f.HeardMe.Concat(f.IHeard))
+        {
+            var k = x.Source == "PSK" ? "PSKReporter" : x.Source == "CL2" ? "DXMAPS" : x.Source;
+            s.BySource[k] = s.BySource.TryGetValue(k, out var n) ? n + 1 : 1;
+        }
+        if (LayerLotw && f.Squares.Count > 0)
+        {
+            s.HasSquares = true;
+            s.SqWorked = f.Squares.Count;
+            s.SqConfirmed = f.Squares.Values.Count(q => q.Lotw || q.Qsl);
+            s.SqLotw = f.Squares.Values.Count(q => q.Lotw);
+            s.SqAllHf = f.SquaresGrey ? f.Squares.Values.Count(q => q.AllHf) : 0;
+        }
+        return s;
     }
 
     public string StatusText()
@@ -479,6 +544,16 @@ public sealed class AppState
         var iheard = new[] { ("VE3NEA", "FN03ai", -14), ("4X1MK", "KM72jb", -9), ("RA3AUU", "KO85ts", -1), ("5B4AHJ", "KM64lr", -19) };
         foreach (var h in iheard)
             Spots.Add(new SpotItem { Time = now.AddMinutes(-i++), Source = "PSK", Dir = SpotDir.IHeard, Tx = h.Item1, Rx = MyCall, TxGrid = h.Item2, Snr = h.Item3, Band = "20m", Mode = "FT8", FreqKHz = 14074 });
+        // qualche QSO di esempio per i quadrati colorati (lavorato / LoTW / QSL)
+        lock (Lotw.Lock)
+        {
+            int k = 0;
+            foreach (var g in new[] { "JN70", "JN61", "JN63", "JN54", "JO62", "IO91", "IN80", "KM18", "KN04", "FN31", "PM95", "QF56", "KP20", "JN95", "JN88", "IM58", "KO85", "GG66" })
+            {
+                var q = new QsoRecord { Call = "DEMO" + k, Band = k % 3 == 0 ? "40m" : "20m", Date = "20261126", Time = (1000 + k).ToString(), Grid = g, Lotw = k % 3 == 1, Qsl = k % 3 == 2 };
+                q.AddGrid(g); Lotw.Qsos.Add(q); k++;
+            }
+        }
         foreach (var d in new[] { ("SV1ABC", "KM18", -7), ("9A2AA", "JN95", -13), ("OE1XYZ", "JN88", 2), ("CT1AAA", "IM58", -17) })
             Decodes.Add(new Decode { Time = now, Band = "20m", Mode = "FT8", Snr = d.Item3, Call = d.Item1, Grid = d.Item2, Message = "CQ " + d.Item1 + " " + d.Item2 });
     }

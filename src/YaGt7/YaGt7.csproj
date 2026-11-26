@@ -14,7 +14,7 @@
     <Nullable>disable</Nullable>
     <AssemblyName>YA-GT</AssemblyName>
     <RootNamespace>YaGt</RootNamespace>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <Product>YA-GT</Product>
     <Authors>Costantino Cerrotta IC8TEM</Authors>
     <Description>YA-GT per Windows 7 - mappa a livelli degli spot di un nominativo</Description>

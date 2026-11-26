@@ -113,6 +113,7 @@ public sealed class MainWindow : Window
         void Rebuild() { _st.SaveSettings(); _st.Rebuild(); }
 
         p.Children.Add(Ui.Section("Livelli della mappa"));
+        p.Children.Add(Ui.Check("Statistiche (in alto a destra)", _st.LayerStats, v => { _st.LayerStats = v; Redraw(); }));
         p.Children.Add(Ui.Check("Chi mi sente (spot)", _st.LayerHeardMe, v => { _st.LayerHeardMe = v; Redraw(); }, "Stazioni che ricevono il tuo segnale: fumetto con l'SNR, bordo blu"));
         p.Children.Add(Ui.Check("Chi sento io (spot)", _st.LayerIHeard, v => { _st.LayerIHeard = v; Redraw(); }, "Stazioni che tu ricevi (PSKReporter, tuo skimmer RBN): bordo viola"));
         p.Children.Add(Ui.Check("Le mie decodifiche (UDP)", _st.LayerDecodes, v => { _st.LayerDecodes = v; Redraw(); }, "Decodifiche di WSJT-X/JTDX/MSHV ricevute via UDP: nuvoletta ovale"));
@@ -134,7 +135,7 @@ public sealed class MainWindow : Window
         p.Children.Add(Ui.Check("Aurora NOAA (OVATION)", _st.LayerAurora, v => { _st.LayerAurora = v; _st.SaveSettings(); if (v) _st.RefreshNow(); else _map.InvalidateVisual(); }, "Probabilità di aurora del NOAA SWPC, ridisegnata in Mercatore e in azimutale"));
         p.Children.Add(Indent(new StackPanel { Orientation = Orientation.Horizontal, Children = { Ui.Label("Opacità", 11, false, Ui.Th.Muted), Slider(_st.AuroraAlpha, v => { _st.AuroraAlpha = v; Redraw(); }) } }));
 
-        p.Children.Add(Ui.Check("Quadrati LoTW", _st.LayerLotw, v => { _st.LayerLotw = v; Rebuild(); }, "Arancio = lavorato, verde = LoTW, blu = QSL, grigio = confermato su tutte le bande 80-10 m (esclusi i 60 m)"));
+        p.Children.Add(Ui.Check("Quadrati (LoTW + QLog)", _st.LayerLotw, v => { _st.LayerLotw = v; _st.SaveSettings(); if (v) _st.RefreshNow(); else _st.Rebuild(); }, "Arancio = lavorato, verde = LoTW, blu = QSL, grigio = confermato su tutte le bande 80-10 m (esclusi i 60 m)"));
         _lotwTag = new ComboBox { FontSize = 12, Width = 190, Margin = new Thickness(2) };
         FillLotwTags();
         _lotwTag.SelectionChanged += (_, _) => { if (_lotwTag.SelectedItem is ComboBoxItem it && it.Tag is string tag) { _st.LotwTag = tag; Rebuild(); } };
@@ -181,8 +182,8 @@ public sealed class MainWindow : Window
         var keep = _st.LotwTag;
         _lotwTag.Items.Clear();
         void Add(string tag, string title) { _lotwTag.Items.Add(new ComboBoxItem { Content = title, Tag = tag }); }
-        Add("ALL", "Tutte le bande"); Add("G:1", "HF 80-10 m"); Add("G:2", "VHF 6 m-1,25 m"); Add("G:3", "UHF e oltre");
-        foreach (var b in _st.Lotw.BandsPresent()) Add("B:" + b, b);
+        Add("BAND", "Banda scelta in alto"); Add("ALL", "Tutte le bande"); Add("G:1", "HF 80-10 m"); Add("G:2", "VHF 6 m-1,25 m"); Add("G:3", "UHF e oltre");
+        foreach (var b in _st.Lotw.BandsPresent(_st.QLog.Qsos)) Add("B:" + b, b);
         var idx = _lotwTag.Items.Cast<ComboBoxItem>().ToList().FindIndex(i => (string)i.Tag == keep);
         _lotwTag.SelectedIndex = idx >= 0 ? idx : 0;
     }

@@ -159,6 +159,55 @@ public sealed class MapRenderer
         }
 
         DrawLegend(g, st, th, width, height);
+        if (st.LayerStats) DrawStats(g, st, f, width);
+    }
+
+    // ------------------------------------------------------------------ riquadro delle statistiche (in alto a destra)
+
+    void DrawStats(ICanvas g, AppState st, Frame f, double width)
+    {
+        var s = f.Stats;
+        var lines = new List<(string text, uint col, bool bold, double size)>();
+        void L(string t, uint c = 0xFF111827, bool b = false, double sz = 10.5) => lines.Add((t, c, b, sz));
+        string Snr(int? v) => v.HasValue ? (v.Value > 0 ? "+" : "") + v.Value + " dB" : "—";
+        void Block(string title, uint col, DirStats d, bool show)
+        {
+            if (!show) return;
+            L(title, col, true, 11);
+            if (d.Stations == 0) { L("  nessuna stazione", 0xFF6D6D6D); return; }
+            L($"  {d.Stations} stazioni · {d.Squares} quadrati · {d.Countries} paesi");
+            L($"  più lontana: {d.MaxCall} {d.MaxKm:N0} km");
+            L($"  migliore: {d.BestCall} {Snr(d.BestSnr)}");
+        }
+        L("Statistiche · " + s.Band + " · ultimi " + (st.AgeMin < 60 ? st.AgeMin + " min" : st.AgeMin / 60 + " h"), 0xFF1E293B, true, 11.5);
+        Block("Mi sentono", ColHeardMe, s.HeardMe, st.LayerHeardMe);
+        Block("Sento io", ColIHeard, s.IHeard, st.LayerIHeard);
+        Block("Mie decodifiche (UDP)", ColDecode, s.Decodes, st.LayerDecodes);
+        if (s.BySource.Count > 0) L("Fonti: " + string.Join(", ", s.BySource.OrderByDescending(kv => kv.Value).Select(kv => kv.Key + " " + kv.Value)), 0xFF374151);
+        if (st.LayerLotw)
+        {
+            L("Quadrati · " + f.SquaresTitle, 0xFF1E293B, true, 11);
+            if (!s.HasSquares) L("  nessun QSO (scarica da LoTW, apri un ADIF o attiva QLog)", 0xFF6D6D6D);
+            else
+            {
+                L($"  lavorati {s.SqWorked} · confermati {s.SqConfirmed} ({(s.SqWorked > 0 ? 100.0 * s.SqConfirmed / s.SqWorked : 0):0}%)");
+                L($"  LoTW {s.SqLotw} · solo QSL {s.SqConfirmed - s.SqLotw} · non confermati {s.SqWorked - s.SqConfirmed}");
+                if (f.SquaresGrey) L($"  confermati su tutte le bande 80-10 m: {s.SqAllHf}");
+            }
+        }
+        L($"Aggiornato {f.Utc:HH:mm} UTC", 0xFF6D6D6D, false, 9.5);
+        double w = 0, h = 8;
+        foreach (var l in lines) { var m = g.MeasureText(l.text, l.size, l.bold); w = Math.Max(w, m.X); h += m.Y + 1; }
+        w += 16;
+        double x = width - w - 10, y = 10;
+        g.FillRoundRect(x, y, w, h, 6, 0xEDFFFFFF);
+        g.StrokeRoundRect(x, y, w, h, 6, 0xFFC3CBD5, 1);
+        double cy = y + 4;
+        foreach (var l in lines)
+        {
+            g.DrawText(l.text, x + 8, cy, l.size, l.col, l.bold);
+            cy += g.MeasureText(l.text, l.size, l.bold).Y + 1;
+        }
     }
 
     // ------------------------------------------------------------------ raster (notte, aurora)
@@ -551,7 +600,7 @@ public sealed class MapRenderer
             (0xFFD62839, "≥ 0"), (0xFFF08A3C, "-1…-6"), (0xFFE8D24A, "-7…-12"), (0xFF5BC07A, "-13…-17"), (0xFF27A08A, "-18…-21"), (0xFF3B82C4, "< -21"),
         };
         double x = 10, y = height - 10;
-        double boxH = 16 + 16 + 18;
+        double boxH = 16 + 16 + 18 + (st.LayerLotw ? 16 : 0);
         double boxW = 8;
         foreach (var it in items) boxW += 14 + g.MeasureText(it.txt, 10, false).X + 8;
         boxW = Math.Max(boxW, 330);
@@ -578,5 +627,12 @@ public sealed class MapRenderer
         if (st.LayerHeardMe) Item(ColHeardMe, "mi sentono", false);
         if (st.LayerIHeard) Item(ColIHeard, "sento io", false);
         if (st.LayerDecodes) Item(ColDecode, "mie decodifiche (UDP)", true);
+        if (st.LayerLotw)
+        {
+            ly += 16; cx = x + 6;
+            void Sq(uint col, string t) { g.FillRect(cx, ly + 1, 12, 10, col | 0x60000000); g.DrawText(t, cx + 16, ly - 1, 10, 0xFF111827, false); cx += 16 + g.MeasureText(t, 10, false).X + 10; }
+            Sq(LotwLog.ColWorked, "lavorato"); Sq(LotwLog.ColLotw, "LoTW"); Sq(LotwLog.ColQsl, "QSL");
+            if (st.Current.SquaresGrey) Sq(LotwLog.ColAllHf, "tutte 80-10 m");
+        }
     }
 }

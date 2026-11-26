@@ -200,10 +200,20 @@ public sealed class LotwLog
     }
 
     /// <summary>Quadrati confermati (LoTW o QSL) su ognuna delle bande 80, 40, 30, 20, 17, 15, 12 e 10 m.</summary>
-    HashSet<string> AllHfConfirmed(bool onlyEme)
+    /// <summary>QSO di LoTW/ADIF più quelli di un altro log (QLog), senza doppioni.</summary>
+    List<QsoRecord> All(IEnumerable<QsoRecord> extra)
+    {
+        if (extra == null) return Qsos;
+        var keys = new HashSet<string>(Qsos.Select(q => q.Key));
+        var res = new List<QsoRecord>(Qsos);
+        foreach (var q in extra) if (keys.Add(q.Key)) res.Add(q);
+        return res;
+    }
+
+    HashSet<string> AllHfConfirmed(List<QsoRecord> all, bool onlyEme)
     {
         var perGrid = new Dictionary<string, HashSet<string>>();
-        foreach (var q in Qsos)
+        foreach (var q in all)
         {
             if (!q.Lotw && !q.Qsl) continue;
             if (onlyEme && q.PropMode != "EME") continue;
@@ -219,12 +229,13 @@ public sealed class LotwLog
         return res;
     }
 
-    public Dictionary<string, SquareInfo> BuildSquares(string tag, bool onlyConfirmed, bool onlyEme)
+    public Dictionary<string, SquareInfo> BuildSquares(string tag, bool onlyConfirmed, bool onlyEme, IEnumerable<QsoRecord> extra = null)
     {
         var d = new Dictionary<string, SquareInfo>();
         lock (Lock)
         {
-            foreach (var q in Qsos)
+            var all = All(extra);
+            foreach (var q in all)
             {
                 if (!Matches(q, tag, onlyEme)) continue;
                 if (onlyConfirmed && !q.Lotw && !q.Qsl) continue;
@@ -235,16 +246,16 @@ public sealed class LotwLog
                     si.Lotw |= q.Lotw; si.Qsl |= q.Qsl;
                 }
             }
-            var grey = AllHfConfirmed(onlyEme);
+            var grey = AllHfConfirmed(all, onlyEme);
             foreach (var si in d.Values) si.AllHf = grey.Contains(si.Grid);
         }
         return d;
     }
 
     /// <summary>Bande presenti nei dati (per le linguette/scelte di banda), in ordine.</summary>
-    public List<string> BandsPresent()
+    public List<string> BandsPresent(IEnumerable<QsoRecord> extra = null)
     {
-        lock (Lock) return Qsos.Select(q => q.Band).Distinct().OrderBy(Bands.Order).ToList();
+        lock (Lock) return All(extra).Select(q => q.Band).Distinct().OrderBy(Bands.Order).ToList();
     }
 
     public uint ColorOf(SquareInfo si, bool useGrey)
