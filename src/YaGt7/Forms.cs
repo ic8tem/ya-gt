@@ -348,23 +348,28 @@ public sealed class SettingsForm : Form
         FormBorderStyle = FormBorderStyle.FixedDialog; MaximizeBox = false; MinimizeBox = false;
         StartPosition = FormStartPosition.CenterParent;
         AutoScaleMode = AutoScaleMode.Dpi;
-        ClientSize = new Size(560, 514);
+        ClientSize = new Size(560, 542);
         Font = W.Ui;
         BackColor = W.C(W.Th.Page);
         int y = 12;
         Label Lab(string t, int x, int yy, bool bold = false, int w = 0) { var l = new Label { Text = t, Location = new Point(x, yy), AutoSize = w == 0, Font = bold ? W.UiBold : W.Ui }; if (w > 0) l.Size = new Size(w, 32); Controls.Add(l); return l; }
         Lab("Decodifiche UDP (protocollo WSJT-X: WSJT-X, JTDX, MSHV)", 14, y, true).ForeColor = W.C(W.Th.Accent); y += 26;
-        Lab("Ascolta su", 14, y + 3);
-        var addr = new TextBox { Text = st.Udp.ListenAddress, Location = new Point(100, y), Width = 140 }; Controls.Add(addr);
-        Lab("porta", 252, y + 3);
-        var port = new TextBox { Text = st.Udp.ListenPort.ToString(CultureInfo.InvariantCulture), Location = new Point(300, y), Width = 70 }; Controls.Add(port);
+        Lab("Ricezione su", 14, y + 3);
+        var addr = new TextBox { Text = st.Udp.ListenAddress, Location = new Point(130, y), Width = 140 }; Controls.Add(addr);
+        Lab("porta", 282, y + 3);
+        var port = new TextBox { Text = st.Udp.ListenPort.ToString(CultureInfo.InvariantCulture), Location = new Point(330, y), Width = 70 }; Controls.Add(port);
         y += 32;
         var fwd = new CheckBox { Text = "Rimbalzo UDP: inoltra i pacchetti e riporta indietro le risposte", Checked = st.Udp.Forward, Location = new Point(14, y), AutoSize = true }; Controls.Add(fwd);
         y += 28;
-        Lab("Verso", 14, y + 3);
-        var fwdTo = new TextBox { Text = st.Udp.ForwardTo, Location = new Point(100, y), Width = 420 }; Controls.Add(fwdTo);
+        Lab("Ritrasmetti a", 14, y + 3);
+        var fwdHost = new TextBox { Text = st.Udp.ForwardHost, Location = new Point(130, y), Width = 140 }; Controls.Add(fwdHost);
+        Lab("porta", 282, y + 3);
+        var fwdPort = new TextBox { Text = st.Udp.ForwardPort.ToString(CultureInfo.InvariantCulture), Location = new Point(330, y), Width = 70 }; Controls.Add(fwdPort);
         y += 28;
-        var hint = Lab("Uno o più host:porta separati da virgola (es. QLog 127.0.0.1:2238, GridTracker, JTAlert). Passano anche i QSO registrati, quindi QLog scrive il QSO da solo; le risposte tornano al programma digitale. In QLog metti la porta WSJT-X a 2238.", 14, y, false, 520);
+        Lab("Altre (facolt.)", 14, y + 3);
+        var fwdTo = new TextBox { Text = st.Udp.ForwardTo, Location = new Point(130, y), Width = 390 }; Controls.Add(fwdTo);
+        y += 28;
+        var hint = Lab("La destinazione principale è di solito QLog; nelle altre host:porta separati da virgola (GridTracker, JTAlert). Passano anche i QSO registrati, quindi QLog scrive il QSO da solo; le risposte tornano al programma digitale. In QLog metti come porta WSJT-X la porta di ritrasmissione.", 14, y, false, 520);
         hint.ForeColor = W.C(W.Th.Muted); hint.Size = new Size(520, 48);
         y += 56;
         Lab("Log di QLog", 14, y, true).ForeColor = W.C(W.Th.Accent); y += 26;
@@ -385,17 +390,21 @@ public sealed class SettingsForm : Form
         now.Click += async (_, _) => await Updater.CheckAsync(true);
         y += 36;
         var err = Lab("", 14, y, false, 520); err.ForeColor = Color.Firebrick;
-        var ok = new Button { Text = "Salva", Location = new Point(452, 470), Size = new Size(90, 30), BackColor = W.C(W.Th.Accent), ForeColor = Color.White, FlatStyle = FlatStyle.Flat };
-        var cancel = new Button { Text = "Annulla", Location = new Point(354, 470), Size = new Size(90, 30), DialogResult = DialogResult.Cancel };
+        var ok = new Button { Text = "Salva", Location = new Point(452, 498), Size = new Size(90, 30), BackColor = W.C(W.Th.Accent), ForeColor = Color.White, FlatStyle = FlatStyle.Flat };
+        var cancel = new Button { Text = "Annulla", Location = new Point(354, 498), Size = new Size(90, 30), DialogResult = DialogResult.Cancel };
         Controls.Add(ok); Controls.Add(cancel);
         AcceptButton = ok; CancelButton = cancel;
         ok.Click += (_, _) =>
         {
             if (!int.TryParse(port.Text, NumberStyles.Integer, CultureInfo.InvariantCulture, out var pr) || pr <= 0 || pr > 65535) { err.Text = "Porta UDP non valida."; return; }
             if (!System.Net.IPAddress.TryParse(addr.Text.Trim(), out _)) { err.Text = "Indirizzo d'ascolto non valido."; return; }
-            WsjtxUdp.ParseTargets(fwdTo.Text, out var e2);
-            if (fwd.Checked && e2 != "") { err.Text = "Inoltro: " + e2; return; }
-            st.Udp.ListenAddress = addr.Text.Trim(); st.Udp.ListenPort = pr; st.Udp.Forward = fwd.Checked; st.Udp.ForwardTo = fwdTo.Text.Trim();
+            if (!int.TryParse(fwdPort.Text, NumberStyles.Integer, CultureInfo.InvariantCulture, out var fp) || fp <= 0 || fp > 65535) { err.Text = "Porta di ritrasmissione non valida."; return; }
+            var fh = fwdHost.Text.Trim();
+            WsjtxUdp.ParseTargets(fh + ":" + fp + "," + fwdTo.Text, out var e2);
+            if (fwd.Checked && e2 != "") { err.Text = "Ritrasmissione: " + e2; return; }
+            if (fwd.Checked && fp == pr && (fh == "127.0.0.1" || fh == "localhost" || fh == addr.Text.Trim())) { err.Text = "La porta di ritrasmissione deve essere diversa da quella di ricezione."; return; }
+            st.Udp.ListenAddress = addr.Text.Trim(); st.Udp.ListenPort = pr; st.Udp.Forward = fwd.Checked;
+            st.Udp.ForwardHost = fh; st.Udp.ForwardPort = fp; st.Udp.ForwardTo = fwdTo.Text.Trim();
             st.QLogPath = qlog.Text.Trim();
             bool wasOn = Updater.Enabled;
             Updater.Enabled = auto.Checked;

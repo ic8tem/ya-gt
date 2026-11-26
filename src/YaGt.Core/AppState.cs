@@ -154,7 +154,18 @@ public sealed class AppState
         Udp.ListenAddress = S.Get("udp_addr", "127.0.0.1");
         Udp.ListenPort = S.GetInt("udp_port", 2237);
         Udp.Forward = S.GetBool("udp_forward", false);
-        Udp.ForwardTo = S.Get("udp_forward_to", "127.0.0.1:2238");
+        Udp.ForwardHost = S.Get("udp_forward_host", "");
+        Udp.ForwardPort = S.GetInt("udp_forward_port", 0);
+        Udp.ForwardTo = S.Get("udp_forward_to", "");
+        if (Udp.ForwardHost == "")
+        {
+            // impostazioni della 1.0.2: la prima destinazione dell'elenco diventa quella principale
+            var old = Udp.ForwardTo.Split(new[] { ',', ';', ' ' }, StringSplitOptions.RemoveEmptyEntries).Select(x => x.Trim()).ToList();
+            int i = old.Count > 0 ? old[0].LastIndexOf(':') : -1;
+            if (i > 0 && int.TryParse(old[0].Substring(i + 1), out var op)) { Udp.ForwardHost = old[0].Substring(0, i); Udp.ForwardPort = op; old.RemoveAt(0); }
+            else { Udp.ForwardHost = "127.0.0.1"; Udp.ForwardPort = 2238; }
+            Udp.ForwardTo = string.Join(", ", old);
+        }
         BandFilter = S.Get("band", "");
         AgeMin = S.GetInt("age_min", 30);
         RefreshMin = S.GetInt("refresh_min", 3);
@@ -176,7 +187,7 @@ public sealed class AppState
         S.SetBool("bubble_calls", BubbleCalls);
         S.SetBool("src_psk", SrcPsk); S.SetBool("src_rbn", SrcRbn); S.SetBool("src_dm4x", SrcDm4x); S.SetBool("src_cl2", SrcCl2); S.SetBool("cl2_skimmer", Cl2Skimmer);
         S.SetBool("udp", UdpEnabled); S.Set("udp_addr", Udp.ListenAddress); S.SetInt("udp_port", Udp.ListenPort);
-        S.SetBool("udp_forward", Udp.Forward); S.Set("udp_forward_to", Udp.ForwardTo);
+        S.SetBool("udp_forward", Udp.Forward); S.Set("udp_forward_host", Udp.ForwardHost); S.SetInt("udp_forward_port", Udp.ForwardPort); S.Set("udp_forward_to", Udp.ForwardTo);
         S.Set("band", BandFilter); S.SetInt("age_min", AgeMin); S.SetInt("refresh_min", RefreshMin);
         S.Set("proj", Proj == ProjKind.Azimuthal ? "azi" : "merc"); S.Set("theme", ThemeKey); S.Set("qlog_path", QLogPath); S.SetBool("auto_update", Updater.Enabled);
         S.Save();
@@ -490,7 +501,7 @@ public sealed class AppState
             On(Feeds["rbn"].Wanted, Feeds["rbn"].Connected || Feeds["rbn2"].Connected, "RBN"),
             On(Feeds["dm4x"].Wanted, Feeds["dm4x"].Connected, "DM4X"),
             On(Feeds["cl2"].Wanted, Feeds["cl2"].Connected, "DXMAPS" + (Cl2Skimmer ? "+skimmer" : "")),
-            UdpEnabled ? (Udp.Running ? $"UDP {Udp.ListenPort} ●" + (Udp.Forward ? $" ⇄ inoltro {Udp.Forwarded}/{Udp.Returned}" : "") + (Udp.Logged > 0 ? $" · QSO {Udp.Logged}" : "") + (Udp.LastError != "" ? " ⚠ " + Udp.LastError : "") : "UDP ○ " + Udp.LastError) : "",
+            UdpEnabled ? (Udp.Running ? $"UDP {Udp.ListenPort} ●" + (Udp.Forward ? $" ⇄ {Udp.ForwardPort} inoltro {Udp.Forwarded}/{Udp.Returned}" : "") + (Udp.Logged > 0 ? $" · QSO {Udp.Logged}" : "") + (Udp.LastError != "" ? " ⚠ " + Udp.LastError : "") : "UDP ○ " + Udp.LastError) : "",
         };
         return string.Join("   ", l.Where(x => x != ""));
     }

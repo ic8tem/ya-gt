@@ -33,8 +33,15 @@ public sealed class WsjtxUdp
 {
     public string ListenAddress = "127.0.0.1";
     public int ListenPort = 2237;
+    /// <summary>Destinazione principale della ritrasmissione (es. QLog): indirizzo e porta scelti a parte.</summary>
+    public string ForwardHost = "127.0.0.1";
+    public int ForwardPort = 2238;
+    /// <summary>Altre destinazioni facoltative "host:porta" separate da virgola.</summary>
     public string ForwardTo = "";
     public bool Forward;
+
+    /// <summary>Tutte le destinazioni: quella principale più le altre.</summary>
+    public string AllTargets => (ForwardHost.Trim() != "" && ForwardPort > 0 ? ForwardHost.Trim() + ":" + ForwardPort.ToString(CultureInfo.InvariantCulture) + "," : "") + ForwardTo;
 
     public bool Running { get; private set; }
     public string LastError = "";
@@ -85,7 +92,7 @@ public sealed class WsjtxUdp
         Stop();
         try
         {
-            var targets = ParseTargets(ForwardTo, out var err);
+            var targets = ParseTargets(AllTargets, out var err);
             LastError = Forward ? err : "";
             var listenIp = IPAddress.Parse(ListenAddress.Trim());
             bool multicast = listenIp.AddressFamily == AddressFamily.InterNetwork && (listenIp.GetAddressBytes()[0] & 0xF0) == 0xE0;

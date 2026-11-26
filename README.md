@@ -44,7 +44,7 @@ La scala dei colori dell'SNR va dal rosso (forte) al blu (debole); per l'RBN in 
 - **Reverse Beacon Network**: `telnet.reversebeacon.net` porte 7000 (CW/RTTY) e 7001 (FT8/FT4).
 - **DM4X**: cluster telnet `dm4x.ddns.net:8500` (indirizzo fisso).
 - **DXMAPS**: secondo cluster telnet `dxmaps.com:7300` (indirizzo fisso) con la **rete skimmer attivabile** (`set/skimmer`).
-- **UDP**: protocollo WSJT-X (porta predefinita 2237, indirizzo configurabile anche multicast) con **rimbalzo UDP nei due sensi** verso uno o più indirizzi `host:porta` (es. QLog, GridTracker, JTAlert): i pacchetti passano identici, QSO registrati compresi, così QLog scrive il QSO da solo, e le risposte (doppio clic, evidenziazioni) tornano al programma digitale. Con QLog: WSJT-X manda a YA-GT sulla 2237, YA-GT inoltra a `127.0.0.1:2238`, in QLog la porta WSJT-X va messa a 2238. I QSO appena registrati colorano subito i quadrati.
+- **UDP**: protocollo WSJT-X (porta predefinita 2237, indirizzo configurabile anche multicast) con **rimbalzo UDP nei due sensi** verso uno o più indirizzi `host:porta` (es. QLog, GridTracker, JTAlert): i pacchetti passano identici, QSO registrati compresi, così QLog scrive il QSO da solo, e le risposte (doppio clic, evidenziazioni) tornano al programma digitale. La **porta di ricezione** e la **porta di ritrasmissione** si scelgono a parte nelle Impostazioni (predefinite 2237 e 2238), più altre destinazioni facoltative; in QLog la porta WSJT-X va messa uguale a quella di ritrasmissione. I QSO appena registrati colorano subito i quadrati.
 
 ## Posizione delle stazioni: CALL3.TXT
 

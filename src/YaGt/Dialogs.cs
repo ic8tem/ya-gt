@@ -15,24 +15,27 @@ public sealed class SettingsWindow : Window
     {
         Title = "YA-GT — impostazioni";
         Icon = Ui.WindowIcon();
-        Width = 580; Height = 590; CanResize = false;
+        Width = 600; Height = 630; CanResize = false;
         WindowStartupLocation = WindowStartupLocation.CenterOwner;
         Background = Ui.B(Ui.Th.Page);
 
         var addr = new TextBox { Text = st.Udp.ListenAddress, Width = 160 };
         var port = new TextBox { Text = st.Udp.ListenPort.ToString(CultureInfo.InvariantCulture), Width = 80 };
         var fwd = new CheckBox { Content = "Rimbalzo UDP: inoltra i pacchetti e riporta indietro le risposte", IsChecked = st.Udp.Forward };
-        var fwdTo = new TextBox { Text = st.Udp.ForwardTo, Width = 330, Watermark = "127.0.0.1:2238, 192.168.1.20:2237" };
+        var fwdHost = new TextBox { Text = st.Udp.ForwardHost, Width = 160 };
+        var fwdPort = new TextBox { Text = st.Udp.ForwardPort.ToString(CultureInfo.InvariantCulture), Width = 80 };
+        var fwdTo = new TextBox { Text = st.Udp.ForwardTo, Width = 330, Watermark = "facoltative: 127.0.0.1:2333, 192.168.1.20:2237" };
         var qlog = new TextBox { Text = st.QLogPath, Width = 380, Watermark = QLogDb.DefaultPath() };
         var err = Ui.Label("", 12, false, 0xFFB22222);
 
         var p = new StackPanel { Margin = new Thickness(16, 8), Spacing = 6 };
         p.Children.Add(Ui.Section("Decodifiche UDP (protocollo WSJT-X: WSJT-X, JTDX, MSHV)"));
-        p.Children.Add(new StackPanel { Orientation = Orientation.Horizontal, Spacing = 8, Children = { Ui.Label("Ascolta su"), addr, Ui.Label("porta"), port } });
+        p.Children.Add(new StackPanel { Orientation = Orientation.Horizontal, Spacing = 8, Children = { Ui.Label("Ricezione: ascolta su"), addr, Ui.Label("porta"), port } });
         p.Children.Add(Ui.Label("Per l'indirizzo multicast (es. 224.0.0.1) YA-GT si unisce al gruppo; con 127.0.0.1 la porta non può essere la stessa di un altro programma in ascolto.", 11, false, Ui.Th.Muted));
         p.Children.Add(fwd);
-        p.Children.Add(new StackPanel { Orientation = Orientation.Horizontal, Spacing = 8, Children = { Ui.Label("Verso"), fwdTo } });
-        p.Children.Add(Ui.Label("Uno o più host:porta separati da virgola (es. QLog 127.0.0.1:2238, GridTracker, JTAlert). I pacchetti passano identici, QSO registrati compresi, quindi QLog scrive il QSO da solo; le risposte (doppio clic, evidenziazioni) tornano al programma digitale. In QLog metti la porta WSJT-X a 2238.", 11, false, Ui.Th.Muted));
+        p.Children.Add(new StackPanel { Orientation = Orientation.Horizontal, Spacing = 8, Children = { Ui.Label("Ritrasmissione: verso"), fwdHost, Ui.Label("porta"), fwdPort } });
+        p.Children.Add(new StackPanel { Orientation = Orientation.Horizontal, Spacing = 8, Children = { Ui.Label("Altre destinazioni"), fwdTo } });
+        p.Children.Add(Ui.Label("La destinazione principale è di solito QLog; nelle altre puoi aggiungere host:porta separati da virgola (GridTracker, JTAlert). I pacchetti passano identici, QSO registrati compresi, quindi QLog scrive il QSO da solo; le risposte (doppio clic, evidenziazioni) tornano al programma digitale. In QLog metti come porta WSJT-X la stessa porta di ritrasmissione.", 11, false, Ui.Th.Muted));
 
         p.Children.Add(Ui.Section("Log di QLog"));
         p.Children.Add(new StackPanel
@@ -62,9 +65,13 @@ public sealed class SettingsWindow : Window
         {
             if (!int.TryParse(port.Text, NumberStyles.Integer, CultureInfo.InvariantCulture, out var pr) || pr <= 0 || pr > 65535) { err.Text = "Porta UDP non valida."; return; }
             if (!System.Net.IPAddress.TryParse((addr.Text ?? "").Trim(), out _)) { err.Text = "Indirizzo d'ascolto non valido."; return; }
-            WsjtxUdp.ParseTargets(fwdTo.Text ?? "", out var e2);
-            if (fwd.IsChecked == true && e2 != "") { err.Text = "Inoltro: " + e2; return; }
-            st.Udp.ListenAddress = addr.Text.Trim(); st.Udp.ListenPort = pr; st.Udp.Forward = fwd.IsChecked == true; st.Udp.ForwardTo = (fwdTo.Text ?? "").Trim();
+            if (!int.TryParse(fwdPort.Text, NumberStyles.Integer, CultureInfo.InvariantCulture, out var fp) || fp <= 0 || fp > 65535) { err.Text = "Porta di ritrasmissione non valida."; return; }
+            var fh = (fwdHost.Text ?? "").Trim();
+            WsjtxUdp.ParseTargets(fh + ":" + fp + "," + (fwdTo.Text ?? ""), out var e2);
+            if (fwd.IsChecked == true && e2 != "") { err.Text = "Ritrasmissione: " + e2; return; }
+            if (fwd.IsChecked == true && fp == pr && (fh == "127.0.0.1" || fh == "localhost" || fh == (addr.Text ?? "").Trim())) { err.Text = "La porta di ritrasmissione deve essere diversa da quella di ricezione."; return; }
+            st.Udp.ListenAddress = addr.Text.Trim(); st.Udp.ListenPort = pr; st.Udp.Forward = fwd.IsChecked == true;
+            st.Udp.ForwardHost = fh; st.Udp.ForwardPort = fp; st.Udp.ForwardTo = (fwdTo.Text ?? "").Trim();
             st.QLogPath = (qlog.Text ?? "").Trim();
             bool wasOn = Updater.Enabled;
             Updater.Enabled = auto.IsChecked == true;
