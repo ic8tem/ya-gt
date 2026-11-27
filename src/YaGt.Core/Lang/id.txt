@@ -1,0 +1,199 @@
+# YA-GT — id — traduzione dell'interfaccia: <frase italiana><TAB><traduzione>; \n = a capo. Generato da tools/lingue (armonizzazione 27/11/2026).
+YA-GT — aggiornamento	YA-GT — pembaruan
+Apri file ADIF del log	Buka file ADIF log
+È stata installata la versione {0} di YA-GT.\nEntra in funzione al prossimo avvio del programma.	Versi {0} YA-GT telah dipasang.\nBerlaku pada saat program dijalankan berikutnya.
+{0:HH:mm:ss} UTC   ·   prossimo aggiornamento tra {1}	{0:HH:mm:ss} UTC   ·   pembaruan berikutnya dalam {1}
+Database di QLog (qlog.db)	Basis data QLog (qlog.db)
+Porta UDP non valida.	Port UDP tidak valid.
+Indirizzo d'ascolto non valido.	Alamat dengar tidak valid.
+Porta di ritrasmissione non valida.	Port penerusan tidak valid.
+La porta di ritrasmissione deve essere diversa da quella di ricezione.	Port penerusan harus berbeda dari port penerimaan.
+Inserisci nome utente e password di LoTW.	Masukkan nama pengguna dan kata sandi LoTW.
+Aggiornamento automatico dal GitHub (ogni {0} minuti)	Pembaruan otomatis dari GitHub (setiap {0} menit)
+Stato: {0}	Status: {0}
+Ritrasmissione: {0}	Penerusan: {0}
+Errore di collegamento: {0}	Kesalahan koneksi: {0}
+Nominativo non valido.	Callsign tidak valid.
+Il locatore deve avere 6 caratteri, es. JN70cn.	Lokator harus 6 karakter, mis. JN70cn.
+Opacità	Opasitas
+Banda scelta in alto	Band yang dipilih di atas
+Tutte le bande	Semua band
+UHF e oltre	UHF ke atas
+Tutti i file	Semua file
+nessuna stazione	tidak ada stasiun
+Fonti:	Sumber:
+nessun QSO (scarica da LoTW, apri un ADIF o attiva QLog)	tidak ada QSO (unduh dari LoTW, buka ADIF, atau aktifkan QLog)
+confermato su tutte le bande 80-10 m	dikonfirmasi di semua band 80-10 m
+confermato LoTW	dikonfirmasi LoTW
+confermato con QSL	dikonfirmasi dengan QSL
+lavorato, non confermato	dikerjakan, belum dikonfirmasi
+posizione del paese (cty.dat)	posisi negara (cty.dat)
+Mi sente	Mendengar saya
+Sento	Saya dengar
+posizione da CALL3.TXT	posisi dari CALL3.TXT
+Mia decodifica	Dekode saya
+SNR dB (RBN CW: dB sul rumore)	SNR dB (RBN CW: dB di atas derau)
+{0} stazioni · {1} quadrati · {2} paesi	{0} stasiun · {1} kotak · {2} negara
+più lontana: {0} {1:N0} km	terjauh: {0} {1:N0} km
+migliore: {0} {1}	terbaik: {0} {1}
+Statistiche · {0} · ultimi {1}	Statistik · {0} · terakhir {1}
+Quadrati · {0}	Kotak · {0}
+lavorati {0} · confermati {1} ({2:0}%)	dikerjakan {0} · dikonfirmasi {1} ({2:0}%)
+LoTW {0} · solo QSL {1} · non confermati {2}	LoTW {0} · hanya QSL {1} · belum dikonfirmasi {2}
+confermati su tutte le bande 80-10 m: {0}	dikonfirmasi di semua band 80-10 m: {0}
+Aggiornato {0:HH:mm} UTC	Diperbarui {0:HH:mm} UTC
+KC2G ionosonda {0}: {1} {2:0.0} MHz (affidabilità {3:0.00})	Ionosonde KC2G {0}: {1} {2:0.0} MHz (keandalan {3:0.00})
+spento durante le prove automatiche	mati selama uji otomatis
+spento nelle Impostazioni	mati di Pengaturan
+spento: la cartella del programma non è scrivibile (aggiornare a mano)	mati: folder program tidak dapat ditulisi (perbarui secara manual)
+gestito da un'altra finestra di YA-GT già aperta	ditangani oleh jendela YA-GT lain yang sudah terbuka
+pacchetto troppo grande, non si scarica	paket terlalu besar, tidak diunduh
+pacchetto tar.gz non gestito su questa piattaforma	paket tar.gz tidak didukung di platform ini
+nessuna versione pubblicata su {0}	tidak ada versi yang diterbitkan di {0}
+versione pubblicata non leggibile: {0}	versi yang diterbitkan tidak terbaca: {0}
+hai già l'ultima versione ({0})	Anda sudah memiliki versi terbaru ({0})
+aggiornato: l'ultima versione è la {0} ({1})	mutakhir: versi terbaru adalah {0} ({1})
+versione {0} disponibile su {1}	versi {0} tersedia di {1}
+versione {0} pubblicata, ma senza il pacchetto {1}	versi {0} diterbitkan, tetapi tanpa paket {1}
+versione {0}: mancano impronta o firma del pacchetto, non si installa	versi {0}: sidik jari atau tanda tangan paket tidak ada, tidak dipasang
+scarico la versione {0} ({1})	mengunduh versi {0} ({1})
+versione {0}: impronta SHA-256 diversa, pacchetto scartato	versi {0}: sidik jari SHA-256 berbeda, paket dibuang
+versione {0}: FIRMA NON VALIDA, pacchetto scartato	versi {0}: TANDA TANGAN TIDAK VALID, paket dibuang
+controllo non riuscito: {0} (riprovo fra {1} minuti)	pemeriksaan gagal: {0} (coba lagi dalam {1} menit)
+aggiornato da {0} a {1} il {2}	diperbarui dari {0} ke {1} pada {2}
+versione {0} installata: entra in funzione al prossimo avvio di YA-GT	versi {0} dipasang: berlaku saat YA-GT dijalankan berikutnya
+installazione della {0} non riuscita, rimessa la {1}: {2}	pemasangan {0} gagal, {1} dipulihkan: {2}
+LoTW (copia salvata)	LoTW (salinan tersimpan)
+Collegamento a LoTW in corso…	Menghubungkan ke LoTW…
+LoTW ha rifiutato l'accesso: controlla nome utente e password.	LoTW menolak akses: periksa nama pengguna dan kata sandi.
+Risposta inattesa da LoTW (non è un file ADIF). Riprova più tardi.	Jawaban tak terduga dari LoTW (bukan file ADIF). Coba lagi nanti.
+Il file ricevuto da LoTW sembra incompleto. Riprova.	File yang diterima dari LoTW tampaknya tidak lengkap. Coba lagi.
+{0}: {1} QSO letti, {2} in totale	{0}: {1} QSO terbaca, total {2}
+Ricezione dati da LoTW: {0:N0} kB…	Menerima data dari LoTW: {0:N0} kB…
+tutte le bande	semua band
+{0} mi sentono · {1} sento · {2} decodifiche	{0} mendengar saya · {1} saya dengar · {2} dekode
+G7VRD in coda {0}	G7VRD dalam antrean {0}
+ ⇄ {0} inoltro {1}/{2}	 ⇄ {0} penerusan {1}/{2}
+KC2G {0}: {1} curve, {2} ionosonde	KC2G {0}: {1} kurva, {2} ionosonde
+Aurora NOAA: previsione {0}	Aurora NOAA: prakiraan {0}
+Proiezione	Proyeksi
+Mercatore	Mercator
+Azimutale	Azimutal
+Aggiornamento	Pembaruan
+Banda	Band
+Tutte	Semua
+Spot degli ultimi	Spot dari terakhir
+Aggiorna ora	Perbarui sekarang
+Vista intera	Tampilan penuh
+Impostazioni	Pengaturan
+Livelli della mappa	Lapisan peta
+Statistiche (in alto a destra)	Statistik (kanan atas)
+Chi mi sente (spot)	Siapa mendengar saya (spot)
+Stazioni che ricevono il tuo segnale: fumetto con l'SNR, bordo blu	Stasiun yang menerima sinyal Anda: balon dengan SNR, tepi biru
+Chi sento io (spot)	Siapa yang saya dengar (spot)
+Stazioni che tu ricevi (PSKReporter, tuo skimmer RBN): bordo viola	Stasiun yang Anda terima (PSKReporter, skimmer RBN Anda): tepi ungu
+Le mie decodifiche (UDP)	Dekode saya (UDP)
+Decodifiche di WSJT-X/JTDX/MSHV ricevute via UDP: nuvoletta ovale	Dekode WSJT-X/JTDX/MSHV yang diterima lewat UDP: awan oval
+Nominativo nei fumetti	Callsign di balon
+Percorsi (cerchio massimo)	Lintasan (lingkaran besar)
+Griglia Maidenhead	Kisi Maidenhead
+Greyline (giorno/notte)	Greyline (siang/malam)
+Propagazione KC2G	Propagasi KC2G
+prop.kc2g.com: curve della MUF(3000) o della foF2 e valori delle ionosonde	prop.kc2g.com: kurva MUF(3000) atau foF2 dan nilai ionosonde
+Aurora NOAA (OVATION)	Aurora NOAA (OVATION)
+Probabilità di aurora del NOAA SWPC, ridisegnata in Mercatore e in azimutale	Peluang aurora dari NOAA SWPC, digambar ulang dalam Mercator dan azimutal
+Quadrati (LoTW + QLog)	Kotak (LoTW + QLog)
+Arancio = lavorato, verde = LoTW, blu = QSL, grigio = confermato su tutte le bande 80-10 m (esclusi i 60 m)	Oranye = dikerjakan, hijau = LoTW, biru = QSL, abu-abu = dikonfirmasi di semua band 80-10 m (tanpa 60 m)
+Solo confermati	Hanya yang dikonfirmasi
+Solo EME (PROP__MODE)	Hanya EME (PROP__MODE)
+Scarica da LoTW…	Unduh dari LoTW…
+Apri ADIF…	Buka ADIF…
+QSO del log QLog	QSO dari log QLog
+Legge qlog.db (copia in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato	Membaca qlog.db (salinan hanya-baca): kotak hijau = LoTW, biru = QSL, oranye = dikerjakan
+qlog.db: posizione standard di QLog	qlog.db: lokasi standar QLog
+Fonti degli spot	Sumber spot
+mqtt.pskreporter.info, più lo storico dell'ultima ora via HTTP	mqtt.pskreporter.info, ditambah riwayat satu jam terakhir lewat HTTP
+telnet.reversebeacon.net porte 7000 (CW/RTTY) e 7001 (FT8/FT4)	telnet.reversebeacon.net port 7000 (CW/RTTY) dan 7001 (FT8/FT4)
+DM4X (cluster telnet)	DM4X (kluster telnet)
+dm4x.ddns.net:8500, spot PSKReporter in forma di cluster	dm4x.ddns.net:8500, spot PSKReporter dalam bentuk kluster
+DXMAPS (2° cluster)	DXMAPS (kluster ke-2)
+Rete skimmer	Jaringan skimmer
+Invia set/skimmer (o set/noskimmer) al secondo cluster	Mengirim set/skimmer (atau set/noskimmer) ke kluster kedua
+Decodifiche UDP (WSJT-X/MSHV)	Dekode UDP (WSJT-X/MSHV)
+Porta e inoltro UDP in Impostazioni	Port UDP dan penerusan di Pengaturan
+Tema	Tema
+Chiaro (YA-NEC)	Terang (YA-NEC)
+Notte	Malam
+YA-GT — impostazioni	YA-GT — pengaturan
+Rimbalzo UDP: inoltra i pacchetti e riporta indietro le risposte	Pantulan UDP: meneruskan paket dan mengembalikan jawaban
+facoltative: 127.0.0.1:2333, 192.168.1.20:2237	opsional: 127.0.0.1:2333, 192.168.1.20:2237
+Decodifiche UDP (protocollo WSJT-X: WSJT-X, JTDX, MSHV)	Dekode UDP (protokol WSJT-X: WSJT-X, JTDX, MSHV)
+Ricezione: ascolta su	Penerimaan: dengarkan di
+Per l'indirizzo multicast (es. 224.0.0.1) YA-GT si unisce al gruppo; con 127.0.0.1 la porta non può essere la stessa di un altro programma in ascolto.	Untuk alamat multicast (mis. 224.0.0.1) YA-GT bergabung dengan grup; dengan 127.0.0.1 port tidak boleh sama dengan program lain yang sedang mendengarkan.
+Ritrasmissione: verso	Penerusan: ke
+Altre destinazioni	Tujuan lain
+La destinazione principale è di solito QLog; nelle altre puoi aggiungere host:porta separati da virgola (GridTracker, JTAlert). I pacchetti passano identici, QSO registrati compresi, quindi QLog scrive il QSO da solo; le risposte (doppio clic, evidenziazioni) tornano al programma digitale. In QLog metti come porta WSJT-X la stessa porta di ritrasmissione.	Tujuan utama biasanya QLog; di tujuan lain Anda dapat menambahkan host:port dipisahkan koma (GridTracker, JTAlert). Paket lewat tanpa diubah, termasuk QSO yang dicatat, sehingga QLog mencatat QSO sendiri; jawaban (klik ganda, sorotan) kembali ke program digital. Di QLog atur port WSJT-X sama dengan port penerusan.
+Log di QLog	Log QLog
+Sfoglia…	Telusuri…
+Vuoto = posizione standard di QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Il file di QLog non viene mai modificato: si legge una copia.	Kosong = lokasi standar QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). File QLog tidak pernah diubah: yang dibaca adalah salinan.
+Aggiornamento automatico	Pembaruan otomatis
+Controlla adesso	Periksa sekarang
+Lingua	Bahasa
+La nuova lingua vale dal prossimo avvio del programma.	Bahasa baru berlaku mulai program dijalankan berikutnya.
+Salva	Simpan
+Annulla	Batal
+Scarica da LoTW	Unduh dari LoTW
+Ricorda il nome utente (la password non viene mai salvata)	Ingat nama pengguna (kata sandi tidak pernah disimpan)
+Vengono scaricati tutti i QSO caricati su LoTW, con i dettagli delle conferme (locatore del corrispondente). Con log grandi LoTW può impiegare qualche minuto.	Semua QSO yang diunggah ke LoTW akan diunduh, dengan rincian konfirmasi (lokator stasiun lawan). Untuk log besar LoTW bisa memerlukan beberapa menit.
+Nome utente LoTW	Nama pengguna LoTW
+Password LoTW	Kata sandi LoTW
+Solo nominativo (facoltativo)	Hanya callsign (opsional)
+Scarica	Unduh
+Spot di un nominativo, LoTW, QLog e decodifiche UDP su una mappa a livelli	Spot sebuah callsign, LoTW, QLog, dan dekode UDP pada peta berlapis
+Contatti	Kontak
+Sostieni il progetto: ko-fi.com/ic8tem	Dukung proyek ini: ko-fi.com/ic8tem
+Riconoscimenti (credits)	Ucapan terima kasih (credits)
+I dati restano accanto al programma (YA-GT.ini, CALL3.TXT, cartella Dati): nulla in AppData. La password LoTW non viene mai salvata.	Data tetap berada di samping program (YA-GT.ini, CALL3.TXT, folder Dati): tidak ada di AppData. Kata sandi LoTW tidak pernah disimpan.
+Chiudi	Tutup
+YA-GT — avvio	YA-GT — mulai
+Spot, LoTW, QLog e decodifiche sulla mappa — di Costantino IC8TEM	Spot, LoTW, QLog, dan dekode di peta — oleh Costantino IC8TEM
+Nominativo	Callsign
+Locatore (6 caratteri)	Lokator (6 karakter)
+Il locatore fa da centro della mappa azimutale e serve a calcolare distanza e azimut di ogni spot.	Lokator adalah pusat peta azimutal dan dipakai untuk menghitung jarak dan azimut setiap spot.
+Avvia	Mulai
+Esci	Keluar
+Stazioni che tu ricevi: bordo viola	Stasiun yang Anda terima: tepi ungu
+Decodifiche di WSJT-X/JTDX/MSHV via UDP: nuvoletta ovale	Dekode WSJT-X/JTDX/MSHV lewat UDP: awan oval
+prop.kc2g.com: curve della MUF(3000) o della foF2	prop.kc2g.com: kurva MUF(3000) atau foF2
+Solo EME (PROP_MODE)	Hanya EME (PROP_MODE)
+Legge qlog.db (copia in sola lettura)	Membaca qlog.db (salinan hanya-baca)
+Ricezione su	Terima di
+Ritrasmetti a	Teruskan ke
+Altre (facolt.)	Lainnya (ops.)
+La destinazione principale è di solito QLog; nelle altre host:porta separati da virgola (GridTracker, JTAlert). Passano anche i QSO registrati, quindi QLog scrive il QSO da solo; le risposte tornano al programma digitale. In QLog metti come porta WSJT-X la porta di ritrasmissione.	Tujuan utama biasanya QLog; di yang lain host:port dipisahkan koma (GridTracker, JTAlert). QSO yang dicatat juga lewat, sehingga QLog mencatat QSO sendiri; jawaban kembali ke program digital. Di QLog atur port WSJT-X sama dengan port penerusan.
+Vuoto = posizione standard di QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Si legge una copia: il file di QLog non viene mai modificato.	Kosong = lokasi standar QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Yang dibaca adalah salinan: file QLog tidak pernah diubah.
+Nome utente LoTW:	Nama pengguna LoTW:
+Password LoTW:	Kata sandi LoTW:
+Solo nominativo (facoltativo):	Hanya callsign (opsional):
+Mi sentono	Mendengar saya
+Sento io	Saya dengar
+Mie decodifiche (UDP)	Dekode saya (UDP)
+mi sentono	mendengar saya
+sento io	saya dengar
+mie decodifiche (UDP)	dekode saya (UDP)
+lavorato	dikerjakan
+tutte 80-10 m	semua 80-10 m
+non ancora controllato	belum diperiksa
+PSKReporter — Philip Gladstone N1DQ: flusso MQTT (mqtt.pskreporter.info) e interfaccia HTTP	PSKReporter — Philip Gladstone N1DQ: aliran MQTT (mqtt.pskreporter.info) dan antarmuka HTTP
+Cluster DM4X (dm4x.ddns.net:8500): spot PSKReporter in forma di cluster	Kluster DM4X (dm4x.ddns.net:8500): spot PSKReporter dalam bentuk kluster
+DXMAPS — Gabriel Sampol EA6VQ: secondo cluster con rete skimmer (dxmaps.com:7300)	DXMAPS — Gabriel Sampol EA6VQ: kluster kedua dengan jaringan skimmer (dxmaps.com:7300)
+prop.kc2g.com — Andrew Rodland KC2G: mappe di propagazione MUF/foF2 (GeoJSON)	prop.kc2g.com — Andrew Rodland KC2G: peta propagasi MUF/foF2 (GeoJSON)
+NOAA Space Weather Prediction Center: modello OVATION Prime dell'ovale aurorale	NOAA Space Weather Prediction Center: model OVATION Prime oval aurora
+ARRL Logbook of The World (LoTW): report ADIF delle conferme	ARRL Logbook of The World (LoTW): laporan ADIF konfirmasi
+QLog — Ladislav Foldyna OK1MLG: struttura del database qlog.db	QLog — Ladislav Foldyna OK1MLG: struktur basis data qlog.db
+Protocollo UDP di WSJT-X (K1JT e WSJT Development Group); JTDX; MSHV (LZ2HV)	Protokol UDP WSJT-X (K1JT dan WSJT Development Group); JTDX; MSHV (LZ2HV)
+CALL3.TXT: WSJT-X Improved (DG2YCB), CALL3 EME di W7GJ, grid_data.bin di JTDX, database di MSHV-IC8TEM e LIVETROPOVHF	CALL3.TXT: WSJT-X Improved (DG2YCB), CALL3 EME dari W7GJ, grid_data.bin dari JTDX, basis data MSHV-IC8TEM dan LIVETROPOVHF
+G7VRD: ricerca dei locatori per nominativo (api.g7vrd.co.uk)	G7VRD: pencarian lokator berdasarkan callsign (api.g7vrd.co.uk)
+cty.dat — Jim Reisert AD1C (country-files.com): prefissi e paesi DXCC	cty.dat — Jim Reisert AD1C (country-files.com): prefiks dan negara DXCC
+Natural Earth: coste e confini (pubblico dominio)	Natural Earth: garis pantai dan perbatasan (domain publik)
+Codice ripreso da LIVETROPOVHF e LoTW Grid Map v2 (IC8TEM)	Kode diambil dari LIVETROPOVHF dan LoTW Grid Map v2 (IC8TEM)

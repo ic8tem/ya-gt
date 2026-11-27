@@ -109,6 +109,7 @@ public sealed class AppState
         Http = new HttpClient { Timeout = TimeSpan.FromSeconds(60) };
         Http.DefaultRequestHeaders.UserAgent.ParseAdd("YA-GT/" + Version + " (+IC8TEM; ic8tem@gmail.com)");
         LoadSettings();
+        L.Init(S.Get("lingua", ""));   // 1.1.0: lingua dell'interfaccia (vuota = quella del sistema)
     }
 
     public static string Version
@@ -238,6 +239,7 @@ public sealed class AppState
         ApplySources();
         ScheduleTimer();
         UpdateMessage = Updater.CleanAfterStart();
+        
         Updater.Start();
     }
 
@@ -401,7 +403,7 @@ public sealed class AppState
             var logQ = LogQsos();
             f.Squares = Lotw.BuildSquares(tag, LotwOnlyConfirmed, LotwOnlyEme, logQ.Count > 0 ? logQ : null);
             f.SquaresGrey = LotwLog.GreyTab(tag);
-            f.SquaresTitle = tag == "ALL" ? "tutte le bande" : tag == "G:1" ? "HF 80-10 m" : tag == "G:2" ? "VHF" : tag == "G:3" ? "UHF e oltre" : tag.Substring(2);
+            f.SquaresTitle = tag == "ALL" ? L.T("tutte le bande") : tag == "G:1" ? "HF 80-10 m" : tag == "G:2" ? "VHF" : tag == "G:3" ? L.T("UHF e oltre") : tag.Substring(2);
         }
         f.Stats = ComputeStats(f);
         if (LayerQLog)
@@ -458,7 +460,7 @@ public sealed class AppState
 
     FrameStats ComputeStats(Frame f)
     {
-        var s = new FrameStats { Band = BandFilter == "" ? "tutte le bande" : BandFilter };
+        var s = new FrameStats { Band = BandFilter == "" ? L.T("tutte le bande") : BandFilter };
         s.HeardMe = Dir(f.HeardMe.Select(x => (x.Other, x.Pos, x.PosApprox, x.Km, x.Snr)));
         s.IHeard = Dir(f.IHeard.Select(x => (x.Other, x.Pos, x.PosApprox, x.Km, x.Snr)));
         s.Decodes = Dir(f.Decodes.Select(x => (x.Call, x.Pos, x.PosApprox, x.Km, (int?)x.Snr)));
@@ -481,13 +483,13 @@ public sealed class AppState
     public string StatusText()
     {
         var parts = new List<string>();
-        parts.Add($"{Current.HeardMe.Count} mi sentono · {Current.IHeard.Count} sento · {Current.Decodes.Count} decodifiche");
+        parts.Add(L.F("{0} mi sentono · {1} sento · {2} decodifiche", Current.HeardMe.Count, Current.IHeard.Count, Current.Decodes.Count));
         if (CallDb.Ready) parts.Add($"CALL3.TXT {CallDb.Count:N0}");
         if (LayerKc2g && Kc2g.Status != "") parts.Add(Kc2g.Status);
         if (LayerAurora && Aurora.Status != "") parts.Add(Aurora.Status);
         if (LayerQLog && QLog.Status != "") parts.Add(QLog.Status);
         if (LayerLotw && Lotw.Status != "") parts.Add(Lotw.Status);
-        if (G7Lookup.Pending > 0) parts.Add($"G7VRD in coda {G7Lookup.Pending}");
+        if (G7Lookup.Pending > 0) parts.Add(L.F("G7VRD in coda {0}", G7Lookup.Pending));
         return string.Join("  ·  ", parts);
     }
 
@@ -501,7 +503,7 @@ public sealed class AppState
             On(Feeds["rbn"].Wanted, Feeds["rbn"].Connected || Feeds["rbn2"].Connected, "RBN"),
             On(Feeds["dm4x"].Wanted, Feeds["dm4x"].Connected, "DM4X"),
             On(Feeds["cl2"].Wanted, Feeds["cl2"].Connected, "DXMAPS" + (Cl2Skimmer ? "+skimmer" : "")),
-            UdpEnabled ? (Udp.Running ? $"UDP {Udp.ListenPort} ●" + (Udp.Forward ? $" ⇄ {Udp.ForwardPort} inoltro {Udp.Forwarded}/{Udp.Returned}" : "") + (Udp.Logged > 0 ? $" · QSO {Udp.Logged}" : "") + (Udp.LastError != "" ? " ⚠ " + Udp.LastError : "") : "UDP ○ " + Udp.LastError) : "",
+            UdpEnabled ? (Udp.Running ? $"UDP {Udp.ListenPort} ●" + (Udp.Forward ? L.F(" ⇄ {0} inoltro {1}/{2}", Udp.ForwardPort, Udp.Forwarded, Udp.Returned) : "") + (Udp.Logged > 0 ? $" · QSO {Udp.Logged}" : "") + (Udp.LastError != "" ? " ⚠ " + Udp.LastError : "") : "UDP ○ " + Udp.LastError) : "",
         };
         return string.Join("   ", l.Where(x => x != ""));
     }

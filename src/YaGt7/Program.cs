@@ -81,17 +81,25 @@ public static class W
     {
         var c = new CheckBox { Text = t, Checked = value, AutoSize = true, Font = Ui, ForeColor = C(Th.Text), Margin = new Padding(3, 1, 3, 1) };
         c.CheckedChanged += (_, _) => changed(c.Checked);
-        if (tip != null && tipText != null) tip.SetToolTip(c, tipText);
+        if (tip != null && tipText != null) tip.SetToolTip(c, L.T(tipText));
         return c;
     }
 
     public static ComboBox Combo(IEnumerable<string> items, int selected, Action<int> changed, int width)
     {
         var c = new ComboBox { DropDownStyle = ComboBoxStyle.DropDownList, Font = Ui, Width = width, Margin = new Padding(3, 3, 3, 3) };
-        foreach (var i in items) c.Items.Add(i);
+        foreach (var i in items) c.Items.Add(L.T(i));
         if (c.Items.Count > 0) c.SelectedIndex = Math.Max(0, Math.Min(c.Items.Count - 1, selected));
         c.SelectedIndexChanged += (_, _) => { if (c.SelectedIndex >= 0) changed(c.SelectedIndex); };
         return c;
+    }
+
+    /// <summary>Traduce i testi fissi di una finestra appena costruita (titolo, scritte, pulsanti, caselle): la chiave è la frase italiana.</summary>
+    public static void Translate(Control root)
+    {
+        if (L.Code == "it" || root == null) return;
+        root.Text = L.T(root.Text);
+        foreach (Control c in root.Controls) if (!(c is TextBox) && !(c is ComboBox)) Translate(c);
     }
 
     public static void Open(string url) { try { System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(url) { UseShellExecute = true }); } catch { } }

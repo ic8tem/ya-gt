@@ -28,7 +28,7 @@ public static class Updater
     const string KeyY = "fPvsImUDR7YedhC5jCoiPVvx2DVByT1yVTBvq9xcpnk=";
     const long MaxPackage = 400L * 1024 * 1024;
 
-    public static string Status { get; private set; } = "non ancora controllato";
+    public static string Status { get; private set; } = "non ancora controllato";   // tradotto quando si mostra (L.T)
     public static event Action<string> Changed;
     /// <summary>Versione nuova installata: entra in funzione al prossimo avvio.</summary>
     public static event Action<string> Ready;
@@ -77,13 +77,13 @@ public static class Updater
 
     public static void Start()
     {
-        if (InTest) { Set("spento durante le prove automatiche"); return; }
-        if (!Enabled) { Set("spento nelle Impostazioni"); return; }
-        if (!Writable()) { Set("spento: la cartella del programma non è scrivibile (aggiornare a mano)"); return; }
+        if (InTest) { Set(L.T("spento durante le prove automatiche")); return; }
+        if (!Enabled) { Set(L.T("spento nelle Impostazioni")); return; }
+        if (!Writable()) { Set(L.T("spento: la cartella del programma non è scrivibile (aggiornare a mano)")); return; }
         try
         {
             _single = new Mutex(true, "YA-GT-aggiornamento", out bool first);
-            if (!first) { Set("gestito da un'altra finestra di YA-GT già aperta"); return; }
+            if (!first) { Set(L.T("gestito da un'altra finestra di YA-GT già aperta")); return; }
         }
         catch { }
         _timer = new Timer(_ => { var t = CheckAsync(false); }, null, TimeSpan.FromSeconds(10), TimeSpan.FromMinutes(IntervalMinutes));
@@ -156,7 +156,7 @@ public static class Updater
                         if (rs.StatusCode == System.Net.HttpStatusCode.NotModified) json = _lastJson;
                         else
                         {
-                            if (rs.StatusCode == System.Net.HttpStatusCode.NotFound) { Set("nessuna versione pubblicata su github.com/" + Repo); return; }
+                            if (rs.StatusCode == System.Net.HttpStatusCode.NotFound) { Set(L.F("nessuna versione pubblicata su {0}", "github.com/" + Repo)); return; }
                             rs.EnsureSuccessStatusCode();
                             json = await Compat.ReadString(rs.Content, CancellationToken.None);
                             _etag = rs.Headers.ETag?.ToString();
@@ -173,22 +173,22 @@ public static class Updater
                         assets[a.GetProperty("name").GetString()] = a.GetProperty("browser_download_url").GetString();
                 }
                 Version latest = Ver(tag), current = Ver(AppState.Version);
-                if (latest == null || current == null) { Set("versione pubblicata non leggibile: " + tag); return; }
-                if (latest <= current) { Set((manual ? "hai già l'ultima versione (" : "aggiornato: l'ultima versione è la ") + latest.ToString(3) + (manual ? ")" : " (" + DateTime.Now.ToString("HH:mm") + ")")); return; }
+                if (latest == null || current == null) { Set(L.F("versione pubblicata non leggibile: {0}", tag)); return; }
+                if (latest <= current) { Set(manual ? L.F("hai già l'ultima versione ({0})", latest.ToString(3)) : L.F("aggiornato: l'ultima versione è la {0} ({1})", latest.ToString(3), DateTime.Now.ToString("HH:mm"))); return; }
                 var name = PackageName(latest);
-                if (name == null) { Set("versione " + latest.ToString(3) + " disponibile su github.com/" + Repo + "/releases"); return; }
-                if (!assets.TryGetValue(name, out var urlPkg)) { Set("versione " + latest.ToString(3) + " pubblicata, ma senza il pacchetto " + name); return; }
+                if (name == null) { Set(L.F("versione {0} disponibile su {1}", latest.ToString(3), "github.com/" + Repo + "/releases")); return; }
+                if (!assets.TryGetValue(name, out var urlPkg)) { Set(L.F("versione {0} pubblicata, ma senza il pacchetto {1}", latest.ToString(3), name)); return; }
                 if (!assets.TryGetValue(name + ".sha256", out var urlSha) || !assets.TryGetValue(name + ".sig", out var urlSig))
-                { Set("versione " + latest.ToString(3) + ": mancano impronta o firma del pacchetto, non si installa"); return; }
+                { Set(L.F("versione {0}: mancano impronta o firma del pacchetto, non si installa", latest.ToString(3))); return; }
                 Directory.CreateDirectory(UpdDir);
                 var pkg = Path.Combine(UpdDir, name);
-                Set("scarico la versione " + latest.ToString(3) + " (" + name + ")");
+                Set(L.F("scarico la versione {0} ({1})", latest.ToString(3), name));
                 byte[] data;
                 using (var cts = new CancellationTokenSource(TimeSpan.FromMinutes(10)))
                 using (var rs = await http.GetAsync(urlPkg, HttpCompletionOption.ResponseHeadersRead, cts.Token))
                 {
                     rs.EnsureSuccessStatusCode();
-                    if (rs.Content.Headers.ContentLength > MaxPackage) { Set("pacchetto troppo grande, non si scarica"); return; }
+                    if (rs.Content.Headers.ContentLength > MaxPackage) { Set(L.T("pacchetto troppo grande, non si scarica")); return; }
                     using (var s = await rs.Content.ReadAsStreamAsync())
                     using (var ms = new MemoryStream())
                     {
@@ -204,14 +204,14 @@ public static class Updater
                 var expected = (await Compat.ReadString((await http.GetAsync(urlSha)).EnsureSuccessStatusCode().Content, CancellationToken.None)).Trim().Split(' ', '\t', '\r', '\n')[0].ToLowerInvariant();
                 string actual;
                 using (var sha = SHA256.Create()) actual = Hex(sha.ComputeHash(data));
-                if (actual != expected) { Set("versione " + latest.ToString(3) + ": impronta SHA-256 diversa, pacchetto scartato"); return; }
+                if (actual != expected) { Set(L.F("versione {0}: impronta SHA-256 diversa, pacchetto scartato", latest.ToString(3))); return; }
                 var sig = await Compat.ReadString((await http.GetAsync(urlSig)).EnsureSuccessStatusCode().Content, CancellationToken.None);
-                if (!SignatureValid(data, sig)) { Set("versione " + latest.ToString(3) + ": FIRMA NON VALIDA, pacchetto scartato"); return; }
+                if (!SignatureValid(data, sig)) { Set(L.F("versione {0}: FIRMA NON VALIDA, pacchetto scartato", latest.ToString(3))); return; }
                 File.WriteAllBytes(pkg, data);
                 Install(pkg, current.ToString(3), latest.ToString(3));
             }
         }
-        catch (Exception ex) { Set("controllo non riuscito: " + ex.Message + " (riprovo fra " + IntervalMinutes + " minuti)"); }
+        catch (Exception ex) { Set(L.F("controllo non riuscito: {0} (riprovo fra {1} minuti)", ex.Message, IntervalMinutes)); }
         finally { Interlocked.Exchange(ref _busy, 0); }
     }
 
@@ -235,7 +235,7 @@ public static class Updater
         if (pkg.EndsWith(".tar.gz", StringComparison.OrdinalIgnoreCase))
         {
 #if NETFRAMEWORK
-            Set("pacchetto tar.gz non gestito su questa piattaforma"); return;
+            Set(L.T("pacchetto tar.gz non gestito su questa piattaforma")); return;
 #else
             using (var fs = File.OpenRead(pkg))
             using (var gz = new GZipStream(fs, CompressionMode.Decompress))
@@ -268,8 +268,8 @@ public static class Updater
                 else added.Add(dest);
                 File.Copy(f, dest, false);
             }
-            File.WriteAllText(Path.Combine(UpdDir, "applicato.txt"), "aggiornato da " + oldV + " a " + newV + " il " + DateTime.Now.ToString("dd/MM/yyyy HH:mm"));
-            Set("versione " + newV + " installata: entra in funzione al prossimo avvio di YA-GT");
+            File.WriteAllText(Path.Combine(UpdDir, "applicato.txt"), L.F("aggiornato da {0} a {1} il {2}", oldV, newV, DateTime.Now.ToString("dd/MM/yyyy HH:mm")));
+            Set(L.F("versione {0} installata: entra in funzione al prossimo avvio di YA-GT", newV));
             Stop();
             if (_announced != newV) { _announced = newV; try { Ready?.Invoke(newV); } catch { } }
         }
@@ -277,7 +277,7 @@ public static class Updater
         {
             foreach (var d in added) try { File.Delete(d); } catch { }
             foreach (var d in renamed) try { if (File.Exists(d)) File.Delete(d); File.Move(d + ".old", d); } catch { }
-            Set("installazione della " + newV + " non riuscita, rimessa la " + oldV + ": " + ex.Message);
+            Set(L.F("installazione della {0} non riuscita, rimessa la {1}: {2}", newV, oldV, ex.Message));
         }
         finally { try { Directory.Delete(ext, true); } catch { } try { File.Delete(pkg); } catch { } }
     }

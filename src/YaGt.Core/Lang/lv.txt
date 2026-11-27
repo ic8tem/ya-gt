@@ -1,0 +1,199 @@
+# YA-GT — lv — traduzione dell'interfaccia: <frase italiana><TAB><traduzione>; \n = a capo. Generato da tools/lingue (armonizzazione 27/11/2026).
+YA-GT — aggiornamento	YA-GT — atjaunināšana
+Apri file ADIF del log	Atvērt žurnāla ADIF failu
+È stata installata la versione {0} di YA-GT.\nEntra in funzione al prossimo avvio del programma.	YA-GT versija {0} ir instalēta.\nTā stāsies spēkā nākamajā programmas palaišanas reizē.
+{0:HH:mm:ss} UTC   ·   prossimo aggiornamento tra {1}	{0:HH:mm:ss} UTC   ·   nākamā atjaunināšana pēc {1}
+Database di QLog (qlog.db)	QLog datubāze (qlog.db)
+Porta UDP non valida.	Nederīgs UDP ports.
+Indirizzo d'ascolto non valido.	Nederīga klausīšanās adrese.
+Porta di ritrasmissione non valida.	Nederīgs pārsūtīšanas ports.
+La porta di ritrasmissione deve essere diversa da quella di ricezione.	Pārsūtīšanas portam jāatšķiras no uztveršanas porta.
+Inserisci nome utente e password di LoTW.	Ievadiet LoTW lietotājvārdu un paroli.
+Aggiornamento automatico dal GitHub (ogni {0} minuti)	Automātiska atjaunināšana no GitHub (ik pēc {0} minūtēm)
+Stato: {0}	Statuss: {0}
+Ritrasmissione: {0}	Pārsūtīšana: {0}
+Errore di collegamento: {0}	Savienojuma kļūda: {0}
+Nominativo non valido.	Nederīgs izsaukuma signāls.
+Il locatore deve avere 6 caratteri, es. JN70cn.	Lokatoram jābūt 6 rakstzīmēm, piem., JN70cn.
+Opacità	Necaurredzamība
+Banda scelta in alto	Augšā izvēlētā josla
+Tutte le bande	Visas joslas
+UHF e oltre	UHF un augstāk
+Tutti i file	Visi faili
+nessuna stazione	nav staciju
+Fonti:	Avoti:
+nessun QSO (scarica da LoTW, apri un ADIF o attiva QLog)	nav QSO (lejupielādējiet no LoTW, atveriet ADIF vai ieslēdziet QLog)
+confermato su tutte le bande 80-10 m	apstiprināts visās joslās 80-10 m
+confermato LoTW	apstiprināts LoTW
+confermato con QSL	apstiprināts ar QSL
+lavorato, non confermato	strādāts, nav apstiprināts
+posizione del paese (cty.dat)	valsts atrašanās vieta (cty.dat)
+Mi sente	Dzird mani
+Sento	Dzirdu
+posizione da CALL3.TXT	atrašanās vieta no CALL3.TXT
+Mia decodifica	Mana dekodēšana
+SNR dB (RBN CW: dB sul rumore)	SNR dB (RBN CW: dB virs trokšņa)
+{0} stazioni · {1} quadrati · {2} paesi	{0} stacijas · {1} kvadrāti · {2} valstis
+più lontana: {0} {1:N0} km	tālākā: {0} {1:N0} km
+migliore: {0} {1}	labākā: {0} {1}
+Statistiche · {0} · ultimi {1}	Statistika · {0} · pēdējās {1}
+Quadrati · {0}	Kvadrāti · {0}
+lavorati {0} · confermati {1} ({2:0}%)	strādāti {0} · apstiprināti {1} ({2:0}%)
+LoTW {0} · solo QSL {1} · non confermati {2}	LoTW {0} · tikai QSL {1} · neapstiprināti {2}
+confermati su tutte le bande 80-10 m: {0}	apstiprināti visās joslās 80-10 m: {0}
+Aggiornato {0:HH:mm} UTC	Atjaunināts {0:HH:mm} UTC
+KC2G ionosonda {0}: {1} {2:0.0} MHz (affidabilità {3:0.00})	KC2G jonozonde {0}: {1} {2:0.0} MHz (uzticamība {3:0.00})
+spento durante le prove automatiche	izslēgts automātisko testu laikā
+spento nelle Impostazioni	izslēgts Iestatījumos
+spento: la cartella del programma non è scrivibile (aggiornare a mano)	izslēgts: programmas mapē nevar rakstīt (atjauniniet manuāli)
+gestito da un'altra finestra di YA-GT già aperta	pārvalda cits jau atvērts YA-GT logs
+pacchetto troppo grande, non si scarica	pakotne ir pārāk liela, netiek lejupielādēta
+pacchetto tar.gz non gestito su questa piattaforma	tar.gz pakotne šajā platformā netiek atbalstīta
+nessuna versione pubblicata su {0}	neviena versija nav publicēta vietnē {0}
+versione pubblicata non leggibile: {0}	publicētā versija nav nolasāma: {0}
+hai già l'ultima versione ({0})	jums jau ir jaunākā versija ({0})
+aggiornato: l'ultima versione è la {0} ({1})	atjaunināts: jaunākā versija ir {0} ({1})
+versione {0} disponibile su {1}	versija {0} pieejama vietnē {1}
+versione {0} pubblicata, ma senza il pacchetto {1}	versija {0} publicēta, bet bez pakotnes {1}
+versione {0}: mancano impronta o firma del pacchetto, non si installa	versija {0}: trūkst pakotnes nospieduma vai paraksta, netiek instalēta
+scarico la versione {0} ({1})	lejupielādē versiju {0} ({1})
+versione {0}: impronta SHA-256 diversa, pacchetto scartato	versija {0}: atšķiras SHA-256 nospiedums, pakotne noraidīta
+versione {0}: FIRMA NON VALIDA, pacchetto scartato	versija {0}: NEDERĪGS PARAKSTS, pakotne noraidīta
+controllo non riuscito: {0} (riprovo fra {1} minuti)	pārbaude neizdevās: {0} (atkārtošu pēc {1} minūtēm)
+aggiornato da {0} a {1} il {2}	atjaunināts no {0} uz {1} {2}
+versione {0} installata: entra in funzione al prossimo avvio di YA-GT	versija {0} instalēta: stāsies spēkā nākamajā YA-GT palaišanas reizē
+installazione della {0} non riuscita, rimessa la {1}: {2}	versijas {0} instalēšana neizdevās, atjaunota {1}: {2}
+LoTW (copia salvata)	LoTW (saglabāta kopija)
+Collegamento a LoTW in corso…	Savienojas ar LoTW…
+LoTW ha rifiutato l'accesso: controlla nome utente e password.	LoTW atteica piekļuvi: pārbaudiet lietotājvārdu un paroli.
+Risposta inattesa da LoTW (non è un file ADIF). Riprova più tardi.	Negaidīta LoTW atbilde (nav ADIF fails). Mēģiniet vēlāk.
+Il file ricevuto da LoTW sembra incompleto. Riprova.	No LoTW saņemtais fails šķiet nepilnīgs. Mēģiniet vēlreiz.
+{0}: {1} QSO letti, {2} in totale	{0}: nolasīti {1} QSO, kopā {2}
+Ricezione dati da LoTW: {0:N0} kB…	Saņem datus no LoTW: {0:N0} kB…
+tutte le bande	visas joslas
+{0} mi sentono · {1} sento · {2} decodifiche	{0} dzird mani · {1} dzirdu · {2} dekodējumi
+G7VRD in coda {0}	G7VRD rindā {0}
+ ⇄ {0} inoltro {1}/{2}	 ⇄ {0} pārsūtīšana {1}/{2}
+KC2G {0}: {1} curve, {2} ionosonde	KC2G {0}: {1} līknes, {2} jonozondes
+Aurora NOAA: previsione {0}	NOAA polārblāzma: prognoze {0}
+Proiezione	Projekcija
+Mercatore	Merkatora
+Azimutale	Azimutālā
+Aggiornamento	Atjaunināšana
+Banda	Josla
+Tutte	Visas
+Spot degli ultimi	Pēdējo spoti
+Aggiorna ora	Atjaunināt tagad
+Vista intera	Pilns skats
+Impostazioni	Iestatījumi
+Livelli della mappa	Kartes slāņi
+Statistiche (in alto a destra)	Statistika (augšā labajā pusē)
+Chi mi sente (spot)	Kas mani dzird (spoti)
+Stazioni che ricevono il tuo segnale: fumetto con l'SNR, bordo blu	Stacijas, kas uztver jūsu signālu: burbulis ar SNR, zila mala
+Chi sento io (spot)	Ko es dzirdu (spoti)
+Stazioni che tu ricevi (PSKReporter, tuo skimmer RBN): bordo viola	Stacijas, ko jūs uztverat (PSKReporter, jūsu RBN skimmers): violeta mala
+Le mie decodifiche (UDP)	Mani dekodējumi (UDP)
+Decodifiche di WSJT-X/JTDX/MSHV ricevute via UDP: nuvoletta ovale	WSJT-X/JTDX/MSHV dekodējumi caur UDP: ovāls mākonis
+Nominativo nei fumetti	Izsaukuma signāls burbuļos
+Percorsi (cerchio massimo)	Ceļi (lielais loks)
+Griglia Maidenhead	Maidenhead režģis
+Greyline (giorno/notte)	Greyline (diena/nakts)
+Propagazione KC2G	KC2G izplatīšanās
+prop.kc2g.com: curve della MUF(3000) o della foF2 e valori delle ionosonde	prop.kc2g.com: MUF(3000) vai foF2 līknes un jonozonžu vērtības
+Aurora NOAA (OVATION)	NOAA polārblāzma (OVATION)
+Probabilità di aurora del NOAA SWPC, ridisegnata in Mercatore e in azimutale	NOAA SWPC polārblāzmas varbūtība, pārzīmēta Merkatora un azimutālajā projekcijā
+Quadrati (LoTW + QLog)	Kvadrāti (LoTW + QLog)
+Arancio = lavorato, verde = LoTW, blu = QSL, grigio = confermato su tutte le bande 80-10 m (esclusi i 60 m)	Oranžs = strādāts, zaļš = LoTW, zils = QSL, pelēks = apstiprināts visās joslās 80-10 m (izņemot 60 m)
+Solo confermati	Tikai apstiprinātie
+Solo EME (PROP__MODE)	Tikai EME (PROP__MODE)
+Scarica da LoTW…	Lejupielādēt no LoTW…
+Apri ADIF…	Atvērt ADIF…
+QSO del log QLog	QLog žurnāla QSO
+Legge qlog.db (copia in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato	Nolasa qlog.db (tikai lasāma kopija): zaļi kvadrātiņi = LoTW, zili = QSL, oranži = strādāts
+qlog.db: posizione standard di QLog	qlog.db: QLog standarta atrašanās vieta
+Fonti degli spot	Spotu avoti
+mqtt.pskreporter.info, più lo storico dell'ultima ora via HTTP	mqtt.pskreporter.info, plus pēdējās stundas vēsture caur HTTP
+telnet.reversebeacon.net porte 7000 (CW/RTTY) e 7001 (FT8/FT4)	telnet.reversebeacon.net porti 7000 (CW/RTTY) un 7001 (FT8/FT4)
+DM4X (cluster telnet)	DM4X (telnet klasteris)
+dm4x.ddns.net:8500, spot PSKReporter in forma di cluster	dm4x.ddns.net:8500, PSKReporter spoti klastera formā
+DXMAPS (2° cluster)	DXMAPS (2. klasteris)
+Rete skimmer	Skimmeru tīkls
+Invia set/skimmer (o set/noskimmer) al secondo cluster	Sūta set/skimmer (vai set/noskimmer) otrajam klasterim
+Decodifiche UDP (WSJT-X/MSHV)	UDP dekodējumi (WSJT-X/MSHV)
+Porta e inoltro UDP in Impostazioni	UDP ports un pārsūtīšana Iestatījumos
+Tema	Tēma
+Chiaro (YA-NEC)	Gaišā (YA-NEC)
+Notte	Nakts
+YA-GT — impostazioni	YA-GT — iestatījumi
+Rimbalzo UDP: inoltra i pacchetti e riporta indietro le risposte	UDP retranslācija: pārsūta paketes un nosūta atpakaļ atbildes
+facoltative: 127.0.0.1:2333, 192.168.1.20:2237	neobligāti: 127.0.0.1:2333, 192.168.1.20:2237
+Decodifiche UDP (protocollo WSJT-X: WSJT-X, JTDX, MSHV)	UDP dekodējumi (WSJT-X protokols: WSJT-X, JTDX, MSHV)
+Ricezione: ascolta su	Uztveršana: klausīties uz
+Per l'indirizzo multicast (es. 224.0.0.1) YA-GT si unisce al gruppo; con 127.0.0.1 la porta non può essere la stessa di un altro programma in ascolto.	Multiraides adresei (piem., 224.0.0.1) YA-GT pievienojas grupai; ar 127.0.0.1 ports nedrīkst būt tāds pats kā citai klausošai programmai.
+Ritrasmissione: verso	Pārsūtīšana: uz
+Altre destinazioni	Citi galamērķi
+La destinazione principale è di solito QLog; nelle altre puoi aggiungere host:porta separati da virgola (GridTracker, JTAlert). I pacchetti passano identici, QSO registrati compresi, quindi QLog scrive il QSO da solo; le risposte (doppio clic, evidenziazioni) tornano al programma digitale. In QLog metti come porta WSJT-X la stessa porta di ritrasmissione.	Galvenais galamērķis parasti ir QLog; citos varat pievienot host:port, atdalot ar komatiem (GridTracker, JTAlert). Paketes iziet nemainītas, ieskaitot reģistrētos QSO, tāpēc QLog pats reģistrē QSO; atbildes (dubultklikšķis, izcēlumi) atgriežas digitālajā programmā. QLog iestatiet kā WSJT-X portu to pašu pārsūtīšanas portu.
+Log di QLog	QLog žurnāls
+Sfoglia…	Pārlūkot…
+Vuoto = posizione standard di QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Il file di QLog non viene mai modificato: si legge una copia.	Tukšs = QLog standarta atrašanās vieta (%LOCALAPPDATA%\hamradio\QLog\qlog.db). QLog fails nekad netiek mainīts: tiek nolasīta kopija.
+Aggiornamento automatico	Automātiska atjaunināšana
+Controlla adesso	Pārbaudīt tagad
+Lingua	Valoda
+La nuova lingua vale dal prossimo avvio del programma.	Jaunā valoda ir spēkā no nākamās programmas palaišanas.
+Salva	Saglabāt
+Annulla	Atcelt
+Scarica da LoTW	Lejupielādēt no LoTW
+Ricorda il nome utente (la password non viene mai salvata)	Atcerēties lietotājvārdu (parole nekad netiek saglabāta)
+Vengono scaricati tutti i QSO caricati su LoTW, con i dettagli delle conferme (locatore del corrispondente). Con log grandi LoTW può impiegare qualche minuto.	Tiek lejupielādēti visi uz LoTW augšupielādētie QSO ar apstiprinājumu informāciju (korespondenta lokators). Lieliem žurnāliem LoTW var vajadzēt dažas minūtes.
+Nome utente LoTW	LoTW lietotājvārds
+Password LoTW	LoTW parole
+Solo nominativo (facoltativo)	Tikai izsaukuma signāls (neobligāti)
+Scarica	Lejupielādēt
+Spot di un nominativo, LoTW, QLog e decodifiche UDP su una mappa a livelli	Izsaukuma signāla spoti, LoTW, QLog un UDP dekodējumi slāņainā kartē
+Contatti	Kontakti
+Sostieni il progetto: ko-fi.com/ic8tem	Atbalstiet projektu: ko-fi.com/ic8tem
+Riconoscimenti (credits)	Pateicības (credits)
+I dati restano accanto al programma (YA-GT.ini, CALL3.TXT, cartella Dati): nulla in AppData. La password LoTW non viene mai salvata.	Dati paliek blakus programmai (YA-GT.ini, CALL3.TXT, mape Dati): nekas AppData. LoTW parole nekad netiek saglabāta.
+Chiudi	Aizvērt
+YA-GT — avvio	YA-GT — palaišana
+Spot, LoTW, QLog e decodifiche sulla mappa — di Costantino IC8TEM	Spoti, LoTW, QLog un dekodējumi kartē — Costantino IC8TEM
+Nominativo	Izsaukuma signāls
+Locatore (6 caratteri)	Lokators (6 rakstzīmes)
+Il locatore fa da centro della mappa azimutale e serve a calcolare distanza e azimut di ogni spot.	Lokators ir azimutālās kartes centrs, un ar to aprēķina katra spota attālumu un azimutu.
+Avvia	Sākt
+Esci	Iziet
+Stazioni che tu ricevi: bordo viola	Stacijas, ko jūs uztverat: violeta mala
+Decodifiche di WSJT-X/JTDX/MSHV via UDP: nuvoletta ovale	WSJT-X/JTDX/MSHV dekodējumi caur UDP: ovāls mākonis
+prop.kc2g.com: curve della MUF(3000) o della foF2	prop.kc2g.com: MUF(3000) vai foF2 līknes
+Solo EME (PROP_MODE)	Tikai EME (PROP_MODE)
+Legge qlog.db (copia in sola lettura)	Nolasa qlog.db (tikai lasāma kopija)
+Ricezione su	Uztveršana uz
+Ritrasmetti a	Pārsūtīt uz
+Altre (facolt.)	Citi (neobl.)
+La destinazione principale è di solito QLog; nelle altre host:porta separati da virgola (GridTracker, JTAlert). Passano anche i QSO registrati, quindi QLog scrive il QSO da solo; le risposte tornano al programma digitale. In QLog metti come porta WSJT-X la porta di ritrasmissione.	Galvenais galamērķis parasti ir QLog; citos host:port, atdalot ar komatiem (GridTracker, JTAlert). Iziet arī reģistrētie QSO, tāpēc QLog pats reģistrē QSO; atbildes atgriežas digitālajā programmā. QLog iestatiet kā WSJT-X portu pārsūtīšanas portu.
+Vuoto = posizione standard di QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Si legge una copia: il file di QLog non viene mai modificato.	Tukšs = QLog standarta atrašanās vieta (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Tiek nolasīta kopija: QLog fails nekad netiek mainīts.
+Nome utente LoTW:	LoTW lietotājvārds:
+Password LoTW:	LoTW parole:
+Solo nominativo (facoltativo):	Tikai izsaukuma signāls (neobligāti):
+Mi sentono	Dzird mani
+Sento io	Dzirdu
+Mie decodifiche (UDP)	Mani dekodējumi (UDP)
+mi sentono	dzird mani
+sento io	dzirdu
+mie decodifiche (UDP)	mani dekodējumi (UDP)
+lavorato	strādāts
+tutte 80-10 m	visas 80-10 m
+non ancora controllato	vēl nav pārbaudīts
+PSKReporter — Philip Gladstone N1DQ: flusso MQTT (mqtt.pskreporter.info) e interfaccia HTTP	PSKReporter — Philip Gladstone N1DQ: MQTT plūsma (mqtt.pskreporter.info) un HTTP saskarne
+Cluster DM4X (dm4x.ddns.net:8500): spot PSKReporter in forma di cluster	Klasteris DM4X (dm4x.ddns.net:8500): PSKReporter spoti klastera formā
+DXMAPS — Gabriel Sampol EA6VQ: secondo cluster con rete skimmer (dxmaps.com:7300)	DXMAPS — Gabriel Sampol EA6VQ: otrais klasteris ar skimmeru tīklu (dxmaps.com:7300)
+prop.kc2g.com — Andrew Rodland KC2G: mappe di propagazione MUF/foF2 (GeoJSON)	prop.kc2g.com — Andrew Rodland KC2G: MUF/foF2 izplatīšanās kartes (GeoJSON)
+NOAA Space Weather Prediction Center: modello OVATION Prime dell'ovale aurorale	NOAA Space Weather Prediction Center: polārblāzmas ovāla modelis OVATION Prime
+ARRL Logbook of The World (LoTW): report ADIF delle conferme	ARRL Logbook of The World (LoTW): apstiprinājumu ADIF pārskats
+QLog — Ladislav Foldyna OK1MLG: struttura del database qlog.db	QLog — Ladislav Foldyna OK1MLG: datubāzes qlog.db struktūra
+Protocollo UDP di WSJT-X (K1JT e WSJT Development Group); JTDX; MSHV (LZ2HV)	WSJT-X UDP protokols (K1JT un WSJT Development Group); JTDX; MSHV (LZ2HV)
+CALL3.TXT: WSJT-X Improved (DG2YCB), CALL3 EME di W7GJ, grid_data.bin di JTDX, database di MSHV-IC8TEM e LIVETROPOVHF	CALL3.TXT: WSJT-X Improved (DG2YCB), W7GJ EME CALL3, JTDX grid_data.bin, MSHV-IC8TEM un LIVETROPOVHF datubāzes
+G7VRD: ricerca dei locatori per nominativo (api.g7vrd.co.uk)	G7VRD: lokatoru meklēšana pēc izsaukuma signāla (api.g7vrd.co.uk)
+cty.dat — Jim Reisert AD1C (country-files.com): prefissi e paesi DXCC	cty.dat — Jim Reisert AD1C (country-files.com): DXCC prefiksi un valstis
+Natural Earth: coste e confini (pubblico dominio)	Natural Earth: krasta līnijas un robežas (publiskais īpašums)
+Codice ripreso da LIVETROPOVHF e LoTW Grid Map v2 (IC8TEM)	Kods ņemts no LIVETROPOVHF un LoTW Grid Map v2 (IC8TEM)

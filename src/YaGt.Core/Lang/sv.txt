@@ -1,0 +1,199 @@
+# YA-GT — sv — traduzione dell'interfaccia: <frase italiana><TAB><traduzione>; \n = a capo. Generato da tools/lingue (armonizzazione 27/11/2026).
+YA-GT — aggiornamento	YA-GT — uppdatering
+Apri file ADIF del log	Öppna loggens ADIF-fil
+È stata installata la versione {0} di YA-GT.\nEntra in funzione al prossimo avvio del programma.	Version {0} av YA-GT har installerats.\nDen börjar gälla vid nästa start av programmet.
+{0:HH:mm:ss} UTC   ·   prossimo aggiornamento tra {1}	{0:HH:mm:ss} UTC   ·   nästa uppdatering om {1}
+Database di QLog (qlog.db)	QLog-databas (qlog.db)
+Porta UDP non valida.	Ogiltig UDP-port.
+Indirizzo d'ascolto non valido.	Ogiltig lyssningsadress.
+Porta di ritrasmissione non valida.	Ogiltig vidarebefordringsport.
+La porta di ritrasmissione deve essere diversa da quella di ricezione.	Vidarebefordringsporten måste skilja sig från mottagningsporten.
+Inserisci nome utente e password di LoTW.	Ange användarnamn och lösenord för LoTW.
+Aggiornamento automatico dal GitHub (ogni {0} minuti)	Automatisk uppdatering från GitHub (var {0}:e minut)
+Stato: {0}	Status: {0}
+Ritrasmissione: {0}	Vidarebefordran: {0}
+Errore di collegamento: {0}	Anslutningsfel: {0}
+Nominativo non valido.	Ogiltig anropssignal.
+Il locatore deve avere 6 caratteri, es. JN70cn.	Lokatorn måste ha 6 tecken, t.ex. JN70cn.
+Opacità	Opacitet
+Banda scelta in alto	Band valt överst
+Tutte le bande	Alla band
+UHF e oltre	UHF och högre
+Tutti i file	Alla filer
+nessuna stazione	inga stationer
+Fonti:	Källor:
+nessun QSO (scarica da LoTW, apri un ADIF o attiva QLog)	inga QSO (hämta från LoTW, öppna en ADIF eller slå på QLog)
+confermato su tutte le bande 80-10 m	bekräftad på alla band 80-10 m
+confermato LoTW	bekräftad via LoTW
+confermato con QSL	bekräftad med QSL
+lavorato, non confermato	körd, inte bekräftad
+posizione del paese (cty.dat)	landets position (cty.dat)
+Mi sente	Hör mig
+Sento	Jag hör
+posizione da CALL3.TXT	position från CALL3.TXT
+Mia decodifica	Min avkodning
+SNR dB (RBN CW: dB sul rumore)	SNR dB (RBN CW: dB över bruset)
+{0} stazioni · {1} quadrati · {2} paesi	{0} stationer · {1} rutor · {2} länder
+più lontana: {0} {1:N0} km	längst bort: {0} {1:N0} km
+migliore: {0} {1}	bäst: {0} {1}
+Statistiche · {0} · ultimi {1}	Statistik · {0} · senaste {1}
+Quadrati · {0}	Rutor · {0}
+lavorati {0} · confermati {1} ({2:0}%)	körda {0} · bekräftade {1} ({2:0} %)
+LoTW {0} · solo QSL {1} · non confermati {2}	LoTW {0} · endast QSL {1} · ej bekräftade {2}
+confermati su tutte le bande 80-10 m: {0}	bekräftade på alla band 80-10 m: {0}
+Aggiornato {0:HH:mm} UTC	Uppdaterad {0:HH:mm} UTC
+KC2G ionosonda {0}: {1} {2:0.0} MHz (affidabilità {3:0.00})	KC2G-jonosond {0}: {1} {2:0.0} MHz (tillförlitlighet {3:0.00})
+spento durante le prove automatiche	av under de automatiska testerna
+spento nelle Impostazioni	av i Inställningar
+spento: la cartella del programma non è scrivibile (aggiornare a mano)	av: programmappen är inte skrivbar (uppdatera för hand)
+gestito da un'altra finestra di YA-GT già aperta	hanteras av ett annat redan öppet YA-GT-fönster
+pacchetto troppo grande, non si scarica	paketet är för stort, laddas inte ner
+pacchetto tar.gz non gestito su questa piattaforma	tar.gz-paket stöds inte på denna plattform
+nessuna versione pubblicata su {0}	ingen version publicerad på {0}
+versione pubblicata non leggibile: {0}	publicerad version oläsbar: {0}
+hai già l'ultima versione ({0})	du har redan den senaste versionen ({0})
+aggiornato: l'ultima versione è la {0} ({1})	uppdaterad: den senaste versionen är {0} ({1})
+versione {0} disponibile su {1}	version {0} tillgänglig på {1}
+versione {0} pubblicata, ma senza il pacchetto {1}	version {0} publicerad, men utan paketet {1}
+versione {0}: mancano impronta o firma del pacchetto, non si installa	version {0}: paketets fingeravtryck eller signatur saknas, installeras inte
+scarico la versione {0} ({1})	laddar ner version {0} ({1})
+versione {0}: impronta SHA-256 diversa, pacchetto scartato	version {0}: SHA-256-fingeravtrycket skiljer sig, paketet kasserat
+versione {0}: FIRMA NON VALIDA, pacchetto scartato	version {0}: OGILTIG SIGNATUR, paketet kasserat
+controllo non riuscito: {0} (riprovo fra {1} minuti)	kontrollen misslyckades: {0} (nytt försök om {1} minuter)
+aggiornato da {0} a {1} il {2}	uppdaterad från {0} till {1} den {2}
+versione {0} installata: entra in funzione al prossimo avvio di YA-GT	version {0} installerad: börjar gälla vid nästa start av YA-GT
+installazione della {0} non riuscita, rimessa la {1}: {2}	installationen av {0} misslyckades, {1} återställd: {2}
+LoTW (copia salvata)	LoTW (sparad kopia)
+Collegamento a LoTW in corso…	Ansluter till LoTW…
+LoTW ha rifiutato l'accesso: controlla nome utente e password.	LoTW nekade åtkomst: kontrollera användarnamn och lösenord.
+Risposta inattesa da LoTW (non è un file ADIF). Riprova più tardi.	Oväntat svar från LoTW (inte en ADIF-fil). Försök igen senare.
+Il file ricevuto da LoTW sembra incompleto. Riprova.	Filen som mottogs från LoTW verkar ofullständig. Försök igen.
+{0}: {1} QSO letti, {2} in totale	{0}: {1} QSO lästa, {2} totalt
+Ricezione dati da LoTW: {0:N0} kB…	Tar emot data från LoTW: {0:N0} kB…
+tutte le bande	alla band
+{0} mi sentono · {1} sento · {2} decodifiche	{0} hör mig · {1} hör jag · {2} avkodningar
+G7VRD in coda {0}	G7VRD i kö {0}
+ ⇄ {0} inoltro {1}/{2}	 ⇄ {0} vidarebefordran {1}/{2}
+KC2G {0}: {1} curve, {2} ionosonde	KC2G {0}: {1} kurvor, {2} jonosonder
+Aurora NOAA: previsione {0}	NOAA norrsken: prognos {0}
+Proiezione	Projektion
+Mercatore	Mercator
+Azimutale	Azimutal
+Aggiornamento	Uppdatering
+Banda	Band
+Tutte	Alla
+Spot degli ultimi	Spottar från de senaste
+Aggiorna ora	Uppdatera nu
+Vista intera	Hela vyn
+Impostazioni	Inställningar
+Livelli della mappa	Kartlager
+Statistiche (in alto a destra)	Statistik (uppe till höger)
+Chi mi sente (spot)	Vem hör mig (spottar)
+Stazioni che ricevono il tuo segnale: fumetto con l'SNR, bordo blu	Stationer som tar emot din signal: bubbla med SNR, blå kant
+Chi sento io (spot)	Vem jag hör (spottar)
+Stazioni che tu ricevi (PSKReporter, tuo skimmer RBN): bordo viola	Stationer du tar emot (PSKReporter, din RBN-skimmer): lila kant
+Le mie decodifiche (UDP)	Mina avkodningar (UDP)
+Decodifiche di WSJT-X/JTDX/MSHV ricevute via UDP: nuvoletta ovale	Avkodningar från WSJT-X/JTDX/MSHV via UDP: ovalt moln
+Nominativo nei fumetti	Anropssignal i bubblorna
+Percorsi (cerchio massimo)	Vägar (storcirkel)
+Griglia Maidenhead	Maidenhead-rutnät
+Greyline (giorno/notte)	Greyline (dag/natt)
+Propagazione KC2G	KC2G-utbredning
+prop.kc2g.com: curve della MUF(3000) o della foF2 e valori delle ionosonde	prop.kc2g.com: kurvor för MUF(3000) eller foF2 och jonosondernas värden
+Aurora NOAA (OVATION)	NOAA norrsken (OVATION)
+Probabilità di aurora del NOAA SWPC, ridisegnata in Mercatore e in azimutale	Sannolikhet för norrsken från NOAA SWPC, omritad i Mercator och azimutal
+Quadrati (LoTW + QLog)	Rutor (LoTW + QLog)
+Arancio = lavorato, verde = LoTW, blu = QSL, grigio = confermato su tutte le bande 80-10 m (esclusi i 60 m)	Orange = körd, grön = LoTW, blå = QSL, grå = bekräftad på alla band 80-10 m (utom 60 m)
+Solo confermati	Endast bekräftade
+Solo EME (PROP__MODE)	Endast EME (PROP__MODE)
+Scarica da LoTW…	Hämta från LoTW…
+Apri ADIF…	Öppna ADIF…
+QSO del log QLog	QSO i QLog-loggen
+Legge qlog.db (copia in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato	Läser qlog.db (skrivskyddad kopia): gröna rutor = LoTW, blå = QSL, orange = körd
+qlog.db: posizione standard di QLog	qlog.db: QLogs standardplats
+Fonti degli spot	Spottkällor
+mqtt.pskreporter.info, più lo storico dell'ultima ora via HTTP	mqtt.pskreporter.info, plus historiken för den senaste timmen via HTTP
+telnet.reversebeacon.net porte 7000 (CW/RTTY) e 7001 (FT8/FT4)	telnet.reversebeacon.net portarna 7000 (CW/RTTY) och 7001 (FT8/FT4)
+DM4X (cluster telnet)	DM4X (telnetkluster)
+dm4x.ddns.net:8500, spot PSKReporter in forma di cluster	dm4x.ddns.net:8500, PSKReporter-spottar i klusterform
+DXMAPS (2° cluster)	DXMAPS (2:a kluster)
+Rete skimmer	Skimmernät
+Invia set/skimmer (o set/noskimmer) al secondo cluster	Skickar set/skimmer (eller set/noskimmer) till det andra klustret
+Decodifiche UDP (WSJT-X/MSHV)	UDP-avkodningar (WSJT-X/MSHV)
+Porta e inoltro UDP in Impostazioni	UDP-port och vidarebefordran i Inställningar
+Tema	Tema
+Chiaro (YA-NEC)	Ljust (YA-NEC)
+Notte	Natt
+YA-GT — impostazioni	YA-GT — inställningar
+Rimbalzo UDP: inoltra i pacchetti e riporta indietro le risposte	UDP-relä: vidarebefordrar paketen och skickar tillbaka svaren
+facoltative: 127.0.0.1:2333, 192.168.1.20:2237	valfria: 127.0.0.1:2333, 192.168.1.20:2237
+Decodifiche UDP (protocollo WSJT-X: WSJT-X, JTDX, MSHV)	UDP-avkodningar (WSJT-X-protokoll: WSJT-X, JTDX, MSHV)
+Ricezione: ascolta su	Mottagning: lyssna på
+Per l'indirizzo multicast (es. 224.0.0.1) YA-GT si unisce al gruppo; con 127.0.0.1 la porta non può essere la stessa di un altro programma in ascolto.	För en multicastadress (t.ex. 224.0.0.1) går YA-GT med i gruppen; med 127.0.0.1 kan porten inte vara densamma som för ett annat lyssnande program.
+Ritrasmissione: verso	Vidarebefordran: till
+Altre destinazioni	Andra mål
+La destinazione principale è di solito QLog; nelle altre puoi aggiungere host:porta separati da virgola (GridTracker, JTAlert). I pacchetti passano identici, QSO registrati compresi, quindi QLog scrive il QSO da solo; le risposte (doppio clic, evidenziazioni) tornano al programma digitale. In QLog metti come porta WSJT-X la stessa porta di ritrasmissione.	Huvudmålet är oftast QLog; i de andra kan du lägga till värd:port åtskilda med kommatecken (GridTracker, JTAlert). Paketen passerar oförändrade, loggade QSO inräknade, så QLog loggar QSO:t själv; svaren (dubbelklick, markeringar) går tillbaka till det digitala programmet. Ange i QLog samma vidarebefordringsport som WSJT-X-port.
+Log di QLog	QLog-logg
+Sfoglia…	Bläddra…
+Vuoto = posizione standard di QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Il file di QLog non viene mai modificato: si legge una copia.	Tomt = QLogs standardplats (%LOCALAPPDATA%\hamradio\QLog\qlog.db). QLog-filen ändras aldrig: en kopia läses.
+Aggiornamento automatico	Automatisk uppdatering
+Controlla adesso	Kontrollera nu
+Lingua	Språk
+La nuova lingua vale dal prossimo avvio del programma.	Det nya språket gäller från nästa start av programmet.
+Salva	Spara
+Annulla	Avbryt
+Scarica da LoTW	Hämta från LoTW
+Ricorda il nome utente (la password non viene mai salvata)	Kom ihåg användarnamnet (lösenordet sparas aldrig)
+Vengono scaricati tutti i QSO caricati su LoTW, con i dettagli delle conferme (locatore del corrispondente). Con log grandi LoTW può impiegare qualche minuto.	Alla QSO som laddats upp till LoTW hämtas, med detaljerna om bekräftelserna (motstationens lokator). Med stora loggar kan LoTW ta några minuter.
+Nome utente LoTW	LoTW-användarnamn
+Password LoTW	LoTW-lösenord
+Solo nominativo (facoltativo)	Endast anropssignal (valfritt)
+Scarica	Hämta
+Spot di un nominativo, LoTW, QLog e decodifiche UDP su una mappa a livelli	Spottar för en anropssignal, LoTW, QLog och UDP-avkodningar på en karta i lager
+Contatti	Kontakt
+Sostieni il progetto: ko-fi.com/ic8tem	Stöd projektet: ko-fi.com/ic8tem
+Riconoscimenti (credits)	Tack (credits)
+I dati restano accanto al programma (YA-GT.ini, CALL3.TXT, cartella Dati): nulla in AppData. La password LoTW non viene mai salvata.	Data stannar bredvid programmet (YA-GT.ini, CALL3.TXT, mappen Dati): inget i AppData. LoTW-lösenordet sparas aldrig.
+Chiudi	Stäng
+YA-GT — avvio	YA-GT — start
+Spot, LoTW, QLog e decodifiche sulla mappa — di Costantino IC8TEM	Spottar, LoTW, QLog och avkodningar på kartan — av Costantino IC8TEM
+Nominativo	Anropssignal
+Locatore (6 caratteri)	Lokator (6 tecken)
+Il locatore fa da centro della mappa azimutale e serve a calcolare distanza e azimut di ogni spot.	Lokatorn är mitten av den azimutala kartan och används för att beräkna avstånd och azimut för varje spott.
+Avvia	Starta
+Esci	Avsluta
+Stazioni che tu ricevi: bordo viola	Stationer du tar emot: lila kant
+Decodifiche di WSJT-X/JTDX/MSHV via UDP: nuvoletta ovale	Avkodningar från WSJT-X/JTDX/MSHV via UDP: ovalt moln
+prop.kc2g.com: curve della MUF(3000) o della foF2	prop.kc2g.com: kurvor för MUF(3000) eller foF2
+Solo EME (PROP_MODE)	Endast EME (PROP_MODE)
+Legge qlog.db (copia in sola lettura)	Läser qlog.db (skrivskyddad kopia)
+Ricezione su	Mottagning på
+Ritrasmetti a	Vidarebefordra till
+Altre (facolt.)	Andra (valfria)
+La destinazione principale è di solito QLog; nelle altre host:porta separati da virgola (GridTracker, JTAlert). Passano anche i QSO registrati, quindi QLog scrive il QSO da solo; le risposte tornano al programma digitale. In QLog metti come porta WSJT-X la porta di ritrasmissione.	Huvudmålet är oftast QLog; i de andra värd:port åtskilda med kommatecken (GridTracker, JTAlert). Även loggade QSO passerar, så QLog loggar QSO:t själv; svaren går tillbaka till det digitala programmet. Ange i QLog vidarebefordringsporten som WSJT-X-port.
+Vuoto = posizione standard di QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Si legge una copia: il file di QLog non viene mai modificato.	Tomt = QLogs standardplats (%LOCALAPPDATA%\hamradio\QLog\qlog.db). En kopia läses: QLog-filen ändras aldrig.
+Nome utente LoTW:	LoTW-användarnamn:
+Password LoTW:	LoTW-lösenord:
+Solo nominativo (facoltativo):	Endast anropssignal (valfritt):
+Mi sentono	Hör mig
+Sento io	Jag hör
+Mie decodifiche (UDP)	Mina avkodningar (UDP)
+mi sentono	hör mig
+sento io	jag hör
+mie decodifiche (UDP)	mina avkodningar (UDP)
+lavorato	körd
+tutte 80-10 m	alla 80-10 m
+non ancora controllato	inte kontrollerad än
+PSKReporter — Philip Gladstone N1DQ: flusso MQTT (mqtt.pskreporter.info) e interfaccia HTTP	PSKReporter — Philip Gladstone N1DQ: MQTT-ström (mqtt.pskreporter.info) och HTTP-gränssnitt
+Cluster DM4X (dm4x.ddns.net:8500): spot PSKReporter in forma di cluster	Kluster DM4X (dm4x.ddns.net:8500): PSKReporter-spottar i klusterform
+DXMAPS — Gabriel Sampol EA6VQ: secondo cluster con rete skimmer (dxmaps.com:7300)	DXMAPS — Gabriel Sampol EA6VQ: andra kluster med skimmernät (dxmaps.com:7300)
+prop.kc2g.com — Andrew Rodland KC2G: mappe di propagazione MUF/foF2 (GeoJSON)	prop.kc2g.com — Andrew Rodland KC2G: utbredningskartor MUF/foF2 (GeoJSON)
+NOAA Space Weather Prediction Center: modello OVATION Prime dell'ovale aurorale	NOAA Space Weather Prediction Center: OVATION Prime-modellen av norrskensovalen
+ARRL Logbook of The World (LoTW): report ADIF delle conferme	ARRL Logbook of The World (LoTW): ADIF-rapport över bekräftelserna
+QLog — Ladislav Foldyna OK1MLG: struttura del database qlog.db	QLog — Ladislav Foldyna OK1MLG: databasens qlog.db struktur
+Protocollo UDP di WSJT-X (K1JT e WSJT Development Group); JTDX; MSHV (LZ2HV)	WSJT-X:s UDP-protokoll (K1JT och WSJT Development Group); JTDX; MSHV (LZ2HV)
+CALL3.TXT: WSJT-X Improved (DG2YCB), CALL3 EME di W7GJ, grid_data.bin di JTDX, database di MSHV-IC8TEM e LIVETROPOVHF	CALL3.TXT: WSJT-X Improved (DG2YCB), W7GJ:s EME-CALL3, JTDX:s grid_data.bin, databaser från MSHV-IC8TEM och LIVETROPOVHF
+G7VRD: ricerca dei locatori per nominativo (api.g7vrd.co.uk)	G7VRD: sökning av lokatorer efter anropssignal (api.g7vrd.co.uk)
+cty.dat — Jim Reisert AD1C (country-files.com): prefissi e paesi DXCC	cty.dat — Jim Reisert AD1C (country-files.com): DXCC-prefix och länder
+Natural Earth: coste e confini (pubblico dominio)	Natural Earth: kuster och gränser (allmän egendom)
+Codice ripreso da LIVETROPOVHF e LoTW Grid Map v2 (IC8TEM)	Kod hämtad från LIVETROPOVHF och LoTW Grid Map v2 (IC8TEM)

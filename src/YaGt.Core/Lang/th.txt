@@ -1,0 +1,199 @@
+# YA-GT — th — traduzione dell'interfaccia: <frase italiana><TAB><traduzione>; \n = a capo. Generato da tools/lingue (armonizzazione 27/11/2026).
+YA-GT — aggiornamento	YA-GT — อัปเดต
+Apri file ADIF del log	เปิดไฟล์ ADIF ของล็อก
+È stata installata la versione {0} di YA-GT.\nEntra in funzione al prossimo avvio del programma.	ติดตั้ง YA-GT เวอร์ชัน {0} แล้ว\nจะมีผลเมื่อเปิดโปรแกรมครั้งถัดไป
+{0:HH:mm:ss} UTC   ·   prossimo aggiornamento tra {1}	{0:HH:mm:ss} UTC   ·   อัปเดตครั้งถัดไปในอีก {1}
+Database di QLog (qlog.db)	ฐานข้อมูล QLog (qlog.db)
+Porta UDP non valida.	พอร์ต UDP ไม่ถูกต้อง
+Indirizzo d'ascolto non valido.	ที่อยู่สำหรับรับฟังไม่ถูกต้อง
+Porta di ritrasmissione non valida.	พอร์ตส่งต่อไม่ถูกต้อง
+La porta di ritrasmissione deve essere diversa da quella di ricezione.	พอร์ตส่งต่อต้องต่างจากพอร์ตรับ
+Inserisci nome utente e password di LoTW.	ป้อนชื่อผู้ใช้และรหัสผ่าน LoTW
+Aggiornamento automatico dal GitHub (ogni {0} minuti)	อัปเดตอัตโนมัติจาก GitHub (ทุก {0} นาที)
+Stato: {0}	สถานะ: {0}
+Ritrasmissione: {0}	ส่งต่อ: {0}
+Errore di collegamento: {0}	ข้อผิดพลาดในการเชื่อมต่อ: {0}
+Nominativo non valido.	นามเรียกขานไม่ถูกต้อง
+Il locatore deve avere 6 caratteri, es. JN70cn.	โลเคเตอร์ต้องมี 6 ตัวอักษร เช่น JN70cn
+Opacità	ความทึบ
+Banda scelta in alto	แบนด์ที่เลือกด้านบน
+Tutte le bande	ทุกแบนด์
+UHF e oltre	UHF ขึ้นไป
+Tutti i file	ทุกไฟล์
+nessuna stazione	ไม่มีสถานี
+Fonti:	แหล่งข้อมูล:
+nessun QSO (scarica da LoTW, apri un ADIF o attiva QLog)	ไม่มี QSO (ดาวน์โหลดจาก LoTW เปิด ADIF หรือเปิด QLog)
+confermato su tutte le bande 80-10 m	ยืนยันแล้วในทุกแบนด์ 80-10 m
+confermato LoTW	ยืนยันแล้วทาง LoTW
+confermato con QSL	ยืนยันแล้วด้วย QSL
+lavorato, non confermato	ติดต่อแล้ว ยังไม่ยืนยัน
+posizione del paese (cty.dat)	ตำแหน่งของประเทศ (cty.dat)
+Mi sente	ได้ยินฉัน
+Sento	ฉันได้ยิน
+posizione da CALL3.TXT	ตำแหน่งจาก CALL3.TXT
+Mia decodifica	การถอดรหัสของฉัน
+SNR dB (RBN CW: dB sul rumore)	SNR dB (RBN CW: dB เหนือสัญญาณรบกวน)
+{0} stazioni · {1} quadrati · {2} paesi	{0} สถานี · {1} ช่อง · {2} ประเทศ
+più lontana: {0} {1:N0} km	ไกลที่สุด: {0} {1:N0} km
+migliore: {0} {1}	ดีที่สุด: {0} {1}
+Statistiche · {0} · ultimi {1}	สถิติ · {0} · ล่าสุด {1}
+Quadrati · {0}	ช่อง · {0}
+lavorati {0} · confermati {1} ({2:0}%)	ติดต่อแล้ว {0} · ยืนยันแล้ว {1} ({2:0}%)
+LoTW {0} · solo QSL {1} · non confermati {2}	LoTW {0} · QSL เท่านั้น {1} · ยังไม่ยืนยัน {2}
+confermati su tutte le bande 80-10 m: {0}	ยืนยันแล้วในทุกแบนด์ 80-10 m: {0}
+Aggiornato {0:HH:mm} UTC	อัปเดตเมื่อ {0:HH:mm} UTC
+KC2G ionosonda {0}: {1} {2:0.0} MHz (affidabilità {3:0.00})	ไอโอโนซอนด์ KC2G {0}: {1} {2:0.0} MHz (ความน่าเชื่อถือ {3:0.00})
+spento durante le prove automatiche	ปิดระหว่างการทดสอบอัตโนมัติ
+spento nelle Impostazioni	ปิดในการตั้งค่า
+spento: la cartella del programma non è scrivibile (aggiornare a mano)	ปิด: เขียนลงโฟลเดอร์ของโปรแกรมไม่ได้ (อัปเดตด้วยตนเอง)
+gestito da un'altra finestra di YA-GT già aperta	จัดการโดยหน้าต่าง YA-GT อื่นที่เปิดอยู่แล้ว
+pacchetto troppo grande, non si scarica	แพ็กเกจใหญ่เกินไป ไม่ดาวน์โหลด
+pacchetto tar.gz non gestito su questa piattaforma	แพลตฟอร์มนี้ไม่รองรับแพ็กเกจ tar.gz
+nessuna versione pubblicata su {0}	ไม่มีเวอร์ชันที่เผยแพร่บน {0}
+versione pubblicata non leggibile: {0}	อ่านเวอร์ชันที่เผยแพร่ไม่ได้: {0}
+hai già l'ultima versione ({0})	คุณมีเวอร์ชันล่าสุดแล้ว ({0})
+aggiornato: l'ultima versione è la {0} ({1})	เป็นปัจจุบัน: เวอร์ชันล่าสุดคือ {0} ({1})
+versione {0} disponibile su {1}	เวอร์ชัน {0} มีให้ที่ {1}
+versione {0} pubblicata, ma senza il pacchetto {1}	เผยแพร่เวอร์ชัน {0} แล้ว แต่ไม่มีแพ็กเกจ {1}
+versione {0}: mancano impronta o firma del pacchetto, non si installa	เวอร์ชัน {0}: ไม่มีลายนิ้วมือหรือลายเซ็นของแพ็กเกจ จึงไม่ติดตั้ง
+scarico la versione {0} ({1})	กำลังดาวน์โหลดเวอร์ชัน {0} ({1})
+versione {0}: impronta SHA-256 diversa, pacchetto scartato	เวอร์ชัน {0}: ลายนิ้วมือ SHA-256 ไม่ตรงกัน ทิ้งแพ็กเกจแล้ว
+versione {0}: FIRMA NON VALIDA, pacchetto scartato	เวอร์ชัน {0}: ลายเซ็นไม่ถูกต้อง ทิ้งแพ็กเกจแล้ว
+controllo non riuscito: {0} (riprovo fra {1} minuti)	ตรวจสอบไม่สำเร็จ: {0} (ลองใหม่ในอีก {1} นาที)
+aggiornato da {0} a {1} il {2}	อัปเดตจาก {0} เป็น {1} เมื่อ {2}
+versione {0} installata: entra in funzione al prossimo avvio di YA-GT	ติดตั้งเวอร์ชัน {0} แล้ว: มีผลเมื่อเปิด YA-GT ครั้งถัดไป
+installazione della {0} non riuscita, rimessa la {1}: {2}	ติดตั้ง {0} ไม่สำเร็จ คืนค่า {1} แล้ว: {2}
+LoTW (copia salvata)	LoTW (สำเนาที่บันทึกไว้)
+Collegamento a LoTW in corso…	กำลังเชื่อมต่อ LoTW…
+LoTW ha rifiutato l'accesso: controlla nome utente e password.	LoTW ปฏิเสธการเข้าถึง: ตรวจสอบชื่อผู้ใช้และรหัสผ่าน
+Risposta inattesa da LoTW (non è un file ADIF). Riprova più tardi.	คำตอบจาก LoTW ไม่เป็นไปตามคาด (ไม่ใช่ไฟล์ ADIF) ลองใหม่ภายหลัง
+Il file ricevuto da LoTW sembra incompleto. Riprova.	ไฟล์ที่ได้รับจาก LoTW ดูเหมือนไม่สมบูรณ์ ลองใหม่
+{0}: {1} QSO letti, {2} in totale	{0}: อ่าน {1} QSO รวม {2}
+Ricezione dati da LoTW: {0:N0} kB…	กำลังรับข้อมูลจาก LoTW: {0:N0} kB…
+tutte le bande	ทุกแบนด์
+{0} mi sentono · {1} sento · {2} decodifiche	{0} ได้ยินฉัน · {1} ฉันได้ยิน · {2} การถอดรหัส
+G7VRD in coda {0}	G7VRD ในคิว {0}
+ ⇄ {0} inoltro {1}/{2}	 ⇄ {0} ส่งต่อ {1}/{2}
+KC2G {0}: {1} curve, {2} ionosonde	KC2G {0}: {1} เส้นชั้น, {2} ไอโอโนซอนด์
+Aurora NOAA: previsione {0}	แสงออโรรา NOAA: พยากรณ์ {0}
+Proiezione	การฉายแผนที่
+Mercatore	เมอร์เคเตอร์
+Azimutale	แบบแอซิมัท
+Aggiornamento	อัปเดต
+Banda	แบนด์
+Tutte	ทั้งหมด
+Spot degli ultimi	สปอตของช่วงล่าสุด
+Aggiorna ora	อัปเดตเดี๋ยวนี้
+Vista intera	มุมมองทั้งหมด
+Impostazioni	การตั้งค่า
+Livelli della mappa	ชั้นของแผนที่
+Statistiche (in alto a destra)	สถิติ (มุมขวาบน)
+Chi mi sente (spot)	ใครได้ยินฉัน (สปอต)
+Stazioni che ricevono il tuo segnale: fumetto con l'SNR, bordo blu	สถานีที่รับสัญญาณของคุณ: บอลลูนพร้อม SNR กรอบสีน้ำเงิน
+Chi sento io (spot)	ฉันได้ยินใคร (สปอต)
+Stazioni che tu ricevi (PSKReporter, tuo skimmer RBN): bordo viola	สถานีที่คุณรับได้ (PSKReporter, RBN skimmer ของคุณ): กรอบสีม่วง
+Le mie decodifiche (UDP)	การถอดรหัสของฉัน (UDP)
+Decodifiche di WSJT-X/JTDX/MSHV ricevute via UDP: nuvoletta ovale	การถอดรหัส WSJT-X/JTDX/MSHV ที่ได้รับผ่าน UDP: เมฆรูปวงรี
+Nominativo nei fumetti	นามเรียกขานในบอลลูน
+Percorsi (cerchio massimo)	เส้นทาง (วงกลมใหญ่)
+Griglia Maidenhead	ตาราง Maidenhead
+Greyline (giorno/notte)	เกรย์ไลน์ (กลางวัน/กลางคืน)
+Propagazione KC2G	การแพร่กระจาย KC2G
+prop.kc2g.com: curve della MUF(3000) o della foF2 e valori delle ionosonde	prop.kc2g.com: เส้นชั้น MUF(3000) หรือ foF2 และค่าของไอโอโนซอนด์
+Aurora NOAA (OVATION)	แสงออโรรา NOAA (OVATION)
+Probabilità di aurora del NOAA SWPC, ridisegnata in Mercatore e in azimutale	ความน่าจะเป็นของแสงออโรราจาก NOAA SWPC วาดใหม่แบบเมอร์เคเตอร์และแบบแอซิมัท
+Quadrati (LoTW + QLog)	ช่อง (LoTW + QLog)
+Arancio = lavorato, verde = LoTW, blu = QSL, grigio = confermato su tutte le bande 80-10 m (esclusi i 60 m)	ส้ม = ติดต่อแล้ว, เขียว = LoTW, น้ำเงิน = QSL, เทา = ยืนยันแล้วในทุกแบนด์ 80-10 m (ไม่รวม 60 m)
+Solo confermati	เฉพาะที่ยืนยันแล้ว
+Solo EME (PROP__MODE)	EME เท่านั้น (PROP__MODE)
+Scarica da LoTW…	ดาวน์โหลดจาก LoTW…
+Apri ADIF…	เปิด ADIF…
+QSO del log QLog	QSO ในล็อก QLog
+Legge qlog.db (copia in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato	อ่าน qlog.db (สำเนาอ่านอย่างเดียว): สี่เหลี่ยมเขียว = LoTW, น้ำเงิน = QSL, ส้ม = ติดต่อแล้ว
+qlog.db: posizione standard di QLog	qlog.db: ตำแหน่งมาตรฐานของ QLog
+Fonti degli spot	แหล่งที่มาของสปอต
+mqtt.pskreporter.info, più lo storico dell'ultima ora via HTTP	mqtt.pskreporter.info และประวัติชั่วโมงล่าสุดผ่าน HTTP
+telnet.reversebeacon.net porte 7000 (CW/RTTY) e 7001 (FT8/FT4)	telnet.reversebeacon.net พอร์ต 7000 (CW/RTTY) และ 7001 (FT8/FT4)
+DM4X (cluster telnet)	DM4X (คลัสเตอร์ telnet)
+dm4x.ddns.net:8500, spot PSKReporter in forma di cluster	dm4x.ddns.net:8500, สปอต PSKReporter ในรูปแบบคลัสเตอร์
+DXMAPS (2° cluster)	DXMAPS (คลัสเตอร์ที่ 2)
+Rete skimmer	เครือข่าย skimmer
+Invia set/skimmer (o set/noskimmer) al secondo cluster	ส่ง set/skimmer (หรือ set/noskimmer) ไปยังคลัสเตอร์ที่สอง
+Decodifiche UDP (WSJT-X/MSHV)	การถอดรหัส UDP (WSJT-X/MSHV)
+Porta e inoltro UDP in Impostazioni	พอร์ต UDP และการส่งต่ออยู่ในการตั้งค่า
+Tema	ธีม
+Chiaro (YA-NEC)	สว่าง (YA-NEC)
+Notte	กลางคืน
+YA-GT — impostazioni	YA-GT — การตั้งค่า
+Rimbalzo UDP: inoltra i pacchetti e riporta indietro le risposte	รีเลย์ UDP: ส่งต่อแพ็กเก็ตและส่งคำตอบกลับ
+facoltative: 127.0.0.1:2333, 192.168.1.20:2237	ไม่บังคับ: 127.0.0.1:2333, 192.168.1.20:2237
+Decodifiche UDP (protocollo WSJT-X: WSJT-X, JTDX, MSHV)	การถอดรหัส UDP (โพรโทคอล WSJT-X: WSJT-X, JTDX, MSHV)
+Ricezione: ascolta su	รับ: ฟังที่
+Per l'indirizzo multicast (es. 224.0.0.1) YA-GT si unisce al gruppo; con 127.0.0.1 la porta non può essere la stessa di un altro programma in ascolto.	สำหรับที่อยู่มัลติแคสต์ (เช่น 224.0.0.1) YA-GT จะเข้าร่วมกลุ่ม ส่วน 127.0.0.1 พอร์ตต้องไม่ซ้ำกับโปรแกรมอื่นที่กำลังฟัง
+Ritrasmissione: verso	ส่งต่อ: ไปยัง
+Altre destinazioni	ปลายทางอื่น
+La destinazione principale è di solito QLog; nelle altre puoi aggiungere host:porta separati da virgola (GridTracker, JTAlert). I pacchetti passano identici, QSO registrati compresi, quindi QLog scrive il QSO da solo; le risposte (doppio clic, evidenziazioni) tornano al programma digitale. In QLog metti come porta WSJT-X la stessa porta di ritrasmissione.	ปลายทางหลักมักเป็น QLog ส่วนปลายทางอื่นเพิ่ม host:port คั่นด้วยจุลภาคได้ (GridTracker, JTAlert) แพ็กเก็ตผ่านไปโดยไม่เปลี่ยนแปลง รวมทั้ง QSO ที่บันทึกแล้ว QLog จึงบันทึก QSO เอง ส่วนคำตอบ (ดับเบิลคลิก, การไฮไลต์) จะกลับไปยังโปรแกรมดิจิทัล ใน QLog ให้ตั้งพอร์ต WSJT-X เป็นพอร์ตส่งต่อเดียวกัน
+Log di QLog	ล็อก QLog
+Sfoglia…	เรียกดู…
+Vuoto = posizione standard di QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Il file di QLog non viene mai modificato: si legge una copia.	ว่าง = ตำแหน่งมาตรฐานของ QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db) ไฟล์ของ QLog จะไม่ถูกแก้ไขเลย: อ่านจากสำเนา
+Aggiornamento automatico	อัปเดตอัตโนมัติ
+Controlla adesso	ตรวจสอบเดี๋ยวนี้
+Lingua	ภาษา
+La nuova lingua vale dal prossimo avvio del programma.	ภาษาใหม่จะมีผลตั้งแต่การเปิดโปรแกรมครั้งถัดไป
+Salva	บันทึก
+Annulla	ยกเลิก
+Scarica da LoTW	ดาวน์โหลดจาก LoTW
+Ricorda il nome utente (la password non viene mai salvata)	จำชื่อผู้ใช้ (ไม่บันทึกรหัสผ่านเลย)
+Vengono scaricati tutti i QSO caricati su LoTW, con i dettagli delle conferme (locatore del corrispondente). Con log grandi LoTW può impiegare qualche minuto.	จะดาวน์โหลด QSO ทั้งหมดที่อัปโหลดไปยัง LoTW พร้อมรายละเอียดการยืนยัน (โลเคเตอร์ของคู่สถานี) ล็อกขนาดใหญ่อาจใช้เวลาหลายนาที
+Nome utente LoTW	ชื่อผู้ใช้ LoTW
+Password LoTW	รหัสผ่าน LoTW
+Solo nominativo (facoltativo)	เฉพาะนามเรียกขาน (ไม่บังคับ)
+Scarica	ดาวน์โหลด
+Spot di un nominativo, LoTW, QLog e decodifiche UDP su una mappa a livelli	สปอตของนามเรียกขาน, LoTW, QLog และการถอดรหัส UDP บนแผนที่แบบชั้น
+Contatti	ติดต่อ
+Sostieni il progetto: ko-fi.com/ic8tem	สนับสนุนโครงการ: ko-fi.com/ic8tem
+Riconoscimenti (credits)	ขอบคุณ (credits)
+I dati restano accanto al programma (YA-GT.ini, CALL3.TXT, cartella Dati): nulla in AppData. La password LoTW non viene mai salvata.	ข้อมูลอยู่ข้างโปรแกรม (YA-GT.ini, CALL3.TXT, โฟลเดอร์ Dati): ไม่มีสิ่งใดใน AppData ไม่บันทึกรหัสผ่าน LoTW เลย
+Chiudi	ปิด
+YA-GT — avvio	YA-GT — เริ่มต้น
+Spot, LoTW, QLog e decodifiche sulla mappa — di Costantino IC8TEM	สปอต, LoTW, QLog และการถอดรหัสบนแผนที่ — โดย Costantino IC8TEM
+Nominativo	นามเรียกขาน
+Locatore (6 caratteri)	โลเคเตอร์ (6 ตัวอักษร)
+Il locatore fa da centro della mappa azimutale e serve a calcolare distanza e azimut di ogni spot.	โลเคเตอร์เป็นจุดศูนย์กลางของแผนที่แบบแอซิมัท และใช้คำนวณระยะทางและแอซิมัทของแต่ละสปอต
+Avvia	เริ่ม
+Esci	ออก
+Stazioni che tu ricevi: bordo viola	สถานีที่คุณรับได้: กรอบสีม่วง
+Decodifiche di WSJT-X/JTDX/MSHV via UDP: nuvoletta ovale	การถอดรหัส WSJT-X/JTDX/MSHV ผ่าน UDP: เมฆรูปวงรี
+prop.kc2g.com: curve della MUF(3000) o della foF2	prop.kc2g.com: เส้นชั้น MUF(3000) หรือ foF2
+Solo EME (PROP_MODE)	EME เท่านั้น (PROP_MODE)
+Legge qlog.db (copia in sola lettura)	อ่าน qlog.db (สำเนาอ่านอย่างเดียว)
+Ricezione su	รับที่
+Ritrasmetti a	ส่งต่อไปยัง
+Altre (facolt.)	อื่น ๆ (ไม่บังคับ)
+La destinazione principale è di solito QLog; nelle altre host:porta separati da virgola (GridTracker, JTAlert). Passano anche i QSO registrati, quindi QLog scrive il QSO da solo; le risposte tornano al programma digitale. In QLog metti come porta WSJT-X la porta di ritrasmissione.	ปลายทางหลักมักเป็น QLog ส่วนอื่นเป็น host:port คั่นด้วยจุลภาค (GridTracker, JTAlert) QSO ที่บันทึกแล้วก็ผ่านไปด้วย QLog จึงบันทึก QSO เอง คำตอบจะกลับไปยังโปรแกรมดิจิทัล ใน QLog ให้ตั้งพอร์ต WSJT-X เป็นพอร์ตส่งต่อ
+Vuoto = posizione standard di QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Si legge una copia: il file di QLog non viene mai modificato.	ว่าง = ตำแหน่งมาตรฐานของ QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db) อ่านจากสำเนา: ไฟล์ของ QLog จะไม่ถูกแก้ไขเลย
+Nome utente LoTW:	ชื่อผู้ใช้ LoTW:
+Password LoTW:	รหัสผ่าน LoTW:
+Solo nominativo (facoltativo):	เฉพาะนามเรียกขาน (ไม่บังคับ):
+Mi sentono	ได้ยินฉัน
+Sento io	ฉันได้ยิน
+Mie decodifiche (UDP)	การถอดรหัสของฉัน (UDP)
+mi sentono	ได้ยินฉัน
+sento io	ฉันได้ยิน
+mie decodifiche (UDP)	การถอดรหัสของฉัน (UDP)
+lavorato	ติดต่อแล้ว
+tutte 80-10 m	ทั้งหมด 80-10 m
+non ancora controllato	ยังไม่ได้ตรวจสอบ
+PSKReporter — Philip Gladstone N1DQ: flusso MQTT (mqtt.pskreporter.info) e interfaccia HTTP	PSKReporter — Philip Gladstone N1DQ: ฟีด MQTT (mqtt.pskreporter.info) และอินเทอร์เฟซ HTTP
+Cluster DM4X (dm4x.ddns.net:8500): spot PSKReporter in forma di cluster	คลัสเตอร์ DM4X (dm4x.ddns.net:8500): สปอต PSKReporter ในรูปแบบคลัสเตอร์
+DXMAPS — Gabriel Sampol EA6VQ: secondo cluster con rete skimmer (dxmaps.com:7300)	DXMAPS — Gabriel Sampol EA6VQ: คลัสเตอร์ที่สองพร้อมเครือข่าย skimmer (dxmaps.com:7300)
+prop.kc2g.com — Andrew Rodland KC2G: mappe di propagazione MUF/foF2 (GeoJSON)	prop.kc2g.com — Andrew Rodland KC2G: แผนที่การแพร่กระจาย MUF/foF2 (GeoJSON)
+NOAA Space Weather Prediction Center: modello OVATION Prime dell'ovale aurorale	NOAA Space Weather Prediction Center: แบบจำลอง OVATION Prime ของวงรีออโรรา
+ARRL Logbook of The World (LoTW): report ADIF delle conferme	ARRL Logbook of The World (LoTW): รายงาน ADIF ของการยืนยัน
+QLog — Ladislav Foldyna OK1MLG: struttura del database qlog.db	QLog — Ladislav Foldyna OK1MLG: โครงสร้างฐานข้อมูล qlog.db
+Protocollo UDP di WSJT-X (K1JT e WSJT Development Group); JTDX; MSHV (LZ2HV)	โพรโทคอล UDP ของ WSJT-X (K1JT และ WSJT Development Group); JTDX; MSHV (LZ2HV)
+CALL3.TXT: WSJT-X Improved (DG2YCB), CALL3 EME di W7GJ, grid_data.bin di JTDX, database di MSHV-IC8TEM e LIVETROPOVHF	CALL3.TXT: WSJT-X Improved (DG2YCB), EME CALL3 ของ W7GJ, grid_data.bin ของ JTDX, ฐานข้อมูล MSHV-IC8TEM และ LIVETROPOVHF
+G7VRD: ricerca dei locatori per nominativo (api.g7vrd.co.uk)	G7VRD: ค้นหาโลเคเตอร์ตามนามเรียกขาน (api.g7vrd.co.uk)
+cty.dat — Jim Reisert AD1C (country-files.com): prefissi e paesi DXCC	cty.dat — Jim Reisert AD1C (country-files.com): คำนำหน้าและประเทศ DXCC
+Natural Earth: coste e confini (pubblico dominio)	Natural Earth: แนวชายฝั่งและพรมแดน (สาธารณสมบัติ)
+Codice ripreso da LIVETROPOVHF e LoTW Grid Map v2 (IC8TEM)	โค้ดที่นำมาจาก LIVETROPOVHF และ LoTW Grid Map v2 (IC8TEM)

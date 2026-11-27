@@ -1,0 +1,199 @@
+# YA-GT — tl — traduzione dell'interfaccia: <frase italiana><TAB><traduzione>; \n = a capo. Generato da tools/lingue (armonizzazione 27/11/2026).
+YA-GT — aggiornamento	YA-GT — update
+Apri file ADIF del log	Buksan ang ADIF file ng log
+È stata installata la versione {0} di YA-GT.\nEntra in funzione al prossimo avvio del programma.	Na-install ang bersyon {0} ng YA-GT.\nMagkakabisa ito sa susunod na pagbukas ng programa.
+{0:HH:mm:ss} UTC   ·   prossimo aggiornamento tra {1}	{0:HH:mm:ss} UTC   ·   susunod na update sa loob ng {1}
+Database di QLog (qlog.db)	Database ng QLog (qlog.db)
+Porta UDP non valida.	Hindi wastong UDP port.
+Indirizzo d'ascolto non valido.	Hindi wastong address na pakikinggan.
+Porta di ritrasmissione non valida.	Hindi wastong port ng pagpapasa.
+La porta di ritrasmissione deve essere diversa da quella di ricezione.	Dapat iba ang port ng pagpapasa sa port ng pagtanggap.
+Inserisci nome utente e password di LoTW.	Ilagay ang user name at password ng LoTW.
+Aggiornamento automatico dal GitHub (ogni {0} minuti)	Awtomatikong update mula sa GitHub (bawat {0} minuto)
+Stato: {0}	Kalagayan: {0}
+Ritrasmissione: {0}	Pagpapasa: {0}
+Errore di collegamento: {0}	Error sa koneksyon: {0}
+Nominativo non valido.	Hindi wastong callsign.
+Il locatore deve avere 6 caratteri, es. JN70cn.	Dapat 6 na character ang locator, hal. JN70cn.
+Opacità	Opacity
+Banda scelta in alto	Band na pinili sa itaas
+Tutte le bande	Lahat ng band
+UHF e oltre	UHF pataas
+Tutti i file	Lahat ng file
+nessuna stazione	walang istasyon
+Fonti:	Mga pinagmulan:
+nessun QSO (scarica da LoTW, apri un ADIF o attiva QLog)	walang QSO (i-download mula sa LoTW, magbukas ng ADIF o buksan ang QLog)
+confermato su tutte le bande 80-10 m	kumpirmado sa lahat ng band 80-10 m
+confermato LoTW	kumpirmado sa LoTW
+confermato con QSL	kumpirmado sa QSL
+lavorato, non confermato	nagawa, hindi kumpirmado
+posizione del paese (cty.dat)	posisyon ng bansa (cty.dat)
+Mi sente	Naririnig ako
+Sento	Naririnig ko
+posizione da CALL3.TXT	posisyon mula sa CALL3.TXT
+Mia decodifica	Aking decode
+SNR dB (RBN CW: dB sul rumore)	SNR dB (RBN CW: dB sa ibabaw ng ingay)
+{0} stazioni · {1} quadrati · {2} paesi	{0} istasyon · {1} parisukat · {2} bansa
+più lontana: {0} {1:N0} km	pinakamalayo: {0} {1:N0} km
+migliore: {0} {1}	pinakamahusay: {0} {1}
+Statistiche · {0} · ultimi {1}	Estadistika · {0} · huling {1}
+Quadrati · {0}	Mga parisukat · {0}
+lavorati {0} · confermati {1} ({2:0}%)	nagawa {0} · kumpirmado {1} ({2:0}%)
+LoTW {0} · solo QSL {1} · non confermati {2}	LoTW {0} · QSL lang {1} · hindi kumpirmado {2}
+confermati su tutte le bande 80-10 m: {0}	kumpirmado sa lahat ng band 80-10 m: {0}
+Aggiornato {0:HH:mm} UTC	Na-update {0:HH:mm} UTC
+KC2G ionosonda {0}: {1} {2:0.0} MHz (affidabilità {3:0.00})	KC2G ionosonde {0}: {1} {2:0.0} MHz (katiyakan {3:0.00})
+spento durante le prove automatiche	patay habang may awtomatikong pagsubok
+spento nelle Impostazioni	patay sa Settings
+spento: la cartella del programma non è scrivibile (aggiornare a mano)	patay: hindi masulatan ang folder ng programa (mag-update nang mano-mano)
+gestito da un'altra finestra di YA-GT già aperta	hinahawakan ng isa pang bukas na window ng YA-GT
+pacchetto troppo grande, non si scarica	masyadong malaki ang package, hindi dina-download
+pacchetto tar.gz non gestito su questa piattaforma	hindi suportado ang tar.gz package sa platapormang ito
+nessuna versione pubblicata su {0}	walang bersyong nailathala sa {0}
+versione pubblicata non leggibile: {0}	hindi mabasa ang nailathalang bersyon: {0}
+hai già l'ultima versione ({0})	nasa iyo na ang pinakabagong bersyon ({0})
+aggiornato: l'ultima versione è la {0} ({1})	napapanahon: ang pinakabagong bersyon ay {0} ({1})
+versione {0} disponibile su {1}	available ang bersyon {0} sa {1}
+versione {0} pubblicata, ma senza il pacchetto {1}	nailathala ang bersyon {0}, pero walang package na {1}
+versione {0}: mancano impronta o firma del pacchetto, non si installa	bersyon {0}: walang fingerprint o pirma ang package, hindi ini-install
+scarico la versione {0} ({1})	dina-download ang bersyon {0} ({1})
+versione {0}: impronta SHA-256 diversa, pacchetto scartato	bersyon {0}: iba ang SHA-256 fingerprint, itinapon ang package
+versione {0}: FIRMA NON VALIDA, pacchetto scartato	bersyon {0}: HINDI WASTONG PIRMA, itinapon ang package
+controllo non riuscito: {0} (riprovo fra {1} minuti)	nabigo ang pagsusuri: {0} (susubukan muli sa loob ng {1} minuto)
+aggiornato da {0} a {1} il {2}	na-update mula {0} papuntang {1} noong {2}
+versione {0} installata: entra in funzione al prossimo avvio di YA-GT	na-install ang bersyon {0}: magkakabisa sa susunod na pagbukas ng YA-GT
+installazione della {0} non riuscita, rimessa la {1}: {2}	nabigo ang pag-install ng {0}, ibinalik ang {1}: {2}
+LoTW (copia salvata)	LoTW (naka-save na kopya)
+Collegamento a LoTW in corso…	Kumokonekta sa LoTW…
+LoTW ha rifiutato l'accesso: controlla nome utente e password.	Tinanggihan ng LoTW ang access: suriin ang user name at password.
+Risposta inattesa da LoTW (non è un file ADIF). Riprova più tardi.	Hindi inaasahang sagot mula sa LoTW (hindi ADIF file). Subukang muli mamaya.
+Il file ricevuto da LoTW sembra incompleto. Riprova.	Mukhang kulang ang file na natanggap mula sa LoTW. Subukang muli.
+{0}: {1} QSO letti, {2} in totale	{0}: {1} QSO ang nabasa, {2} lahat
+Ricezione dati da LoTW: {0:N0} kB…	Tumatanggap ng data mula sa LoTW: {0:N0} kB…
+tutte le bande	lahat ng band
+{0} mi sentono · {1} sento · {2} decodifiche	{0} nakakarinig sa akin · {1} naririnig ko · {2} decode
+G7VRD in coda {0}	G7VRD sa pila {0}
+ ⇄ {0} inoltro {1}/{2}	 ⇄ {0} pagpapasa {1}/{2}
+KC2G {0}: {1} curve, {2} ionosonde	KC2G {0}: {1} kurba, {2} ionosonde
+Aurora NOAA: previsione {0}	NOAA aurora: forecast {0}
+Proiezione	Projection
+Mercatore	Mercator
+Azimutale	Azimuthal
+Aggiornamento	Update
+Banda	Band
+Tutte	Lahat
+Spot degli ultimi	Mga spot ng huling
+Aggiorna ora	I-update ngayon
+Vista intera	Buong tanaw
+Impostazioni	Settings
+Livelli della mappa	Mga layer ng mapa
+Statistiche (in alto a destra)	Estadistika (kanang itaas)
+Chi mi sente (spot)	Sino ang nakakarinig sa akin (spot)
+Stazioni che ricevono il tuo segnale: fumetto con l'SNR, bordo blu	Mga istasyong tumatanggap ng iyong signal: lobo na may SNR, asul na gilid
+Chi sento io (spot)	Sino ang naririnig ko (spot)
+Stazioni che tu ricevi (PSKReporter, tuo skimmer RBN): bordo viola	Mga istasyong natatanggap mo (PSKReporter, iyong RBN skimmer): lilang gilid
+Le mie decodifiche (UDP)	Aking mga decode (UDP)
+Decodifiche di WSJT-X/JTDX/MSHV ricevute via UDP: nuvoletta ovale	Mga decode ng WSJT-X/JTDX/MSHV sa UDP: hugis-itlog na ulap
+Nominativo nei fumetti	Callsign sa mga lobo
+Percorsi (cerchio massimo)	Mga ruta (great circle)
+Griglia Maidenhead	Maidenhead grid
+Greyline (giorno/notte)	Greyline (araw/gabi)
+Propagazione KC2G	KC2G propagation
+prop.kc2g.com: curve della MUF(3000) o della foF2 e valori delle ionosonde	prop.kc2g.com: mga kurba ng MUF(3000) o foF2 at mga halaga ng ionosonde
+Aurora NOAA (OVATION)	NOAA aurora (OVATION)
+Probabilità di aurora del NOAA SWPC, ridisegnata in Mercatore e in azimutale	Posibilidad ng aurora ng NOAA SWPC, iginuhit muli sa Mercator at azimuthal
+Quadrati (LoTW + QLog)	Mga parisukat (LoTW + QLog)
+Arancio = lavorato, verde = LoTW, blu = QSL, grigio = confermato su tutte le bande 80-10 m (esclusi i 60 m)	Kahel = nagawa, berde = LoTW, asul = QSL, abo = kumpirmado sa lahat ng band 80-10 m (hindi kasama ang 60 m)
+Solo confermati	Kumpirmado lang
+Solo EME (PROP__MODE)	EME lang (PROP__MODE)
+Scarica da LoTW…	I-download mula sa LoTW…
+Apri ADIF…	Buksan ang ADIF…
+QSO del log QLog	Mga QSO ng log ng QLog
+Legge qlog.db (copia in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato	Binabasa ang qlog.db (kopyang pambasa lang): berdeng parisukat = LoTW, asul = QSL, kahel = nagawa
+qlog.db: posizione standard di QLog	qlog.db: karaniwang lokasyon ng QLog
+Fonti degli spot	Mga pinagmulan ng spot
+mqtt.pskreporter.info, più lo storico dell'ultima ora via HTTP	mqtt.pskreporter.info, kasama ang kasaysayan ng huling oras sa HTTP
+telnet.reversebeacon.net porte 7000 (CW/RTTY) e 7001 (FT8/FT4)	telnet.reversebeacon.net port 7000 (CW/RTTY) at 7001 (FT8/FT4)
+DM4X (cluster telnet)	DM4X (telnet cluster)
+dm4x.ddns.net:8500, spot PSKReporter in forma di cluster	dm4x.ddns.net:8500, mga spot ng PSKReporter na anyong cluster
+DXMAPS (2° cluster)	DXMAPS (ika-2 cluster)
+Rete skimmer	Skimmer network
+Invia set/skimmer (o set/noskimmer) al secondo cluster	Nagpapadala ng set/skimmer (o set/noskimmer) sa ikalawang cluster
+Decodifiche UDP (WSJT-X/MSHV)	Mga UDP decode (WSJT-X/MSHV)
+Porta e inoltro UDP in Impostazioni	UDP port at pagpapasa sa Settings
+Tema	Tema
+Chiaro (YA-NEC)	Maliwanag (YA-NEC)
+Notte	Gabi
+YA-GT — impostazioni	YA-GT — settings
+Rimbalzo UDP: inoltra i pacchetti e riporta indietro le risposte	UDP relay: ipinapasa ang mga packet at ibinabalik ang mga sagot
+facoltative: 127.0.0.1:2333, 192.168.1.20:2237	opsyonal: 127.0.0.1:2333, 192.168.1.20:2237
+Decodifiche UDP (protocollo WSJT-X: WSJT-X, JTDX, MSHV)	Mga UDP decode (WSJT-X protocol: WSJT-X, JTDX, MSHV)
+Ricezione: ascolta su	Pagtanggap: makinig sa
+Per l'indirizzo multicast (es. 224.0.0.1) YA-GT si unisce al gruppo; con 127.0.0.1 la porta non può essere la stessa di un altro programma in ascolto.	Para sa multicast address (hal. 224.0.0.1) sumasali ang YA-GT sa grupo; sa 127.0.0.1 hindi maaaring pareho ang port ng ibang programang nakikinig.
+Ritrasmissione: verso	Pagpapasa: papunta sa
+Altre destinazioni	Ibang destinasyon
+La destinazione principale è di solito QLog; nelle altre puoi aggiungere host:porta separati da virgola (GridTracker, JTAlert). I pacchetti passano identici, QSO registrati compresi, quindi QLog scrive il QSO da solo; le risposte (doppio clic, evidenziazioni) tornano al programma digitale. In QLog metti come porta WSJT-X la stessa porta di ritrasmissione.	Ang pangunahing destinasyon ay karaniwang QLog; sa iba maaari kang magdagdag ng host:port na pinaghihiwalay ng kuwit (GridTracker, JTAlert). Dumaraan ang mga packet nang walang pagbabago, kasama ang mga naitalang QSO, kaya ang QLog mismo ang nagtatala ng QSO; bumabalik ang mga sagot (double click, highlight) sa digital na programa. Sa QLog ilagay bilang WSJT-X port ang parehong port ng pagpapasa.
+Log di QLog	Log ng QLog
+Sfoglia…	Mag-browse…
+Vuoto = posizione standard di QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Il file di QLog non viene mai modificato: si legge una copia.	Walang laman = karaniwang lokasyon ng QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Hindi kailanman binabago ang file ng QLog: kopya ang binabasa.
+Aggiornamento automatico	Awtomatikong update
+Controlla adesso	Suriin ngayon
+Lingua	Wika
+La nuova lingua vale dal prossimo avvio del programma.	Magkakabisa ang bagong wika sa susunod na pagbukas ng programa.
+Salva	I-save
+Annulla	Kanselahin
+Scarica da LoTW	I-download mula sa LoTW
+Ricorda il nome utente (la password non viene mai salvata)	Tandaan ang user name (hindi kailanman sine-save ang password)
+Vengono scaricati tutti i QSO caricati su LoTW, con i dettagli delle conferme (locatore del corrispondente). Con log grandi LoTW può impiegare qualche minuto.	Dina-download ang lahat ng QSO na na-upload sa LoTW, kasama ang detalye ng mga kumpirmasyon (locator ng kausap). Sa malalaking log, maaaring tumagal nang ilang minuto ang LoTW.
+Nome utente LoTW	User name ng LoTW
+Password LoTW	Password ng LoTW
+Solo nominativo (facoltativo)	Callsign lang (opsyonal)
+Scarica	I-download
+Spot di un nominativo, LoTW, QLog e decodifiche UDP su una mappa a livelli	Mga spot ng isang callsign, LoTW, QLog at UDP decode sa mapang may mga layer
+Contatti	Kontak
+Sostieni il progetto: ko-fi.com/ic8tem	Suportahan ang proyekto: ko-fi.com/ic8tem
+Riconoscimenti (credits)	Pasasalamat (credits)
+I dati restano accanto al programma (YA-GT.ini, CALL3.TXT, cartella Dati): nulla in AppData. La password LoTW non viene mai salvata.	Nananatili ang data sa tabi ng programa (YA-GT.ini, CALL3.TXT, folder na Dati): walang anuman sa AppData. Hindi kailanman sine-save ang password ng LoTW.
+Chiudi	Isara
+YA-GT — avvio	YA-GT — simula
+Spot, LoTW, QLog e decodifiche sulla mappa — di Costantino IC8TEM	Mga spot, LoTW, QLog at decode sa mapa — ni Costantino IC8TEM
+Nominativo	Callsign
+Locatore (6 caratteri)	Locator (6 na character)
+Il locatore fa da centro della mappa azimutale e serve a calcolare distanza e azimut di ogni spot.	Ang locator ang gitna ng azimuthal na mapa at ginagamit upang kalkulahin ang layo at azimuth ng bawat spot.
+Avvia	Simulan
+Esci	Lumabas
+Stazioni che tu ricevi: bordo viola	Mga istasyong natatanggap mo: lilang gilid
+Decodifiche di WSJT-X/JTDX/MSHV via UDP: nuvoletta ovale	Mga decode ng WSJT-X/JTDX/MSHV sa UDP: hugis-itlog na ulap
+prop.kc2g.com: curve della MUF(3000) o della foF2	prop.kc2g.com: mga kurba ng MUF(3000) o foF2
+Solo EME (PROP_MODE)	EME lang (PROP_MODE)
+Legge qlog.db (copia in sola lettura)	Binabasa ang qlog.db (kopyang pambasa lang)
+Ricezione su	Tumanggap sa
+Ritrasmetti a	Ipasa sa
+Altre (facolt.)	Iba pa (opsyonal)
+La destinazione principale è di solito QLog; nelle altre host:porta separati da virgola (GridTracker, JTAlert). Passano anche i QSO registrati, quindi QLog scrive il QSO da solo; le risposte tornano al programma digitale. In QLog metti come porta WSJT-X la porta di ritrasmissione.	Ang pangunahing destinasyon ay karaniwang QLog; sa iba host:port na pinaghihiwalay ng kuwit (GridTracker, JTAlert). Dumaraan din ang mga naitalang QSO, kaya ang QLog mismo ang nagtatala ng QSO; bumabalik ang mga sagot sa digital na programa. Sa QLog ilagay bilang WSJT-X port ang port ng pagpapasa.
+Vuoto = posizione standard di QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Si legge una copia: il file di QLog non viene mai modificato.	Walang laman = karaniwang lokasyon ng QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Kopya ang binabasa: hindi kailanman binabago ang file ng QLog.
+Nome utente LoTW:	User name ng LoTW:
+Password LoTW:	Password ng LoTW:
+Solo nominativo (facoltativo):	Callsign lang (opsyonal):
+Mi sentono	Nakakarinig sa akin
+Sento io	Naririnig ko
+Mie decodifiche (UDP)	Aking mga decode (UDP)
+mi sentono	nakakarinig sa akin
+sento io	naririnig ko
+mie decodifiche (UDP)	aking mga decode (UDP)
+lavorato	nagawa
+tutte 80-10 m	lahat 80-10 m
+non ancora controllato	hindi pa nasusuri
+PSKReporter — Philip Gladstone N1DQ: flusso MQTT (mqtt.pskreporter.info) e interfaccia HTTP	PSKReporter — Philip Gladstone N1DQ: MQTT stream (mqtt.pskreporter.info) at HTTP interface
+Cluster DM4X (dm4x.ddns.net:8500): spot PSKReporter in forma di cluster	Cluster DM4X (dm4x.ddns.net:8500): mga spot ng PSKReporter na anyong cluster
+DXMAPS — Gabriel Sampol EA6VQ: secondo cluster con rete skimmer (dxmaps.com:7300)	DXMAPS — Gabriel Sampol EA6VQ: ikalawang cluster na may skimmer network (dxmaps.com:7300)
+prop.kc2g.com — Andrew Rodland KC2G: mappe di propagazione MUF/foF2 (GeoJSON)	prop.kc2g.com — Andrew Rodland KC2G: mga mapa ng propagation MUF/foF2 (GeoJSON)
+NOAA Space Weather Prediction Center: modello OVATION Prime dell'ovale aurorale	NOAA Space Weather Prediction Center: OVATION Prime model ng auroral oval
+ARRL Logbook of The World (LoTW): report ADIF delle conferme	ARRL Logbook of The World (LoTW): ADIF report ng mga kumpirmasyon
+QLog — Ladislav Foldyna OK1MLG: struttura del database qlog.db	QLog — Ladislav Foldyna OK1MLG: istruktura ng database na qlog.db
+Protocollo UDP di WSJT-X (K1JT e WSJT Development Group); JTDX; MSHV (LZ2HV)	UDP protocol ng WSJT-X (K1JT at WSJT Development Group); JTDX; MSHV (LZ2HV)
+CALL3.TXT: WSJT-X Improved (DG2YCB), CALL3 EME di W7GJ, grid_data.bin di JTDX, database di MSHV-IC8TEM e LIVETROPOVHF	CALL3.TXT: WSJT-X Improved (DG2YCB), EME CALL3 ni W7GJ, grid_data.bin ng JTDX, database ng MSHV-IC8TEM at LIVETROPOVHF
+G7VRD: ricerca dei locatori per nominativo (api.g7vrd.co.uk)	G7VRD: paghahanap ng locator ayon sa callsign (api.g7vrd.co.uk)
+cty.dat — Jim Reisert AD1C (country-files.com): prefissi e paesi DXCC	cty.dat — Jim Reisert AD1C (country-files.com): mga DXCC prefix at bansa
+Natural Earth: coste e confini (pubblico dominio)	Natural Earth: mga baybayin at hangganan (pampublikong domain)
+Codice ripreso da LIVETROPOVHF e LoTW Grid Map v2 (IC8TEM)	Code na kinuha mula sa LIVETROPOVHF at LoTW Grid Map v2 (IC8TEM)

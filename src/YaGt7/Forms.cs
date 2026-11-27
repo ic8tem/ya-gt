@@ -137,6 +137,7 @@ public sealed class StartForm : Form
         var cancel = new Button { Text = "Esci", Location = new Point(254, 240), Size = new Size(90, 30), DialogResult = DialogResult.Cancel };
         Controls.Add(ok); Controls.Add(cancel);
         AcceptButton = ok; CancelButton = cancel;
+        W.Translate(this);
     }
 
     void Accept()
@@ -144,8 +145,8 @@ public sealed class StartForm : Form
         var call = _call.Text.Trim().ToUpperInvariant();
         var loc = _loc.Text.Trim();
         if (call.Length < 3 || !call.Any(char.IsDigit) || !call.Any(char.IsLetter) || call.Any(ch => !char.IsLetterOrDigit(ch) && ch != '/'))
-        { _err.Text = "Nominativo non valido."; return; }
-        if (!Locator.IsValid6(loc)) { _err.Text = "Il locatore deve avere 6 caratteri, es. JN70cn."; return; }
+        { _err.Text = L.T("Nominativo non valido."); return; }
+        if (!Locator.IsValid6(loc)) { _err.Text = L.T("Il locatore deve avere 6 caratteri, es. JN70cn."); return; }
         _st.SetStation(call, loc);
         DialogResult = DialogResult.OK;
         Close();
@@ -195,6 +196,7 @@ public sealed class MainForm : Form
         Controls.Add(left);
         Controls.Add(BuildToolbar());
         Controls.Add(bottom);
+        W.Translate(this);
 
         st.Updated += () => { try { BeginInvoke((Action)(() => { _map.Invalidate(); _status.Text = st.StatusText(); })); } catch { } };
         st.ConnectionsChanged += () => { try { BeginInvoke((Action)(() => _conn.Text = st.ConnectionsText())); } catch { } };
@@ -206,14 +208,14 @@ public sealed class MainForm : Form
             st.Start(); _conn.Text = st.ConnectionsText(); StartTour();
             if (!string.IsNullOrEmpty(st.UpdateMessage)) _hover.Text = "YA-GT " + st.UpdateMessage;
         };
-        Updater.Ready += v => { try { BeginInvoke((Action)(() => MessageBox.Show(this, $"È stata installata la versione {v} di YA-GT.\nEntra in funzione al prossimo avvio del programma.", "YA-GT — aggiornamento", MessageBoxButtons.OK, MessageBoxIcon.Information))); } catch { } };
+        Updater.Ready += v => { try { BeginInvoke((Action)(() => MessageBox.Show(this, L.F("È stata installata la versione {0} di YA-GT.\nEntra in funzione al prossimo avvio del programma.", v), L.T("YA-GT — aggiornamento"), MessageBoxButtons.OK, MessageBoxIcon.Information))); } catch { } };
     }
 
     void Tick()
     {
         var now = DateTime.UtcNow;
         var left = _st.NextRefresh - now;
-        _clock.Text = $"{now:HH:mm:ss} UTC   ·   prossimo aggiornamento tra {(left.TotalSeconds > 0 ? $"{(int)left.TotalMinutes}:{left.Seconds:00}" : "—")}";
+        _clock.Text = L.F("{0:HH:mm:ss} UTC   ·   prossimo aggiornamento tra {1}", now, left.TotalSeconds > 0 ? $"{(int)left.TotalMinutes}:{left.Seconds:00}" : "—");
         if (now.Second == 0) _map.Invalidate();
     }
 
@@ -287,7 +289,7 @@ public sealed class MainForm : Form
     TrackBar Track(int value, Action<int> changed)
     {
         var t = new TrackBar { Minimum = 10, Maximum = 100, TickFrequency = 10, Value = Math.Max(10, Math.Min(100, value)), Width = 170, Height = 30, AutoSize = false };
-        _tips.SetToolTip(t, "Opacità");
+        _tips.SetToolTip(t, L.T("Opacità"));
         t.ValueChanged += (_, _) => changed(t.Value);
         return t;
     }
@@ -297,7 +299,7 @@ public sealed class MainForm : Form
         var keep = _st.LotwTag;
         _lotwTag.Items.Clear(); _lotwTags.Clear();
         void Add(string tag, string title) { _lotwTags.Add(tag); _lotwTag.Items.Add(title); }
-        Add("BAND", "Banda scelta in alto"); Add("ALL", "Tutte le bande"); Add("G:1", "HF 80-10 m"); Add("G:2", "VHF 6 m-1,25 m"); Add("G:3", "UHF e oltre");
+        Add("BAND", L.T("Banda scelta in alto")); Add("ALL", L.T("Tutte le bande")); Add("G:1", "HF 80-10 m"); Add("G:2", "VHF 6 m-1,25 m"); Add("G:3", L.T("UHF e oltre"));
         foreach (var b in _st.Lotw.BandsPresent(_st.QLog.Qsos)) Add("B:" + b, b);
         var idx = _lotwTags.IndexOf(keep);
         _lotwTag.SelectedIndex = idx >= 0 ? idx : 0;
@@ -305,7 +307,7 @@ public sealed class MainForm : Form
 
     void OpenAdif()
     {
-        using (var d = new OpenFileDialog { Title = "Apri file ADIF del log", Filter = "ADIF (*.adi;*.adif)|*.adi;*.adif|Tutti i file|*.*", Multiselect = true })
+        using (var d = new OpenFileDialog { Title = L.T("Apri file ADIF del log"), Filter = "ADIF (*.adi;*.adif)|*.adi;*.adif|" + L.T("Tutti i file") + "|*.*", Multiselect = true })
         {
             if (d.ShowDialog(this) != DialogResult.OK) return;
             foreach (var f in d.FileNames)
@@ -348,7 +350,7 @@ public sealed class SettingsForm : Form
         FormBorderStyle = FormBorderStyle.FixedDialog; MaximizeBox = false; MinimizeBox = false;
         StartPosition = FormStartPosition.CenterParent;
         AutoScaleMode = AutoScaleMode.Dpi;
-        ClientSize = new Size(560, 542);
+        ClientSize = new Size(560, 632);
         Font = W.Ui;
         BackColor = W.C(W.Th.Page);
         int y = 12;
@@ -375,37 +377,45 @@ public sealed class SettingsForm : Form
         Lab("Log di QLog", 14, y, true).ForeColor = W.C(W.Th.Accent); y += 26;
         var qlog = new TextBox { Text = st.QLogPath, Location = new Point(14, y), Width = 420 }; Controls.Add(qlog);
         var browse = new Button { Text = "Sfoglia…", Location = new Point(442, y - 2), Size = new Size(90, 26) }; Controls.Add(browse);
-        browse.Click += (_, _) => { using (var d = new OpenFileDialog { Filter = "qlog.db|*.db|Tutti i file|*.*" }) if (d.ShowDialog(this) == DialogResult.OK) qlog.Text = d.FileName; };
+        browse.Click += (_, _) => { using (var d = new OpenFileDialog { Filter = "qlog.db|*.db|" + L.T("Tutti i file") + "|*.*" }) if (d.ShowDialog(this) == DialogResult.OK) qlog.Text = d.FileName; };
         y += 30;
         Lab("Vuoto = posizione standard di QLog (%LOCALAPPDATA%\\hamradio\\QLog\\qlog.db). Si legge una copia: il file di QLog non viene mai modificato.", 14, y, false, 520).ForeColor = W.C(W.Th.Muted);
         y += 44;
         Lab("Aggiornamento automatico", 14, y, true).ForeColor = W.C(W.Th.Accent); y += 24;
-        var auto = new CheckBox { Text = "Aggiornamento automatico dal GitHub (ogni " + Updater.IntervalMinutes + " minuti)", Checked = Updater.Enabled, Location = new Point(14, y), AutoSize = true }; Controls.Add(auto);
+        var auto = new CheckBox { Text = L.F("Aggiornamento automatico dal GitHub (ogni {0} minuti)", Updater.IntervalMinutes), Checked = Updater.Enabled, Location = new Point(14, y), AutoSize = true }; Controls.Add(auto);
         var now = new Button { Text = "Controlla adesso", Location = new Point(400, y - 3), Size = new Size(130, 26) }; Controls.Add(now);
         y += 28;
-        var upd = Lab("Stato: " + Updater.Status, 14, y, false, 520); upd.ForeColor = W.C(W.Th.Muted);
-        Action<string> onChange = m => { try { if (!upd.IsDisposed) upd.BeginInvoke((Action)(() => upd.Text = "Stato: " + m)); } catch { } };
+        var upd = Lab(L.F("Stato: {0}", L.T(Updater.Status)), 14, y, false, 520); upd.ForeColor = W.C(W.Th.Muted);
+        Action<string> onChange = m => { try { if (!upd.IsDisposed) upd.BeginInvoke((Action)(() => upd.Text = L.F("Stato: {0}", L.T(m)))); } catch { } };
         Updater.Changed += onChange;
         FormClosed += (_, _) => Updater.Changed -= onChange;
         now.Click += async (_, _) => await Updater.CheckAsync(true);
         y += 36;
+        Lab("Lingua", 14, y, true).ForeColor = W.C(W.Th.Accent); y += 24;
+        var lang = new ComboBox { DropDownStyle = ComboBoxStyle.DropDownList, Location = new Point(14, y), Width = 220 };
+        foreach (var n in L.All) lang.Items.Add(n[1]);
+        lang.SelectedIndex = Math.Max(0, L.IndexOf(L.Code));
+        Controls.Add(lang);
+        Lab("La nuova lingua vale dal prossimo avvio del programma.", 244, y + 3).ForeColor = W.C(W.Th.Muted);
+        y += 30;
         var err = Lab("", 14, y, false, 520); err.ForeColor = Color.Firebrick;
-        var ok = new Button { Text = "Salva", Location = new Point(452, 498), Size = new Size(90, 30), BackColor = W.C(W.Th.Accent), ForeColor = Color.White, FlatStyle = FlatStyle.Flat };
-        var cancel = new Button { Text = "Annulla", Location = new Point(354, 498), Size = new Size(90, 30), DialogResult = DialogResult.Cancel };
+        var ok = new Button { Text = "Salva", Location = new Point(452, 588), Size = new Size(90, 30), BackColor = W.C(W.Th.Accent), ForeColor = Color.White, FlatStyle = FlatStyle.Flat };
+        var cancel = new Button { Text = "Annulla", Location = new Point(354, 588), Size = new Size(90, 30), DialogResult = DialogResult.Cancel };
         Controls.Add(ok); Controls.Add(cancel);
         AcceptButton = ok; CancelButton = cancel;
         ok.Click += (_, _) =>
         {
-            if (!int.TryParse(port.Text, NumberStyles.Integer, CultureInfo.InvariantCulture, out var pr) || pr <= 0 || pr > 65535) { err.Text = "Porta UDP non valida."; return; }
-            if (!System.Net.IPAddress.TryParse(addr.Text.Trim(), out _)) { err.Text = "Indirizzo d'ascolto non valido."; return; }
-            if (!int.TryParse(fwdPort.Text, NumberStyles.Integer, CultureInfo.InvariantCulture, out var fp) || fp <= 0 || fp > 65535) { err.Text = "Porta di ritrasmissione non valida."; return; }
+            if (!int.TryParse(port.Text, NumberStyles.Integer, CultureInfo.InvariantCulture, out var pr) || pr <= 0 || pr > 65535) { err.Text = L.T("Porta UDP non valida."); return; }
+            if (!System.Net.IPAddress.TryParse(addr.Text.Trim(), out _)) { err.Text = L.T("Indirizzo d'ascolto non valido."); return; }
+            if (!int.TryParse(fwdPort.Text, NumberStyles.Integer, CultureInfo.InvariantCulture, out var fp) || fp <= 0 || fp > 65535) { err.Text = L.T("Porta di ritrasmissione non valida."); return; }
             var fh = fwdHost.Text.Trim();
             WsjtxUdp.ParseTargets(fh + ":" + fp + "," + fwdTo.Text, out var e2);
-            if (fwd.Checked && e2 != "") { err.Text = "Ritrasmissione: " + e2; return; }
-            if (fwd.Checked && fp == pr && (fh == "127.0.0.1" || fh == "localhost" || fh == addr.Text.Trim())) { err.Text = "La porta di ritrasmissione deve essere diversa da quella di ricezione."; return; }
+            if (fwd.Checked && e2 != "") { err.Text = L.F("Ritrasmissione: {0}", e2); return; }
+            if (fwd.Checked && fp == pr && (fh == "127.0.0.1" || fh == "localhost" || fh == addr.Text.Trim())) { err.Text = L.T("La porta di ritrasmissione deve essere diversa da quella di ricezione."); return; }
             st.Udp.ListenAddress = addr.Text.Trim(); st.Udp.ListenPort = pr; st.Udp.Forward = fwd.Checked;
             st.Udp.ForwardHost = fh; st.Udp.ForwardPort = fp; st.Udp.ForwardTo = fwdTo.Text.Trim();
             st.QLogPath = qlog.Text.Trim();
+            if (lang.SelectedIndex >= 0) st.S.Set("lingua", L.All[lang.SelectedIndex][0]);
             bool wasOn = Updater.Enabled;
             Updater.Enabled = auto.Checked;
             if (Updater.Enabled && !wasOn) Updater.Start(); else if (!Updater.Enabled) Updater.Stop();
@@ -415,6 +425,7 @@ public sealed class SettingsForm : Form
             DialogResult = DialogResult.OK;
             Close();
         };
+        W.Translate(this);
     }
 }
 
@@ -450,7 +461,7 @@ public sealed class LotwForm : Form
         FormClosing += (_, _) => { try { _cts.Cancel(); } catch { } };
         ok.Click += async (_, _) =>
         {
-            if (user.Text.Trim() == "" || pass.Text == "") { info.Text = "Inserisci nome utente e password di LoTW."; info.ForeColor = Color.DarkRed; return; }
+            if (user.Text.Trim() == "" || pass.Text == "") { info.Text = L.T("Inserisci nome utente e password di LoTW."); info.ForeColor = Color.DarkRed; return; }
             ok.Enabled = false;
             st.S.SetBool("lotw_remember", remember.Checked);
             st.S.Set("lotw_user", remember.Checked ? user.Text.Trim() : "");
@@ -467,8 +478,9 @@ public sealed class LotwForm : Form
                 DialogResult = DialogResult.OK;
                 Close();
             }
-            catch (Exception ex) { if (!IsDisposed) { info.Text = "Errore di collegamento: " + ex.Message; info.ForeColor = Color.DarkRed; ok.Enabled = true; } }
+            catch (Exception ex) { if (!IsDisposed) { info.Text = L.F("Errore di collegamento: {0}", ex.Message); info.ForeColor = Color.DarkRed; ok.Enabled = true; } }
         };
+        W.Translate(this);
     }
 }
 
@@ -506,11 +518,12 @@ public sealed class AboutForm : Form
         p.Controls.Add(Link("www.qrz.com/db/ic8tem", "https://www.qrz.com/db/ic8tem"));
         p.Controls.Add(Link("Sostieni il progetto: ko-fi.com/ic8tem", "https://ko-fi.com/ic8tem"));
         p.Controls.Add(Sec("Riconoscimenti (credits)"));
-        foreach (var c in Credits.List) p.Controls.Add(Link("• " + c.text, c.url));
+        foreach (var c in Credits.List) p.Controls.Add(Link("• " + L.T(c.text), c.url));
         p.Controls.Add(new Label { Text = "I dati restano accanto al programma (YA-GT.ini, CALL3.TXT, cartella Dati): nulla in AppData. La password LoTW non viene mai salvata.", AutoSize = true, MaximumSize = new Size(560, 0), ForeColor = W.C(W.Th.Muted), Margin = new Padding(3, 10, 3, 3) });
         var close = new Button { Text = "Chiudi", DialogResult = DialogResult.OK, Size = new Size(90, 30), Margin = new Padding(470, 10, 3, 3) };
         p.Controls.Add(close);
         AcceptButton = close;
         Controls.Add(p);
+        W.Translate(this);
     }
 }

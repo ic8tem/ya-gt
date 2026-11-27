@@ -1,0 +1,199 @@
+# YA-GT — nl — traduzione dell'interfaccia: <frase italiana><TAB><traduzione>; \n = a capo. Generato da tools/lingue (armonizzazione 27/11/2026).
+YA-GT — aggiornamento	YA-GT — update
+Apri file ADIF del log	ADIF-bestand van het log openen
+È stata installata la versione {0} di YA-GT.\nEntra in funzione al prossimo avvio del programma.	Versie {0} van YA-GT is geïnstalleerd.\nZe werkt vanaf de volgende start van het programma.
+{0:HH:mm:ss} UTC   ·   prossimo aggiornamento tra {1}	{0:HH:mm:ss} UTC   ·   volgende update over {1}
+Database di QLog (qlog.db)	QLog-database (qlog.db)
+Porta UDP non valida.	Ongeldige UDP-poort.
+Indirizzo d'ascolto non valido.	Ongeldig luisteradres.
+Porta di ritrasmissione non valida.	Ongeldige doorstuurpoort.
+La porta di ritrasmissione deve essere diversa da quella di ricezione.	De doorstuurpoort moet verschillen van de ontvangstpoort.
+Inserisci nome utente e password di LoTW.	Voer gebruikersnaam en wachtwoord van LoTW in.
+Aggiornamento automatico dal GitHub (ogni {0} minuti)	Automatische update vanaf GitHub (elke {0} minuten)
+Stato: {0}	Status: {0}
+Ritrasmissione: {0}	Doorsturen: {0}
+Errore di collegamento: {0}	Verbindingsfout: {0}
+Nominativo non valido.	Ongeldige roepnaam.
+Il locatore deve avere 6 caratteri, es. JN70cn.	De locator moet 6 tekens hebben, bijv. JN70cn.
+Opacità	Dekking
+Banda scelta in alto	Bovenaan gekozen band
+Tutte le bande	Alle banden
+UHF e oltre	UHF en hoger
+Tutti i file	Alle bestanden
+nessuna stazione	geen stations
+Fonti:	Bronnen:
+nessun QSO (scarica da LoTW, apri un ADIF o attiva QLog)	geen QSO's (download van LoTW, open een ADIF of zet QLog aan)
+confermato su tutte le bande 80-10 m	bevestigd op alle banden 80-10 m
+confermato LoTW	bevestigd via LoTW
+confermato con QSL	bevestigd met QSL
+lavorato, non confermato	gewerkt, niet bevestigd
+posizione del paese (cty.dat)	positie van het land (cty.dat)
+Mi sente	Hoort mij
+Sento	Ik hoor
+posizione da CALL3.TXT	positie uit CALL3.TXT
+Mia decodifica	Mijn decodering
+SNR dB (RBN CW: dB sul rumore)	SNR dB (RBN CW: dB boven de ruis)
+{0} stazioni · {1} quadrati · {2} paesi	{0} stations · {1} vakken · {2} landen
+più lontana: {0} {1:N0} km	verste: {0} {1:N0} km
+migliore: {0} {1}	beste: {0} {1}
+Statistiche · {0} · ultimi {1}	Statistieken · {0} · laatste {1}
+Quadrati · {0}	Vakken · {0}
+lavorati {0} · confermati {1} ({2:0}%)	gewerkt {0} · bevestigd {1} ({2:0}%)
+LoTW {0} · solo QSL {1} · non confermati {2}	LoTW {0} · alleen QSL {1} · niet bevestigd {2}
+confermati su tutte le bande 80-10 m: {0}	bevestigd op alle banden 80-10 m: {0}
+Aggiornato {0:HH:mm} UTC	Bijgewerkt {0:HH:mm} UTC
+KC2G ionosonda {0}: {1} {2:0.0} MHz (affidabilità {3:0.00})	KC2G-ionosonde {0}: {1} {2:0.0} MHz (betrouwbaarheid {3:0.00})
+spento durante le prove automatiche	uit tijdens de automatische tests
+spento nelle Impostazioni	uit in de Instellingen
+spento: la cartella del programma non è scrivibile (aggiornare a mano)	uit: de programmamap is niet schrijfbaar (met de hand bijwerken)
+gestito da un'altra finestra di YA-GT già aperta	beheerd door een ander al geopend YA-GT-venster
+pacchetto troppo grande, non si scarica	pakket te groot, wordt niet gedownload
+pacchetto tar.gz non gestito su questa piattaforma	tar.gz-pakket niet ondersteund op dit platform
+nessuna versione pubblicata su {0}	geen versie gepubliceerd op {0}
+versione pubblicata non leggibile: {0}	gepubliceerde versie niet leesbaar: {0}
+hai già l'ultima versione ({0})	je hebt al de nieuwste versie ({0})
+aggiornato: l'ultima versione è la {0} ({1})	bijgewerkt: de nieuwste versie is {0} ({1})
+versione {0} disponibile su {1}	versie {0} beschikbaar op {1}
+versione {0} pubblicata, ma senza il pacchetto {1}	versie {0} gepubliceerd, maar zonder het pakket {1}
+versione {0}: mancano impronta o firma del pacchetto, non si installa	versie {0}: vingerafdruk of handtekening van het pakket ontbreekt, niet geïnstalleerd
+scarico la versione {0} ({1})	versie {0} wordt gedownload ({1})
+versione {0}: impronta SHA-256 diversa, pacchetto scartato	versie {0}: SHA-256-vingerafdruk wijkt af, pakket verworpen
+versione {0}: FIRMA NON VALIDA, pacchetto scartato	versie {0}: HANDTEKENING ONGELDIG, pakket verworpen
+controllo non riuscito: {0} (riprovo fra {1} minuti)	controle mislukt: {0} (nieuwe poging over {1} minuten)
+aggiornato da {0} a {1} il {2}	bijgewerkt van {0} naar {1} op {2}
+versione {0} installata: entra in funzione al prossimo avvio di YA-GT	versie {0} geïnstalleerd: werkt vanaf de volgende start van YA-GT
+installazione della {0} non riuscita, rimessa la {1}: {2}	installatie van {0} mislukt, {1} hersteld: {2}
+LoTW (copia salvata)	LoTW (opgeslagen kopie)
+Collegamento a LoTW in corso…	Verbinding met LoTW maken…
+LoTW ha rifiutato l'accesso: controlla nome utente e password.	LoTW weigerde de toegang: controleer gebruikersnaam en wachtwoord.
+Risposta inattesa da LoTW (non è un file ADIF). Riprova più tardi.	Onverwacht antwoord van LoTW (geen ADIF-bestand). Probeer het later opnieuw.
+Il file ricevuto da LoTW sembra incompleto. Riprova.	Het van LoTW ontvangen bestand lijkt onvolledig. Probeer opnieuw.
+{0}: {1} QSO letti, {2} in totale	{0}: {1} QSO's gelezen, {2} in totaal
+Ricezione dati da LoTW: {0:N0} kB…	Gegevens van LoTW ontvangen: {0:N0} kB…
+tutte le bande	alle banden
+{0} mi sentono · {1} sento · {2} decodifiche	{0} horen mij · {1} hoor ik · {2} decoderingen
+G7VRD in coda {0}	G7VRD in wachtrij {0}
+ ⇄ {0} inoltro {1}/{2}	 ⇄ {0} doorsturen {1}/{2}
+KC2G {0}: {1} curve, {2} ionosonde	KC2G {0}: {1} curven, {2} ionosondes
+Aurora NOAA: previsione {0}	NOAA-poollicht: voorspelling {0}
+Proiezione	Projectie
+Mercatore	Mercator
+Azimutale	Azimutaal
+Aggiornamento	Bijwerken
+Banda	Band
+Tutte	Alle
+Spot degli ultimi	Spots van de laatste
+Aggiorna ora	Nu bijwerken
+Vista intera	Volledig beeld
+Impostazioni	Instellingen
+Livelli della mappa	Kaartlagen
+Statistiche (in alto a destra)	Statistieken (rechtsboven)
+Chi mi sente (spot)	Wie mij hoort (spots)
+Stazioni che ricevono il tuo segnale: fumetto con l'SNR, bordo blu	Stations die je signaal ontvangen: ballon met de SNR, blauwe rand
+Chi sento io (spot)	Wie ik hoor (spots)
+Stazioni che tu ricevi (PSKReporter, tuo skimmer RBN): bordo viola	Stations die jij ontvangt (PSKReporter, je RBN-skimmer): paarse rand
+Le mie decodifiche (UDP)	Mijn decoderingen (UDP)
+Decodifiche di WSJT-X/JTDX/MSHV ricevute via UDP: nuvoletta ovale	Decoderingen van WSJT-X/JTDX/MSHV via UDP: ovale wolk
+Nominativo nei fumetti	Roepnaam in de ballonnen
+Percorsi (cerchio massimo)	Paden (grootcirkel)
+Griglia Maidenhead	Maidenhead-raster
+Greyline (giorno/notte)	Greyline (dag/nacht)
+Propagazione KC2G	KC2G-propagatie
+prop.kc2g.com: curve della MUF(3000) o della foF2 e valori delle ionosonde	prop.kc2g.com: curven van de MUF(3000) of de foF2 en waarden van de ionosondes
+Aurora NOAA (OVATION)	NOAA-poollicht (OVATION)
+Probabilità di aurora del NOAA SWPC, ridisegnata in Mercatore e in azimutale	Poollichtkans van NOAA SWPC, opnieuw getekend in Mercator en azimutaal
+Quadrati (LoTW + QLog)	Vakken (LoTW + QLog)
+Arancio = lavorato, verde = LoTW, blu = QSL, grigio = confermato su tutte le bande 80-10 m (esclusi i 60 m)	Oranje = gewerkt, groen = LoTW, blauw = QSL, grijs = bevestigd op alle banden 80-10 m (zonder 60 m)
+Solo confermati	Alleen bevestigde
+Solo EME (PROP__MODE)	Alleen EME (PROP__MODE)
+Scarica da LoTW…	Downloaden van LoTW…
+Apri ADIF…	ADIF openen…
+QSO del log QLog	QSO's van het QLog-log
+Legge qlog.db (copia in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato	Leest qlog.db (alleen-lezen kopie): groene vakjes = LoTW, blauw = QSL, oranje = gewerkt
+qlog.db: posizione standard di QLog	qlog.db: standaardlocatie van QLog
+Fonti degli spot	Spotbronnen
+mqtt.pskreporter.info, più lo storico dell'ultima ora via HTTP	mqtt.pskreporter.info, plus de geschiedenis van het laatste uur via HTTP
+telnet.reversebeacon.net porte 7000 (CW/RTTY) e 7001 (FT8/FT4)	telnet.reversebeacon.net poorten 7000 (CW/RTTY) en 7001 (FT8/FT4)
+DM4X (cluster telnet)	DM4X (telnetcluster)
+dm4x.ddns.net:8500, spot PSKReporter in forma di cluster	dm4x.ddns.net:8500, PSKReporter-spots in clustervorm
+DXMAPS (2° cluster)	DXMAPS (2e cluster)
+Rete skimmer	Skimmernetwerk
+Invia set/skimmer (o set/noskimmer) al secondo cluster	Stuurt set/skimmer (of set/noskimmer) naar de tweede cluster
+Decodifiche UDP (WSJT-X/MSHV)	UDP-decoderingen (WSJT-X/MSHV)
+Porta e inoltro UDP in Impostazioni	UDP-poort en doorsturen in Instellingen
+Tema	Thema
+Chiaro (YA-NEC)	Licht (YA-NEC)
+Notte	Nacht
+YA-GT — impostazioni	YA-GT — instellingen
+Rimbalzo UDP: inoltra i pacchetti e riporta indietro le risposte	UDP-relais: stuurt de pakketten door en brengt de antwoorden terug
+facoltative: 127.0.0.1:2333, 192.168.1.20:2237	optioneel: 127.0.0.1:2333, 192.168.1.20:2237
+Decodifiche UDP (protocollo WSJT-X: WSJT-X, JTDX, MSHV)	UDP-decoderingen (WSJT-X-protocol: WSJT-X, JTDX, MSHV)
+Ricezione: ascolta su	Ontvangst: luisteren op
+Per l'indirizzo multicast (es. 224.0.0.1) YA-GT si unisce al gruppo; con 127.0.0.1 la porta non può essere la stessa di un altro programma in ascolto.	Bij een multicastadres (bijv. 224.0.0.1) neemt YA-GT deel aan de groep; met 127.0.0.1 mag de poort niet dezelfde zijn als die van een ander luisterend programma.
+Ritrasmissione: verso	Doorsturen: naar
+Altre destinazioni	Andere bestemmingen
+La destinazione principale è di solito QLog; nelle altre puoi aggiungere host:porta separati da virgola (GridTracker, JTAlert). I pacchetti passano identici, QSO registrati compresi, quindi QLog scrive il QSO da solo; le risposte (doppio clic, evidenziazioni) tornano al programma digitale. In QLog metti come porta WSJT-X la stessa porta di ritrasmissione.	De hoofdbestemming is meestal QLog; bij de andere kun je host:poort gescheiden door komma's toevoegen (GridTracker, JTAlert). De pakketten gaan ongewijzigd door, gelogde QSO's inbegrepen, zodat QLog het QSO zelf logt; de antwoorden (dubbelklik, markeringen) gaan terug naar het digitale programma. Zet in QLog als WSJT-X-poort dezelfde doorstuurpoort.
+Log di QLog	QLog-log
+Sfoglia…	Bladeren…
+Vuoto = posizione standard di QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Il file di QLog non viene mai modificato: si legge una copia.	Leeg = standaardlocatie van QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Het QLog-bestand wordt nooit gewijzigd: er wordt een kopie gelezen.
+Aggiornamento automatico	Automatische update
+Controlla adesso	Nu controleren
+Lingua	Taal
+La nuova lingua vale dal prossimo avvio del programma.	De nieuwe taal geldt vanaf de volgende start van het programma.
+Salva	Opslaan
+Annulla	Annuleren
+Scarica da LoTW	Downloaden van LoTW
+Ricorda il nome utente (la password non viene mai salvata)	Gebruikersnaam onthouden (het wachtwoord wordt nooit opgeslagen)
+Vengono scaricati tutti i QSO caricati su LoTW, con i dettagli delle conferme (locatore del corrispondente). Con log grandi LoTW può impiegare qualche minuto.	Alle naar LoTW geüploade QSO's worden gedownload, met de details van de bevestigingen (locator van het tegenstation). Bij grote logs kan LoTW enkele minuten nodig hebben.
+Nome utente LoTW	LoTW-gebruikersnaam
+Password LoTW	LoTW-wachtwoord
+Solo nominativo (facoltativo)	Alleen roepnaam (optioneel)
+Scarica	Downloaden
+Spot di un nominativo, LoTW, QLog e decodifiche UDP su una mappa a livelli	Spots van een roepnaam, LoTW, QLog en UDP-decoderingen op een kaart met lagen
+Contatti	Contact
+Sostieni il progetto: ko-fi.com/ic8tem	Steun het project: ko-fi.com/ic8tem
+Riconoscimenti (credits)	Dankwoord (credits)
+I dati restano accanto al programma (YA-GT.ini, CALL3.TXT, cartella Dati): nulla in AppData. La password LoTW non viene mai salvata.	De gegevens blijven naast het programma (YA-GT.ini, CALL3.TXT, map Dati): niets in AppData. Het LoTW-wachtwoord wordt nooit opgeslagen.
+Chiudi	Sluiten
+YA-GT — avvio	YA-GT — start
+Spot, LoTW, QLog e decodifiche sulla mappa — di Costantino IC8TEM	Spots, LoTW, QLog en decoderingen op de kaart — door Costantino IC8TEM
+Nominativo	Roepnaam
+Locatore (6 caratteri)	Locator (6 tekens)
+Il locatore fa da centro della mappa azimutale e serve a calcolare distanza e azimut di ogni spot.	De locator is het middelpunt van de azimutale kaart en dient om afstand en azimut van elke spot te berekenen.
+Avvia	Starten
+Esci	Afsluiten
+Stazioni che tu ricevi: bordo viola	Stations die jij ontvangt: paarse rand
+Decodifiche di WSJT-X/JTDX/MSHV via UDP: nuvoletta ovale	Decoderingen van WSJT-X/JTDX/MSHV via UDP: ovale wolk
+prop.kc2g.com: curve della MUF(3000) o della foF2	prop.kc2g.com: curven van de MUF(3000) of de foF2
+Solo EME (PROP_MODE)	Alleen EME (PROP_MODE)
+Legge qlog.db (copia in sola lettura)	Leest qlog.db (alleen-lezen kopie)
+Ricezione su	Ontvangst op
+Ritrasmetti a	Doorsturen naar
+Altre (facolt.)	Andere (opt.)
+La destinazione principale è di solito QLog; nelle altre host:porta separati da virgola (GridTracker, JTAlert). Passano anche i QSO registrati, quindi QLog scrive il QSO da solo; le risposte tornano al programma digitale. In QLog metti come porta WSJT-X la porta di ritrasmissione.	De hoofdbestemming is meestal QLog; bij de andere host:poort gescheiden door komma's (GridTracker, JTAlert). Ook gelogde QSO's gaan door, zodat QLog het QSO zelf logt; de antwoorden gaan terug naar het digitale programma. Zet in QLog als WSJT-X-poort de doorstuurpoort.
+Vuoto = posizione standard di QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Si legge una copia: il file di QLog non viene mai modificato.	Leeg = standaardlocatie van QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Er wordt een kopie gelezen: het QLog-bestand wordt nooit gewijzigd.
+Nome utente LoTW:	LoTW-gebruikersnaam:
+Password LoTW:	LoTW-wachtwoord:
+Solo nominativo (facoltativo):	Alleen roepnaam (optioneel):
+Mi sentono	Horen mij
+Sento io	Ik hoor
+Mie decodifiche (UDP)	Mijn decoderingen (UDP)
+mi sentono	horen mij
+sento io	ik hoor
+mie decodifiche (UDP)	mijn decoderingen (UDP)
+lavorato	gewerkt
+tutte 80-10 m	alle 80-10 m
+non ancora controllato	nog niet gecontroleerd
+PSKReporter — Philip Gladstone N1DQ: flusso MQTT (mqtt.pskreporter.info) e interfaccia HTTP	PSKReporter — Philip Gladstone N1DQ: MQTT-stroom (mqtt.pskreporter.info) en HTTP-interface
+Cluster DM4X (dm4x.ddns.net:8500): spot PSKReporter in forma di cluster	Cluster DM4X (dm4x.ddns.net:8500): PSKReporter-spots in clustervorm
+DXMAPS — Gabriel Sampol EA6VQ: secondo cluster con rete skimmer (dxmaps.com:7300)	DXMAPS — Gabriel Sampol EA6VQ: tweede cluster met skimmernetwerk (dxmaps.com:7300)
+prop.kc2g.com — Andrew Rodland KC2G: mappe di propagazione MUF/foF2 (GeoJSON)	prop.kc2g.com — Andrew Rodland KC2G: propagatiekaarten MUF/foF2 (GeoJSON)
+NOAA Space Weather Prediction Center: modello OVATION Prime dell'ovale aurorale	NOAA Space Weather Prediction Center: OVATION Prime-model van de poollichtovaal
+ARRL Logbook of The World (LoTW): report ADIF delle conferme	ARRL Logbook of The World (LoTW): ADIF-rapport van de bevestigingen
+QLog — Ladislav Foldyna OK1MLG: struttura del database qlog.db	QLog — Ladislav Foldyna OK1MLG: structuur van de database qlog.db
+Protocollo UDP di WSJT-X (K1JT e WSJT Development Group); JTDX; MSHV (LZ2HV)	UDP-protocol van WSJT-X (K1JT en WSJT Development Group); JTDX; MSHV (LZ2HV)
+CALL3.TXT: WSJT-X Improved (DG2YCB), CALL3 EME di W7GJ, grid_data.bin di JTDX, database di MSHV-IC8TEM e LIVETROPOVHF	CALL3.TXT: WSJT-X Improved (DG2YCB), EME-CALL3 van W7GJ, grid_data.bin van JTDX, databases van MSHV-IC8TEM en LIVETROPOVHF
+G7VRD: ricerca dei locatori per nominativo (api.g7vrd.co.uk)	G7VRD: locators opzoeken op roepnaam (api.g7vrd.co.uk)
+cty.dat — Jim Reisert AD1C (country-files.com): prefissi e paesi DXCC	cty.dat — Jim Reisert AD1C (country-files.com): DXCC-prefixen en -landen
+Natural Earth: coste e confini (pubblico dominio)	Natural Earth: kusten en grenzen (publiek domein)
+Codice ripreso da LIVETROPOVHF e LoTW Grid Map v2 (IC8TEM)	Code overgenomen van LIVETROPOVHF en LoTW Grid Map v2 (IC8TEM)

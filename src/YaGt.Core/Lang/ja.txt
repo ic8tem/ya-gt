@@ -1,0 +1,199 @@
+# YA-GT — ja — traduzione dell'interfaccia: <frase italiana><TAB><traduzione>; \n = a capo. Generato da tools/lingue (armonizzazione 27/11/2026).
+YA-GT — aggiornamento	YA-GT — 更新
+Apri file ADIF del log	ログの ADIF ファイルを開く
+È stata installata la versione {0} di YA-GT.\nEntra in funzione al prossimo avvio del programma.	YA-GT バージョン {0} をインストールしました。\n次回プログラム起動時に有効になります。
+{0:HH:mm:ss} UTC   ·   prossimo aggiornamento tra {1}	{0:HH:mm:ss} UTC   ·   次の更新まで {1}
+Database di QLog (qlog.db)	QLog データベース (qlog.db)
+Porta UDP non valida.	UDP ポートが無効です。
+Indirizzo d'ascolto non valido.	待ち受けアドレスが無効です。
+Porta di ritrasmissione non valida.	転送ポートが無効です。
+La porta di ritrasmissione deve essere diversa da quella di ricezione.	転送ポートは受信ポートと異なる必要があります。
+Inserisci nome utente e password di LoTW.	LoTW のユーザー名とパスワードを入力してください。
+Aggiornamento automatico dal GitHub (ogni {0} minuti)	GitHub から自動更新（{0} 分ごと）
+Stato: {0}	状態: {0}
+Ritrasmissione: {0}	転送: {0}
+Errore di collegamento: {0}	接続エラー: {0}
+Nominativo non valido.	コールサインが無効です。
+Il locatore deve avere 6 caratteri, es. JN70cn.	ロケーターは 6 文字にしてください（例: JN70cn）。
+Opacità	不透明度
+Banda scelta in alto	上で選んだバンド
+Tutte le bande	すべてのバンド
+UHF e oltre	UHF 以上
+Tutti i file	すべてのファイル
+nessuna stazione	局なし
+Fonti:	ソース:
+nessun QSO (scarica da LoTW, apri un ADIF o attiva QLog)	QSO なし（LoTW からダウンロード、ADIF を開く、または QLog をオン）
+confermato su tutte le bande 80-10 m	80-10 m の全バンドで確認済み
+confermato LoTW	LoTW で確認済み
+confermato con QSL	QSL で確認済み
+lavorato, non confermato	交信済み、未確認
+posizione del paese (cty.dat)	国の位置 (cty.dat)
+Mi sente	私を受信
+Sento	受信中
+posizione da CALL3.TXT	CALL3.TXT からの位置
+Mia decodifica	私のデコード
+SNR dB (RBN CW: dB sul rumore)	SNR dB（RBN CW: ノイズ上の dB）
+{0} stazioni · {1} quadrati · {2} paesi	{0} 局 · {1} グリッド · {2} か国
+più lontana: {0} {1:N0} km	最遠: {0} {1:N0} km
+migliore: {0} {1}	最良: {0} {1}
+Statistiche · {0} · ultimi {1}	統計 · {0} · 直近 {1}
+Quadrati · {0}	グリッド · {0}
+lavorati {0} · confermati {1} ({2:0}%)	交信済み {0} · 確認済み {1} ({2:0}%)
+LoTW {0} · solo QSL {1} · non confermati {2}	LoTW {0} · QSL のみ {1} · 未確認 {2}
+confermati su tutte le bande 80-10 m: {0}	80-10 m の全バンドで確認済み: {0}
+Aggiornato {0:HH:mm} UTC	{0:HH:mm} UTC に更新
+KC2G ionosonda {0}: {1} {2:0.0} MHz (affidabilità {3:0.00})	KC2G イオノゾンデ {0}: {1} {2:0.0} MHz（信頼度 {3:0.00}）
+spento durante le prove automatiche	自動テスト中はオフ
+spento nelle Impostazioni	設定でオフ
+spento: la cartella del programma non è scrivibile (aggiornare a mano)	オフ: プログラムのフォルダーに書き込めません（手動で更新してください）
+gestito da un'altra finestra di YA-GT già aperta	すでに開いている別の YA-GT ウィンドウが管理しています
+pacchetto troppo grande, non si scarica	パッケージが大きすぎるためダウンロードしません
+pacchetto tar.gz non gestito su questa piattaforma	このプラットフォームでは tar.gz パッケージに対応していません
+nessuna versione pubblicata su {0}	{0} に公開されたバージョンはありません
+versione pubblicata non leggibile: {0}	公開バージョンを読み取れません: {0}
+hai già l'ultima versione ({0})	すでに最新バージョンです ({0})
+aggiornato: l'ultima versione è la {0} ({1})	最新: 最新バージョンは {0} です ({1})
+versione {0} disponibile su {1}	バージョン {0} は {1} で入手できます
+versione {0} pubblicata, ma senza il pacchetto {1}	バージョン {0} は公開されましたが、パッケージ {1} がありません
+versione {0}: mancano impronta o firma del pacchetto, non si installa	バージョン {0}: パッケージのフィンガープリントまたは署名がないためインストールしません
+scarico la versione {0} ({1})	バージョン {0} をダウンロード中 ({1})
+versione {0}: impronta SHA-256 diversa, pacchetto scartato	バージョン {0}: SHA-256 フィンガープリントが異なるためパッケージを破棄しました
+versione {0}: FIRMA NON VALIDA, pacchetto scartato	バージョン {0}: 署名が無効のためパッケージを破棄しました
+controllo non riuscito: {0} (riprovo fra {1} minuti)	確認に失敗しました: {0}（{1} 分後に再試行）
+aggiornato da {0} a {1} il {2}	{0} から {1} に更新（{2}）
+versione {0} installata: entra in funzione al prossimo avvio di YA-GT	バージョン {0} をインストールしました: 次回 YA-GT 起動時に有効になります
+installazione della {0} non riuscita, rimessa la {1}: {2}	{0} のインストールに失敗し、{1} に戻しました: {2}
+LoTW (copia salvata)	LoTW（保存済みコピー）
+Collegamento a LoTW in corso…	LoTW に接続中…
+LoTW ha rifiutato l'accesso: controlla nome utente e password.	LoTW がアクセスを拒否しました: ユーザー名とパスワードを確認してください。
+Risposta inattesa da LoTW (non è un file ADIF). Riprova più tardi.	LoTW から予期しない応答がありました（ADIF ファイルではありません）。後でもう一度お試しください。
+Il file ricevuto da LoTW sembra incompleto. Riprova.	LoTW から受信したファイルが不完全なようです。もう一度お試しください。
+{0}: {1} QSO letti, {2} in totale	{0}: {1} QSO を読み込み、合計 {2}
+Ricezione dati da LoTW: {0:N0} kB…	LoTW からデータを受信中: {0:N0} kB…
+tutte le bande	すべてのバンド
+{0} mi sentono · {1} sento · {2} decodifiche	私を受信 {0} · 受信中 {1} · デコード {2}
+G7VRD in coda {0}	G7VRD 待ち {0}
+ ⇄ {0} inoltro {1}/{2}	 ⇄ {0} 転送 {1}/{2}
+KC2G {0}: {1} curve, {2} ionosonde	KC2G {0}: 等値線 {1} 本、イオノゾンデ {2} 局
+Aurora NOAA: previsione {0}	NOAA オーロラ: 予報 {0}
+Proiezione	図法
+Mercatore	メルカトル
+Azimutale	正距方位
+Aggiornamento	更新間隔
+Banda	バンド
+Tutte	すべて
+Spot degli ultimi	スポットの期間
+Aggiorna ora	今すぐ更新
+Vista intera	全体表示
+Impostazioni	設定
+Livelli della mappa	地図レイヤー
+Statistiche (in alto a destra)	統計（右上）
+Chi mi sente (spot)	私を受信した局（スポット）
+Stazioni che ricevono il tuo segnale: fumetto con l'SNR, bordo blu	あなたの信号を受信した局: SNR 付き吹き出し、青枠
+Chi sento io (spot)	私が受信した局（スポット）
+Stazioni che tu ricevi (PSKReporter, tuo skimmer RBN): bordo viola	あなたが受信した局（PSKReporter、あなたの RBN スキマー）: 紫枠
+Le mie decodifiche (UDP)	私のデコード (UDP)
+Decodifiche di WSJT-X/JTDX/MSHV ricevute via UDP: nuvoletta ovale	UDP で受信した WSJT-X/JTDX/MSHV のデコード: 楕円の雲
+Nominativo nei fumetti	吹き出しにコールサイン
+Percorsi (cerchio massimo)	経路（大円）
+Griglia Maidenhead	メイデンヘッドグリッド
+Greyline (giorno/notte)	グレイライン（昼/夜）
+Propagazione KC2G	KC2G 伝搬
+prop.kc2g.com: curve della MUF(3000) o della foF2 e valori delle ionosonde	prop.kc2g.com: MUF(3000) または foF2 の等値線とイオノゾンデの値
+Aurora NOAA (OVATION)	NOAA オーロラ (OVATION)
+Probabilità di aurora del NOAA SWPC, ridisegnata in Mercatore e in azimutale	NOAA SWPC のオーロラ確率、メルカトル図法と正距方位図法で再描画
+Quadrati (LoTW + QLog)	グリッド (LoTW + QLog)
+Arancio = lavorato, verde = LoTW, blu = QSL, grigio = confermato su tutte le bande 80-10 m (esclusi i 60 m)	オレンジ = 交信済み、緑 = LoTW、青 = QSL、灰 = 80-10 m の全バンドで確認済み（60 m を除く）
+Solo confermati	確認済みのみ
+Solo EME (PROP__MODE)	EME のみ (PROP__MODE)
+Scarica da LoTW…	LoTW からダウンロード…
+Apri ADIF…	ADIF を開く…
+QSO del log QLog	QLog ログの QSO
+Legge qlog.db (copia in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato	qlog.db を読み込み（読み取り専用コピー）: 緑の四角 = LoTW、青 = QSL、オレンジ = 交信済み
+qlog.db: posizione standard di QLog	qlog.db: QLog の標準の場所
+Fonti degli spot	スポットのソース
+mqtt.pskreporter.info, più lo storico dell'ultima ora via HTTP	mqtt.pskreporter.info、さらに HTTP で直近 1 時間の履歴
+telnet.reversebeacon.net porte 7000 (CW/RTTY) e 7001 (FT8/FT4)	telnet.reversebeacon.net ポート 7000 (CW/RTTY) と 7001 (FT8/FT4)
+DM4X (cluster telnet)	DM4X（telnet クラスター）
+dm4x.ddns.net:8500, spot PSKReporter in forma di cluster	dm4x.ddns.net:8500、クラスター形式の PSKReporter スポット
+DXMAPS (2° cluster)	DXMAPS（第 2 クラスター）
+Rete skimmer	スキマーネットワーク
+Invia set/skimmer (o set/noskimmer) al secondo cluster	2 つ目のクラスターに set/skimmer（または set/noskimmer）を送信
+Decodifiche UDP (WSJT-X/MSHV)	UDP デコード (WSJT-X/MSHV)
+Porta e inoltro UDP in Impostazioni	UDP ポートと転送は設定で
+Tema	テーマ
+Chiaro (YA-NEC)	ライト (YA-NEC)
+Notte	ナイト
+YA-GT — impostazioni	YA-GT — 設定
+Rimbalzo UDP: inoltra i pacchetti e riporta indietro le risposte	UDP 中継: パケットを転送し、応答を戻す
+facoltative: 127.0.0.1:2333, 192.168.1.20:2237	任意: 127.0.0.1:2333, 192.168.1.20:2237
+Decodifiche UDP (protocollo WSJT-X: WSJT-X, JTDX, MSHV)	UDP デコード（WSJT-X プロトコル: WSJT-X、JTDX、MSHV）
+Ricezione: ascolta su	受信: 待ち受け先
+Per l'indirizzo multicast (es. 224.0.0.1) YA-GT si unisce al gruppo; con 127.0.0.1 la porta non può essere la stessa di un altro programma in ascolto.	マルチキャストアドレス（例 224.0.0.1）では YA-GT がグループに参加します。127.0.0.1 の場合、ポートは待ち受け中の他のプログラムと同じにできません。
+Ritrasmissione: verso	転送: 宛先
+Altre destinazioni	その他の宛先
+La destinazione principale è di solito QLog; nelle altre puoi aggiungere host:porta separati da virgola (GridTracker, JTAlert). I pacchetti passano identici, QSO registrati compresi, quindi QLog scrive il QSO da solo; le risposte (doppio clic, evidenziazioni) tornano al programma digitale. In QLog metti come porta WSJT-X la stessa porta di ritrasmissione.	主な宛先は通常 QLog です。ほかの宛先にはカンマ区切りで host:port を追加できます（GridTracker、JTAlert）。パケットは記録済み QSO も含めてそのまま通るので、QLog が自分で QSO を記録します。応答（ダブルクリック、ハイライト）はデジタルモードのプログラムに戻ります。QLog の WSJT-X ポートには同じ転送ポートを設定してください。
+Log di QLog	QLog ログ
+Sfoglia…	参照…
+Vuoto = posizione standard di QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Il file di QLog non viene mai modificato: si legge una copia.	空欄 = QLog の標準の場所 (%LOCALAPPDATA%\hamradio\QLog\qlog.db)。QLog のファイルは決して変更しません: コピーを読み込みます。
+Aggiornamento automatico	自動更新
+Controlla adesso	今すぐ確認
+Lingua	言語
+La nuova lingua vale dal prossimo avvio del programma.	新しい言語は次回プログラム起動時から有効です。
+Salva	保存
+Annulla	キャンセル
+Scarica da LoTW	LoTW からダウンロード
+Ricorda il nome utente (la password non viene mai salvata)	ユーザー名を記憶（パスワードは保存しません）
+Vengono scaricati tutti i QSO caricati su LoTW, con i dettagli delle conferme (locatore del corrispondente). Con log grandi LoTW può impiegare qualche minuto.	LoTW にアップロードされたすべての QSO を、確認の詳細（相手局のロケーター）とともにダウンロードします。大きなログでは LoTW に数分かかることがあります。
+Nome utente LoTW	LoTW ユーザー名
+Password LoTW	LoTW パスワード
+Solo nominativo (facoltativo)	コールサインのみ（任意）
+Scarica	ダウンロード
+Spot di un nominativo, LoTW, QLog e decodifiche UDP su una mappa a livelli	コールサインのスポット、LoTW、QLog、UDP デコードをレイヤー地図に表示
+Contatti	連絡先
+Sostieni il progetto: ko-fi.com/ic8tem	プロジェクトを支援: ko-fi.com/ic8tem
+Riconoscimenti (credits)	謝辞 (credits)
+I dati restano accanto al programma (YA-GT.ini, CALL3.TXT, cartella Dati): nulla in AppData. La password LoTW non viene mai salvata.	データはプログラムの隣に置かれます（YA-GT.ini、CALL3.TXT、Dati フォルダー）: AppData には何も保存しません。LoTW のパスワードは保存しません。
+Chiudi	閉じる
+YA-GT — avvio	YA-GT — 起動
+Spot, LoTW, QLog e decodifiche sulla mappa — di Costantino IC8TEM	地図上のスポット、LoTW、QLog、デコード — Costantino IC8TEM
+Nominativo	コールサイン
+Locatore (6 caratteri)	ロケーター（6 文字）
+Il locatore fa da centro della mappa azimutale e serve a calcolare distanza e azimut di ogni spot.	ロケーターは正距方位地図の中心で、各スポットの距離と方位の計算に使います。
+Avvia	開始
+Esci	終了
+Stazioni che tu ricevi: bordo viola	あなたが受信した局: 紫枠
+Decodifiche di WSJT-X/JTDX/MSHV via UDP: nuvoletta ovale	UDP による WSJT-X/JTDX/MSHV のデコード: 楕円の雲
+prop.kc2g.com: curve della MUF(3000) o della foF2	prop.kc2g.com: MUF(3000) または foF2 の等値線
+Solo EME (PROP_MODE)	EME のみ (PROP_MODE)
+Legge qlog.db (copia in sola lettura)	qlog.db を読み込み（読み取り専用コピー）
+Ricezione su	受信先
+Ritrasmetti a	転送先
+Altre (facolt.)	その他（任意）
+La destinazione principale è di solito QLog; nelle altre host:porta separati da virgola (GridTracker, JTAlert). Passano anche i QSO registrati, quindi QLog scrive il QSO da solo; le risposte tornano al programma digitale. In QLog metti come porta WSJT-X la porta di ritrasmissione.	主な宛先は通常 QLog です。ほかはカンマ区切りの host:port（GridTracker、JTAlert）。記録済み QSO も通るので、QLog が自分で QSO を記録します。応答はデジタルモードのプログラムに戻ります。QLog の WSJT-X ポートには転送ポートを設定してください。
+Vuoto = posizione standard di QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Si legge una copia: il file di QLog non viene mai modificato.	空欄 = QLog の標準の場所 (%LOCALAPPDATA%\hamradio\QLog\qlog.db)。コピーを読み込みます: QLog のファイルは決して変更しません。
+Nome utente LoTW:	LoTW ユーザー名:
+Password LoTW:	LoTW パスワード:
+Solo nominativo (facoltativo):	コールサインのみ（任意）:
+Mi sentono	私を受信
+Sento io	受信中
+Mie decodifiche (UDP)	私のデコード (UDP)
+mi sentono	私を受信
+sento io	受信中
+mie decodifiche (UDP)	私のデコード (UDP)
+lavorato	交信済み
+tutte 80-10 m	全 80-10 m
+non ancora controllato	未チェック
+PSKReporter — Philip Gladstone N1DQ: flusso MQTT (mqtt.pskreporter.info) e interfaccia HTTP	PSKReporter — Philip Gladstone N1DQ: MQTT フィード (mqtt.pskreporter.info) と HTTP インターフェース
+Cluster DM4X (dm4x.ddns.net:8500): spot PSKReporter in forma di cluster	DM4X クラスター (dm4x.ddns.net:8500): クラスター形式の PSKReporter スポット
+DXMAPS — Gabriel Sampol EA6VQ: secondo cluster con rete skimmer (dxmaps.com:7300)	DXMAPS — Gabriel Sampol EA6VQ: スキマーネットワーク付きの第 2 クラスター (dxmaps.com:7300)
+prop.kc2g.com — Andrew Rodland KC2G: mappe di propagazione MUF/foF2 (GeoJSON)	prop.kc2g.com — Andrew Rodland KC2G: MUF/foF2 伝搬マップ (GeoJSON)
+NOAA Space Weather Prediction Center: modello OVATION Prime dell'ovale aurorale	NOAA Space Weather Prediction Center: オーロラオーバルの OVATION Prime モデル
+ARRL Logbook of The World (LoTW): report ADIF delle conferme	ARRL Logbook of The World (LoTW): 確認の ADIF レポート
+QLog — Ladislav Foldyna OK1MLG: struttura del database qlog.db	QLog — Ladislav Foldyna OK1MLG: qlog.db データベースの構造
+Protocollo UDP di WSJT-X (K1JT e WSJT Development Group); JTDX; MSHV (LZ2HV)	WSJT-X の UDP プロトコル（K1JT と WSJT Development Group）; JTDX; MSHV (LZ2HV)
+CALL3.TXT: WSJT-X Improved (DG2YCB), CALL3 EME di W7GJ, grid_data.bin di JTDX, database di MSHV-IC8TEM e LIVETROPOVHF	CALL3.TXT: WSJT-X Improved (DG2YCB)、W7GJ の EME CALL3、JTDX の grid_data.bin、MSHV-IC8TEM と LIVETROPOVHF のデータベース
+G7VRD: ricerca dei locatori per nominativo (api.g7vrd.co.uk)	G7VRD: コールサインからロケーターを検索 (api.g7vrd.co.uk)
+cty.dat — Jim Reisert AD1C (country-files.com): prefissi e paesi DXCC	cty.dat — Jim Reisert AD1C (country-files.com): DXCC プリフィックスと国
+Natural Earth: coste e confini (pubblico dominio)	Natural Earth: 海岸線と国境（パブリックドメイン）
+Codice ripreso da LIVETROPOVHF e LoTW Grid Map v2 (IC8TEM)	LIVETROPOVHF と LoTW Grid Map v2 から流用したコード (IC8TEM)

@@ -8,6 +8,8 @@
 
 YA-GT mostra su una mappa del mondo chi riceve il tuo nominativo e chi ricevi tu, con un **fumetto ben visibile con il valore SNR** per ogni stazione, insieme ai tuoi QSO di LoTW e di QLog, alle tue decodifiche UDP, alla greyline, alla propagazione KC2G e all'aurora del NOAA. **Ogni funzione è un livello della mappa** e si accende o si spegne a scelta.
 
+Interfaccia in **37 lingue** (le stesse di tutti i programmi IC8TEM): al primo avvio quella del sistema, poi si sceglie in *Impostazioni > Lingua*.
+
 A cura di **Costantino Cerrotta • IC8TEM** — ccerrotta@gmail.com · ic8tem@gmail.com · [qrz.com/db/ic8tem](https://www.qrz.com/db/ic8tem) · [ko-fi.com/ic8tem](https://ko-fi.com/ic8tem)
 
 ## Avvio
@@ -94,6 +96,8 @@ PSKReporter (Philip Gladstone N1DQ) · Reverse Beacon Network · cluster DM4X ·
 ## English
 
 YA-GT shows on a world map who hears your callsign and who you hear, with a **clearly visible SNR bubble** for every station, together with your LoTW and QLog QSOs, your UDP decodes, the greyline, KC2G propagation and NOAA aurora. **Every feature is a map layer** that can be switched on or off.
+
+Interface in **37 languages** (the same as all IC8TEM programs): the system language on first start, then choose it in *Settings > Language*.
 
 By **Costantino Cerrotta • IC8TEM** — ccerrotta@gmail.com · ic8tem@gmail.com · [qrz.com/db/ic8tem](https://www.qrz.com/db/ic8tem) · [ko-fi.com/ic8tem](https://ko-fi.com/ic8tem)
 

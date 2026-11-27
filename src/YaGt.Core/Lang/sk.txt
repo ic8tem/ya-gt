@@ -1,0 +1,199 @@
+# YA-GT — sk — traduzione dell'interfaccia: <frase italiana><TAB><traduzione>; \n = a capo. Generato da tools/lingue (armonizzazione 27/11/2026).
+YA-GT — aggiornamento	YA-GT — aktualizácia
+Apri file ADIF del log	Otvoriť súbor ADIF denníka
+È stata installata la versione {0} di YA-GT.\nEntra in funzione al prossimo avvio del programma.	Bola nainštalovaná verzia {0} programu YA-GT.\nPrejaví sa pri ďalšom spustení programu.
+{0:HH:mm:ss} UTC   ·   prossimo aggiornamento tra {1}	{0:HH:mm:ss} UTC   ·   ďalšia aktualizácia o {1}
+Database di QLog (qlog.db)	Databáza QLog (qlog.db)
+Porta UDP non valida.	Neplatný port UDP.
+Indirizzo d'ascolto non valido.	Neplatná adresa počúvania.
+Porta di ritrasmissione non valida.	Neplatný port preposielania.
+La porta di ritrasmissione deve essere diversa da quella di ricezione.	Port preposielania musí byť iný ako port príjmu.
+Inserisci nome utente e password di LoTW.	Zadajte používateľské meno a heslo LoTW.
+Aggiornamento automatico dal GitHub (ogni {0} minuti)	Automatická aktualizácia z GitHubu (každých {0} minút)
+Stato: {0}	Stav: {0}
+Ritrasmissione: {0}	Preposielanie: {0}
+Errore di collegamento: {0}	Chyba pripojenia: {0}
+Nominativo non valido.	Neplatná značka.
+Il locatore deve avere 6 caratteri, es. JN70cn.	Lokátor musí mať 6 znakov, napr. JN70cn.
+Opacità	Krytie
+Banda scelta in alto	Pásmo zvolené hore
+Tutte le bande	Všetky pásma
+UHF e oltre	UHF a vyššie
+Tutti i file	Všetky súbory
+nessuna stazione	žiadne stanice
+Fonti:	Zdroje:
+nessun QSO (scarica da LoTW, apri un ADIF o attiva QLog)	žiadne spojenia (stiahnite z LoTW, otvorte ADIF alebo zapnite QLog)
+confermato su tutte le bande 80-10 m	potvrdené na všetkých pásmach 80-10 m
+confermato LoTW	potvrdené v LoTW
+confermato con QSL	potvrdené lístkom QSL
+lavorato, non confermato	nadviazané, nepotvrdené
+posizione del paese (cty.dat)	poloha krajiny (cty.dat)
+Mi sente	Počuje ma
+Sento	Počujem
+posizione da CALL3.TXT	poloha z CALL3.TXT
+Mia decodifica	Moje dekódovanie
+SNR dB (RBN CW: dB sul rumore)	SNR dB (RBN CW: dB nad šumom)
+{0} stazioni · {1} quadrati · {2} paesi	{0} staníc · {1} štvorcov · {2} krajín
+più lontana: {0} {1:N0} km	najvzdialenejšia: {0} {1:N0} km
+migliore: {0} {1}	najlepšia: {0} {1}
+Statistiche · {0} · ultimi {1}	Štatistiky · {0} · posledných {1}
+Quadrati · {0}	Štvorce · {0}
+lavorati {0} · confermati {1} ({2:0}%)	nadviazané {0} · potvrdené {1} ({2:0} %)
+LoTW {0} · solo QSL {1} · non confermati {2}	LoTW {0} · len QSL {1} · nepotvrdené {2}
+confermati su tutte le bande 80-10 m: {0}	potvrdené na všetkých pásmach 80-10 m: {0}
+Aggiornato {0:HH:mm} UTC	Aktualizované {0:HH:mm} UTC
+KC2G ionosonda {0}: {1} {2:0.0} MHz (affidabilità {3:0.00})	Ionosonda KC2G {0}: {1} {2:0.0} MHz (spoľahlivosť {3:0.00})
+spento durante le prove automatiche	vypnuté počas automatických testov
+spento nelle Impostazioni	vypnuté v Nastaveniach
+spento: la cartella del programma non è scrivibile (aggiornare a mano)	vypnuté: do priečinka programu nemožno zapisovať (aktualizujte ručne)
+gestito da un'altra finestra di YA-GT già aperta	spravované iným, už otvoreným oknom YA-GT
+pacchetto troppo grande, non si scarica	balík je príliš veľký, nesťahuje sa
+pacchetto tar.gz non gestito su questa piattaforma	balík tar.gz nie je na tejto platforme podporovaný
+nessuna versione pubblicata su {0}	žiadna verzia zverejnená na {0}
+versione pubblicata non leggibile: {0}	zverejnená verzia je nečitateľná: {0}
+hai già l'ultima versione ({0})	už máte najnovšiu verziu ({0})
+aggiornato: l'ultima versione è la {0} ({1})	aktuálne: najnovšia verzia je {0} ({1})
+versione {0} disponibile su {1}	verzia {0} dostupná na {1}
+versione {0} pubblicata, ma senza il pacchetto {1}	verzia {0} zverejnená, ale bez balíka {1}
+versione {0}: mancano impronta o firma del pacchetto, non si installa	verzia {0}: chýba odtlačok alebo podpis balíka, neinštaluje sa
+scarico la versione {0} ({1})	sťahujem verziu {0} ({1})
+versione {0}: impronta SHA-256 diversa, pacchetto scartato	verzia {0}: iný odtlačok SHA-256, balík zahodený
+versione {0}: FIRMA NON VALIDA, pacchetto scartato	verzia {0}: NEPLATNÝ PODPIS, balík zahodený
+controllo non riuscito: {0} (riprovo fra {1} minuti)	kontrola zlyhala: {0} (nový pokus o {1} minút)
+aggiornato da {0} a {1} il {2}	aktualizované z {0} na {1} dňa {2}
+versione {0} installata: entra in funzione al prossimo avvio di YA-GT	verzia {0} nainštalovaná: prejaví sa pri ďalšom spustení YA-GT
+installazione della {0} non riuscita, rimessa la {1}: {2}	inštalácia verzie {0} zlyhala, obnovená {1}: {2}
+LoTW (copia salvata)	LoTW (uložená kópia)
+Collegamento a LoTW in corso…	Pripája sa k LoTW…
+LoTW ha rifiutato l'accesso: controlla nome utente e password.	LoTW odmietol prístup: skontrolujte používateľské meno a heslo.
+Risposta inattesa da LoTW (non è un file ADIF). Riprova più tardi.	Neočakávaná odpoveď LoTW (nejde o súbor ADIF). Skúste to neskôr.
+Il file ricevuto da LoTW sembra incompleto. Riprova.	Súbor prijatý z LoTW sa zdá neúplný. Skúste to znova.
+{0}: {1} QSO letti, {2} in totale	{0}: načítaných {1} spojení, spolu {2}
+Ricezione dati da LoTW: {0:N0} kB…	Príjem údajov z LoTW: {0:N0} kB…
+tutte le bande	všetky pásma
+{0} mi sentono · {1} sento · {2} decodifiche	{0} ma počuje · {1} počujem · {2} dekódovaní
+G7VRD in coda {0}	G7VRD v poradí {0}
+ ⇄ {0} inoltro {1}/{2}	 ⇄ {0} preposielanie {1}/{2}
+KC2G {0}: {1} curve, {2} ionosonde	KC2G {0}: {1} kriviek, {2} ionosond
+Aurora NOAA: previsione {0}	Polárna žiara NOAA: predpoveď {0}
+Proiezione	Projekcia
+Mercatore	Mercator
+Azimutale	Azimutálna
+Aggiornamento	Aktualizácia
+Banda	Pásmo
+Tutte	Všetko
+Spot degli ultimi	Spoty za posledných
+Aggiorna ora	Aktualizovať
+Vista intera	Celý pohľad
+Impostazioni	Nastavenia
+Livelli della mappa	Vrstvy mapy
+Statistiche (in alto a destra)	Štatistiky (vpravo hore)
+Chi mi sente (spot)	Kto ma počuje (spoty)
+Stazioni che ricevono il tuo segnale: fumetto con l'SNR, bordo blu	Stanice, ktoré prijímajú váš signál: bublina so SNR, modrý okraj
+Chi sento io (spot)	Koho počujem (spoty)
+Stazioni che tu ricevi (PSKReporter, tuo skimmer RBN): bordo viola	Stanice, ktoré prijímate (PSKReporter, váš skimmer RBN): fialový okraj
+Le mie decodifiche (UDP)	Moje dekódovania (UDP)
+Decodifiche di WSJT-X/JTDX/MSHV ricevute via UDP: nuvoletta ovale	Dekódovania WSJT-X/JTDX/MSHV prijaté cez UDP: oválny obláčik
+Nominativo nei fumetti	Značka v bublinách
+Percorsi (cerchio massimo)	Trasy (ortodróma)
+Griglia Maidenhead	Mriežka Maidenhead
+Greyline (giorno/notte)	Greyline (deň/noc)
+Propagazione KC2G	Šírenie KC2G
+prop.kc2g.com: curve della MUF(3000) o della foF2 e valori delle ionosonde	prop.kc2g.com: krivky MUF(3000) alebo foF2 a hodnoty ionosond
+Aurora NOAA (OVATION)	Polárna žiara NOAA (OVATION)
+Probabilità di aurora del NOAA SWPC, ridisegnata in Mercatore e in azimutale	Pravdepodobnosť polárnej žiary z NOAA SWPC, prekreslená v Mercatorovej a azimutálnej projekcii
+Quadrati (LoTW + QLog)	Štvorce (LoTW + QLog)
+Arancio = lavorato, verde = LoTW, blu = QSL, grigio = confermato su tutte le bande 80-10 m (esclusi i 60 m)	Oranžová = nadviazané, zelená = LoTW, modrá = QSL, sivá = potvrdené na všetkých pásmach 80-10 m (bez 60 m)
+Solo confermati	Len potvrdené
+Solo EME (PROP__MODE)	Len EME (PROP__MODE)
+Scarica da LoTW…	Stiahnuť z LoTW…
+Apri ADIF…	Otvoriť ADIF…
+QSO del log QLog	Spojenia z denníka QLog
+Legge qlog.db (copia in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato	Číta qlog.db (kópia len na čítanie): zelené štvorčeky = LoTW, modré = QSL, oranžové = nadviazané
+qlog.db: posizione standard di QLog	qlog.db: štandardné umiestnenie QLog
+Fonti degli spot	Zdroje spotov
+mqtt.pskreporter.info, più lo storico dell'ultima ora via HTTP	mqtt.pskreporter.info a história poslednej hodiny cez HTTP
+telnet.reversebeacon.net porte 7000 (CW/RTTY) e 7001 (FT8/FT4)	telnet.reversebeacon.net porty 7000 (CW/RTTY) a 7001 (FT8/FT4)
+DM4X (cluster telnet)	DM4X (telnetový klaster)
+dm4x.ddns.net:8500, spot PSKReporter in forma di cluster	dm4x.ddns.net:8500, spoty PSKReporter vo forme klastra
+DXMAPS (2° cluster)	DXMAPS (2. klaster)
+Rete skimmer	Sieť skimmerov
+Invia set/skimmer (o set/noskimmer) al secondo cluster	Posiela set/skimmer (alebo set/noskimmer) druhému klastru
+Decodifiche UDP (WSJT-X/MSHV)	Dekódovania UDP (WSJT-X/MSHV)
+Porta e inoltro UDP in Impostazioni	Port UDP a preposielanie v Nastaveniach
+Tema	Motív
+Chiaro (YA-NEC)	Svetlý (YA-NEC)
+Notte	Noc
+YA-GT — impostazioni	YA-GT — nastavenia
+Rimbalzo UDP: inoltra i pacchetti e riporta indietro le risposte	Odraz UDP: preposiela pakety a vracia odpovede
+facoltative: 127.0.0.1:2333, 192.168.1.20:2237	voliteľné: 127.0.0.1:2333, 192.168.1.20:2237
+Decodifiche UDP (protocollo WSJT-X: WSJT-X, JTDX, MSHV)	Dekódovania UDP (protokol WSJT-X: WSJT-X, JTDX, MSHV)
+Ricezione: ascolta su	Príjem: počúvať na
+Per l'indirizzo multicast (es. 224.0.0.1) YA-GT si unisce al gruppo; con 127.0.0.1 la porta non può essere la stessa di un altro programma in ascolto.	Pri adrese multicast (napr. 224.0.0.1) sa YA-GT pripojí ku skupine; pri 127.0.0.1 nesmie byť port rovnaký ako pri inom počúvajúcom programe.
+Ritrasmissione: verso	Preposielanie: na
+Altre destinazioni	Ďalšie ciele
+La destinazione principale è di solito QLog; nelle altre puoi aggiungere host:porta separati da virgola (GridTracker, JTAlert). I pacchetti passano identici, QSO registrati compresi, quindi QLog scrive il QSO da solo; le risposte (doppio clic, evidenziazioni) tornano al programma digitale. In QLog metti come porta WSJT-X la stessa porta di ritrasmissione.	Hlavným cieľom je zvyčajne QLog; do ďalších môžete pridať host:port oddelené čiarkami (GridTracker, JTAlert). Pakety prechádzajú bez zmeny, vrátane zapísaných spojení, takže QLog spojenie zapíše sám; odpovede (dvojklik, zvýraznenia) sa vracajú do digitálneho programu. V QLog nastavte ako port WSJT-X rovnaký port preposielania.
+Log di QLog	Denník QLog
+Sfoglia…	Prehľadávať…
+Vuoto = posizione standard di QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Il file di QLog non viene mai modificato: si legge una copia.	Prázdne = štandardné umiestnenie QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Súbor QLog sa nikdy nemení: číta sa kópia.
+Aggiornamento automatico	Automatická aktualizácia
+Controlla adesso	Skontrolovať
+Lingua	Jazyk
+La nuova lingua vale dal prossimo avvio del programma.	Nový jazyk platí od ďalšieho spustenia programu.
+Salva	Uložiť
+Annulla	Zrušiť
+Scarica da LoTW	Stiahnuť z LoTW
+Ricorda il nome utente (la password non viene mai salvata)	Zapamätať si používateľské meno (heslo sa nikdy neukladá)
+Vengono scaricati tutti i QSO caricati su LoTW, con i dettagli delle conferme (locatore del corrispondente). Con log grandi LoTW può impiegare qualche minuto.	Stiahnu sa všetky spojenia nahrané do LoTW s podrobnosťami potvrdení (lokátor protistanice). Pri veľkých denníkoch môže LoTW potrebovať niekoľko minút.
+Nome utente LoTW	Používateľské meno LoTW
+Password LoTW	Heslo LoTW
+Solo nominativo (facoltativo)	Len značka (voliteľné)
+Scarica	Stiahnuť
+Spot di un nominativo, LoTW, QLog e decodifiche UDP su una mappa a livelli	Spoty značky, LoTW, QLog a dekódovania UDP na mape vo vrstvách
+Contatti	Kontakty
+Sostieni il progetto: ko-fi.com/ic8tem	Podporte projekt: ko-fi.com/ic8tem
+Riconoscimenti (credits)	Poďakovanie (credits)
+I dati restano accanto al programma (YA-GT.ini, CALL3.TXT, cartella Dati): nulla in AppData. La password LoTW non viene mai salvata.	Údaje zostávajú vedľa programu (YA-GT.ini, CALL3.TXT, priečinok Dati): nič v AppData. Heslo LoTW sa nikdy neukladá.
+Chiudi	Zavrieť
+YA-GT — avvio	YA-GT — spustenie
+Spot, LoTW, QLog e decodifiche sulla mappa — di Costantino IC8TEM	Spoty, LoTW, QLog a dekódovania na mape — Costantino IC8TEM
+Nominativo	Značka
+Locatore (6 caratteri)	Lokátor (6 znakov)
+Il locatore fa da centro della mappa azimutale e serve a calcolare distanza e azimut di ogni spot.	Lokátor je stredom azimutálnej mapy a slúži na výpočet vzdialenosti a azimutu každého spotu.
+Avvia	Spustiť
+Esci	Koniec
+Stazioni che tu ricevi: bordo viola	Stanice, ktoré prijímate: fialový okraj
+Decodifiche di WSJT-X/JTDX/MSHV via UDP: nuvoletta ovale	Dekódovania WSJT-X/JTDX/MSHV cez UDP: oválny obláčik
+prop.kc2g.com: curve della MUF(3000) o della foF2	prop.kc2g.com: krivky MUF(3000) alebo foF2
+Solo EME (PROP_MODE)	Len EME (PROP_MODE)
+Legge qlog.db (copia in sola lettura)	Číta qlog.db (kópia len na čítanie)
+Ricezione su	Príjem na
+Ritrasmetti a	Preposielať na
+Altre (facolt.)	Ďalšie (volit.)
+La destinazione principale è di solito QLog; nelle altre host:porta separati da virgola (GridTracker, JTAlert). Passano anche i QSO registrati, quindi QLog scrive il QSO da solo; le risposte tornano al programma digitale. In QLog metti come porta WSJT-X la porta di ritrasmissione.	Hlavným cieľom je zvyčajne QLog; do ďalších host:port oddelené čiarkami (GridTracker, JTAlert). Prechádzajú aj zapísané spojenia, takže QLog spojenie zapíše sám; odpovede sa vracajú do digitálneho programu. V QLog nastavte ako port WSJT-X port preposielania.
+Vuoto = posizione standard di QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Si legge una copia: il file di QLog non viene mai modificato.	Prázdne = štandardné umiestnenie QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Číta sa kópia: súbor QLog sa nikdy nemení.
+Nome utente LoTW:	Používateľské meno LoTW:
+Password LoTW:	Heslo LoTW:
+Solo nominativo (facoltativo):	Len značka (voliteľné):
+Mi sentono	Počujú ma
+Sento io	Počujem
+Mie decodifiche (UDP)	Moje dekódovania (UDP)
+mi sentono	počujú ma
+sento io	počujem
+mie decodifiche (UDP)	moje dekódovania (UDP)
+lavorato	nadviazané
+tutte 80-10 m	všetky 80-10 m
+non ancora controllato	zatiaľ nekontrolované
+PSKReporter — Philip Gladstone N1DQ: flusso MQTT (mqtt.pskreporter.info) e interfaccia HTTP	PSKReporter — Philip Gladstone N1DQ: tok MQTT (mqtt.pskreporter.info) a rozhranie HTTP
+Cluster DM4X (dm4x.ddns.net:8500): spot PSKReporter in forma di cluster	Klaster DM4X (dm4x.ddns.net:8500): spoty PSKReporter vo forme klastra
+DXMAPS — Gabriel Sampol EA6VQ: secondo cluster con rete skimmer (dxmaps.com:7300)	DXMAPS — Gabriel Sampol EA6VQ: druhý klaster so sieťou skimmerov (dxmaps.com:7300)
+prop.kc2g.com — Andrew Rodland KC2G: mappe di propagazione MUF/foF2 (GeoJSON)	prop.kc2g.com — Andrew Rodland KC2G: mapy šírenia MUF/foF2 (GeoJSON)
+NOAA Space Weather Prediction Center: modello OVATION Prime dell'ovale aurorale	NOAA Space Weather Prediction Center: model OVATION Prime aurorálneho oválu
+ARRL Logbook of The World (LoTW): report ADIF delle conferme	ARRL Logbook of The World (LoTW): správa ADIF o potvrdeniach
+QLog — Ladislav Foldyna OK1MLG: struttura del database qlog.db	QLog — Ladislav Foldyna OK1MLG: štruktúra databázy qlog.db
+Protocollo UDP di WSJT-X (K1JT e WSJT Development Group); JTDX; MSHV (LZ2HV)	Protokol UDP WSJT-X (K1JT a WSJT Development Group); JTDX; MSHV (LZ2HV)
+CALL3.TXT: WSJT-X Improved (DG2YCB), CALL3 EME di W7GJ, grid_data.bin di JTDX, database di MSHV-IC8TEM e LIVETROPOVHF	CALL3.TXT: WSJT-X Improved (DG2YCB), EME CALL3 od W7GJ, grid_data.bin z JTDX, databázy MSHV-IC8TEM a LIVETROPOVHF
+G7VRD: ricerca dei locatori per nominativo (api.g7vrd.co.uk)	G7VRD: vyhľadanie lokátorov podľa značky (api.g7vrd.co.uk)
+cty.dat — Jim Reisert AD1C (country-files.com): prefissi e paesi DXCC	cty.dat — Jim Reisert AD1C (country-files.com): prefixy a krajiny DXCC
+Natural Earth: coste e confini (pubblico dominio)	Natural Earth: pobrežia a hranice (voľné dielo)
+Codice ripreso da LIVETROPOVHF e LoTW Grid Map v2 (IC8TEM)	Kód prevzatý z LIVETROPOVHF a LoTW Grid Map v2 (IC8TEM)

@@ -66,7 +66,7 @@ public sealed class MainWindow : Window
         {
             var w = new Window
             {
-                Title = "YA-GT — aggiornamento", Width = 420, Height = 160, CanResize = false, Icon = Ui.WindowIcon(),
+                Title = L.T("YA-GT — aggiornamento"), Width = 420, Height = 160, CanResize = false, Icon = Ui.WindowIcon(),
                 WindowStartupLocation = WindowStartupLocation.CenterOwner, Background = Ui.B(Ui.Th.Page),
             };
             var ok = Ui.Button("OK", () => w.Close(), true);
@@ -74,10 +74,11 @@ public sealed class MainWindow : Window
             w.Content = new StackPanel
             {
                 Margin = new Thickness(16), Spacing = 12,
-                Children = { Ui.Label($"È stata installata la versione {v} di YA-GT.\nEntra in funzione al prossimo avvio del programma.", 13), ok }
+                Children = { Ui.Label(L.F("È stata installata la versione {0} di YA-GT.\nEntra in funzione al prossimo avvio del programma.", v), 13), ok }
             };
             w.ShowDialog(this);
         });
+        Ui.Translate(this);
         StartTour();
     }
 
@@ -87,7 +88,7 @@ public sealed class MainWindow : Window
     {
         var now = DateTime.UtcNow;
         var left = _st.NextRefresh - now;
-        _clock.Text = $"{now:HH:mm:ss} UTC   ·   prossimo aggiornamento tra {(left.TotalSeconds > 0 ? $"{(int)left.TotalMinutes}:{left.Seconds:00}" : "—")}";
+        _clock.Text = L.F("{0:HH:mm:ss} UTC   ·   prossimo aggiornamento tra {1}", now, left.TotalSeconds > 0 ? $"{(int)left.TotalMinutes}:{left.Seconds:00}" : "—");
         if (now.Second == 0) _map.InvalidateVisual();     // greyline: un ridisegno al minuto
     }
 
@@ -201,7 +202,7 @@ public sealed class MainWindow : Window
     {
         var keep = _st.LotwTag;
         _lotwTag.Items.Clear();
-        void Add(string tag, string title) { _lotwTag.Items.Add(new ComboBoxItem { Content = title, Tag = tag }); }
+        void Add(string tag, string title) { _lotwTag.Items.Add(new ComboBoxItem { Content = L.T(title), Tag = tag }); }
         Add("BAND", "Banda scelta in alto"); Add("ALL", "Tutte le bande"); Add("G:1", "HF 80-10 m"); Add("G:2", "VHF 6 m-1,25 m"); Add("G:3", "UHF e oltre");
         foreach (var b in _st.Lotw.BandsPresent(_st.QLog.Qsos)) Add("B:" + b, b);
         var idx = _lotwTag.Items.Cast<ComboBoxItem>().ToList().FindIndex(i => (string)i.Tag == keep);
@@ -212,7 +213,7 @@ public sealed class MainWindow : Window
     {
         var files = await StorageProvider.OpenFilePickerAsync(new FilePickerOpenOptions
         {
-            Title = "Apri file ADIF del log", AllowMultiple = true,
+            Title = L.T("Apri file ADIF del log"), AllowMultiple = true,
             FileTypeFilter = new[] { new FilePickerFileType("ADIF") { Patterns = new[] { "*.adi", "*.adif", "*.ADI" } }, FilePickerFileTypes.All },
         });
         foreach (var f in files)

@@ -1,0 +1,199 @@
+# YA-GT — ko — traduzione dell'interfaccia: <frase italiana><TAB><traduzione>; \n = a capo. Generato da tools/lingue (armonizzazione 27/11/2026).
+YA-GT — aggiornamento	YA-GT — 업데이트
+Apri file ADIF del log	로그의 ADIF 파일 열기
+È stata installata la versione {0} di YA-GT.\nEntra in funzione al prossimo avvio del programma.	YA-GT {0} 버전이 설치되었습니다.\n프로그램을 다음에 시작할 때 적용됩니다.
+{0:HH:mm:ss} UTC   ·   prossimo aggiornamento tra {1}	{0:HH:mm:ss} UTC   ·   다음 업데이트까지 {1}
+Database di QLog (qlog.db)	QLog 데이터베이스 (qlog.db)
+Porta UDP non valida.	UDP 포트가 올바르지 않습니다.
+Indirizzo d'ascolto non valido.	수신 대기 주소가 올바르지 않습니다.
+Porta di ritrasmissione non valida.	전달 포트가 올바르지 않습니다.
+La porta di ritrasmissione deve essere diversa da quella di ricezione.	전달 포트는 수신 포트와 달라야 합니다.
+Inserisci nome utente e password di LoTW.	LoTW 사용자 이름과 비밀번호를 입력하세요.
+Aggiornamento automatico dal GitHub (ogni {0} minuti)	GitHub에서 자동 업데이트({0}분마다)
+Stato: {0}	상태: {0}
+Ritrasmissione: {0}	전달: {0}
+Errore di collegamento: {0}	연결 오류: {0}
+Nominativo non valido.	호출부호가 올바르지 않습니다.
+Il locatore deve avere 6 caratteri, es. JN70cn.	로케이터는 6자여야 합니다(예: JN70cn).
+Opacità	불투명도
+Banda scelta in alto	위에서 선택한 밴드
+Tutte le bande	모든 밴드
+UHF e oltre	UHF 이상
+Tutti i file	모든 파일
+nessuna stazione	국 없음
+Fonti:	출처:
+nessun QSO (scarica da LoTW, apri un ADIF o attiva QLog)	QSO 없음(LoTW에서 내려받거나 ADIF를 열거나 QLog를 켜세요)
+confermato su tutte le bande 80-10 m	80-10 m 모든 밴드에서 확인됨
+confermato LoTW	LoTW로 확인됨
+confermato con QSL	QSL로 확인됨
+lavorato, non confermato	교신함, 확인 안 됨
+posizione del paese (cty.dat)	국가 위치(cty.dat)
+Mi sente	나를 수신
+Sento	수신함
+posizione da CALL3.TXT	CALL3.TXT의 위치
+Mia decodifica	내 디코드
+SNR dB (RBN CW: dB sul rumore)	SNR dB(RBN CW: 잡음 대비 dB)
+{0} stazioni · {1} quadrati · {2} paesi	{0}개 국 · {1}개 그리드 · {2}개 나라
+più lontana: {0} {1:N0} km	가장 먼 곳: {0} {1:N0} km
+migliore: {0} {1}	최고: {0} {1}
+Statistiche · {0} · ultimi {1}	통계 · {0} · 최근 {1}
+Quadrati · {0}	그리드 · {0}
+lavorati {0} · confermati {1} ({2:0}%)	교신 {0} · 확인 {1} ({2:0}%)
+LoTW {0} · solo QSL {1} · non confermati {2}	LoTW {0} · QSL만 {1} · 미확인 {2}
+confermati su tutte le bande 80-10 m: {0}	80-10 m 모든 밴드에서 확인: {0}
+Aggiornato {0:HH:mm} UTC	{0:HH:mm} UTC 업데이트
+KC2G ionosonda {0}: {1} {2:0.0} MHz (affidabilità {3:0.00})	KC2G 이오노존데 {0}: {1} {2:0.0} MHz(신뢰도 {3:0.00})
+spento durante le prove automatiche	자동 테스트 중 꺼짐
+spento nelle Impostazioni	설정에서 꺼짐
+spento: la cartella del programma non è scrivibile (aggiornare a mano)	꺼짐: 프로그램 폴더에 쓸 수 없습니다(수동으로 업데이트하세요)
+gestito da un'altra finestra di YA-GT già aperta	이미 열려 있는 다른 YA-GT 창이 관리 중
+pacchetto troppo grande, non si scarica	패키지가 너무 커서 내려받지 않음
+pacchetto tar.gz non gestito su questa piattaforma	이 플랫폼에서는 tar.gz 패키지를 지원하지 않음
+nessuna versione pubblicata su {0}	{0}에 게시된 버전이 없음
+versione pubblicata non leggibile: {0}	게시된 버전을 읽을 수 없음: {0}
+hai già l'ultima versione ({0})	이미 최신 버전입니다({0})
+aggiornato: l'ultima versione è la {0} ({1})	최신: 최신 버전은 {0}입니다({1})
+versione {0} disponibile su {1}	{0} 버전을 {1}에서 받을 수 있음
+versione {0} pubblicata, ma senza il pacchetto {1}	{0} 버전이 게시되었지만 {1} 패키지가 없음
+versione {0}: mancano impronta o firma del pacchetto, non si installa	{0} 버전: 패키지 지문이나 서명이 없어 설치하지 않음
+scarico la versione {0} ({1})	{0} 버전 내려받는 중({1})
+versione {0}: impronta SHA-256 diversa, pacchetto scartato	{0} 버전: SHA-256 지문이 달라 패키지를 버림
+versione {0}: FIRMA NON VALIDA, pacchetto scartato	{0} 버전: 서명이 올바르지 않아 패키지를 버림
+controllo non riuscito: {0} (riprovo fra {1} minuti)	확인 실패: {0}({1}분 후 다시 시도)
+aggiornato da {0} a {1} il {2}	{0}에서 {1}(으)로 업데이트됨, {2}
+versione {0} installata: entra in funzione al prossimo avvio di YA-GT	{0} 버전 설치됨: YA-GT를 다음에 시작할 때 적용됨
+installazione della {0} non riuscita, rimessa la {1}: {2}	{0} 설치 실패, {1} 복원됨: {2}
+LoTW (copia salvata)	LoTW(저장된 사본)
+Collegamento a LoTW in corso…	LoTW에 연결 중…
+LoTW ha rifiutato l'accesso: controlla nome utente e password.	LoTW가 접근을 거부했습니다: 사용자 이름과 비밀번호를 확인하세요.
+Risposta inattesa da LoTW (non è un file ADIF). Riprova più tardi.	LoTW에서 예상치 못한 응답(ADIF 파일 아님). 나중에 다시 시도하세요.
+Il file ricevuto da LoTW sembra incompleto. Riprova.	LoTW에서 받은 파일이 불완전한 것 같습니다. 다시 시도하세요.
+{0}: {1} QSO letti, {2} in totale	{0}: QSO {1}개 읽음, 총 {2}개
+Ricezione dati da LoTW: {0:N0} kB…	LoTW에서 데이터 받는 중: {0:N0} kB…
+tutte le bande	모든 밴드
+{0} mi sentono · {1} sento · {2} decodifiche	나를 수신 {0} · 내가 수신 {1} · 디코드 {2}
+G7VRD in coda {0}	G7VRD 대기열 {0}
+ ⇄ {0} inoltro {1}/{2}	 ⇄ {0} 전달 {1}/{2}
+KC2G {0}: {1} curve, {2} ionosonde	KC2G {0}: 등치선 {1}개, 이오노존데 {2}개
+Aurora NOAA: previsione {0}	NOAA 오로라: 예보 {0}
+Proiezione	투영법
+Mercatore	메르카토르
+Azimutale	방위
+Aggiornamento	업데이트
+Banda	밴드
+Tutte	전체
+Spot degli ultimi	최근 스팟
+Aggiorna ora	지금 업데이트
+Vista intera	전체 보기
+Impostazioni	설정
+Livelli della mappa	지도 레이어
+Statistiche (in alto a destra)	통계(오른쪽 위)
+Chi mi sente (spot)	나를 수신한 국(스팟)
+Stazioni che ricevono il tuo segnale: fumetto con l'SNR, bordo blu	내 신호를 수신한 국: SNR 말풍선, 파란 테두리
+Chi sento io (spot)	내가 수신한 국(스팟)
+Stazioni che tu ricevi (PSKReporter, tuo skimmer RBN): bordo viola	내가 수신한 국(PSKReporter, 내 RBN 스키머): 보라 테두리
+Le mie decodifiche (UDP)	내 디코드(UDP)
+Decodifiche di WSJT-X/JTDX/MSHV ricevute via UDP: nuvoletta ovale	UDP로 받은 WSJT-X/JTDX/MSHV 디코드: 타원 구름
+Nominativo nei fumetti	말풍선에 호출부호
+Percorsi (cerchio massimo)	경로(대권)
+Griglia Maidenhead	메이든헤드 그리드
+Greyline (giorno/notte)	그레이라인(낮/밤)
+Propagazione KC2G	KC2G 전파
+prop.kc2g.com: curve della MUF(3000) o della foF2 e valori delle ionosonde	prop.kc2g.com: MUF(3000) 또는 foF2 등치선과 이오노존데 값
+Aurora NOAA (OVATION)	NOAA 오로라(OVATION)
+Probabilità di aurora del NOAA SWPC, ridisegnata in Mercatore e in azimutale	NOAA SWPC 오로라 확률, 메르카토르와 방위 투영으로 다시 그림
+Quadrati (LoTW + QLog)	그리드(LoTW + QLog)
+Arancio = lavorato, verde = LoTW, blu = QSL, grigio = confermato su tutte le bande 80-10 m (esclusi i 60 m)	주황 = 교신, 초록 = LoTW, 파랑 = QSL, 회색 = 80-10 m 모든 밴드에서 확인(60 m 제외)
+Solo confermati	확인된 것만
+Solo EME (PROP__MODE)	EME만 (PROP__MODE)
+Scarica da LoTW…	LoTW에서 내려받기…
+Apri ADIF…	ADIF 열기…
+QSO del log QLog	QLog 로그의 QSO
+Legge qlog.db (copia in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato	qlog.db를 읽음(읽기 전용 사본): 초록 사각형 = LoTW, 파랑 = QSL, 주황 = 교신
+qlog.db: posizione standard di QLog	qlog.db: QLog 기본 위치
+Fonti degli spot	스팟 출처
+mqtt.pskreporter.info, più lo storico dell'ultima ora via HTTP	mqtt.pskreporter.info와 HTTP로 최근 1시간 기록
+telnet.reversebeacon.net porte 7000 (CW/RTTY) e 7001 (FT8/FT4)	telnet.reversebeacon.net 포트 7000(CW/RTTY)과 7001(FT8/FT4)
+DM4X (cluster telnet)	DM4X(telnet 클러스터)
+dm4x.ddns.net:8500, spot PSKReporter in forma di cluster	dm4x.ddns.net:8500, 클러스터 형식의 PSKReporter 스팟
+DXMAPS (2° cluster)	DXMAPS(두 번째 클러스터)
+Rete skimmer	스키머 네트워크
+Invia set/skimmer (o set/noskimmer) al secondo cluster	두 번째 클러스터에 set/skimmer(또는 set/noskimmer)를 보냄
+Decodifiche UDP (WSJT-X/MSHV)	UDP 디코드(WSJT-X/MSHV)
+Porta e inoltro UDP in Impostazioni	UDP 포트와 전달은 설정에서
+Tema	테마
+Chiaro (YA-NEC)	밝게 (YA-NEC)
+Notte	야간
+YA-GT — impostazioni	YA-GT — 설정
+Rimbalzo UDP: inoltra i pacchetti e riporta indietro le risposte	UDP 중계: 패킷을 전달하고 응답을 되돌려 보냄
+facoltative: 127.0.0.1:2333, 192.168.1.20:2237	선택 사항: 127.0.0.1:2333, 192.168.1.20:2237
+Decodifiche UDP (protocollo WSJT-X: WSJT-X, JTDX, MSHV)	UDP 디코드(WSJT-X 프로토콜: WSJT-X, JTDX, MSHV)
+Ricezione: ascolta su	수신: 대기 주소
+Per l'indirizzo multicast (es. 224.0.0.1) YA-GT si unisce al gruppo; con 127.0.0.1 la porta non può essere la stessa di un altro programma in ascolto.	멀티캐스트 주소(예: 224.0.0.1)에서는 YA-GT가 그룹에 참여합니다. 127.0.0.1에서는 포트가 수신 대기 중인 다른 프로그램과 같을 수 없습니다.
+Ritrasmissione: verso	전달: 대상
+Altre destinazioni	기타 대상
+La destinazione principale è di solito QLog; nelle altre puoi aggiungere host:porta separati da virgola (GridTracker, JTAlert). I pacchetti passano identici, QSO registrati compresi, quindi QLog scrive il QSO da solo; le risposte (doppio clic, evidenziazioni) tornano al programma digitale. In QLog metti come porta WSJT-X la stessa porta di ritrasmissione.	주 대상은 보통 QLog입니다. 다른 대상에는 쉼표로 구분한 host:port를 추가할 수 있습니다(GridTracker, JTAlert). 패킷은 기록된 QSO를 포함해 그대로 통과하므로 QLog가 직접 QSO를 기록합니다. 응답(더블 클릭, 강조 표시)은 디지털 프로그램으로 돌아갑니다. QLog의 WSJT-X 포트를 같은 전달 포트로 설정하세요.
+Log di QLog	QLog 로그
+Sfoglia…	찾아보기…
+Vuoto = posizione standard di QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Il file di QLog non viene mai modificato: si legge una copia.	비워 두면 = QLog 기본 위치(%LOCALAPPDATA%\hamradio\QLog\qlog.db). QLog 파일은 절대 수정하지 않습니다: 사본을 읽습니다.
+Aggiornamento automatico	자동 업데이트
+Controlla adesso	지금 확인
+Lingua	언어
+La nuova lingua vale dal prossimo avvio del programma.	새 언어는 프로그램을 다음에 시작할 때부터 적용됩니다.
+Salva	저장
+Annulla	취소
+Scarica da LoTW	LoTW에서 내려받기
+Ricorda il nome utente (la password non viene mai salvata)	사용자 이름 기억(비밀번호는 저장하지 않음)
+Vengono scaricati tutti i QSO caricati su LoTW, con i dettagli delle conferme (locatore del corrispondente). Con log grandi LoTW può impiegare qualche minuto.	LoTW에 올린 모든 QSO를 확인 세부 정보(상대국 로케이터)와 함께 내려받습니다. 로그가 크면 LoTW가 몇 분 걸릴 수 있습니다.
+Nome utente LoTW	LoTW 사용자 이름
+Password LoTW	LoTW 비밀번호
+Solo nominativo (facoltativo)	호출부호만(선택)
+Scarica	내려받기
+Spot di un nominativo, LoTW, QLog e decodifiche UDP su una mappa a livelli	호출부호의 스팟, LoTW, QLog, UDP 디코드를 레이어 지도에 표시
+Contatti	연락처
+Sostieni il progetto: ko-fi.com/ic8tem	프로젝트 후원: ko-fi.com/ic8tem
+Riconoscimenti (credits)	감사의 말(credits)
+I dati restano accanto al programma (YA-GT.ini, CALL3.TXT, cartella Dati): nulla in AppData. La password LoTW non viene mai salvata.	데이터는 프로그램 옆에 있습니다(YA-GT.ini, CALL3.TXT, Dati 폴더): AppData에는 아무것도 없습니다. LoTW 비밀번호는 저장하지 않습니다.
+Chiudi	닫기
+YA-GT — avvio	YA-GT — 시작
+Spot, LoTW, QLog e decodifiche sulla mappa — di Costantino IC8TEM	지도 위의 스팟, LoTW, QLog, 디코드 — Costantino IC8TEM
+Nominativo	호출부호
+Locatore (6 caratteri)	로케이터(6자)
+Il locatore fa da centro della mappa azimutale e serve a calcolare distanza e azimut di ogni spot.	로케이터는 방위 지도의 중심이며 각 스팟의 거리와 방위각을 계산하는 데 쓰입니다.
+Avvia	시작
+Esci	종료
+Stazioni che tu ricevi: bordo viola	내가 수신한 국: 보라 테두리
+Decodifiche di WSJT-X/JTDX/MSHV via UDP: nuvoletta ovale	UDP로 받은 WSJT-X/JTDX/MSHV 디코드: 타원 구름
+prop.kc2g.com: curve della MUF(3000) o della foF2	prop.kc2g.com: MUF(3000) 또는 foF2 등치선
+Solo EME (PROP_MODE)	EME만 (PROP_MODE)
+Legge qlog.db (copia in sola lettura)	qlog.db를 읽음(읽기 전용 사본)
+Ricezione su	수신 주소
+Ritrasmetti a	전달 대상
+Altre (facolt.)	기타(선택)
+La destinazione principale è di solito QLog; nelle altre host:porta separati da virgola (GridTracker, JTAlert). Passano anche i QSO registrati, quindi QLog scrive il QSO da solo; le risposte tornano al programma digitale. In QLog metti come porta WSJT-X la porta di ritrasmissione.	주 대상은 보통 QLog입니다. 다른 대상은 쉼표로 구분한 host:port(GridTracker, JTAlert). 기록된 QSO도 통과하므로 QLog가 직접 QSO를 기록합니다. 응답은 디지털 프로그램으로 돌아갑니다. QLog의 WSJT-X 포트를 전달 포트로 설정하세요.
+Vuoto = posizione standard di QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Si legge una copia: il file di QLog non viene mai modificato.	비워 두면 = QLog 기본 위치(%LOCALAPPDATA%\hamradio\QLog\qlog.db). 사본을 읽습니다: QLog 파일은 절대 수정하지 않습니다.
+Nome utente LoTW:	LoTW 사용자 이름:
+Password LoTW:	LoTW 비밀번호:
+Solo nominativo (facoltativo):	호출부호만(선택):
+Mi sentono	나를 수신
+Sento io	내가 수신
+Mie decodifiche (UDP)	내 디코드(UDP)
+mi sentono	나를 수신
+sento io	내가 수신
+mie decodifiche (UDP)	내 디코드(UDP)
+lavorato	교신함
+tutte 80-10 m	모두 80-10 m
+non ancora controllato	아직 확인 안 함
+PSKReporter — Philip Gladstone N1DQ: flusso MQTT (mqtt.pskreporter.info) e interfaccia HTTP	PSKReporter — Philip Gladstone N1DQ: MQTT 피드(mqtt.pskreporter.info)와 HTTP 인터페이스
+Cluster DM4X (dm4x.ddns.net:8500): spot PSKReporter in forma di cluster	DM4X 클러스터(dm4x.ddns.net:8500): 클러스터 형식의 PSKReporter 스팟
+DXMAPS — Gabriel Sampol EA6VQ: secondo cluster con rete skimmer (dxmaps.com:7300)	DXMAPS — Gabriel Sampol EA6VQ: 스키머 네트워크가 있는 두 번째 클러스터(dxmaps.com:7300)
+prop.kc2g.com — Andrew Rodland KC2G: mappe di propagazione MUF/foF2 (GeoJSON)	prop.kc2g.com — Andrew Rodland KC2G: MUF/foF2 전파 지도(GeoJSON)
+NOAA Space Weather Prediction Center: modello OVATION Prime dell'ovale aurorale	NOAA Space Weather Prediction Center: 오로라 타원의 OVATION Prime 모델
+ARRL Logbook of The World (LoTW): report ADIF delle conferme	ARRL Logbook of The World (LoTW): 확인 ADIF 보고서
+QLog — Ladislav Foldyna OK1MLG: struttura del database qlog.db	QLog — Ladislav Foldyna OK1MLG: qlog.db 데이터베이스 구조
+Protocollo UDP di WSJT-X (K1JT e WSJT Development Group); JTDX; MSHV (LZ2HV)	WSJT-X UDP 프로토콜(K1JT와 WSJT Development Group); JTDX; MSHV (LZ2HV)
+CALL3.TXT: WSJT-X Improved (DG2YCB), CALL3 EME di W7GJ, grid_data.bin di JTDX, database di MSHV-IC8TEM e LIVETROPOVHF	CALL3.TXT: WSJT-X Improved (DG2YCB), W7GJ의 EME CALL3, JTDX의 grid_data.bin, MSHV-IC8TEM과 LIVETROPOVHF 데이터베이스
+G7VRD: ricerca dei locatori per nominativo (api.g7vrd.co.uk)	G7VRD: 호출부호로 로케이터 찾기(api.g7vrd.co.uk)
+cty.dat — Jim Reisert AD1C (country-files.com): prefissi e paesi DXCC	cty.dat — Jim Reisert AD1C (country-files.com): DXCC 접두어와 나라
+Natural Earth: coste e confini (pubblico dominio)	Natural Earth: 해안선과 국경(퍼블릭 도메인)
+Codice ripreso da LIVETROPOVHF e LoTW Grid Map v2 (IC8TEM)	LIVETROPOVHF와 LoTW Grid Map v2에서 가져온 코드(IC8TEM)

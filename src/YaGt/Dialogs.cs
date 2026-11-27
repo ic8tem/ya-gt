@@ -15,7 +15,7 @@ public sealed class SettingsWindow : Window
     {
         Title = "YA-GT — impostazioni";
         Icon = Ui.WindowIcon();
-        Width = 600; Height = 630; CanResize = false;
+        Width = 600; Height = 690; CanResize = false;
         WindowStartupLocation = WindowStartupLocation.CenterOwner;
         Background = Ui.B(Ui.Th.Page);
 
@@ -46,7 +46,7 @@ public sealed class SettingsWindow : Window
                 qlog,
                 Ui.Button("Sfoglia…", async () =>
                 {
-                    var files = await StorageProvider.OpenFilePickerAsync(new FilePickerOpenOptions { Title = "Database di QLog (qlog.db)", FileTypeFilter = new[] { new FilePickerFileType("qlog.db") { Patterns = new[] { "*.db" } } } });
+                    var files = await StorageProvider.OpenFilePickerAsync(new FilePickerOpenOptions { Title = L.T("Database di QLog (qlog.db)"), FileTypeFilter = new[] { new FilePickerFileType("qlog.db") { Patterns = new[] { "*.db" } } } });
                     var f = files.FirstOrDefault()?.TryGetLocalPath();
                     if (f != null) qlog.Text = f;
                 }),
@@ -54,25 +54,32 @@ public sealed class SettingsWindow : Window
         });
         p.Children.Add(Ui.Label("Vuoto = posizione standard di QLog (%LOCALAPPDATA%\\hamradio\\QLog\\qlog.db). Il file di QLog non viene mai modificato: si legge una copia.", 11, false, Ui.Th.Muted));
         p.Children.Add(Ui.Section("Aggiornamento automatico"));
-        var auto = new CheckBox { Content = "Aggiornamento automatico dal GitHub (ogni " + Updater.IntervalMinutes + " minuti)", IsChecked = Updater.Enabled };
-        var upd = Ui.Label("Stato: " + Updater.Status, 11, false, Ui.Th.Muted);
-        Updater.Changed += m => Dispatcher.UIThread.Post(() => upd.Text = "Stato: " + m);
+        var auto = new CheckBox { Content = L.F("Aggiornamento automatico dal GitHub (ogni {0} minuti)", Updater.IntervalMinutes), IsChecked = Updater.Enabled };
+        var upd = Ui.Label(L.F("Stato: {0}", L.T(Updater.Status)), 11, false, Ui.Th.Muted);
+        Updater.Changed += m => Dispatcher.UIThread.Post(() => upd.Text = L.F("Stato: {0}", L.T(m)));
         p.Children.Add(new StackPanel { Orientation = Orientation.Horizontal, Spacing = 8, Children = { auto, Ui.Button("Controlla adesso", async () => await Updater.CheckAsync(true)) } });
         p.Children.Add(upd);
+        p.Children.Add(Ui.Section("Lingua"));
+        var langs = L.All.Select(x => x[1]).ToList();
+        var lang = new ComboBox { FontSize = 12, Width = 220, Margin = new Thickness(2) };
+        foreach (var n in langs) lang.Items.Add(n);
+        lang.SelectedIndex = Math.Max(0, L.IndexOf(L.Code));
+        p.Children.Add(new StackPanel { Orientation = Orientation.Horizontal, Spacing = 8, Children = { lang, Ui.Label("La nuova lingua vale dal prossimo avvio del programma.", 11, false, Ui.Th.Muted) } });
         p.Children.Add(err);
 
         var ok = Ui.Button("Salva", () =>
         {
-            if (!int.TryParse(port.Text, NumberStyles.Integer, CultureInfo.InvariantCulture, out var pr) || pr <= 0 || pr > 65535) { err.Text = "Porta UDP non valida."; return; }
-            if (!System.Net.IPAddress.TryParse((addr.Text ?? "").Trim(), out _)) { err.Text = "Indirizzo d'ascolto non valido."; return; }
-            if (!int.TryParse(fwdPort.Text, NumberStyles.Integer, CultureInfo.InvariantCulture, out var fp) || fp <= 0 || fp > 65535) { err.Text = "Porta di ritrasmissione non valida."; return; }
+            if (!int.TryParse(port.Text, NumberStyles.Integer, CultureInfo.InvariantCulture, out var pr) || pr <= 0 || pr > 65535) { err.Text = L.T("Porta UDP non valida."); return; }
+            if (!System.Net.IPAddress.TryParse((addr.Text ?? "").Trim(), out _)) { err.Text = L.T("Indirizzo d'ascolto non valido."); return; }
+            if (!int.TryParse(fwdPort.Text, NumberStyles.Integer, CultureInfo.InvariantCulture, out var fp) || fp <= 0 || fp > 65535) { err.Text = L.T("Porta di ritrasmissione non valida."); return; }
             var fh = (fwdHost.Text ?? "").Trim();
             WsjtxUdp.ParseTargets(fh + ":" + fp + "," + (fwdTo.Text ?? ""), out var e2);
-            if (fwd.IsChecked == true && e2 != "") { err.Text = "Ritrasmissione: " + e2; return; }
-            if (fwd.IsChecked == true && fp == pr && (fh == "127.0.0.1" || fh == "localhost" || fh == (addr.Text ?? "").Trim())) { err.Text = "La porta di ritrasmissione deve essere diversa da quella di ricezione."; return; }
+            if (fwd.IsChecked == true && e2 != "") { err.Text = L.F("Ritrasmissione: {0}", e2); return; }
+            if (fwd.IsChecked == true && fp == pr && (fh == "127.0.0.1" || fh == "localhost" || fh == (addr.Text ?? "").Trim())) { err.Text = L.T("La porta di ritrasmissione deve essere diversa da quella di ricezione."); return; }
             st.Udp.ListenAddress = addr.Text.Trim(); st.Udp.ListenPort = pr; st.Udp.Forward = fwd.IsChecked == true;
             st.Udp.ForwardHost = fh; st.Udp.ForwardPort = fp; st.Udp.ForwardTo = (fwdTo.Text ?? "").Trim();
             st.QLogPath = (qlog.Text ?? "").Trim();
+            if (lang.SelectedIndex >= 0) st.S.Set("lingua", L.All[lang.SelectedIndex][0]);
             bool wasOn = Updater.Enabled;
             Updater.Enabled = auto.IsChecked == true;
             if (Updater.Enabled && !wasOn) Updater.Start(); else if (!Updater.Enabled) Updater.Stop();
@@ -86,8 +93,9 @@ public sealed class SettingsWindow : Window
         var buttons = new StackPanel { Orientation = Orientation.Horizontal, HorizontalAlignment = HorizontalAlignment.Right, Margin = new Thickness(12), Children = { Ui.Button("Annulla", Close), ok } };
         DockPanel.SetDock(buttons, Dock.Bottom);
         root.Children.Add(buttons);
-        root.Children.Add(p);
+        root.Children.Add(new ScrollViewer { Content = p });
         Content = root;
+        Ui.Translate(this);
     }
 }
 
@@ -115,7 +123,7 @@ public sealed class LotwWindow : Window
         Button go = null;
         go = Ui.Button("Scarica", async () =>
         {
-            if ((user.Text ?? "").Trim() == "" || (pass.Text ?? "") == "") { info.Text = "Inserisci nome utente e password di LoTW."; info.Foreground = Ui.B(0xFFB22222); return; }
+            if ((user.Text ?? "").Trim() == "" || (pass.Text ?? "") == "") { info.Text = L.T("Inserisci nome utente e password di LoTW."); info.Foreground = Ui.B(0xFFB22222); return; }
             go.IsEnabled = false;
             st.S.SetBool("lotw_remember", remember.IsChecked == true);
             st.S.Set("lotw_user", remember.IsChecked == true ? user.Text.Trim() : "");
@@ -131,7 +139,7 @@ public sealed class LotwWindow : Window
                 }
                 Close();
             }
-            catch (Exception ex) { info.Text = "Errore di collegamento: " + ex.Message; info.Foreground = Ui.B(0xFFB22222); go.IsEnabled = true; }
+            catch (Exception ex) { info.Text = L.F("Errore di collegamento: {0}", ex.Message); info.Foreground = Ui.B(0xFFB22222); go.IsEnabled = true; }
         }, true);
         Closed += (_, _) => { try { cts.Cancel(); } catch { } };
         var p = new StackPanel { Children = { grid, new Border { Margin = new Thickness(16, 6), Child = remember }, new Border { Margin = new Thickness(16, 4), Child = info } } };
@@ -141,6 +149,7 @@ public sealed class LotwWindow : Window
         root.Children.Add(buttons);
         root.Children.Add(p);
         Content = root;
+        Ui.Translate(this);
         Opened += (_, _) => { if ((user.Text ?? "") != "") pass.Focus(); else user.Focus(); };
     }
 }
@@ -187,7 +196,7 @@ public sealed class AboutWindow : Window
         p.Children.Add(Link("Sostieni il progetto: ko-fi.com/ic8tem", "https://ko-fi.com/ic8tem"));
         p.Children.Add(Ui.Section("Riconoscimenti (credits)"));
         foreach (var (t, u) in Credits.List)
-            p.Children.Add(u == "" ? (Control)Ui.Label("• " + t, 11) : Link("• " + t, u));
+            p.Children.Add(u == "" ? (Control)Ui.Label("• " + L.T(t), 11) : Link("• " + L.T(t), u));
         p.Children.Add(Ui.Label("I dati restano accanto al programma (YA-GT.ini, CALL3.TXT, cartella Dati): nulla in AppData. La password LoTW non viene mai salvata.", 11, false, Ui.Th.Muted));
         var root = new DockPanel();
         var close = new StackPanel { Orientation = Orientation.Horizontal, HorizontalAlignment = HorizontalAlignment.Right, Margin = new Thickness(12), Children = { Ui.Button("Chiudi", Close, true) } };
@@ -195,5 +204,6 @@ public sealed class AboutWindow : Window
         root.Children.Add(close);
         root.Children.Add(new ScrollViewer { Content = p });
         Content = root;
+        Ui.Translate(this);
     }
 }

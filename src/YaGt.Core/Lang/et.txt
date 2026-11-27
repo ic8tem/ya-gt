@@ -1,0 +1,199 @@
+# YA-GT — et — traduzione dell'interfaccia: <frase italiana><TAB><traduzione>; \n = a capo. Generato da tools/lingue (armonizzazione 27/11/2026).
+YA-GT — aggiornamento	YA-GT — uuendus
+Apri file ADIF del log	Ava logi ADIF-fail
+È stata installata la versione {0} di YA-GT.\nEntra in funzione al prossimo avvio del programma.	YA-GT versioon {0} on paigaldatud.\nSee hakkab kehtima programmi järgmisel käivitamisel.
+{0:HH:mm:ss} UTC   ·   prossimo aggiornamento tra {1}	{0:HH:mm:ss} UTC   ·   järgmine uuendus {1} pärast
+Database di QLog (qlog.db)	QLogi andmebaas (qlog.db)
+Porta UDP non valida.	Vigane UDP-port.
+Indirizzo d'ascolto non valido.	Vigane kuulamisaadress.
+Porta di ritrasmissione non valida.	Vigane edastusport.
+La porta di ritrasmissione deve essere diversa da quella di ricezione.	Edastusport peab erinema vastuvõtupordist.
+Inserisci nome utente e password di LoTW.	Sisesta LoTW kasutajanimi ja parool.
+Aggiornamento automatico dal GitHub (ogni {0} minuti)	Automaatne uuendus GitHubist (iga {0} minuti järel)
+Stato: {0}	Olek: {0}
+Ritrasmissione: {0}	Edastus: {0}
+Errore di collegamento: {0}	Ühenduse viga: {0}
+Nominativo non valido.	Vigane kutsung.
+Il locatore deve avere 6 caratteri, es. JN70cn.	Lokaator peab olema 6 märki, nt JN70cn.
+Opacità	Läbipaistmatus
+Banda scelta in alto	Üleval valitud sagedusala
+Tutte le bande	Kõik sagedusalad
+UHF e oltre	UHF ja kõrgemad
+Tutti i file	Kõik failid
+nessuna stazione	jaamu pole
+Fonti:	Allikad:
+nessun QSO (scarica da LoTW, apri un ADIF o attiva QLog)	QSO-sid pole (laadi LoTW-st, ava ADIF või lülita QLog sisse)
+confermato su tutte le bande 80-10 m	kinnitatud kõigil sagedusaladel 80-10 m
+confermato LoTW	kinnitatud LoTW-s
+confermato con QSL	kinnitatud QSL-iga
+lavorato, non confermato	tehtud, kinnitamata
+posizione del paese (cty.dat)	riigi asukoht (cty.dat)
+Mi sente	Kuuleb mind
+Sento	Kuulen
+posizione da CALL3.TXT	asukoht CALL3.TXT-st
+Mia decodifica	Minu dekodeering
+SNR dB (RBN CW: dB sul rumore)	SNR dB (RBN CW: dB üle müra)
+{0} stazioni · {1} quadrati · {2} paesi	{0} jaama · {1} ruutu · {2} riiki
+più lontana: {0} {1:N0} km	kaugeim: {0} {1:N0} km
+migliore: {0} {1}	parim: {0} {1}
+Statistiche · {0} · ultimi {1}	Statistika · {0} · viimased {1}
+Quadrati · {0}	Ruudud · {0}
+lavorati {0} · confermati {1} ({2:0}%)	tehtud {0} · kinnitatud {1} ({2:0}%)
+LoTW {0} · solo QSL {1} · non confermati {2}	LoTW {0} · ainult QSL {1} · kinnitamata {2}
+confermati su tutte le bande 80-10 m: {0}	kinnitatud kõigil sagedusaladel 80-10 m: {0}
+Aggiornato {0:HH:mm} UTC	Uuendatud {0:HH:mm} UTC
+KC2G ionosonda {0}: {1} {2:0.0} MHz (affidabilità {3:0.00})	KC2G ionosond {0}: {1} {2:0.0} MHz (usaldusväärsus {3:0.00})
+spento durante le prove automatiche	välja lülitatud automaattestide ajal
+spento nelle Impostazioni	välja lülitatud Seadetes
+spento: la cartella del programma non è scrivibile (aggiornare a mano)	välja lülitatud: programmi kausta ei saa kirjutada (uuenda käsitsi)
+gestito da un'altra finestra di YA-GT già aperta	haldab teine juba avatud YA-GT aken
+pacchetto troppo grande, non si scarica	pakett on liiga suur, ei laadita alla
+pacchetto tar.gz non gestito su questa piattaforma	tar.gz-paketti sellel platvormil ei toetata
+nessuna versione pubblicata su {0}	ühtegi versiooni pole avaldatud: {0}
+versione pubblicata non leggibile: {0}	avaldatud versioon on loetamatu: {0}
+hai già l'ultima versione ({0})	sul on juba uusim versioon ({0})
+aggiornato: l'ultima versione è la {0} ({1})	ajakohane: uusim versioon on {0} ({1})
+versione {0} disponibile su {1}	versioon {0} on saadaval: {1}
+versione {0} pubblicata, ma senza il pacchetto {1}	versioon {0} avaldatud, kuid ilma paketita {1}
+versione {0}: mancano impronta o firma del pacchetto, non si installa	versioon {0}: paketi sõrmejälg või allkiri puudub, ei paigaldata
+scarico la versione {0} ({1})	laadin alla versiooni {0} ({1})
+versione {0}: impronta SHA-256 diversa, pacchetto scartato	versioon {0}: SHA-256 sõrmejälg erineb, pakett hüljatud
+versione {0}: FIRMA NON VALIDA, pacchetto scartato	versioon {0}: KEHTETU ALLKIRI, pakett hüljatud
+controllo non riuscito: {0} (riprovo fra {1} minuti)	kontroll ebaõnnestus: {0} (uus katse {1} minuti pärast)
+aggiornato da {0} a {1} il {2}	uuendatud versioonilt {0} versioonile {1} kuupäeval {2}
+versione {0} installata: entra in funzione al prossimo avvio di YA-GT	versioon {0} paigaldatud: hakkab kehtima YA-GT järgmisel käivitamisel
+installazione della {0} non riuscita, rimessa la {1}: {2}	versiooni {0} paigaldus ebaõnnestus, taastatud {1}: {2}
+LoTW (copia salvata)	LoTW (salvestatud koopia)
+Collegamento a LoTW in corso…	Ühendan LoTW-ga…
+LoTW ha rifiutato l'accesso: controlla nome utente e password.	LoTW keeldus juurdepääsust: kontrolli kasutajanime ja parooli.
+Risposta inattesa da LoTW (non è un file ADIF). Riprova più tardi.	Ootamatu vastus LoTW-lt (pole ADIF-fail). Proovi hiljem uuesti.
+Il file ricevuto da LoTW sembra incompleto. Riprova.	LoTW-lt saadud fail näib puudulik. Proovi uuesti.
+{0}: {1} QSO letti, {2} in totale	{0}: loetud {1} QSO-d, kokku {2}
+Ricezione dati da LoTW: {0:N0} kB…	Andmete vastuvõtt LoTW-st: {0:N0} kB…
+tutte le bande	kõik sagedusalad
+{0} mi sentono · {1} sento · {2} decodifiche	{0} kuulevad mind · {1} kuulen · {2} dekodeeringut
+G7VRD in coda {0}	G7VRD järjekorras {0}
+ ⇄ {0} inoltro {1}/{2}	 ⇄ {0} edastus {1}/{2}
+KC2G {0}: {1} curve, {2} ionosonde	KC2G {0}: {1} kõverat, {2} ionosondi
+Aurora NOAA: previsione {0}	NOAA virmalised: prognoos {0}
+Proiezione	Projektsioon
+Mercatore	Mercator
+Azimutale	Asimuutne
+Aggiornamento	Uuendus
+Banda	Sagedusala
+Tutte	Kõik
+Spot degli ultimi	Spotid viimase
+Aggiorna ora	Uuenda kohe
+Vista intera	Kogu vaade
+Impostazioni	Seaded
+Livelli della mappa	Kaardi kihid
+Statistiche (in alto a destra)	Statistika (üleval paremal)
+Chi mi sente (spot)	Kes mind kuuleb (spotid)
+Stazioni che ricevono il tuo segnale: fumetto con l'SNR, bordo blu	Jaamad, mis võtavad su signaali vastu: mull SNR-iga, sinine ääris
+Chi sento io (spot)	Keda ma kuulen (spotid)
+Stazioni che tu ricevi (PSKReporter, tuo skimmer RBN): bordo viola	Jaamad, mida sa vastu võtad (PSKReporter, sinu RBN-skimmer): lilla ääris
+Le mie decodifiche (UDP)	Minu dekodeeringud (UDP)
+Decodifiche di WSJT-X/JTDX/MSHV ricevute via UDP: nuvoletta ovale	WSJT-X/JTDX/MSHV dekodeeringud UDP kaudu: ovaalne pilv
+Nominativo nei fumetti	Kutsung mullides
+Percorsi (cerchio massimo)	Teed (suurring)
+Griglia Maidenhead	Maidenheadi ruudustik
+Greyline (giorno/notte)	Greyline (päev/öö)
+Propagazione KC2G	KC2G levi
+prop.kc2g.com: curve della MUF(3000) o della foF2 e valori delle ionosonde	prop.kc2g.com: MUF(3000) või foF2 kõverad ja ionosondide väärtused
+Aurora NOAA (OVATION)	NOAA virmalised (OVATION)
+Probabilità di aurora del NOAA SWPC, ridisegnata in Mercatore e in azimutale	NOAA SWPC virmaliste tõenäosus, ümber joonistatud Mercatori ja asimuutses projektsioonis
+Quadrati (LoTW + QLog)	Ruudud (LoTW + QLog)
+Arancio = lavorato, verde = LoTW, blu = QSL, grigio = confermato su tutte le bande 80-10 m (esclusi i 60 m)	Oranž = tehtud, roheline = LoTW, sinine = QSL, hall = kinnitatud kõigil sagedusaladel 80-10 m (v.a 60 m)
+Solo confermati	Ainult kinnitatud
+Solo EME (PROP__MODE)	Ainult EME (PROP__MODE)
+Scarica da LoTW…	Laadi LoTW-st…
+Apri ADIF…	Ava ADIF…
+QSO del log QLog	QLogi logi QSO-d
+Legge qlog.db (copia in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato	Loeb qlog.db (kirjutuskaitstud koopia): rohelised ruudud = LoTW, sinised = QSL, oranžid = tehtud
+qlog.db: posizione standard di QLog	qlog.db: QLogi tavaline asukoht
+Fonti degli spot	Spottide allikad
+mqtt.pskreporter.info, più lo storico dell'ultima ora via HTTP	mqtt.pskreporter.info, lisaks viimase tunni ajalugu HTTP kaudu
+telnet.reversebeacon.net porte 7000 (CW/RTTY) e 7001 (FT8/FT4)	telnet.reversebeacon.net pordid 7000 (CW/RTTY) ja 7001 (FT8/FT4)
+DM4X (cluster telnet)	DM4X (telneti klaster)
+dm4x.ddns.net:8500, spot PSKReporter in forma di cluster	dm4x.ddns.net:8500, PSKReporteri spotid klastri kujul
+DXMAPS (2° cluster)	DXMAPS (2. klaster)
+Rete skimmer	Skimmerite võrk
+Invia set/skimmer (o set/noskimmer) al secondo cluster	Saadab set/skimmer (või set/noskimmer) teisele klastrile
+Decodifiche UDP (WSJT-X/MSHV)	UDP dekodeeringud (WSJT-X/MSHV)
+Porta e inoltro UDP in Impostazioni	UDP-port ja edastus Seadetes
+Tema	Teema
+Chiaro (YA-NEC)	Hele (YA-NEC)
+Notte	Öö
+YA-GT — impostazioni	YA-GT — seaded
+Rimbalzo UDP: inoltra i pacchetti e riporta indietro le risposte	UDP-relee: edastab paketid ja saadab vastused tagasi
+facoltative: 127.0.0.1:2333, 192.168.1.20:2237	valikulised: 127.0.0.1:2333, 192.168.1.20:2237
+Decodifiche UDP (protocollo WSJT-X: WSJT-X, JTDX, MSHV)	UDP dekodeeringud (WSJT-X protokoll: WSJT-X, JTDX, MSHV)
+Ricezione: ascolta su	Vastuvõtt: kuula aadressil
+Per l'indirizzo multicast (es. 224.0.0.1) YA-GT si unisce al gruppo; con 127.0.0.1 la porta non può essere la stessa di un altro programma in ascolto.	Multicast-aadressi korral (nt 224.0.0.1) liitub YA-GT grupiga; 127.0.0.1 korral ei tohi port olla sama mis mõnel teisel kuulaval programmil.
+Ritrasmissione: verso	Edastus: aadressile
+Altre destinazioni	Muud sihtkohad
+La destinazione principale è di solito QLog; nelle altre puoi aggiungere host:porta separati da virgola (GridTracker, JTAlert). I pacchetti passano identici, QSO registrati compresi, quindi QLog scrive il QSO da solo; le risposte (doppio clic, evidenziazioni) tornano al programma digitale. In QLog metti come porta WSJT-X la stessa porta di ritrasmissione.	Peamine sihtkoht on tavaliselt QLog; teistesse saad lisada komadega eraldatud host:port (GridTracker, JTAlert). Paketid läbivad muutmata, logitud QSO-d kaasa arvatud, nii et QLog logib QSO ise; vastused (topeltklõps, esiletõstmised) lähevad tagasi digiprogrammile. Pane QLogis WSJT-X pordiks sama edastusport.
+Log di QLog	QLogi logi
+Sfoglia…	Sirvi…
+Vuoto = posizione standard di QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Il file di QLog non viene mai modificato: si legge una copia.	Tühi = QLogi tavaline asukoht (%LOCALAPPDATA%\hamradio\QLog\qlog.db). QLogi faili ei muudeta kunagi: loetakse koopiat.
+Aggiornamento automatico	Automaatne uuendus
+Controlla adesso	Kontrolli kohe
+Lingua	Keel
+La nuova lingua vale dal prossimo avvio del programma.	Uus keel kehtib programmi järgmisest käivitamisest.
+Salva	Salvesta
+Annulla	Loobu
+Scarica da LoTW	Laadi LoTW-st
+Ricorda il nome utente (la password non viene mai salvata)	Jäta kasutajanimi meelde (parooli ei salvestata kunagi)
+Vengono scaricati tutti i QSO caricati su LoTW, con i dettagli delle conferme (locatore del corrispondente). Con log grandi LoTW può impiegare qualche minuto.	Laaditakse kõik LoTW-sse üles laaditud QSO-d koos kinnituste üksikasjadega (vastasjaama lokaator). Suurte logide korral võib LoTW vajada mõni minut.
+Nome utente LoTW	LoTW kasutajanimi
+Password LoTW	LoTW parool
+Solo nominativo (facoltativo)	Ainult kutsung (valikuline)
+Scarica	Laadi
+Spot di un nominativo, LoTW, QLog e decodifiche UDP su una mappa a livelli	Kutsungi spotid, LoTW, QLog ja UDP dekodeeringud kihilisel kaardil
+Contatti	Kontaktid
+Sostieni il progetto: ko-fi.com/ic8tem	Toeta projekti: ko-fi.com/ic8tem
+Riconoscimenti (credits)	Tänuavaldused (credits)
+I dati restano accanto al programma (YA-GT.ini, CALL3.TXT, cartella Dati): nulla in AppData. La password LoTW non viene mai salvata.	Andmed jäävad programmi kõrvale (YA-GT.ini, CALL3.TXT, kaust Dati): mitte midagi AppData-s. LoTW parooli ei salvestata kunagi.
+Chiudi	Sulge
+YA-GT — avvio	YA-GT — käivitus
+Spot, LoTW, QLog e decodifiche sulla mappa — di Costantino IC8TEM	Spotid, LoTW, QLog ja dekodeeringud kaardil — Costantino IC8TEM
+Nominativo	Kutsung
+Locatore (6 caratteri)	Lokaator (6 märki)
+Il locatore fa da centro della mappa azimutale e serve a calcolare distanza e azimut di ogni spot.	Lokaator on asimuutse kaardi keskpunkt ja sellega arvutatakse iga spoti kaugus ja asimuut.
+Avvia	Käivita
+Esci	Välju
+Stazioni che tu ricevi: bordo viola	Jaamad, mida sa vastu võtad: lilla ääris
+Decodifiche di WSJT-X/JTDX/MSHV via UDP: nuvoletta ovale	WSJT-X/JTDX/MSHV dekodeeringud UDP kaudu: ovaalne pilv
+prop.kc2g.com: curve della MUF(3000) o della foF2	prop.kc2g.com: MUF(3000) või foF2 kõverad
+Solo EME (PROP_MODE)	Ainult EME (PROP_MODE)
+Legge qlog.db (copia in sola lettura)	Loeb qlog.db (kirjutuskaitstud koopia)
+Ricezione su	Vastuvõtt aadressil
+Ritrasmetti a	Edasta aadressile
+Altre (facolt.)	Muud (valik.)
+La destinazione principale è di solito QLog; nelle altre host:porta separati da virgola (GridTracker, JTAlert). Passano anche i QSO registrati, quindi QLog scrive il QSO da solo; le risposte tornano al programma digitale. In QLog metti come porta WSJT-X la porta di ritrasmissione.	Peamine sihtkoht on tavaliselt QLog; teistesse komadega eraldatud host:port (GridTracker, JTAlert). Ka logitud QSO-d läbivad, nii et QLog logib QSO ise; vastused lähevad tagasi digiprogrammile. Pane QLogis WSJT-X pordiks edastusport.
+Vuoto = posizione standard di QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Si legge una copia: il file di QLog non viene mai modificato.	Tühi = QLogi tavaline asukoht (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Loetakse koopiat: QLogi faili ei muudeta kunagi.
+Nome utente LoTW:	LoTW kasutajanimi:
+Password LoTW:	LoTW parool:
+Solo nominativo (facoltativo):	Ainult kutsung (valikuline):
+Mi sentono	Kuulevad mind
+Sento io	Kuulen
+Mie decodifiche (UDP)	Minu dekodeeringud (UDP)
+mi sentono	kuulevad mind
+sento io	kuulen
+mie decodifiche (UDP)	minu dekodeeringud (UDP)
+lavorato	tehtud
+tutte 80-10 m	kõik 80-10 m
+non ancora controllato	pole veel kontrollitud
+PSKReporter — Philip Gladstone N1DQ: flusso MQTT (mqtt.pskreporter.info) e interfaccia HTTP	PSKReporter — Philip Gladstone N1DQ: MQTT-voog (mqtt.pskreporter.info) ja HTTP-liides
+Cluster DM4X (dm4x.ddns.net:8500): spot PSKReporter in forma di cluster	Klaster DM4X (dm4x.ddns.net:8500): PSKReporteri spotid klastri kujul
+DXMAPS — Gabriel Sampol EA6VQ: secondo cluster con rete skimmer (dxmaps.com:7300)	DXMAPS — Gabriel Sampol EA6VQ: teine klaster skimmerite võrguga (dxmaps.com:7300)
+prop.kc2g.com — Andrew Rodland KC2G: mappe di propagazione MUF/foF2 (GeoJSON)	prop.kc2g.com — Andrew Rodland KC2G: MUF/foF2 levikaardid (GeoJSON)
+NOAA Space Weather Prediction Center: modello OVATION Prime dell'ovale aurorale	NOAA Space Weather Prediction Center: virmaliste ovaali mudel OVATION Prime
+ARRL Logbook of The World (LoTW): report ADIF delle conferme	ARRL Logbook of The World (LoTW): kinnituste ADIF-aruanne
+QLog — Ladislav Foldyna OK1MLG: struttura del database qlog.db	QLog — Ladislav Foldyna OK1MLG: andmebaasi qlog.db struktuur
+Protocollo UDP di WSJT-X (K1JT e WSJT Development Group); JTDX; MSHV (LZ2HV)	WSJT-X UDP-protokoll (K1JT ja WSJT Development Group); JTDX; MSHV (LZ2HV)
+CALL3.TXT: WSJT-X Improved (DG2YCB), CALL3 EME di W7GJ, grid_data.bin di JTDX, database di MSHV-IC8TEM e LIVETROPOVHF	CALL3.TXT: WSJT-X Improved (DG2YCB), W7GJ EME CALL3, JTDX grid_data.bin, MSHV-IC8TEM ja LIVETROPOVHF andmebaasid
+G7VRD: ricerca dei locatori per nominativo (api.g7vrd.co.uk)	G7VRD: lokaatorite otsing kutsungi järgi (api.g7vrd.co.uk)
+cty.dat — Jim Reisert AD1C (country-files.com): prefissi e paesi DXCC	cty.dat — Jim Reisert AD1C (country-files.com): DXCC eesliited ja riigid
+Natural Earth: coste e confini (pubblico dominio)	Natural Earth: rannajooned ja piirid (avalik omand)
+Codice ripreso da LIVETROPOVHF e LoTW Grid Map v2 (IC8TEM)	Kood võetud LIVETROPOVHF-ist ja LoTW Grid Map v2-st (IC8TEM)

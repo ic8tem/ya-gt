@@ -1,0 +1,199 @@
+# YA-GT — zh — traduzione dell'interfaccia: <frase italiana><TAB><traduzione>; \n = a capo. Generato da tools/lingue (armonizzazione 27/11/2026).
+YA-GT — aggiornamento	YA-GT — 更新
+Apri file ADIF del log	打开日志的 ADIF 文件
+È stata installata la versione {0} di YA-GT.\nEntra in funzione al prossimo avvio del programma.	已安装 YA-GT {0} 版。\n将在程序下次启动时生效。
+{0:HH:mm:ss} UTC   ·   prossimo aggiornamento tra {1}	{0:HH:mm:ss} UTC   ·   下次更新还有 {1}
+Database di QLog (qlog.db)	QLog 数据库 (qlog.db)
+Porta UDP non valida.	UDP 端口无效。
+Indirizzo d'ascolto non valido.	监听地址无效。
+Porta di ritrasmissione non valida.	转发端口无效。
+La porta di ritrasmissione deve essere diversa da quella di ricezione.	转发端口必须与接收端口不同。
+Inserisci nome utente e password di LoTW.	请输入 LoTW 用户名和密码。
+Aggiornamento automatico dal GitHub (ogni {0} minuti)	从 GitHub 自动更新（每 {0} 分钟）
+Stato: {0}	状态：{0}
+Ritrasmissione: {0}	转发：{0}
+Errore di collegamento: {0}	连接错误：{0}
+Nominativo non valido.	呼号无效。
+Il locatore deve avere 6 caratteri, es. JN70cn.	网格定位必须为 6 个字符，例如 JN70cn。
+Opacità	不透明度
+Banda scelta in alto	顶部所选波段
+Tutte le bande	所有波段
+UHF e oltre	UHF 及以上
+Tutti i file	所有文件
+nessuna stazione	没有电台
+Fonti:	来源：
+nessun QSO (scarica da LoTW, apri un ADIF o attiva QLog)	没有 QSO（从 LoTW 下载、打开 ADIF 或启用 QLog）
+confermato su tutte le bande 80-10 m	在 80-10 m 所有波段均已确认
+confermato LoTW	LoTW 已确认
+confermato con QSL	QSL 已确认
+lavorato, non confermato	已联络，未确认
+posizione del paese (cty.dat)	国家位置 (cty.dat)
+Mi sente	听到我
+Sento	我听到
+posizione da CALL3.TXT	来自 CALL3.TXT 的位置
+Mia decodifica	我的解码
+SNR dB (RBN CW: dB sul rumore)	SNR dB（RBN CW：高于噪声的 dB）
+{0} stazioni · {1} quadrati · {2} paesi	{0} 个电台 · {1} 个网格 · {2} 个国家
+più lontana: {0} {1:N0} km	最远：{0} {1:N0} km
+migliore: {0} {1}	最佳：{0} {1}
+Statistiche · {0} · ultimi {1}	统计 · {0} · 最近 {1}
+Quadrati · {0}	网格 · {0}
+lavorati {0} · confermati {1} ({2:0}%)	已联络 {0} · 已确认 {1} ({2:0}%)
+LoTW {0} · solo QSL {1} · non confermati {2}	LoTW {0} · 仅 QSL {1} · 未确认 {2}
+confermati su tutte le bande 80-10 m: {0}	在 80-10 m 所有波段均已确认：{0}
+Aggiornato {0:HH:mm} UTC	更新于 {0:HH:mm} UTC
+KC2G ionosonda {0}: {1} {2:0.0} MHz (affidabilità {3:0.00})	KC2G 电离层探测站 {0}：{1} {2:0.0} MHz（可信度 {3:0.00}）
+spento durante le prove automatiche	自动测试期间已关闭
+spento nelle Impostazioni	已在设置中关闭
+spento: la cartella del programma non è scrivibile (aggiornare a mano)	已关闭：程序文件夹不可写（请手动更新）
+gestito da un'altra finestra di YA-GT già aperta	由另一个已打开的 YA-GT 窗口处理
+pacchetto troppo grande, non si scarica	软件包过大，不下载
+pacchetto tar.gz non gestito su questa piattaforma	此平台不支持 tar.gz 软件包
+nessuna versione pubblicata su {0}	{0} 上没有发布的版本
+versione pubblicata non leggibile: {0}	无法读取已发布的版本：{0}
+hai già l'ultima versione ({0})	你已经是最新版本（{0}）
+aggiornato: l'ultima versione è la {0} ({1})	已是最新：最新版本为 {0}（{1}）
+versione {0} disponibile su {1}	{0} 版可在 {1} 获取
+versione {0} pubblicata, ma senza il pacchetto {1}	{0} 版已发布，但缺少软件包 {1}
+versione {0}: mancano impronta o firma del pacchetto, non si installa	{0} 版：缺少软件包的指纹或签名，不安装
+scarico la versione {0} ({1})	正在下载 {0} 版（{1}）
+versione {0}: impronta SHA-256 diversa, pacchetto scartato	{0} 版：SHA-256 指纹不一致，已丢弃软件包
+versione {0}: FIRMA NON VALIDA, pacchetto scartato	{0} 版：签名无效，已丢弃软件包
+controllo non riuscito: {0} (riprovo fra {1} minuti)	检查失败：{0}（{1} 分钟后重试）
+aggiornato da {0} a {1} il {2}	已从 {0} 更新到 {1}，时间 {2}
+versione {0} installata: entra in funzione al prossimo avvio di YA-GT	{0} 版已安装：将在 YA-GT 下次启动时生效
+installazione della {0} non riuscita, rimessa la {1}: {2}	{0} 版安装失败，已恢复 {1}：{2}
+LoTW (copia salvata)	LoTW（已保存的副本）
+Collegamento a LoTW in corso…	正在连接 LoTW…
+LoTW ha rifiutato l'accesso: controlla nome utente e password.	LoTW 拒绝访问：请检查用户名和密码。
+Risposta inattesa da LoTW (non è un file ADIF). Riprova più tardi.	LoTW 返回意外的应答（不是 ADIF 文件）。请稍后再试。
+Il file ricevuto da LoTW sembra incompleto. Riprova.	从 LoTW 收到的文件似乎不完整。请重试。
+{0}: {1} QSO letti, {2} in totale	{0}：已读取 {1} 个 QSO，共 {2} 个
+Ricezione dati da LoTW: {0:N0} kB…	正在从 LoTW 接收数据：{0:N0} kB…
+tutte le bande	所有波段
+{0} mi sentono · {1} sento · {2} decodifiche	{0} 个听到我 · {1} 个我听到 · {2} 个解码
+G7VRD in coda {0}	G7VRD 队列 {0}
+ ⇄ {0} inoltro {1}/{2}	 ⇄ {0} 转发 {1}/{2}
+KC2G {0}: {1} curve, {2} ionosonde	KC2G {0}：{1} 条等值线，{2} 个电离层探测站
+Aurora NOAA: previsione {0}	NOAA 极光：预报 {0}
+Proiezione	投影
+Mercatore	墨卡托
+Azimutale	方位
+Aggiornamento	更新
+Banda	波段
+Tutte	全部
+Spot degli ultimi	最近的报告
+Aggiorna ora	立即更新
+Vista intera	全图
+Impostazioni	设置
+Livelli della mappa	地图图层
+Statistiche (in alto a destra)	统计（右上角）
+Chi mi sente (spot)	谁听到我（报告）
+Stazioni che ricevono il tuo segnale: fumetto con l'SNR, bordo blu	接收到你信号的电台：带 SNR 的气泡，蓝色边框
+Chi sento io (spot)	我听到谁（报告）
+Stazioni che tu ricevi (PSKReporter, tuo skimmer RBN): bordo viola	你接收到的电台（PSKReporter、你的 RBN skimmer）：紫色边框
+Le mie decodifiche (UDP)	我的解码 (UDP)
+Decodifiche di WSJT-X/JTDX/MSHV ricevute via UDP: nuvoletta ovale	通过 UDP 收到的 WSJT-X/JTDX/MSHV 解码：椭圆云
+Nominativo nei fumetti	气泡中显示呼号
+Percorsi (cerchio massimo)	路径（大圆）
+Griglia Maidenhead	Maidenhead 网格
+Greyline (giorno/notte)	晨昏线（昼/夜）
+Propagazione KC2G	KC2G 传播
+prop.kc2g.com: curve della MUF(3000) o della foF2 e valori delle ionosonde	prop.kc2g.com：MUF(3000) 或 foF2 等值线及电离层探测站数值
+Aurora NOAA (OVATION)	NOAA 极光 (OVATION)
+Probabilità di aurora del NOAA SWPC, ridisegnata in Mercatore e in azimutale	NOAA SWPC 的极光概率，以墨卡托和方位投影重新绘制
+Quadrati (LoTW + QLog)	网格 (LoTW + QLog)
+Arancio = lavorato, verde = LoTW, blu = QSL, grigio = confermato su tutte le bande 80-10 m (esclusi i 60 m)	橙色 = 已联络，绿色 = LoTW，蓝色 = QSL，灰色 = 在 80-10 m 所有波段均已确认（不含 60 m）
+Solo confermati	仅已确认
+Solo EME (PROP__MODE)	仅 EME (PROP__MODE)
+Scarica da LoTW…	从 LoTW 下载…
+Apri ADIF…	打开 ADIF…
+QSO del log QLog	QLog 日志的 QSO
+Legge qlog.db (copia in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato	读取 qlog.db（只读副本）：绿色方块 = LoTW，蓝色 = QSL，橙色 = 已联络
+qlog.db: posizione standard di QLog	qlog.db：QLog 的标准位置
+Fonti degli spot	报告来源
+mqtt.pskreporter.info, più lo storico dell'ultima ora via HTTP	mqtt.pskreporter.info，以及通过 HTTP 获取最近一小时的历史
+telnet.reversebeacon.net porte 7000 (CW/RTTY) e 7001 (FT8/FT4)	telnet.reversebeacon.net 端口 7000 (CW/RTTY) 和 7001 (FT8/FT4)
+DM4X (cluster telnet)	DM4X（telnet 集群）
+dm4x.ddns.net:8500, spot PSKReporter in forma di cluster	dm4x.ddns.net:8500，集群形式的 PSKReporter 报告
+DXMAPS (2° cluster)	DXMAPS（第二集群）
+Rete skimmer	Skimmer 网络
+Invia set/skimmer (o set/noskimmer) al secondo cluster	向第二个集群发送 set/skimmer（或 set/noskimmer）
+Decodifiche UDP (WSJT-X/MSHV)	UDP 解码 (WSJT-X/MSHV)
+Porta e inoltro UDP in Impostazioni	UDP 端口和转发在设置中
+Tema	主题
+Chiaro (YA-NEC)	浅色 (YA-NEC)
+Notte	夜间
+YA-GT — impostazioni	YA-GT — 设置
+Rimbalzo UDP: inoltra i pacchetti e riporta indietro le risposte	UDP 中继：转发数据包并送回应答
+facoltative: 127.0.0.1:2333, 192.168.1.20:2237	可选：127.0.0.1:2333, 192.168.1.20:2237
+Decodifiche UDP (protocollo WSJT-X: WSJT-X, JTDX, MSHV)	UDP 解码（WSJT-X 协议：WSJT-X、JTDX、MSHV）
+Ricezione: ascolta su	接收：监听于
+Per l'indirizzo multicast (es. 224.0.0.1) YA-GT si unisce al gruppo; con 127.0.0.1 la porta non può essere la stessa di un altro programma in ascolto.	对于组播地址（如 224.0.0.1），YA-GT 会加入该组；使用 127.0.0.1 时端口不能与其他正在监听的程序相同。
+Ritrasmissione: verso	转发：至
+Altre destinazioni	其他目标
+La destinazione principale è di solito QLog; nelle altre puoi aggiungere host:porta separati da virgola (GridTracker, JTAlert). I pacchetti passano identici, QSO registrati compresi, quindi QLog scrive il QSO da solo; le risposte (doppio clic, evidenziazioni) tornano al programma digitale. In QLog metti come porta WSJT-X la stessa porta di ritrasmissione.	主要目标通常是 QLog；其他目标可添加以逗号分隔的 host:port（GridTracker、JTAlert）。数据包原样通过，包括已记录的 QSO，因此 QLog 会自行记录 QSO；应答（双击、高亮）返回数字模式程序。在 QLog 中把 WSJT-X 端口设为同一转发端口。
+Log di QLog	QLog 日志
+Sfoglia…	浏览…
+Vuoto = posizione standard di QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Il file di QLog non viene mai modificato: si legge una copia.	留空 = QLog 的标准位置 (%LOCALAPPDATA%\hamradio\QLog\qlog.db)。QLog 文件从不修改：读取的是副本。
+Aggiornamento automatico	自动更新
+Controlla adesso	立即检查
+Lingua	语言
+La nuova lingua vale dal prossimo avvio del programma.	新语言将在程序下次启动时生效。
+Salva	保存
+Annulla	取消
+Scarica da LoTW	从 LoTW 下载
+Ricorda il nome utente (la password non viene mai salvata)	记住用户名（密码从不保存）
+Vengono scaricati tutti i QSO caricati su LoTW, con i dettagli delle conferme (locatore del corrispondente). Con log grandi LoTW può impiegare qualche minuto.	下载所有上传到 LoTW 的 QSO，包括确认详情（对方电台的网格定位）。日志较大时 LoTW 可能需要几分钟。
+Nome utente LoTW	LoTW 用户名
+Password LoTW	LoTW 密码
+Solo nominativo (facoltativo)	仅呼号（可选）
+Scarica	下载
+Spot di un nominativo, LoTW, QLog e decodifiche UDP su una mappa a livelli	在分层地图上显示呼号的报告、LoTW、QLog 和 UDP 解码
+Contatti	联系方式
+Sostieni il progetto: ko-fi.com/ic8tem	支持本项目：ko-fi.com/ic8tem
+Riconoscimenti (credits)	致谢 (credits)
+I dati restano accanto al programma (YA-GT.ini, CALL3.TXT, cartella Dati): nulla in AppData. La password LoTW non viene mai salvata.	数据保存在程序旁边（YA-GT.ini、CALL3.TXT、Dati 文件夹）：AppData 中没有任何内容。LoTW 密码从不保存。
+Chiudi	关闭
+YA-GT — avvio	YA-GT — 启动
+Spot, LoTW, QLog e decodifiche sulla mappa — di Costantino IC8TEM	地图上的报告、LoTW、QLog 和解码 — Costantino IC8TEM
+Nominativo	呼号
+Locatore (6 caratteri)	网格定位（6 个字符）
+Il locatore fa da centro della mappa azimutale e serve a calcolare distanza e azimut di ogni spot.	网格定位是方位地图的中心，用于计算每条报告的距离和方位角。
+Avvia	启动
+Esci	退出
+Stazioni che tu ricevi: bordo viola	你接收到的电台：紫色边框
+Decodifiche di WSJT-X/JTDX/MSHV via UDP: nuvoletta ovale	通过 UDP 的 WSJT-X/JTDX/MSHV 解码：椭圆云
+prop.kc2g.com: curve della MUF(3000) o della foF2	prop.kc2g.com：MUF(3000) 或 foF2 等值线
+Solo EME (PROP_MODE)	仅 EME (PROP_MODE)
+Legge qlog.db (copia in sola lettura)	读取 qlog.db（只读副本）
+Ricezione su	接收于
+Ritrasmetti a	转发至
+Altre (facolt.)	其他（可选）
+La destinazione principale è di solito QLog; nelle altre host:porta separati da virgola (GridTracker, JTAlert). Passano anche i QSO registrati, quindi QLog scrive il QSO da solo; le risposte tornano al programma digitale. In QLog metti come porta WSJT-X la porta di ritrasmissione.	主要目标通常是 QLog；其他为以逗号分隔的 host:port（GridTracker、JTAlert）。已记录的 QSO 也会通过，因此 QLog 会自行记录 QSO；应答返回数字模式程序。在 QLog 中把 WSJT-X 端口设为转发端口。
+Vuoto = posizione standard di QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Si legge una copia: il file di QLog non viene mai modificato.	留空 = QLog 的标准位置 (%LOCALAPPDATA%\hamradio\QLog\qlog.db)。读取的是副本：QLog 文件从不修改。
+Nome utente LoTW:	LoTW 用户名：
+Password LoTW:	LoTW 密码：
+Solo nominativo (facoltativo):	仅呼号（可选）：
+Mi sentono	听到我
+Sento io	我听到
+Mie decodifiche (UDP)	我的解码 (UDP)
+mi sentono	听到我
+sento io	我听到
+mie decodifiche (UDP)	我的解码 (UDP)
+lavorato	已联络
+tutte 80-10 m	全部 80-10 m
+non ancora controllato	尚未检查
+PSKReporter — Philip Gladstone N1DQ: flusso MQTT (mqtt.pskreporter.info) e interfaccia HTTP	PSKReporter — Philip Gladstone N1DQ：MQTT 数据流 (mqtt.pskreporter.info) 和 HTTP 接口
+Cluster DM4X (dm4x.ddns.net:8500): spot PSKReporter in forma di cluster	DM4X 集群 (dm4x.ddns.net:8500)：集群形式的 PSKReporter 报告
+DXMAPS — Gabriel Sampol EA6VQ: secondo cluster con rete skimmer (dxmaps.com:7300)	DXMAPS — Gabriel Sampol EA6VQ：带 skimmer 网络的第二集群 (dxmaps.com:7300)
+prop.kc2g.com — Andrew Rodland KC2G: mappe di propagazione MUF/foF2 (GeoJSON)	prop.kc2g.com — Andrew Rodland KC2G：MUF/foF2 传播图 (GeoJSON)
+NOAA Space Weather Prediction Center: modello OVATION Prime dell'ovale aurorale	NOAA Space Weather Prediction Center：极光椭圆的 OVATION Prime 模型
+ARRL Logbook of The World (LoTW): report ADIF delle conferme	ARRL Logbook of The World (LoTW)：确认的 ADIF 报告
+QLog — Ladislav Foldyna OK1MLG: struttura del database qlog.db	QLog — Ladislav Foldyna OK1MLG：qlog.db 数据库结构
+Protocollo UDP di WSJT-X (K1JT e WSJT Development Group); JTDX; MSHV (LZ2HV)	WSJT-X 的 UDP 协议（K1JT 和 WSJT Development Group）；JTDX；MSHV (LZ2HV)
+CALL3.TXT: WSJT-X Improved (DG2YCB), CALL3 EME di W7GJ, grid_data.bin di JTDX, database di MSHV-IC8TEM e LIVETROPOVHF	CALL3.TXT：WSJT-X Improved (DG2YCB)、W7GJ 的 EME CALL3、JTDX 的 grid_data.bin、MSHV-IC8TEM 和 LIVETROPOVHF 数据库
+G7VRD: ricerca dei locatori per nominativo (api.g7vrd.co.uk)	G7VRD：按呼号查询网格定位 (api.g7vrd.co.uk)
+cty.dat — Jim Reisert AD1C (country-files.com): prefissi e paesi DXCC	cty.dat — Jim Reisert AD1C (country-files.com)：DXCC 前缀和国家
+Natural Earth: coste e confini (pubblico dominio)	Natural Earth：海岸线和国界（公有领域）
+Codice ripreso da LIVETROPOVHF e LoTW Grid Map v2 (IC8TEM)	取自 LIVETROPOVHF 和 LoTW Grid Map v2 的代码 (IC8TEM)

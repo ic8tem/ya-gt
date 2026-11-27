@@ -1,0 +1,199 @@
+# YA-GT — lt — traduzione dell'interfaccia: <frase italiana><TAB><traduzione>; \n = a capo. Generato da tools/lingue (armonizzazione 27/11/2026).
+YA-GT — aggiornamento	YA-GT — atnaujinimas
+Apri file ADIF del log	Atidaryti žurnalo ADIF failą
+È stata installata la versione {0} di YA-GT.\nEntra in funzione al prossimo avvio del programma.	Įdiegta YA-GT versija {0}.\nJi įsigalios kitą kartą paleidus programą.
+{0:HH:mm:ss} UTC   ·   prossimo aggiornamento tra {1}	{0:HH:mm:ss} UTC   ·   kitas atnaujinimas po {1}
+Database di QLog (qlog.db)	QLog duomenų bazė (qlog.db)
+Porta UDP non valida.	Netinkamas UDP prievadas.
+Indirizzo d'ascolto non valido.	Netinkamas klausymo adresas.
+Porta di ritrasmissione non valida.	Netinkamas persiuntimo prievadas.
+La porta di ritrasmissione deve essere diversa da quella di ricezione.	Persiuntimo prievadas turi skirtis nuo priėmimo prievado.
+Inserisci nome utente e password di LoTW.	Įveskite LoTW naudotojo vardą ir slaptažodį.
+Aggiornamento automatico dal GitHub (ogni {0} minuti)	Automatinis atnaujinimas iš GitHub (kas {0} min.)
+Stato: {0}	Būsena: {0}
+Ritrasmissione: {0}	Persiuntimas: {0}
+Errore di collegamento: {0}	Ryšio klaida: {0}
+Nominativo non valido.	Netinkamas šaukinys.
+Il locatore deve avere 6 caratteri, es. JN70cn.	Lokatorius turi būti iš 6 simbolių, pvz., JN70cn.
+Opacità	Neskaidrumas
+Banda scelta in alto	Viršuje pasirinkta juosta
+Tutte le bande	Visos juostos
+UHF e oltre	UHF ir aukščiau
+Tutti i file	Visi failai
+nessuna stazione	stočių nėra
+Fonti:	Šaltiniai:
+nessun QSO (scarica da LoTW, apri un ADIF o attiva QLog)	QSO nėra (atsisiųskite iš LoTW, atidarykite ADIF arba įjunkite QLog)
+confermato su tutte le bande 80-10 m	patvirtinta visose juostose 80-10 m
+confermato LoTW	patvirtinta LoTW
+confermato con QSL	patvirtinta QSL
+lavorato, non confermato	dirbta, nepatvirtinta
+posizione del paese (cty.dat)	šalies padėtis (cty.dat)
+Mi sente	Girdi mane
+Sento	Girdžiu
+posizione da CALL3.TXT	padėtis iš CALL3.TXT
+Mia decodifica	Mano dekodavimas
+SNR dB (RBN CW: dB sul rumore)	SNR dB (RBN CW: dB virš triukšmo)
+{0} stazioni · {1} quadrati · {2} paesi	{0} stotys · {1} kvadratai · {2} šalys
+più lontana: {0} {1:N0} km	toliausia: {0} {1:N0} km
+migliore: {0} {1}	geriausia: {0} {1}
+Statistiche · {0} · ultimi {1}	Statistika · {0} · paskutinės {1}
+Quadrati · {0}	Kvadratai · {0}
+lavorati {0} · confermati {1} ({2:0}%)	dirbta {0} · patvirtinta {1} ({2:0}%)
+LoTW {0} · solo QSL {1} · non confermati {2}	LoTW {0} · tik QSL {1} · nepatvirtinta {2}
+confermati su tutte le bande 80-10 m: {0}	patvirtinta visose juostose 80-10 m: {0}
+Aggiornato {0:HH:mm} UTC	Atnaujinta {0:HH:mm} UTC
+KC2G ionosonda {0}: {1} {2:0.0} MHz (affidabilità {3:0.00})	KC2G jonozondas {0}: {1} {2:0.0} MHz (patikimumas {3:0.00})
+spento durante le prove automatiche	išjungta automatinių bandymų metu
+spento nelle Impostazioni	išjungta Nustatymuose
+spento: la cartella del programma non è scrivibile (aggiornare a mano)	išjungta: į programos aplanką negalima rašyti (atnaujinkite rankiniu būdu)
+gestito da un'altra finestra di YA-GT già aperta	valdo kitas jau atidarytas YA-GT langas
+pacchetto troppo grande, non si scarica	paketas per didelis, nesiunčiamas
+pacchetto tar.gz non gestito su questa piattaforma	tar.gz paketas šioje platformoje nepalaikomas
+nessuna versione pubblicata su {0}	jokia versija nepaskelbta {0}
+versione pubblicata non leggibile: {0}	paskelbta versija neperskaitoma: {0}
+hai già l'ultima versione ({0})	jau turite naujausią versiją ({0})
+aggiornato: l'ultima versione è la {0} ({1})	atnaujinta: naujausia versija yra {0} ({1})
+versione {0} disponibile su {1}	versija {0} pasiekiama {1}
+versione {0} pubblicata, ma senza il pacchetto {1}	versija {0} paskelbta, bet be paketo {1}
+versione {0}: mancano impronta o firma del pacchetto, non si installa	versija {0}: trūksta paketo kontrolinės sumos arba parašo, nediegiama
+scarico la versione {0} ({1})	siunčiama versija {0} ({1})
+versione {0}: impronta SHA-256 diversa, pacchetto scartato	versija {0}: kita SHA-256 kontrolinė suma, paketas atmestas
+versione {0}: FIRMA NON VALIDA, pacchetto scartato	versija {0}: NETINKAMAS PARAŠAS, paketas atmestas
+controllo non riuscito: {0} (riprovo fra {1} minuti)	patikra nepavyko: {0} (kartosiu po {1} min.)
+aggiornato da {0} a {1} il {2}	atnaujinta iš {0} į {1} {2}
+versione {0} installata: entra in funzione al prossimo avvio di YA-GT	versija {0} įdiegta: įsigalios kitą kartą paleidus YA-GT
+installazione della {0} non riuscita, rimessa la {1}: {2}	versijos {0} diegimas nepavyko, atkurta {1}: {2}
+LoTW (copia salvata)	LoTW (išsaugota kopija)
+Collegamento a LoTW in corso…	Jungiamasi prie LoTW…
+LoTW ha rifiutato l'accesso: controlla nome utente e password.	LoTW atsisakė suteikti prieigą: patikrinkite naudotojo vardą ir slaptažodį.
+Risposta inattesa da LoTW (non è un file ADIF). Riprova più tardi.	Netikėtas LoTW atsakymas (ne ADIF failas). Bandykite vėliau.
+Il file ricevuto da LoTW sembra incompleto. Riprova.	Iš LoTW gautas failas atrodo nepilnas. Bandykite dar kartą.
+{0}: {1} QSO letti, {2} in totale	{0}: nuskaityta {1} QSO, iš viso {2}
+Ricezione dati da LoTW: {0:N0} kB…	Gaunami duomenys iš LoTW: {0:N0} kB…
+tutte le bande	visos juostos
+{0} mi sentono · {1} sento · {2} decodifiche	{0} girdi mane · {1} girdžiu · {2} dekodavimai
+G7VRD in coda {0}	G7VRD eilėje {0}
+ ⇄ {0} inoltro {1}/{2}	 ⇄ {0} persiuntimas {1}/{2}
+KC2G {0}: {1} curve, {2} ionosonde	KC2G {0}: {1} kreivės, {2} jonozondai
+Aurora NOAA: previsione {0}	NOAA pašvaistė: prognozė {0}
+Proiezione	Projekcija
+Mercatore	Merkatoriaus
+Azimutale	Azimutinė
+Aggiornamento	Atnaujinimas
+Banda	Juosta
+Tutte	Visos
+Spot degli ultimi	Paskutinių spotai
+Aggiorna ora	Atnaujinti dabar
+Vista intera	Visas vaizdas
+Impostazioni	Nustatymai
+Livelli della mappa	Žemėlapio sluoksniai
+Statistiche (in alto a destra)	Statistika (viršuje dešinėje)
+Chi mi sente (spot)	Kas mane girdi (spotai)
+Stazioni che ricevono il tuo segnale: fumetto con l'SNR, bordo blu	Stotys, priimančios jūsų signalą: burbulas su SNR, mėlynas kraštas
+Chi sento io (spot)	Ką aš girdžiu (spotai)
+Stazioni che tu ricevi (PSKReporter, tuo skimmer RBN): bordo viola	Stotys, kurias priimate (PSKReporter, jūsų RBN skimeris): violetinis kraštas
+Le mie decodifiche (UDP)	Mano dekodavimai (UDP)
+Decodifiche di WSJT-X/JTDX/MSHV ricevute via UDP: nuvoletta ovale	WSJT-X/JTDX/MSHV dekodavimai per UDP: ovalus debesėlis
+Nominativo nei fumetti	Šaukinys burbuluose
+Percorsi (cerchio massimo)	Trasos (didysis apskritimas)
+Griglia Maidenhead	Maidenhead tinklelis
+Greyline (giorno/notte)	Greyline (diena/naktis)
+Propagazione KC2G	KC2G sklidimas
+prop.kc2g.com: curve della MUF(3000) o della foF2 e valori delle ionosonde	prop.kc2g.com: MUF(3000) arba foF2 kreivės ir jonozondų vertės
+Aurora NOAA (OVATION)	NOAA pašvaistė (OVATION)
+Probabilità di aurora del NOAA SWPC, ridisegnata in Mercatore e in azimutale	NOAA SWPC pašvaistės tikimybė, perpiešta Merkatoriaus ir azimutine projekcija
+Quadrati (LoTW + QLog)	Kvadratai (LoTW + QLog)
+Arancio = lavorato, verde = LoTW, blu = QSL, grigio = confermato su tutte le bande 80-10 m (esclusi i 60 m)	Oranžinė = dirbta, žalia = LoTW, mėlyna = QSL, pilka = patvirtinta visose juostose 80-10 m (išskyrus 60 m)
+Solo confermati	Tik patvirtinti
+Solo EME (PROP__MODE)	Tik EME (PROP__MODE)
+Scarica da LoTW…	Atsisiųsti iš LoTW…
+Apri ADIF…	Atidaryti ADIF…
+QSO del log QLog	QLog žurnalo QSO
+Legge qlog.db (copia in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato	Skaito qlog.db (tik skaitoma kopija): žali kvadratėliai = LoTW, mėlyni = QSL, oranžiniai = dirbta
+qlog.db: posizione standard di QLog	qlog.db: standartinė QLog vieta
+Fonti degli spot	Spotų šaltiniai
+mqtt.pskreporter.info, più lo storico dell'ultima ora via HTTP	mqtt.pskreporter.info, taip pat paskutinės valandos istorija per HTTP
+telnet.reversebeacon.net porte 7000 (CW/RTTY) e 7001 (FT8/FT4)	telnet.reversebeacon.net prievadai 7000 (CW/RTTY) ir 7001 (FT8/FT4)
+DM4X (cluster telnet)	DM4X (telnet klasteris)
+dm4x.ddns.net:8500, spot PSKReporter in forma di cluster	dm4x.ddns.net:8500, PSKReporter spotai klasterio pavidalu
+DXMAPS (2° cluster)	DXMAPS (2-as klasteris)
+Rete skimmer	Skimerių tinklas
+Invia set/skimmer (o set/noskimmer) al secondo cluster	Siunčia set/skimmer (arba set/noskimmer) antrajam klasteriui
+Decodifiche UDP (WSJT-X/MSHV)	UDP dekodavimai (WSJT-X/MSHV)
+Porta e inoltro UDP in Impostazioni	UDP prievadas ir persiuntimas Nustatymuose
+Tema	Tema
+Chiaro (YA-NEC)	Šviesi (YA-NEC)
+Notte	Naktis
+YA-GT — impostazioni	YA-GT — nustatymai
+Rimbalzo UDP: inoltra i pacchetti e riporta indietro le risposte	UDP retransliacija: persiunčia paketus ir grąžina atsakymus
+facoltative: 127.0.0.1:2333, 192.168.1.20:2237	neprivaloma: 127.0.0.1:2333, 192.168.1.20:2237
+Decodifiche UDP (protocollo WSJT-X: WSJT-X, JTDX, MSHV)	UDP dekodavimai (WSJT-X protokolas: WSJT-X, JTDX, MSHV)
+Ricezione: ascolta su	Priėmimas: klausytis adresu
+Per l'indirizzo multicast (es. 224.0.0.1) YA-GT si unisce al gruppo; con 127.0.0.1 la porta non può essere la stessa di un altro programma in ascolto.	Daugiaadresiam adresui (pvz., 224.0.0.1) YA-GT prisijungia prie grupės; su 127.0.0.1 prievadas negali sutapti su kitos klausančios programos prievadu.
+Ritrasmissione: verso	Persiuntimas: į
+Altre destinazioni	Kitos paskirties vietos
+La destinazione principale è di solito QLog; nelle altre puoi aggiungere host:porta separati da virgola (GridTracker, JTAlert). I pacchetti passano identici, QSO registrati compresi, quindi QLog scrive il QSO da solo; le risposte (doppio clic, evidenziazioni) tornano al programma digitale. In QLog metti come porta WSJT-X la stessa porta di ritrasmissione.	Pagrindinė paskirtis paprastai yra QLog; kitose galite pridėti host:port, atskirtus kableliais (GridTracker, JTAlert). Paketai praeina nepakitę, įskaitant užregistruotus QSO, todėl QLog pats užregistruoja QSO; atsakymai (dvigubas spustelėjimas, paryškinimai) grįžta į skaitmeninę programą. QLog nustatykite kaip WSJT-X prievadą tą patį persiuntimo prievadą.
+Log di QLog	QLog žurnalas
+Sfoglia…	Naršyti…
+Vuoto = posizione standard di QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Il file di QLog non viene mai modificato: si legge una copia.	Tuščia = standartinė QLog vieta (%LOCALAPPDATA%\hamradio\QLog\qlog.db). QLog failas niekada nekeičiamas: skaitoma kopija.
+Aggiornamento automatico	Automatinis atnaujinimas
+Controlla adesso	Tikrinti dabar
+Lingua	Kalba
+La nuova lingua vale dal prossimo avvio del programma.	Nauja kalba galios nuo kito programos paleidimo.
+Salva	Įrašyti
+Annulla	Atšaukti
+Scarica da LoTW	Atsisiųsti iš LoTW
+Ricorda il nome utente (la password non viene mai salvata)	Prisiminti naudotojo vardą (slaptažodis niekada neišsaugomas)
+Vengono scaricati tutti i QSO caricati su LoTW, con i dettagli delle conferme (locatore del corrispondente). Con log grandi LoTW può impiegare qualche minuto.	Atsisiunčiami visi į LoTW įkelti QSO su patvirtinimų informacija (korespondento lokatorius). Dideliems žurnalams LoTW gali užtrukti kelias minutes.
+Nome utente LoTW	LoTW naudotojo vardas
+Password LoTW	LoTW slaptažodis
+Solo nominativo (facoltativo)	Tik šaukinys (neprivaloma)
+Scarica	Atsisiųsti
+Spot di un nominativo, LoTW, QLog e decodifiche UDP su una mappa a livelli	Šaukinio spotai, LoTW, QLog ir UDP dekodavimai sluoksniuotame žemėlapyje
+Contatti	Kontaktai
+Sostieni il progetto: ko-fi.com/ic8tem	Paremkite projektą: ko-fi.com/ic8tem
+Riconoscimenti (credits)	Padėkos (credits)
+I dati restano accanto al programma (YA-GT.ini, CALL3.TXT, cartella Dati): nulla in AppData. La password LoTW non viene mai salvata.	Duomenys lieka šalia programos (YA-GT.ini, CALL3.TXT, aplankas Dati): nieko AppData. LoTW slaptažodis niekada neišsaugomas.
+Chiudi	Uždaryti
+YA-GT — avvio	YA-GT — paleidimas
+Spot, LoTW, QLog e decodifiche sulla mappa — di Costantino IC8TEM	Spotai, LoTW, QLog ir dekodavimai žemėlapyje — Costantino IC8TEM
+Nominativo	Šaukinys
+Locatore (6 caratteri)	Lokatorius (6 simboliai)
+Il locatore fa da centro della mappa azimutale e serve a calcolare distanza e azimut di ogni spot.	Lokatorius yra azimutinio žemėlapio centras ir naudojamas kiekvieno spoto atstumui ir azimutui apskaičiuoti.
+Avvia	Paleisti
+Esci	Išeiti
+Stazioni che tu ricevi: bordo viola	Stotys, kurias priimate: violetinis kraštas
+Decodifiche di WSJT-X/JTDX/MSHV via UDP: nuvoletta ovale	WSJT-X/JTDX/MSHV dekodavimai per UDP: ovalus debesėlis
+prop.kc2g.com: curve della MUF(3000) o della foF2	prop.kc2g.com: MUF(3000) arba foF2 kreivės
+Solo EME (PROP_MODE)	Tik EME (PROP_MODE)
+Legge qlog.db (copia in sola lettura)	Skaito qlog.db (tik skaitoma kopija)
+Ricezione su	Priėmimas adresu
+Ritrasmetti a	Persiųsti į
+Altre (facolt.)	Kiti (nepriv.)
+La destinazione principale è di solito QLog; nelle altre host:porta separati da virgola (GridTracker, JTAlert). Passano anche i QSO registrati, quindi QLog scrive il QSO da solo; le risposte tornano al programma digitale. In QLog metti come porta WSJT-X la porta di ritrasmissione.	Pagrindinė paskirtis paprastai yra QLog; kitose host:port, atskirti kableliais (GridTracker, JTAlert). Praeina ir užregistruoti QSO, todėl QLog pats užregistruoja QSO; atsakymai grįžta į skaitmeninę programą. QLog nustatykite kaip WSJT-X prievadą persiuntimo prievadą.
+Vuoto = posizione standard di QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Si legge una copia: il file di QLog non viene mai modificato.	Tuščia = standartinė QLog vieta (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Skaitoma kopija: QLog failas niekada nekeičiamas.
+Nome utente LoTW:	LoTW naudotojo vardas:
+Password LoTW:	LoTW slaptažodis:
+Solo nominativo (facoltativo):	Tik šaukinys (neprivaloma):
+Mi sentono	Girdi mane
+Sento io	Girdžiu
+Mie decodifiche (UDP)	Mano dekodavimai (UDP)
+mi sentono	girdi mane
+sento io	girdžiu
+mie decodifiche (UDP)	mano dekodavimai (UDP)
+lavorato	dirbta
+tutte 80-10 m	visos 80-10 m
+non ancora controllato	dar netikrinta
+PSKReporter — Philip Gladstone N1DQ: flusso MQTT (mqtt.pskreporter.info) e interfaccia HTTP	PSKReporter — Philip Gladstone N1DQ: MQTT srautas (mqtt.pskreporter.info) ir HTTP sąsaja
+Cluster DM4X (dm4x.ddns.net:8500): spot PSKReporter in forma di cluster	Klasteris DM4X (dm4x.ddns.net:8500): PSKReporter spotai klasterio pavidalu
+DXMAPS — Gabriel Sampol EA6VQ: secondo cluster con rete skimmer (dxmaps.com:7300)	DXMAPS — Gabriel Sampol EA6VQ: antrasis klasteris su skimerių tinklu (dxmaps.com:7300)
+prop.kc2g.com — Andrew Rodland KC2G: mappe di propagazione MUF/foF2 (GeoJSON)	prop.kc2g.com — Andrew Rodland KC2G: MUF/foF2 sklidimo žemėlapiai (GeoJSON)
+NOAA Space Weather Prediction Center: modello OVATION Prime dell'ovale aurorale	NOAA Space Weather Prediction Center: pašvaistės ovalo modelis OVATION Prime
+ARRL Logbook of The World (LoTW): report ADIF delle conferme	ARRL Logbook of The World (LoTW): patvirtinimų ADIF ataskaita
+QLog — Ladislav Foldyna OK1MLG: struttura del database qlog.db	QLog — Ladislav Foldyna OK1MLG: duomenų bazės qlog.db struktūra
+Protocollo UDP di WSJT-X (K1JT e WSJT Development Group); JTDX; MSHV (LZ2HV)	WSJT-X UDP protokolas (K1JT ir WSJT Development Group); JTDX; MSHV (LZ2HV)
+CALL3.TXT: WSJT-X Improved (DG2YCB), CALL3 EME di W7GJ, grid_data.bin di JTDX, database di MSHV-IC8TEM e LIVETROPOVHF	CALL3.TXT: WSJT-X Improved (DG2YCB), W7GJ EME CALL3, JTDX grid_data.bin, MSHV-IC8TEM ir LIVETROPOVHF duomenų bazės
+G7VRD: ricerca dei locatori per nominativo (api.g7vrd.co.uk)	G7VRD: lokatorių paieška pagal šaukinį (api.g7vrd.co.uk)
+cty.dat — Jim Reisert AD1C (country-files.com): prefissi e paesi DXCC	cty.dat — Jim Reisert AD1C (country-files.com): DXCC prefiksai ir šalys
+Natural Earth: coste e confini (pubblico dominio)	Natural Earth: pakrantės ir sienos (viešoji nuosavybė)
+Codice ripreso da LIVETROPOVHF e LoTW Grid Map v2 (IC8TEM)	Kodas paimtas iš LIVETROPOVHF ir LoTW Grid Map v2 (IC8TEM)

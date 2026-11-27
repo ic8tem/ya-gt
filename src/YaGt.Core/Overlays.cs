@@ -49,7 +49,7 @@ public sealed class Kc2gData
             catch { }
             Contours = contours; Stations = stations; Metric = metric;
             Loaded = DateTime.UtcNow;
-            Status = $"KC2G {(metric == "fof2" ? "foF2" : "MUF")}: {contours.Count} curve, {stations.Count} ionosonde";
+            Status = L.F("KC2G {0}: {1} curve, {2} ionosonde", metric == "fof2" ? "foF2" : "MUF", contours.Count, stations.Count);
         }
         catch (Exception ex) { Status = "KC2G: " + ex.Message; }
     }
@@ -183,7 +183,7 @@ public sealed class AuroraData
                 }
             }
             Grid = grid; Valid = n > 1000; Loaded = DateTime.UtcNow; Version++;
-            Status = "Aurora NOAA: previsione " + ForecastTime;
+            Status = L.F("Aurora NOAA: previsione {0}", ForecastTime);
         }
         catch (Exception ex) { Status = "Aurora NOAA: " + ex.Message; }
     }

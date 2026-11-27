@@ -4,6 +4,7 @@ using Avalonia.Controls;
 using Avalonia.Layout;
 using Avalonia.Media;
 using Avalonia.Media.Imaging;
+using Avalonia.LogicalTree;
 
 namespace YaGt.Core.Gui;
 
@@ -47,7 +48,7 @@ public static class Ui
     public static ComboBox Combo(IEnumerable<string> items, int selected, Action<int> changed, double width = 0)
     {
         var c = new ComboBox { FontSize = 12, Margin = new Thickness(2), VerticalAlignment = VerticalAlignment.Center };
-        foreach (var i in items) c.Items.Add(i);
+        foreach (var i in items) c.Items.Add(L.T(i));
         c.SelectedIndex = Math.Max(0, selected);
         if (width > 0) c.Width = width;
         c.SelectionChanged += (_, _) => { if (c.SelectedIndex >= 0) changed(c.SelectedIndex); };
@@ -70,6 +71,27 @@ public static class Ui
     {
         var b = Icon();
         return b == null ? null : new WindowIcon(b);
+    }
+
+    /// <summary>
+    /// Traduce i testi fissi di una finestra appena costruita (titolo, scritte, pulsanti, caselle, suggerimenti, testi d'invito):
+    /// la chiave è la frase italiana del codice; i testi che non sono chiavi restano come sono.
+    /// </summary>
+    public static void Translate(Window w)
+    {
+        if (L.Code == "it" || w == null) return;
+        w.Title = L.T(w.Title);
+        foreach (var o in w.GetLogicalDescendants())
+        {
+            switch (o)
+            {
+                case TextBlock t when t.Text != null: t.Text = L.T(t.Text); break;
+                case TextBox tb when tb.Watermark is string wm: tb.Watermark = L.T(wm); break;
+                case ComboBox _: break;
+                case ContentControl cc when cc.Content is string s: cc.Content = L.T(s); break;
+            }
+            if (o is Control ctl && ToolTip.GetTip(ctl) is string tip) ToolTip.SetTip(ctl, L.T(tip));
+        }
     }
 
     public static void Open(string url)

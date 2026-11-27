@@ -1,0 +1,199 @@
+# YA-GT — ro — traduzione dell'interfaccia: <frase italiana><TAB><traduzione>; \n = a capo. Generato da tools/lingue (armonizzazione 27/11/2026).
+YA-GT — aggiornamento	YA-GT — actualizare
+Apri file ADIF del log	Deschide fișierul ADIF al jurnalului
+È stata installata la versione {0} di YA-GT.\nEntra in funzione al prossimo avvio del programma.	Versiunea {0} a YA-GT a fost instalată.\nIntră în funcțiune la următoarea pornire a programului.
+{0:HH:mm:ss} UTC   ·   prossimo aggiornamento tra {1}	{0:HH:mm:ss} UTC   ·   următoarea actualizare peste {1}
+Database di QLog (qlog.db)	Baza de date QLog (qlog.db)
+Porta UDP non valida.	Port UDP nevalid.
+Indirizzo d'ascolto non valido.	Adresă de ascultare nevalidă.
+Porta di ritrasmissione non valida.	Port de retransmisie nevalid.
+La porta di ritrasmissione deve essere diversa da quella di ricezione.	Portul de retransmisie trebuie să fie diferit de cel de recepție.
+Inserisci nome utente e password di LoTW.	Introdu numele de utilizator și parola LoTW.
+Aggiornamento automatico dal GitHub (ogni {0} minuti)	Actualizare automată de pe GitHub (la fiecare {0} minute)
+Stato: {0}	Stare: {0}
+Ritrasmissione: {0}	Retransmisie: {0}
+Errore di collegamento: {0}	Eroare de conexiune: {0}
+Nominativo non valido.	Indicativ nevalid.
+Il locatore deve avere 6 caratteri, es. JN70cn.	Locatorul trebuie să aibă 6 caractere, de ex. JN70cn.
+Opacità	Opacitate
+Banda scelta in alto	Banda aleasă sus
+Tutte le bande	Toate benzile
+UHF e oltre	UHF și peste
+Tutti i file	Toate fișierele
+nessuna stazione	nicio stație
+Fonti:	Surse:
+nessun QSO (scarica da LoTW, apri un ADIF o attiva QLog)	niciun QSO (descarcă de pe LoTW, deschide un ADIF sau activează QLog)
+confermato su tutte le bande 80-10 m	confirmat pe toate benzile 80-10 m
+confermato LoTW	confirmat pe LoTW
+confermato con QSL	confirmat cu QSL
+lavorato, non confermato	lucrat, neconfirmat
+posizione del paese (cty.dat)	poziția țării (cty.dat)
+Mi sente	Mă aude
+Sento	Aud
+posizione da CALL3.TXT	poziție din CALL3.TXT
+Mia decodifica	Decodarea mea
+SNR dB (RBN CW: dB sul rumore)	SNR dB (RBN CW: dB peste zgomot)
+{0} stazioni · {1} quadrati · {2} paesi	{0} stații · {1} pătrate · {2} țări
+più lontana: {0} {1:N0} km	cea mai îndepărtată: {0} {1:N0} km
+migliore: {0} {1}	cea mai bună: {0} {1}
+Statistiche · {0} · ultimi {1}	Statistici · {0} · ultimele {1}
+Quadrati · {0}	Pătrate · {0}
+lavorati {0} · confermati {1} ({2:0}%)	lucrate {0} · confirmate {1} ({2:0}%)
+LoTW {0} · solo QSL {1} · non confermati {2}	LoTW {0} · doar QSL {1} · neconfirmate {2}
+confermati su tutte le bande 80-10 m: {0}	confirmate pe toate benzile 80-10 m: {0}
+Aggiornato {0:HH:mm} UTC	Actualizat {0:HH:mm} UTC
+KC2G ionosonda {0}: {1} {2:0.0} MHz (affidabilità {3:0.00})	Ionosonda KC2G {0}: {1} {2:0.0} MHz (fiabilitate {3:0.00})
+spento durante le prove automatiche	oprit în timpul testelor automate
+spento nelle Impostazioni	oprit în Setări
+spento: la cartella del programma non è scrivibile (aggiornare a mano)	oprit: în dosarul programului nu se poate scrie (actualizează manual)
+gestito da un'altra finestra di YA-GT già aperta	gestionat de o altă fereastră YA-GT deja deschisă
+pacchetto troppo grande, non si scarica	pachet prea mare, nu se descarcă
+pacchetto tar.gz non gestito su questa piattaforma	pachetul tar.gz nu este suportat pe această platformă
+nessuna versione pubblicata su {0}	nicio versiune publicată pe {0}
+versione pubblicata non leggibile: {0}	versiune publicată ilizibilă: {0}
+hai già l'ultima versione ({0})	ai deja ultima versiune ({0})
+aggiornato: l'ultima versione è la {0} ({1})	la zi: ultima versiune este {0} ({1})
+versione {0} disponibile su {1}	versiunea {0} disponibilă pe {1}
+versione {0} pubblicata, ma senza il pacchetto {1}	versiunea {0} publicată, dar fără pachetul {1}
+versione {0}: mancano impronta o firma del pacchetto, non si installa	versiunea {0}: lipsesc amprenta sau semnătura pachetului, nu se instalează
+scarico la versione {0} ({1})	se descarcă versiunea {0} ({1})
+versione {0}: impronta SHA-256 diversa, pacchetto scartato	versiunea {0}: amprentă SHA-256 diferită, pachet respins
+versione {0}: FIRMA NON VALIDA, pacchetto scartato	versiunea {0}: SEMNĂTURĂ NEVALIDĂ, pachet respins
+controllo non riuscito: {0} (riprovo fra {1} minuti)	verificare eșuată: {0} (reîncerc peste {1} minute)
+aggiornato da {0} a {1} il {2}	actualizat de la {0} la {1} pe {2}
+versione {0} installata: entra in funzione al prossimo avvio di YA-GT	versiunea {0} instalată: intră în funcțiune la următoarea pornire a YA-GT
+installazione della {0} non riuscita, rimessa la {1}: {2}	instalarea versiunii {0} a eșuat, restaurată {1}: {2}
+LoTW (copia salvata)	LoTW (copie salvată)
+Collegamento a LoTW in corso…	Conectare la LoTW…
+LoTW ha rifiutato l'accesso: controlla nome utente e password.	LoTW a refuzat accesul: verifică numele de utilizator și parola.
+Risposta inattesa da LoTW (non è un file ADIF). Riprova più tardi.	Răspuns neașteptat de la LoTW (nu este un fișier ADIF). Încearcă mai târziu.
+Il file ricevuto da LoTW sembra incompleto. Riprova.	Fișierul primit de la LoTW pare incomplet. Încearcă din nou.
+{0}: {1} QSO letti, {2} in totale	{0}: {1} QSO citite, {2} în total
+Ricezione dati da LoTW: {0:N0} kB…	Se primesc date de la LoTW: {0:N0} kB…
+tutte le bande	toate benzile
+{0} mi sentono · {1} sento · {2} decodifiche	{0} mă aud · {1} aud · {2} decodări
+G7VRD in coda {0}	G7VRD în coadă {0}
+ ⇄ {0} inoltro {1}/{2}	 ⇄ {0} retransmisie {1}/{2}
+KC2G {0}: {1} curve, {2} ionosonde	KC2G {0}: {1} curbe, {2} ionosonde
+Aurora NOAA: previsione {0}	Auroră NOAA: prognoză {0}
+Proiezione	Proiecție
+Mercatore	Mercator
+Azimutale	Azimutală
+Aggiornamento	Actualizare
+Banda	Bandă
+Tutte	Toate
+Spot degli ultimi	Spoturi din ultimele
+Aggiorna ora	Actualizează acum
+Vista intera	Vedere completă
+Impostazioni	Setări
+Livelli della mappa	Straturile hărții
+Statistiche (in alto a destra)	Statistici (sus în dreapta)
+Chi mi sente (spot)	Cine mă aude (spoturi)
+Stazioni che ricevono il tuo segnale: fumetto con l'SNR, bordo blu	Stații care îți recepționează semnalul: balon cu SNR, chenar albastru
+Chi sento io (spot)	Pe cine aud (spoturi)
+Stazioni che tu ricevi (PSKReporter, tuo skimmer RBN): bordo viola	Stații pe care le recepționezi (PSKReporter, skimmerul tău RBN): chenar violet
+Le mie decodifiche (UDP)	Decodările mele (UDP)
+Decodifiche di WSJT-X/JTDX/MSHV ricevute via UDP: nuvoletta ovale	Decodări WSJT-X/JTDX/MSHV primite prin UDP: nor oval
+Nominativo nei fumetti	Indicativ în baloane
+Percorsi (cerchio massimo)	Trasee (cerc mare)
+Griglia Maidenhead	Grila Maidenhead
+Greyline (giorno/notte)	Greyline (zi/noapte)
+Propagazione KC2G	Propagare KC2G
+prop.kc2g.com: curve della MUF(3000) o della foF2 e valori delle ionosonde	prop.kc2g.com: curbele MUF(3000) sau foF2 și valorile ionosondelor
+Aurora NOAA (OVATION)	Auroră NOAA (OVATION)
+Probabilità di aurora del NOAA SWPC, ridisegnata in Mercatore e in azimutale	Probabilitatea de auroră de la NOAA SWPC, redesenată în Mercator și azimutal
+Quadrati (LoTW + QLog)	Pătrate (LoTW + QLog)
+Arancio = lavorato, verde = LoTW, blu = QSL, grigio = confermato su tutte le bande 80-10 m (esclusi i 60 m)	Portocaliu = lucrat, verde = LoTW, albastru = QSL, gri = confirmat pe toate benzile 80-10 m (fără 60 m)
+Solo confermati	Doar confirmate
+Solo EME (PROP__MODE)	Doar EME (PROP__MODE)
+Scarica da LoTW…	Descarcă de pe LoTW…
+Apri ADIF…	Deschide ADIF…
+QSO del log QLog	QSO-urile din jurnalul QLog
+Legge qlog.db (copia in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato	Citește qlog.db (copie doar pentru citire): pătrățele verzi = LoTW, albastre = QSL, portocalii = lucrat
+qlog.db: posizione standard di QLog	qlog.db: locația standard QLog
+Fonti degli spot	Sursele spoturilor
+mqtt.pskreporter.info, più lo storico dell'ultima ora via HTTP	mqtt.pskreporter.info, plus istoricul ultimei ore prin HTTP
+telnet.reversebeacon.net porte 7000 (CW/RTTY) e 7001 (FT8/FT4)	telnet.reversebeacon.net porturile 7000 (CW/RTTY) și 7001 (FT8/FT4)
+DM4X (cluster telnet)	DM4X (cluster telnet)
+dm4x.ddns.net:8500, spot PSKReporter in forma di cluster	dm4x.ddns.net:8500, spoturi PSKReporter sub formă de cluster
+DXMAPS (2° cluster)	DXMAPS (al 2-lea cluster)
+Rete skimmer	Rețea skimmer
+Invia set/skimmer (o set/noskimmer) al secondo cluster	Trimite set/skimmer (sau set/noskimmer) celui de-al doilea cluster
+Decodifiche UDP (WSJT-X/MSHV)	Decodări UDP (WSJT-X/MSHV)
+Porta e inoltro UDP in Impostazioni	Port UDP și retransmisie în Setări
+Tema	Temă
+Chiaro (YA-NEC)	Luminoasă (YA-NEC)
+Notte	Noapte
+YA-GT — impostazioni	YA-GT — setări
+Rimbalzo UDP: inoltra i pacchetti e riporta indietro le risposte	Releu UDP: retransmite pachetele și trimite înapoi răspunsurile
+facoltative: 127.0.0.1:2333, 192.168.1.20:2237	opționale: 127.0.0.1:2333, 192.168.1.20:2237
+Decodifiche UDP (protocollo WSJT-X: WSJT-X, JTDX, MSHV)	Decodări UDP (protocol WSJT-X: WSJT-X, JTDX, MSHV)
+Ricezione: ascolta su	Recepție: ascultă pe
+Per l'indirizzo multicast (es. 224.0.0.1) YA-GT si unisce al gruppo; con 127.0.0.1 la porta non può essere la stessa di un altro programma in ascolto.	Pentru o adresă multicast (de ex. 224.0.0.1) YA-GT intră în grup; cu 127.0.0.1 portul nu poate fi același cu al altui program care ascultă.
+Ritrasmissione: verso	Retransmisie: către
+Altre destinazioni	Alte destinații
+La destinazione principale è di solito QLog; nelle altre puoi aggiungere host:porta separati da virgola (GridTracker, JTAlert). I pacchetti passano identici, QSO registrati compresi, quindi QLog scrive il QSO da solo; le risposte (doppio clic, evidenziazioni) tornano al programma digitale. In QLog metti come porta WSJT-X la stessa porta di ritrasmissione.	Destinația principală este de obicei QLog; în celelalte poți adăuga host:port separate prin virgulă (GridTracker, JTAlert). Pachetele trec neschimbate, inclusiv QSO-urile înregistrate, așa că QLog înregistrează singur QSO-ul; răspunsurile (dublu clic, evidențieri) se întorc la programul digital. În QLog pune ca port WSJT-X același port de retransmisie.
+Log di QLog	Jurnal QLog
+Sfoglia…	Răsfoiește…
+Vuoto = posizione standard di QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Il file di QLog non viene mai modificato: si legge una copia.	Gol = locația standard QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Fișierul QLog nu este modificat niciodată: se citește o copie.
+Aggiornamento automatico	Actualizare automată
+Controlla adesso	Verifică acum
+Lingua	Limbă
+La nuova lingua vale dal prossimo avvio del programma.	Noua limbă se aplică de la următoarea pornire a programului.
+Salva	Salvează
+Annulla	Anulează
+Scarica da LoTW	Descarcă de pe LoTW
+Ricorda il nome utente (la password non viene mai salvata)	Ține minte numele de utilizator (parola nu este salvată niciodată)
+Vengono scaricati tutti i QSO caricati su LoTW, con i dettagli delle conferme (locatore del corrispondente). Con log grandi LoTW può impiegare qualche minuto.	Se descarcă toate QSO-urile încărcate pe LoTW, cu detaliile confirmărilor (locatorul corespondentului). La jurnale mari LoTW poate dura câteva minute.
+Nome utente LoTW	Nume de utilizator LoTW
+Password LoTW	Parolă LoTW
+Solo nominativo (facoltativo)	Doar indicativul (opțional)
+Scarica	Descarcă
+Spot di un nominativo, LoTW, QLog e decodifiche UDP su una mappa a livelli	Spoturile unui indicativ, LoTW, QLog și decodări UDP pe o hartă pe straturi
+Contatti	Contact
+Sostieni il progetto: ko-fi.com/ic8tem	Susține proiectul: ko-fi.com/ic8tem
+Riconoscimenti (credits)	Mulțumiri (credite)
+I dati restano accanto al programma (YA-GT.ini, CALL3.TXT, cartella Dati): nulla in AppData. La password LoTW non viene mai salvata.	Datele rămân lângă program (YA-GT.ini, CALL3.TXT, dosarul Dati): nimic în AppData. Parola LoTW nu este salvată niciodată.
+Chiudi	Închide
+YA-GT — avvio	YA-GT — pornire
+Spot, LoTW, QLog e decodifiche sulla mappa — di Costantino IC8TEM	Spoturi, LoTW, QLog și decodări pe hartă — de Costantino IC8TEM
+Nominativo	Indicativ
+Locatore (6 caratteri)	Locator (6 caractere)
+Il locatore fa da centro della mappa azimutale e serve a calcolare distanza e azimut di ogni spot.	Locatorul este centrul hărții azimutale și servește la calculul distanței și azimutului fiecărui spot.
+Avvia	Pornește
+Esci	Ieșire
+Stazioni che tu ricevi: bordo viola	Stații pe care le recepționezi: chenar violet
+Decodifiche di WSJT-X/JTDX/MSHV via UDP: nuvoletta ovale	Decodări WSJT-X/JTDX/MSHV prin UDP: nor oval
+prop.kc2g.com: curve della MUF(3000) o della foF2	prop.kc2g.com: curbele MUF(3000) sau foF2
+Solo EME (PROP_MODE)	Doar EME (PROP_MODE)
+Legge qlog.db (copia in sola lettura)	Citește qlog.db (copie doar pentru citire)
+Ricezione su	Recepție pe
+Ritrasmetti a	Retransmite către
+Altre (facolt.)	Altele (opț.)
+La destinazione principale è di solito QLog; nelle altre host:porta separati da virgola (GridTracker, JTAlert). Passano anche i QSO registrati, quindi QLog scrive il QSO da solo; le risposte tornano al programma digitale. In QLog metti come porta WSJT-X la porta di ritrasmissione.	Destinația principală este de obicei QLog; în celelalte host:port separate prin virgulă (GridTracker, JTAlert). Trec și QSO-urile înregistrate, așa că QLog înregistrează singur QSO-ul; răspunsurile se întorc la programul digital. În QLog pune ca port WSJT-X portul de retransmisie.
+Vuoto = posizione standard di QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Si legge una copia: il file di QLog non viene mai modificato.	Gol = locația standard QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Se citește o copie: fișierul QLog nu este modificat niciodată.
+Nome utente LoTW:	Nume de utilizator LoTW:
+Password LoTW:	Parolă LoTW:
+Solo nominativo (facoltativo):	Doar indicativul (opțional):
+Mi sentono	Mă aud
+Sento io	Aud
+Mie decodifiche (UDP)	Decodările mele (UDP)
+mi sentono	mă aud
+sento io	aud
+mie decodifiche (UDP)	decodările mele (UDP)
+lavorato	lucrat
+tutte 80-10 m	toate 80-10 m
+non ancora controllato	încă neverificat
+PSKReporter — Philip Gladstone N1DQ: flusso MQTT (mqtt.pskreporter.info) e interfaccia HTTP	PSKReporter — Philip Gladstone N1DQ: flux MQTT (mqtt.pskreporter.info) și interfață HTTP
+Cluster DM4X (dm4x.ddns.net:8500): spot PSKReporter in forma di cluster	Clusterul DM4X (dm4x.ddns.net:8500): spoturi PSKReporter sub formă de cluster
+DXMAPS — Gabriel Sampol EA6VQ: secondo cluster con rete skimmer (dxmaps.com:7300)	DXMAPS — Gabriel Sampol EA6VQ: al doilea cluster cu rețea skimmer (dxmaps.com:7300)
+prop.kc2g.com — Andrew Rodland KC2G: mappe di propagazione MUF/foF2 (GeoJSON)	prop.kc2g.com — Andrew Rodland KC2G: hărți de propagare MUF/foF2 (GeoJSON)
+NOAA Space Weather Prediction Center: modello OVATION Prime dell'ovale aurorale	NOAA Space Weather Prediction Center: modelul OVATION Prime al ovalului auroral
+ARRL Logbook of The World (LoTW): report ADIF delle conferme	ARRL Logbook of The World (LoTW): raportul ADIF al confirmărilor
+QLog — Ladislav Foldyna OK1MLG: struttura del database qlog.db	QLog — Ladislav Foldyna OK1MLG: structura bazei de date qlog.db
+Protocollo UDP di WSJT-X (K1JT e WSJT Development Group); JTDX; MSHV (LZ2HV)	Protocolul UDP al WSJT-X (K1JT și WSJT Development Group); JTDX; MSHV (LZ2HV)
+CALL3.TXT: WSJT-X Improved (DG2YCB), CALL3 EME di W7GJ, grid_data.bin di JTDX, database di MSHV-IC8TEM e LIVETROPOVHF	CALL3.TXT: WSJT-X Improved (DG2YCB), CALL3 EME de la W7GJ, grid_data.bin din JTDX, bazele de date MSHV-IC8TEM și LIVETROPOVHF
+G7VRD: ricerca dei locatori per nominativo (api.g7vrd.co.uk)	G7VRD: căutarea locatorilor după indicativ (api.g7vrd.co.uk)
+cty.dat — Jim Reisert AD1C (country-files.com): prefissi e paesi DXCC	cty.dat — Jim Reisert AD1C (country-files.com): prefixe și țări DXCC
+Natural Earth: coste e confini (pubblico dominio)	Natural Earth: coaste și granițe (domeniu public)
+Codice ripreso da LIVETROPOVHF e LoTW Grid Map v2 (IC8TEM)	Cod preluat din LIVETROPOVHF și LoTW Grid Map v2 (IC8TEM)

@@ -1,0 +1,199 @@
+# YA-GT — hu — traduzione dell'interfaccia: <frase italiana><TAB><traduzione>; \n = a capo. Generato da tools/lingue (armonizzazione 27/11/2026).
+YA-GT — aggiornamento	YA-GT — frissítés
+Apri file ADIF del log	A napló ADIF-fájljának megnyitása
+È stata installata la versione {0} di YA-GT.\nEntra in funzione al prossimo avvio del programma.	A YA-GT {0} verziója telepítve.\nA program következő indításakor lép érvénybe.
+{0:HH:mm:ss} UTC   ·   prossimo aggiornamento tra {1}	{0:HH:mm:ss} UTC   ·   következő frissítés {1} múlva
+Database di QLog (qlog.db)	QLog-adatbázis (qlog.db)
+Porta UDP non valida.	Érvénytelen UDP-port.
+Indirizzo d'ascolto non valido.	Érvénytelen figyelési cím.
+Porta di ritrasmissione non valida.	Érvénytelen továbbítási port.
+La porta di ritrasmissione deve essere diversa da quella di ricezione.	A továbbítási portnak különböznie kell a vételi porttól.
+Inserisci nome utente e password di LoTW.	Add meg a LoTW-felhasználónevet és -jelszót.
+Aggiornamento automatico dal GitHub (ogni {0} minuti)	Automatikus frissítés a GitHubról ({0} percenként)
+Stato: {0}	Állapot: {0}
+Ritrasmissione: {0}	Továbbítás: {0}
+Errore di collegamento: {0}	Kapcsolódási hiba: {0}
+Nominativo non valido.	Érvénytelen hívójel.
+Il locatore deve avere 6 caratteri, es. JN70cn.	A lokátornak 6 karakterből kell állnia, pl. JN70cn.
+Opacità	Átlátszatlanság
+Banda scelta in alto	Fent kiválasztott sáv
+Tutte le bande	Minden sáv
+UHF e oltre	UHF és felette
+Tutti i file	Minden fájl
+nessuna stazione	nincs állomás
+Fonti:	Források:
+nessun QSO (scarica da LoTW, apri un ADIF o attiva QLog)	nincs QSO (tölts le a LoTW-ről, nyiss meg egy ADIF-et vagy kapcsold be a QLogot)
+confermato su tutte le bande 80-10 m	megerősítve minden sávon 80-10 m
+confermato LoTW	LoTW-n megerősítve
+confermato con QSL	QSL-lel megerősítve
+lavorato, non confermato	dolgozva, nem megerősítve
+posizione del paese (cty.dat)	az ország helye (cty.dat)
+Mi sente	Hall engem
+Sento	Hallom
+posizione da CALL3.TXT	hely a CALL3.TXT-ből
+Mia decodifica	Saját dekódolásom
+SNR dB (RBN CW: dB sul rumore)	SNR dB (RBN CW: dB a zaj felett)
+{0} stazioni · {1} quadrati · {2} paesi	{0} állomás · {1} négyzet · {2} ország
+più lontana: {0} {1:N0} km	legtávolabbi: {0} {1:N0} km
+migliore: {0} {1}	legjobb: {0} {1}
+Statistiche · {0} · ultimi {1}	Statisztika · {0} · utolsó {1}
+Quadrati · {0}	Négyzetek · {0}
+lavorati {0} · confermati {1} ({2:0}%)	dolgozva {0} · megerősítve {1} ({2:0}%)
+LoTW {0} · solo QSL {1} · non confermati {2}	LoTW {0} · csak QSL {1} · nem megerősítve {2}
+confermati su tutte le bande 80-10 m: {0}	megerősítve minden sávon 80-10 m: {0}
+Aggiornato {0:HH:mm} UTC	Frissítve {0:HH:mm} UTC
+KC2G ionosonda {0}: {1} {2:0.0} MHz (affidabilità {3:0.00})	KC2G ionoszonda {0}: {1} {2:0.0} MHz (megbízhatóság {3:0.00})
+spento durante le prove automatiche	kikapcsolva az automatikus tesztek alatt
+spento nelle Impostazioni	kikapcsolva a Beállításokban
+spento: la cartella del programma non è scrivibile (aggiornare a mano)	kikapcsolva: a program mappája nem írható (frissíts kézzel)
+gestito da un'altra finestra di YA-GT già aperta	egy másik, már nyitott YA-GT-ablak kezeli
+pacchetto troppo grande, non si scarica	a csomag túl nagy, nem töltődik le
+pacchetto tar.gz non gestito su questa piattaforma	a tar.gz csomag ezen a platformon nem támogatott
+nessuna versione pubblicata su {0}	nincs közzétett verzió itt: {0}
+versione pubblicata non leggibile: {0}	a közzétett verzió nem olvasható: {0}
+hai già l'ultima versione ({0})	már a legújabb verzió van meg ({0})
+aggiornato: l'ultima versione è la {0} ({1})	naprakész: a legújabb verzió a {0} ({1})
+versione {0} disponibile su {1}	a {0} verzió elérhető itt: {1}
+versione {0} pubblicata, ma senza il pacchetto {1}	a {0} verzió közzétéve, de a(z) {1} csomag nélkül
+versione {0}: mancano impronta o firma del pacchetto, non si installa	{0} verzió: hiányzik a csomag ujjlenyomata vagy aláírása, nem települ
+scarico la versione {0} ({1})	a {0} verzió letöltése ({1})
+versione {0}: impronta SHA-256 diversa, pacchetto scartato	{0} verzió: eltérő SHA-256 ujjlenyomat, csomag elvetve
+versione {0}: FIRMA NON VALIDA, pacchetto scartato	{0} verzió: ÉRVÉNYTELEN ALÁÍRÁS, csomag elvetve
+controllo non riuscito: {0} (riprovo fra {1} minuti)	az ellenőrzés sikertelen: {0} (új próba {1} perc múlva)
+aggiornato da {0} a {1} il {2}	frissítve erről: {0}, erre: {1}, ekkor: {2}
+versione {0} installata: entra in funzione al prossimo avvio di YA-GT	a {0} verzió telepítve: a YA-GT következő indításakor lép érvénybe
+installazione della {0} non riuscita, rimessa la {1}: {2}	a {0} telepítése sikertelen, a {1} visszaállítva: {2}
+LoTW (copia salvata)	LoTW (mentett másolat)
+Collegamento a LoTW in corso…	Kapcsolódás a LoTW-hez…
+LoTW ha rifiutato l'accesso: controlla nome utente e password.	A LoTW megtagadta a hozzáférést: ellenőrizd a felhasználónevet és a jelszót.
+Risposta inattesa da LoTW (non è un file ADIF). Riprova più tardi.	Váratlan válasz a LoTW-től (nem ADIF-fájl). Próbáld újra később.
+Il file ricevuto da LoTW sembra incompleto. Riprova.	A LoTW-től kapott fájl hiányosnak tűnik. Próbáld újra.
+{0}: {1} QSO letti, {2} in totale	{0}: {1} QSO beolvasva, összesen {2}
+Ricezione dati da LoTW: {0:N0} kB…	Adatok fogadása a LoTW-től: {0:N0} kB…
+tutte le bande	minden sáv
+{0} mi sentono · {1} sento · {2} decodifiche	{0} hall engem · {1} hallok · {2} dekódolás
+G7VRD in coda {0}	G7VRD sorban {0}
+ ⇄ {0} inoltro {1}/{2}	 ⇄ {0} továbbítás {1}/{2}
+KC2G {0}: {1} curve, {2} ionosonde	KC2G {0}: {1} görbe, {2} ionoszonda
+Aurora NOAA: previsione {0}	NOAA sarki fény: előrejelzés {0}
+Proiezione	Vetület
+Mercatore	Mercator
+Azimutale	Azimutális
+Aggiornamento	Frissítés
+Banda	Sáv
+Tutte	Mind
+Spot degli ultimi	Az utolsó spotjai
+Aggiorna ora	Frissítés most
+Vista intera	Teljes nézet
+Impostazioni	Beállítások
+Livelli della mappa	Térképrétegek
+Statistiche (in alto a destra)	Statisztika (jobbra fent)
+Chi mi sente (spot)	Ki hall engem (spotok)
+Stazioni che ricevono il tuo segnale: fumetto con l'SNR, bordo blu	A jeledet vevő állomások: buborék az SNR-rel, kék keret
+Chi sento io (spot)	Kit hallok (spotok)
+Stazioni che tu ricevi (PSKReporter, tuo skimmer RBN): bordo viola	Az általad vett állomások (PSKReporter, a saját RBN-skimmered): lila keret
+Le mie decodifiche (UDP)	Saját dekódolásaim (UDP)
+Decodifiche di WSJT-X/JTDX/MSHV ricevute via UDP: nuvoletta ovale	WSJT-X/JTDX/MSHV dekódolások UDP-n: ovális felhő
+Nominativo nei fumetti	Hívójel a buborékokban
+Percorsi (cerchio massimo)	Útvonalak (főkör)
+Griglia Maidenhead	Maidenhead-rács
+Greyline (giorno/notte)	Greyline (nappal/éjszaka)
+Propagazione KC2G	KC2G terjedés
+prop.kc2g.com: curve della MUF(3000) o della foF2 e valori delle ionosonde	prop.kc2g.com: a MUF(3000) vagy a foF2 görbéi és az ionoszondák értékei
+Aurora NOAA (OVATION)	NOAA sarki fény (OVATION)
+Probabilità di aurora del NOAA SWPC, ridisegnata in Mercatore e in azimutale	A NOAA SWPC sarkifény-valószínűsége, újrarajzolva Mercator- és azimutális vetületben
+Quadrati (LoTW + QLog)	Négyzetek (LoTW + QLog)
+Arancio = lavorato, verde = LoTW, blu = QSL, grigio = confermato su tutte le bande 80-10 m (esclusi i 60 m)	Narancs = dolgozva, zöld = LoTW, kék = QSL, szürke = megerősítve minden sávon 80-10 m (a 60 m nélkül)
+Solo confermati	Csak megerősítettek
+Solo EME (PROP__MODE)	Csak EME (PROP__MODE)
+Scarica da LoTW…	Letöltés a LoTW-ről…
+Apri ADIF…	ADIF megnyitása…
+QSO del log QLog	A QLog-napló QSO-i
+Legge qlog.db (copia in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato	Beolvassa a qlog.db-t (csak olvasható másolat): zöld négyzetek = LoTW, kék = QSL, narancs = dolgozva
+qlog.db: posizione standard di QLog	qlog.db: a QLog szokásos helye
+Fonti degli spot	Spotforrások
+mqtt.pskreporter.info, più lo storico dell'ultima ora via HTTP	mqtt.pskreporter.info, plusz az utolsó óra előzményei HTTP-n
+telnet.reversebeacon.net porte 7000 (CW/RTTY) e 7001 (FT8/FT4)	telnet.reversebeacon.net 7000-es (CW/RTTY) és 7001-es (FT8/FT4) port
+DM4X (cluster telnet)	DM4X (telnet-klaszter)
+dm4x.ddns.net:8500, spot PSKReporter in forma di cluster	dm4x.ddns.net:8500, PSKReporter-spotok klaszter formában
+DXMAPS (2° cluster)	DXMAPS (2. klaszter)
+Rete skimmer	Skimmerhálózat
+Invia set/skimmer (o set/noskimmer) al secondo cluster	set/skimmer (vagy set/noskimmer) küldése a második klaszternek
+Decodifiche UDP (WSJT-X/MSHV)	UDP-dekódolások (WSJT-X/MSHV)
+Porta e inoltro UDP in Impostazioni	UDP-port és továbbítás a Beállításokban
+Tema	Téma
+Chiaro (YA-NEC)	Világos (YA-NEC)
+Notte	Éjszaka
+YA-GT — impostazioni	YA-GT — beállítások
+Rimbalzo UDP: inoltra i pacchetti e riporta indietro le risposte	UDP-visszaverés: továbbítja a csomagokat és visszaküldi a válaszokat
+facoltative: 127.0.0.1:2333, 192.168.1.20:2237	opcionális: 127.0.0.1:2333, 192.168.1.20:2237
+Decodifiche UDP (protocollo WSJT-X: WSJT-X, JTDX, MSHV)	UDP-dekódolások (WSJT-X protokoll: WSJT-X, JTDX, MSHV)
+Ricezione: ascolta su	Vétel: figyelés itt
+Per l'indirizzo multicast (es. 224.0.0.1) YA-GT si unisce al gruppo; con 127.0.0.1 la porta non può essere la stessa di un altro programma in ascolto.	Multicast-cím esetén (pl. 224.0.0.1) a YA-GT csatlakozik a csoporthoz; 127.0.0.1 esetén a port nem lehet ugyanaz, mint egy másik figyelő programé.
+Ritrasmissione: verso	Továbbítás: ide
+Altre destinazioni	További célok
+La destinazione principale è di solito QLog; nelle altre puoi aggiungere host:porta separati da virgola (GridTracker, JTAlert). I pacchetti passano identici, QSO registrati compresi, quindi QLog scrive il QSO da solo; le risposte (doppio clic, evidenziazioni) tornano al programma digitale. In QLog metti come porta WSJT-X la stessa porta di ritrasmissione.	A fő cél általában a QLog; a többibe vesszővel elválasztott host:port párokat adhatsz meg (GridTracker, JTAlert). A csomagok változatlanul mennek át, a naplózott QSO-kkal együtt, így a QLog maga rögzíti a QSO-t; a válaszok (dupla kattintás, kiemelések) visszajutnak a digitális programhoz. A QLogban WSJT-X-portként ugyanazt a továbbítási portot add meg.
+Log di QLog	QLog-napló
+Sfoglia…	Tallózás…
+Vuoto = posizione standard di QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Il file di QLog non viene mai modificato: si legge una copia.	Üres = a QLog szokásos helye (%LOCALAPPDATA%\hamradio\QLog\qlog.db). A QLog fájlja soha nem változik: egy másolatot olvas.
+Aggiornamento automatico	Automatikus frissítés
+Controlla adesso	Ellenőrzés most
+Lingua	Nyelv
+La nuova lingua vale dal prossimo avvio del programma.	Az új nyelv a program következő indításától érvényes.
+Salva	Mentés
+Annulla	Mégse
+Scarica da LoTW	Letöltés a LoTW-ről
+Ricorda il nome utente (la password non viene mai salvata)	Felhasználónév megjegyzése (a jelszót soha nem menti)
+Vengono scaricati tutti i QSO caricati su LoTW, con i dettagli delle conferme (locatore del corrispondente). Con log grandi LoTW può impiegare qualche minuto.	Minden LoTW-re feltöltött QSO letöltődik a megerősítések részleteivel (a partner lokátora). Nagy naplóknál a LoTW-nek néhány perc is kellhet.
+Nome utente LoTW	LoTW-felhasználónév
+Password LoTW	LoTW-jelszó
+Solo nominativo (facoltativo)	Csak hívójel (nem kötelező)
+Scarica	Letöltés
+Spot di un nominativo, LoTW, QLog e decodifiche UDP su una mappa a livelli	Egy hívójel spotjai, LoTW, QLog és UDP-dekódolások rétegezett térképen
+Contatti	Kapcsolat
+Sostieni il progetto: ko-fi.com/ic8tem	Támogasd a projektet: ko-fi.com/ic8tem
+Riconoscimenti (credits)	Köszönetnyilvánítás (credits)
+I dati restano accanto al programma (YA-GT.ini, CALL3.TXT, cartella Dati): nulla in AppData. La password LoTW non viene mai salvata.	Az adatok a program mellett maradnak (YA-GT.ini, CALL3.TXT, Dati mappa): semmi az AppData-ban. A LoTW-jelszót soha nem menti.
+Chiudi	Bezárás
+YA-GT — avvio	YA-GT — indítás
+Spot, LoTW, QLog e decodifiche sulla mappa — di Costantino IC8TEM	Spotok, LoTW, QLog és dekódolások a térképen — Costantino IC8TEM
+Nominativo	Hívójel
+Locatore (6 caratteri)	Lokátor (6 karakter)
+Il locatore fa da centro della mappa azimutale e serve a calcolare distanza e azimut di ogni spot.	A lokátor az azimutális térkép középpontja, és ebből számolja minden spot távolságát és irányszögét.
+Avvia	Indítás
+Esci	Kilépés
+Stazioni che tu ricevi: bordo viola	Az általad vett állomások: lila keret
+Decodifiche di WSJT-X/JTDX/MSHV via UDP: nuvoletta ovale	WSJT-X/JTDX/MSHV dekódolások UDP-n: ovális felhő
+prop.kc2g.com: curve della MUF(3000) o della foF2	prop.kc2g.com: a MUF(3000) vagy a foF2 görbéi
+Solo EME (PROP_MODE)	Csak EME (PROP_MODE)
+Legge qlog.db (copia in sola lettura)	Beolvassa a qlog.db-t (csak olvasható másolat)
+Ricezione su	Vétel itt
+Ritrasmetti a	Továbbítás ide
+Altre (facolt.)	Egyéb (opc.)
+La destinazione principale è di solito QLog; nelle altre host:porta separati da virgola (GridTracker, JTAlert). Passano anche i QSO registrati, quindi QLog scrive il QSO da solo; le risposte tornano al programma digitale. In QLog metti come porta WSJT-X la porta di ritrasmissione.	A fő cél általában a QLog; a többibe vesszővel elválasztott host:port (GridTracker, JTAlert). A naplózott QSO-k is átmennek, így a QLog maga rögzíti a QSO-t; a válaszok visszajutnak a digitális programhoz. A QLogban WSJT-X-portként a továbbítási portot add meg.
+Vuoto = posizione standard di QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Si legge una copia: il file di QLog non viene mai modificato.	Üres = a QLog szokásos helye (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Egy másolatot olvas: a QLog fájlja soha nem változik.
+Nome utente LoTW:	LoTW-felhasználónév:
+Password LoTW:	LoTW-jelszó:
+Solo nominativo (facoltativo):	Csak hívójel (nem kötelező):
+Mi sentono	Hallanak engem
+Sento io	Hallom
+Mie decodifiche (UDP)	Saját dekódolásaim (UDP)
+mi sentono	hallanak engem
+sento io	hallom
+mie decodifiche (UDP)	saját dekódolásaim (UDP)
+lavorato	dolgozva
+tutte 80-10 m	mind 80-10 m
+non ancora controllato	még nincs ellenőrizve
+PSKReporter — Philip Gladstone N1DQ: flusso MQTT (mqtt.pskreporter.info) e interfaccia HTTP	PSKReporter — Philip Gladstone N1DQ: MQTT-adatfolyam (mqtt.pskreporter.info) és HTTP-felület
+Cluster DM4X (dm4x.ddns.net:8500): spot PSKReporter in forma di cluster	DM4X klaszter (dm4x.ddns.net:8500): PSKReporter-spotok klaszter formában
+DXMAPS — Gabriel Sampol EA6VQ: secondo cluster con rete skimmer (dxmaps.com:7300)	DXMAPS — Gabriel Sampol EA6VQ: második klaszter skimmerhálózattal (dxmaps.com:7300)
+prop.kc2g.com — Andrew Rodland KC2G: mappe di propagazione MUF/foF2 (GeoJSON)	prop.kc2g.com — Andrew Rodland KC2G: MUF/foF2 terjedési térképek (GeoJSON)
+NOAA Space Weather Prediction Center: modello OVATION Prime dell'ovale aurorale	NOAA Space Weather Prediction Center: a sarkifény-ovális OVATION Prime modellje
+ARRL Logbook of The World (LoTW): report ADIF delle conferme	ARRL Logbook of The World (LoTW): a megerősítések ADIF-jelentése
+QLog — Ladislav Foldyna OK1MLG: struttura del database qlog.db	QLog — Ladislav Foldyna OK1MLG: a qlog.db adatbázis szerkezete
+Protocollo UDP di WSJT-X (K1JT e WSJT Development Group); JTDX; MSHV (LZ2HV)	A WSJT-X UDP-protokollja (K1JT és a WSJT Development Group); JTDX; MSHV (LZ2HV)
+CALL3.TXT: WSJT-X Improved (DG2YCB), CALL3 EME di W7GJ, grid_data.bin di JTDX, database di MSHV-IC8TEM e LIVETROPOVHF	CALL3.TXT: WSJT-X Improved (DG2YCB), W7GJ EME CALL3, JTDX grid_data.bin, MSHV-IC8TEM és LIVETROPOVHF adatbázisok
+G7VRD: ricerca dei locatori per nominativo (api.g7vrd.co.uk)	G7VRD: lokátorok keresése hívójel alapján (api.g7vrd.co.uk)
+cty.dat — Jim Reisert AD1C (country-files.com): prefissi e paesi DXCC	cty.dat — Jim Reisert AD1C (country-files.com): DXCC előtagok és országok
+Natural Earth: coste e confini (pubblico dominio)	Natural Earth: partvonalak és határok (közkincs)
+Codice ripreso da LIVETROPOVHF e LoTW Grid Map v2 (IC8TEM)	A LIVETROPOVHF-ből és a LoTW Grid Map v2-ből átvett kód (IC8TEM)

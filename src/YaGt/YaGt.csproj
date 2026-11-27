@@ -32,6 +32,7 @@
 
   <ItemGroup>
     <Compile Include="..\YaGt.Core\*.cs" Link="Core\%(Filename)%(Extension)" />
+    <EmbeddedResource Include="..\YaGt.Core\Lang\*.txt" Link="Lang\%(Filename)%(Extension)" LogicalName="YaGt.Lang.%(Filename).txt" />
     <EmbeddedResource Include="..\YaGt.Core\Assets\*.txt" Link="Assets\%(Filename)%(Extension)" LogicalName="YaGt.Assets.%(Filename)%(Extension)" />
     <EmbeddedResource Include="..\..\assets\ya-gt-256.png;..\..\assets\ya-gt.ico" Link="Assets\%(Filename)%(Extension)" LogicalName="YaGt.Assets.%(Filename)%(Extension)" />
     <!-- database nominativi e prefissi accanto al programma -->

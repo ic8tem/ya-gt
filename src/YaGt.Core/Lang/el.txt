@@ -1,0 +1,199 @@
+# YA-GT — el — traduzione dell'interfaccia: <frase italiana><TAB><traduzione>; \n = a capo. Generato da tools/lingue (armonizzazione 27/11/2026).
+YA-GT — aggiornamento	YA-GT — ενημέρωση
+Apri file ADIF del log	Άνοιγμα του αρχείου ADIF του ημερολογίου
+È stata installata la versione {0} di YA-GT.\nEntra in funzione al prossimo avvio del programma.	Εγκαταστάθηκε η έκδοση {0} του YA-GT.\nΘα ισχύσει στην επόμενη εκκίνηση του προγράμματος.
+{0:HH:mm:ss} UTC   ·   prossimo aggiornamento tra {1}	{0:HH:mm:ss} UTC   ·   επόμενη ενημέρωση σε {1}
+Database di QLog (qlog.db)	Βάση δεδομένων QLog (qlog.db)
+Porta UDP non valida.	Μη έγκυρη θύρα UDP.
+Indirizzo d'ascolto non valido.	Μη έγκυρη διεύθυνση ακρόασης.
+Porta di ritrasmissione non valida.	Μη έγκυρη θύρα αναμετάδοσης.
+La porta di ritrasmissione deve essere diversa da quella di ricezione.	Η θύρα αναμετάδοσης πρέπει να διαφέρει από τη θύρα λήψης.
+Inserisci nome utente e password di LoTW.	Εισαγάγετε όνομα χρήστη και κωδικό του LoTW.
+Aggiornamento automatico dal GitHub (ogni {0} minuti)	Αυτόματη ενημέρωση από το GitHub (κάθε {0} λεπτά)
+Stato: {0}	Κατάσταση: {0}
+Ritrasmissione: {0}	Αναμετάδοση: {0}
+Errore di collegamento: {0}	Σφάλμα σύνδεσης: {0}
+Nominativo non valido.	Μη έγκυρο διακριτικό κλήσης.
+Il locatore deve avere 6 caratteri, es. JN70cn.	Ο locator πρέπει να έχει 6 χαρακτήρες, π.χ. JN70cn.
+Opacità	Αδιαφάνεια
+Banda scelta in alto	Μπάντα επιλεγμένη επάνω
+Tutte le bande	Όλες οι μπάντες
+UHF e oltre	UHF και πάνω
+Tutti i file	Όλα τα αρχεία
+nessuna stazione	κανένας σταθμός
+Fonti:	Πηγές:
+nessun QSO (scarica da LoTW, apri un ADIF o attiva QLog)	κανένα QSO (λήψη από το LoTW, άνοιγμα ADIF ή ενεργοποίηση του QLog)
+confermato su tutte le bande 80-10 m	επιβεβαιωμένο σε όλες τις μπάντες 80-10 m
+confermato LoTW	επιβεβαιωμένο στο LoTW
+confermato con QSL	επιβεβαιωμένο με QSL
+lavorato, non confermato	έγινε, μη επιβεβαιωμένο
+posizione del paese (cty.dat)	θέση της χώρας (cty.dat)
+Mi sente	Με ακούει
+Sento	Ακούω
+posizione da CALL3.TXT	θέση από το CALL3.TXT
+Mia decodifica	Δική μου αποκωδικοποίηση
+SNR dB (RBN CW: dB sul rumore)	SNR dB (RBN CW: dB πάνω από τον θόρυβο)
+{0} stazioni · {1} quadrati · {2} paesi	{0} σταθμοί · {1} τετράγωνα · {2} χώρες
+più lontana: {0} {1:N0} km	μακρύτερος: {0} {1:N0} km
+migliore: {0} {1}	καλύτερος: {0} {1}
+Statistiche · {0} · ultimi {1}	Στατιστικά · {0} · τελευταία {1}
+Quadrati · {0}	Τετράγωνα · {0}
+lavorati {0} · confermati {1} ({2:0}%)	έγιναν {0} · επιβεβαιωμένα {1} ({2:0}%)
+LoTW {0} · solo QSL {1} · non confermati {2}	LoTW {0} · μόνο QSL {1} · μη επιβεβαιωμένα {2}
+confermati su tutte le bande 80-10 m: {0}	επιβεβαιωμένα σε όλες τις μπάντες 80-10 m: {0}
+Aggiornato {0:HH:mm} UTC	Ενημερώθηκε {0:HH:mm} UTC
+KC2G ionosonda {0}: {1} {2:0.0} MHz (affidabilità {3:0.00})	Ιονοσόντα KC2G {0}: {1} {2:0.0} MHz (αξιοπιστία {3:0.00})
+spento durante le prove automatiche	ανενεργό κατά τις αυτόματες δοκιμές
+spento nelle Impostazioni	ανενεργό στις Ρυθμίσεις
+spento: la cartella del programma non è scrivibile (aggiornare a mano)	ανενεργό: ο φάκελος του προγράμματος δεν είναι εγγράψιμος (ενημέρωση με το χέρι)
+gestito da un'altra finestra di YA-GT già aperta	το διαχειρίζεται άλλο ήδη ανοιχτό παράθυρο του YA-GT
+pacchetto troppo grande, non si scarica	το πακέτο είναι πολύ μεγάλο, δεν γίνεται λήψη
+pacchetto tar.gz non gestito su questa piattaforma	το πακέτο tar.gz δεν υποστηρίζεται σε αυτή την πλατφόρμα
+nessuna versione pubblicata su {0}	καμία έκδοση δημοσιευμένη στο {0}
+versione pubblicata non leggibile: {0}	η δημοσιευμένη έκδοση δεν διαβάζεται: {0}
+hai già l'ultima versione ({0})	έχετε ήδη την τελευταία έκδοση ({0})
+aggiornato: l'ultima versione è la {0} ({1})	ενημερωμένο: η τελευταία έκδοση είναι η {0} ({1})
+versione {0} disponibile su {1}	η έκδοση {0} είναι διαθέσιμη στο {1}
+versione {0} pubblicata, ma senza il pacchetto {1}	η έκδοση {0} δημοσιεύτηκε, αλλά χωρίς το πακέτο {1}
+versione {0}: mancano impronta o firma del pacchetto, non si installa	έκδοση {0}: λείπει το αποτύπωμα ή η υπογραφή του πακέτου, δεν εγκαθίσταται
+scarico la versione {0} ({1})	λήψη της έκδοσης {0} ({1})
+versione {0}: impronta SHA-256 diversa, pacchetto scartato	έκδοση {0}: διαφορετικό αποτύπωμα SHA-256, το πακέτο απορρίφθηκε
+versione {0}: FIRMA NON VALIDA, pacchetto scartato	έκδοση {0}: ΜΗ ΕΓΚΥΡΗ ΥΠΟΓΡΑΦΗ, το πακέτο απορρίφθηκε
+controllo non riuscito: {0} (riprovo fra {1} minuti)	ο έλεγχος απέτυχε: {0} (νέα προσπάθεια σε {1} λεπτά)
+aggiornato da {0} a {1} il {2}	ενημερώθηκε από {0} σε {1} στις {2}
+versione {0} installata: entra in funzione al prossimo avvio di YA-GT	η έκδοση {0} εγκαταστάθηκε: θα ισχύσει στην επόμενη εκκίνηση του YA-GT
+installazione della {0} non riuscita, rimessa la {1}: {2}	η εγκατάσταση της {0} απέτυχε, επανήλθε η {1}: {2}
+LoTW (copia salvata)	LoTW (αποθηκευμένο αντίγραφο)
+Collegamento a LoTW in corso…	Σύνδεση με το LoTW…
+LoTW ha rifiutato l'accesso: controlla nome utente e password.	Το LoTW αρνήθηκε την πρόσβαση: ελέγξτε όνομα χρήστη και κωδικό.
+Risposta inattesa da LoTW (non è un file ADIF). Riprova più tardi.	Απρόσμενη απάντηση από το LoTW (δεν είναι αρχείο ADIF). Δοκιμάστε αργότερα.
+Il file ricevuto da LoTW sembra incompleto. Riprova.	Το αρχείο που ελήφθη από το LoTW φαίνεται ελλιπές. Δοκιμάστε ξανά.
+{0}: {1} QSO letti, {2} in totale	{0}: διαβάστηκαν {1} QSO, συνολικά {2}
+Ricezione dati da LoTW: {0:N0} kB…	Λήψη δεδομένων από το LoTW: {0:N0} kB…
+tutte le bande	όλες οι μπάντες
+{0} mi sentono · {1} sento · {2} decodifiche	{0} με ακούν · {1} ακούω · {2} αποκωδικοποιήσεις
+G7VRD in coda {0}	G7VRD σε αναμονή {0}
+ ⇄ {0} inoltro {1}/{2}	 ⇄ {0} αναμετάδοση {1}/{2}
+KC2G {0}: {1} curve, {2} ionosonde	KC2G {0}: {1} καμπύλες, {2} ιονοσόντες
+Aurora NOAA: previsione {0}	Σέλας NOAA: πρόγνωση {0}
+Proiezione	Προβολή
+Mercatore	Mercator
+Azimutale	Αζιμουθιακή
+Aggiornamento	Ενημέρωση
+Banda	Μπάντα
+Tutte	Όλες
+Spot degli ultimi	Spot των τελευταίων
+Aggiorna ora	Ενημέρωση τώρα
+Vista intera	Πλήρης προβολή
+Impostazioni	Ρυθμίσεις
+Livelli della mappa	Επίπεδα χάρτη
+Statistiche (in alto a destra)	Στατιστικά (πάνω δεξιά)
+Chi mi sente (spot)	Ποιος με ακούει (spot)
+Stazioni che ricevono il tuo segnale: fumetto con l'SNR, bordo blu	Σταθμοί που λαμβάνουν το σήμα σας: συννεφάκι με το SNR, μπλε περίγραμμα
+Chi sento io (spot)	Ποιον ακούω (spot)
+Stazioni che tu ricevi (PSKReporter, tuo skimmer RBN): bordo viola	Σταθμοί που λαμβάνετε (PSKReporter, ο skimmer RBN σας): μωβ περίγραμμα
+Le mie decodifiche (UDP)	Οι αποκωδικοποιήσεις μου (UDP)
+Decodifiche di WSJT-X/JTDX/MSHV ricevute via UDP: nuvoletta ovale	Αποκωδικοποιήσεις WSJT-X/JTDX/MSHV μέσω UDP: οβάλ σύννεφο
+Nominativo nei fumetti	Διακριτικό στα συννεφάκια
+Percorsi (cerchio massimo)	Διαδρομές (μέγιστος κύκλος)
+Griglia Maidenhead	Πλέγμα Maidenhead
+Greyline (giorno/notte)	Greyline (μέρα/νύχτα)
+Propagazione KC2G	Διάδοση KC2G
+prop.kc2g.com: curve della MUF(3000) o della foF2 e valori delle ionosonde	prop.kc2g.com: καμπύλες MUF(3000) ή foF2 και τιμές των ιονοσοντών
+Aurora NOAA (OVATION)	Σέλας NOAA (OVATION)
+Probabilità di aurora del NOAA SWPC, ridisegnata in Mercatore e in azimutale	Πιθανότητα σέλαος από το NOAA SWPC, ξανασχεδιασμένη σε Mercator και αζιμουθιακή
+Quadrati (LoTW + QLog)	Τετράγωνα (LoTW + QLog)
+Arancio = lavorato, verde = LoTW, blu = QSL, grigio = confermato su tutte le bande 80-10 m (esclusi i 60 m)	Πορτοκαλί = έγινε, πράσινο = LoTW, μπλε = QSL, γκρι = επιβεβαιωμένο σε όλες τις μπάντες 80-10 m (εκτός 60 m)
+Solo confermati	Μόνο επιβεβαιωμένα
+Solo EME (PROP__MODE)	Μόνο EME (PROP__MODE)
+Scarica da LoTW…	Λήψη από το LoTW…
+Apri ADIF…	Άνοιγμα ADIF…
+QSO del log QLog	QSO του ημερολογίου QLog
+Legge qlog.db (copia in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato	Διαβάζει το qlog.db (αντίγραφο μόνο για ανάγνωση): πράσινα τετραγωνάκια = LoTW, μπλε = QSL, πορτοκαλί = έγινε
+qlog.db: posizione standard di QLog	qlog.db: τυπική θέση του QLog
+Fonti degli spot	Πηγές των spot
+mqtt.pskreporter.info, più lo storico dell'ultima ora via HTTP	mqtt.pskreporter.info, συν το ιστορικό της τελευταίας ώρας μέσω HTTP
+telnet.reversebeacon.net porte 7000 (CW/RTTY) e 7001 (FT8/FT4)	telnet.reversebeacon.net θύρες 7000 (CW/RTTY) και 7001 (FT8/FT4)
+DM4X (cluster telnet)	DM4X (cluster telnet)
+dm4x.ddns.net:8500, spot PSKReporter in forma di cluster	dm4x.ddns.net:8500, spot του PSKReporter σε μορφή cluster
+DXMAPS (2° cluster)	DXMAPS (2ο cluster)
+Rete skimmer	Δίκτυο skimmer
+Invia set/skimmer (o set/noskimmer) al secondo cluster	Στέλνει set/skimmer (ή set/noskimmer) στο δεύτερο cluster
+Decodifiche UDP (WSJT-X/MSHV)	Αποκωδικοποιήσεις UDP (WSJT-X/MSHV)
+Porta e inoltro UDP in Impostazioni	Θύρα UDP και αναμετάδοση στις Ρυθμίσεις
+Tema	Θέμα
+Chiaro (YA-NEC)	Ανοιχτό (YA-NEC)
+Notte	Νύχτα
+YA-GT — impostazioni	YA-GT — ρυθμίσεις
+Rimbalzo UDP: inoltra i pacchetti e riporta indietro le risposte	Αναπήδηση UDP: προωθεί τα πακέτα και επιστρέφει τις απαντήσεις
+facoltative: 127.0.0.1:2333, 192.168.1.20:2237	προαιρετικά: 127.0.0.1:2333, 192.168.1.20:2237
+Decodifiche UDP (protocollo WSJT-X: WSJT-X, JTDX, MSHV)	Αποκωδικοποιήσεις UDP (πρωτόκολλο WSJT-X: WSJT-X, JTDX, MSHV)
+Ricezione: ascolta su	Λήψη: ακρόαση σε
+Per l'indirizzo multicast (es. 224.0.0.1) YA-GT si unisce al gruppo; con 127.0.0.1 la porta non può essere la stessa di un altro programma in ascolto.	Για διεύθυνση multicast (π.χ. 224.0.0.1) το YA-GT εντάσσεται στην ομάδα· με 127.0.0.1 η θύρα δεν μπορεί να είναι ίδια με άλλου προγράμματος σε ακρόαση.
+Ritrasmissione: verso	Αναμετάδοση: προς
+Altre destinazioni	Άλλοι προορισμοί
+La destinazione principale è di solito QLog; nelle altre puoi aggiungere host:porta separati da virgola (GridTracker, JTAlert). I pacchetti passano identici, QSO registrati compresi, quindi QLog scrive il QSO da solo; le risposte (doppio clic, evidenziazioni) tornano al programma digitale. In QLog metti come porta WSJT-X la stessa porta di ritrasmissione.	Ο κύριος προορισμός είναι συνήθως το QLog· στους άλλους μπορείτε να προσθέσετε host:port χωρισμένα με κόμμα (GridTracker, JTAlert). Τα πακέτα περνούν αμετάβλητα, μαζί με τα καταγεγραμμένα QSO, οπότε το QLog καταγράφει μόνο του το QSO· οι απαντήσεις (διπλό κλικ, επισημάνσεις) επιστρέφουν στο ψηφιακό πρόγραμμα. Στο QLog ορίστε ως θύρα WSJT-X την ίδια θύρα αναμετάδοσης.
+Log di QLog	Ημερολόγιο QLog
+Sfoglia…	Αναζήτηση…
+Vuoto = posizione standard di QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Il file di QLog non viene mai modificato: si legge una copia.	Κενό = τυπική θέση του QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Το αρχείο του QLog δεν αλλάζει ποτέ: διαβάζεται αντίγραφο.
+Aggiornamento automatico	Αυτόματη ενημέρωση
+Controlla adesso	Έλεγχος τώρα
+Lingua	Γλώσσα
+La nuova lingua vale dal prossimo avvio del programma.	Η νέα γλώσσα ισχύει από την επόμενη εκκίνηση του προγράμματος.
+Salva	Αποθήκευση
+Annulla	Άκυρο
+Scarica da LoTW	Λήψη από το LoTW
+Ricorda il nome utente (la password non viene mai salvata)	Απομνημόνευση ονόματος χρήστη (ο κωδικός δεν αποθηκεύεται ποτέ)
+Vengono scaricati tutti i QSO caricati su LoTW, con i dettagli delle conferme (locatore del corrispondente). Con log grandi LoTW può impiegare qualche minuto.	Λαμβάνονται όλα τα QSO που έχουν ανέβει στο LoTW, με τις λεπτομέρειες των επιβεβαιώσεων (locator του ανταποκριτή). Με μεγάλα ημερολόγια το LoTW μπορεί να χρειαστεί μερικά λεπτά.
+Nome utente LoTW	Όνομα χρήστη LoTW
+Password LoTW	Κωδικός LoTW
+Solo nominativo (facoltativo)	Μόνο διακριτικό (προαιρετικό)
+Scarica	Λήψη
+Spot di un nominativo, LoTW, QLog e decodifiche UDP su una mappa a livelli	Spot ενός διακριτικού, LoTW, QLog και αποκωδικοποιήσεις UDP σε χάρτη με επίπεδα
+Contatti	Επικοινωνία
+Sostieni il progetto: ko-fi.com/ic8tem	Υποστηρίξτε το έργο: ko-fi.com/ic8tem
+Riconoscimenti (credits)	Ευχαριστίες (credits)
+I dati restano accanto al programma (YA-GT.ini, CALL3.TXT, cartella Dati): nulla in AppData. La password LoTW non viene mai salvata.	Τα δεδομένα μένουν δίπλα στο πρόγραμμα (YA-GT.ini, CALL3.TXT, φάκελος Dati): τίποτα στο AppData. Ο κωδικός του LoTW δεν αποθηκεύεται ποτέ.
+Chiudi	Κλείσιμο
+YA-GT — avvio	YA-GT — εκκίνηση
+Spot, LoTW, QLog e decodifiche sulla mappa — di Costantino IC8TEM	Spot, LoTW, QLog και αποκωδικοποιήσεις στον χάρτη — Costantino IC8TEM
+Nominativo	Διακριτικό κλήσης
+Locatore (6 caratteri)	Locator (6 χαρακτήρες)
+Il locatore fa da centro della mappa azimutale e serve a calcolare distanza e azimut di ogni spot.	Ο locator είναι το κέντρο του αζιμουθιακού χάρτη και χρησιμεύει για τον υπολογισμό απόστασης και αζιμουθίου κάθε spot.
+Avvia	Εκκίνηση
+Esci	Έξοδος
+Stazioni che tu ricevi: bordo viola	Σταθμοί που λαμβάνετε: μωβ περίγραμμα
+Decodifiche di WSJT-X/JTDX/MSHV via UDP: nuvoletta ovale	Αποκωδικοποιήσεις WSJT-X/JTDX/MSHV μέσω UDP: οβάλ σύννεφο
+prop.kc2g.com: curve della MUF(3000) o della foF2	prop.kc2g.com: καμπύλες MUF(3000) ή foF2
+Solo EME (PROP_MODE)	Μόνο EME (PROP_MODE)
+Legge qlog.db (copia in sola lettura)	Διαβάζει το qlog.db (αντίγραφο μόνο για ανάγνωση)
+Ricezione su	Λήψη σε
+Ritrasmetti a	Αναμετάδοση προς
+Altre (facolt.)	Άλλοι (προαιρ.)
+La destinazione principale è di solito QLog; nelle altre host:porta separati da virgola (GridTracker, JTAlert). Passano anche i QSO registrati, quindi QLog scrive il QSO da solo; le risposte tornano al programma digitale. In QLog metti come porta WSJT-X la porta di ritrasmissione.	Ο κύριος προορισμός είναι συνήθως το QLog· στους άλλους host:port χωρισμένα με κόμμα (GridTracker, JTAlert). Περνούν και τα καταγεγραμμένα QSO, οπότε το QLog καταγράφει μόνο του το QSO· οι απαντήσεις επιστρέφουν στο ψηφιακό πρόγραμμα. Στο QLog ορίστε ως θύρα WSJT-X τη θύρα αναμετάδοσης.
+Vuoto = posizione standard di QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Si legge una copia: il file di QLog non viene mai modificato.	Κενό = τυπική θέση του QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Διαβάζεται αντίγραφο: το αρχείο του QLog δεν αλλάζει ποτέ.
+Nome utente LoTW:	Όνομα χρήστη LoTW:
+Password LoTW:	Κωδικός LoTW:
+Solo nominativo (facoltativo):	Μόνο διακριτικό (προαιρετικό):
+Mi sentono	Με ακούν
+Sento io	Ακούω
+Mie decodifiche (UDP)	Οι αποκωδικοποιήσεις μου (UDP)
+mi sentono	με ακούν
+sento io	ακούω
+mie decodifiche (UDP)	οι αποκωδικοποιήσεις μου (UDP)
+lavorato	έγινε
+tutte 80-10 m	όλες 80-10 m
+non ancora controllato	δεν ελέγχθηκε ακόμα
+PSKReporter — Philip Gladstone N1DQ: flusso MQTT (mqtt.pskreporter.info) e interfaccia HTTP	PSKReporter — Philip Gladstone N1DQ: ροή MQTT (mqtt.pskreporter.info) και διεπαφή HTTP
+Cluster DM4X (dm4x.ddns.net:8500): spot PSKReporter in forma di cluster	Cluster DM4X (dm4x.ddns.net:8500): spot του PSKReporter σε μορφή cluster
+DXMAPS — Gabriel Sampol EA6VQ: secondo cluster con rete skimmer (dxmaps.com:7300)	DXMAPS — Gabriel Sampol EA6VQ: δεύτερο cluster με δίκτυο skimmer (dxmaps.com:7300)
+prop.kc2g.com — Andrew Rodland KC2G: mappe di propagazione MUF/foF2 (GeoJSON)	prop.kc2g.com — Andrew Rodland KC2G: χάρτες διάδοσης MUF/foF2 (GeoJSON)
+NOAA Space Weather Prediction Center: modello OVATION Prime dell'ovale aurorale	NOAA Space Weather Prediction Center: μοντέλο OVATION Prime του σελαϊκού οβάλ
+ARRL Logbook of The World (LoTW): report ADIF delle conferme	ARRL Logbook of The World (LoTW): αναφορά ADIF των επιβεβαιώσεων
+QLog — Ladislav Foldyna OK1MLG: struttura del database qlog.db	QLog — Ladislav Foldyna OK1MLG: δομή της βάσης qlog.db
+Protocollo UDP di WSJT-X (K1JT e WSJT Development Group); JTDX; MSHV (LZ2HV)	Πρωτόκολλο UDP του WSJT-X (K1JT και WSJT Development Group)· JTDX· MSHV (LZ2HV)
+CALL3.TXT: WSJT-X Improved (DG2YCB), CALL3 EME di W7GJ, grid_data.bin di JTDX, database di MSHV-IC8TEM e LIVETROPOVHF	CALL3.TXT: WSJT-X Improved (DG2YCB), EME CALL3 του W7GJ, grid_data.bin του JTDX, βάσεις MSHV-IC8TEM και LIVETROPOVHF
+G7VRD: ricerca dei locatori per nominativo (api.g7vrd.co.uk)	G7VRD: αναζήτηση locator κατά διακριτικό (api.g7vrd.co.uk)
+cty.dat — Jim Reisert AD1C (country-files.com): prefissi e paesi DXCC	cty.dat — Jim Reisert AD1C (country-files.com): προθέματα και χώρες DXCC
+Natural Earth: coste e confini (pubblico dominio)	Natural Earth: ακτογραμμές και σύνορα (δημόσιος τομέας)
+Codice ripreso da LIVETROPOVHF e LoTW Grid Map v2 (IC8TEM)	Κώδικας από το LIVETROPOVHF και το LoTW Grid Map v2 (IC8TEM)

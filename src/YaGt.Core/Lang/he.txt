@@ -1,0 +1,199 @@
+# YA-GT — he — traduzione dell'interfaccia: <frase italiana><TAB><traduzione>; \n = a capo. Generato da tools/lingue (armonizzazione 27/11/2026).
+YA-GT — aggiornamento	YA-GT — עדכון
+Apri file ADIF del log	פתיחת קובץ ה-ADIF של היומן
+È stata installata la versione {0} di YA-GT.\nEntra in funzione al prossimo avvio del programma.	גרסה {0} של YA-GT הותקנה.\nהיא תיכנס לתוקף בהפעלה הבאה של התוכנה.
+{0:HH:mm:ss} UTC   ·   prossimo aggiornamento tra {1}	{0:HH:mm:ss} UTC   ·   העדכון הבא בעוד {1}
+Database di QLog (qlog.db)	מסד הנתונים של QLog (qlog.db)
+Porta UDP non valida.	יציאת UDP לא תקינה.
+Indirizzo d'ascolto non valido.	כתובת האזנה לא תקינה.
+Porta di ritrasmissione non valida.	יציאת העברה לא תקינה.
+La porta di ritrasmissione deve essere diversa da quella di ricezione.	יציאת ההעברה חייבת להיות שונה מיציאת הקליטה.
+Inserisci nome utente e password di LoTW.	הזן שם משתמש וסיסמה של LoTW.
+Aggiornamento automatico dal GitHub (ogni {0} minuti)	עדכון אוטומטי מ-GitHub (כל {0} דקות)
+Stato: {0}	מצב: {0}
+Ritrasmissione: {0}	העברה: {0}
+Errore di collegamento: {0}	שגיאת חיבור: {0}
+Nominativo non valido.	אות קריאה לא תקין.
+Il locatore deve avere 6 caratteri, es. JN70cn.	הלוקטור חייב להכיל 6 תווים, למשל JN70cn.
+Opacità	אטימות
+Banda scelta in alto	התדר שנבחר למעלה
+Tutte le bande	כל התדרים
+UHF e oltre	UHF ומעלה
+Tutti i file	כל הקבצים
+nessuna stazione	אין תחנות
+Fonti:	מקורות:
+nessun QSO (scarica da LoTW, apri un ADIF o attiva QLog)	אין QSO (הורד מ-LoTW, פתח ADIF או הפעל את QLog)
+confermato su tutte le bande 80-10 m	מאושר בכל התדרים 80-10 m
+confermato LoTW	מאושר ב-LoTW
+confermato con QSL	מאושר ב-QSL
+lavorato, non confermato	בוצע קשר, לא מאושר
+posizione del paese (cty.dat)	מיקום המדינה (cty.dat)
+Mi sente	שומע אותי
+Sento	אני שומע
+posizione da CALL3.TXT	מיקום מ-CALL3.TXT
+Mia decodifica	הפענוח שלי
+SNR dB (RBN CW: dB sul rumore)	SNR dB (RBN CW: dB מעל הרעש)
+{0} stazioni · {1} quadrati · {2} paesi	{0} תחנות · {1} ריבועים · {2} מדינות
+più lontana: {0} {1:N0} km	הרחוקה ביותר: {0} {1:N0} km
+migliore: {0} {1}	הטובה ביותר: {0} {1}
+Statistiche · {0} · ultimi {1}	סטטיסטיקה · {0} · אחרונים {1}
+Quadrati · {0}	ריבועים · {0}
+lavorati {0} · confermati {1} ({2:0}%)	בוצעו {0} · מאושרים {1} ({2:0}%)
+LoTW {0} · solo QSL {1} · non confermati {2}	LoTW {0} · QSL בלבד {1} · לא מאושרים {2}
+confermati su tutte le bande 80-10 m: {0}	מאושרים בכל התדרים 80-10 m: {0}
+Aggiornato {0:HH:mm} UTC	עודכן {0:HH:mm} UTC
+KC2G ionosonda {0}: {1} {2:0.0} MHz (affidabilità {3:0.00})	יונוסונדה KC2G {0}: {1} {2:0.0} MHz (אמינות {3:0.00})
+spento durante le prove automatiche	כבוי במהלך הבדיקות האוטומטיות
+spento nelle Impostazioni	כבוי בהגדרות
+spento: la cartella del programma non è scrivibile (aggiornare a mano)	כבוי: אי אפשר לכתוב בתיקיית התוכנה (עדכן ידנית)
+gestito da un'altra finestra di YA-GT già aperta	מנוהל על ידי חלון YA-GT אחר שכבר פתוח
+pacchetto troppo grande, non si scarica	החבילה גדולה מדי, לא מורדת
+pacchetto tar.gz non gestito su questa piattaforma	חבילת tar.gz אינה נתמכת בפלטפורמה זו
+nessuna versione pubblicata su {0}	אין גרסה שפורסמה ב-{0}
+versione pubblicata non leggibile: {0}	הגרסה שפורסמה אינה קריאה: {0}
+hai già l'ultima versione ({0})	כבר יש לך את הגרסה האחרונה ({0})
+aggiornato: l'ultima versione è la {0} ({1})	מעודכן: הגרסה האחרונה היא {0} ({1})
+versione {0} disponibile su {1}	גרסה {0} זמינה ב-{1}
+versione {0} pubblicata, ma senza il pacchetto {1}	גרסה {0} פורסמה, אך בלי החבילה {1}
+versione {0}: mancano impronta o firma del pacchetto, non si installa	גרסה {0}: חסרים טביעת אצבע או חתימה של החבילה, לא מותקנת
+scarico la versione {0} ({1})	מוריד את גרסה {0} ({1})
+versione {0}: impronta SHA-256 diversa, pacchetto scartato	גרסה {0}: טביעת אצבע SHA-256 שונה, החבילה נדחתה
+versione {0}: FIRMA NON VALIDA, pacchetto scartato	גרסה {0}: חתימה לא תקינה, החבילה נדחתה
+controllo non riuscito: {0} (riprovo fra {1} minuti)	הבדיקה נכשלה: {0} (ניסיון חוזר בעוד {1} דקות)
+aggiornato da {0} a {1} il {2}	עודכן מ-{0} ל-{1} ב-{2}
+versione {0} installata: entra in funzione al prossimo avvio di YA-GT	גרסה {0} הותקנה: תיכנס לתוקף בהפעלה הבאה של YA-GT
+installazione della {0} non riuscita, rimessa la {1}: {2}	התקנת {0} נכשלה, {1} שוחזרה: {2}
+LoTW (copia salvata)	LoTW (עותק שמור)
+Collegamento a LoTW in corso…	מתחבר ל-LoTW…
+LoTW ha rifiutato l'accesso: controlla nome utente e password.	LoTW סירב לגישה: בדוק את שם המשתמש והסיסמה.
+Risposta inattesa da LoTW (non è un file ADIF). Riprova più tardi.	תשובה לא צפויה מ-LoTW (לא קובץ ADIF). נסה שוב מאוחר יותר.
+Il file ricevuto da LoTW sembra incompleto. Riprova.	הקובץ שהתקבל מ-LoTW נראה חלקי. נסה שוב.
+{0}: {1} QSO letti, {2} in totale	{0}: נקראו {1} QSO, סך הכול {2}
+Ricezione dati da LoTW: {0:N0} kB…	מקבל נתונים מ-LoTW: {0:N0} kB…
+tutte le bande	כל התדרים
+{0} mi sentono · {1} sento · {2} decodifiche	{0} שומעים אותי · {1} אני שומע · {2} פענוחים
+G7VRD in coda {0}	G7VRD בתור {0}
+ ⇄ {0} inoltro {1}/{2}	 ⇄ {0} העברה {1}/{2}
+KC2G {0}: {1} curve, {2} ionosonde	KC2G {0}: {1} עקומות, {2} יונוסונדות
+Aurora NOAA: previsione {0}	זוהר קוטבי NOAA: תחזית {0}
+Proiezione	היטל
+Mercatore	מרקטור
+Azimutale	אזימוטלי
+Aggiornamento	עדכון
+Banda	תדר
+Tutte	הכול
+Spot degli ultimi	דיווחים מה-
+Aggiorna ora	עדכן עכשיו
+Vista intera	תצוגה מלאה
+Impostazioni	הגדרות
+Livelli della mappa	שכבות המפה
+Statistiche (in alto a destra)	סטטיסטיקה (למעלה מימין)
+Chi mi sente (spot)	מי שומע אותי (דיווחים)
+Stazioni che ricevono il tuo segnale: fumetto con l'SNR, bordo blu	תחנות שקולטות את האות שלך: בועה עם ה-SNR, מסגרת כחולה
+Chi sento io (spot)	את מי אני שומע (דיווחים)
+Stazioni che tu ricevi (PSKReporter, tuo skimmer RBN): bordo viola	תחנות שאתה קולט (PSKReporter, ה-RBN skimmer שלך): מסגרת סגולה
+Le mie decodifiche (UDP)	הפענוחים שלי (UDP)
+Decodifiche di WSJT-X/JTDX/MSHV ricevute via UDP: nuvoletta ovale	פענוחי WSJT-X/JTDX/MSHV שהתקבלו ב-UDP: ענן סגלגל
+Nominativo nei fumetti	אות הקריאה בבועות
+Percorsi (cerchio massimo)	מסלולים (מעגל גדול)
+Griglia Maidenhead	רשת Maidenhead
+Greyline (giorno/notte)	Greyline (יום/לילה)
+Propagazione KC2G	התפשטות KC2G
+prop.kc2g.com: curve della MUF(3000) o della foF2 e valori delle ionosonde	prop.kc2g.com: עקומות MUF(3000) או foF2 וערכי היונוסונדות
+Aurora NOAA (OVATION)	זוהר קוטבי NOAA (OVATION)
+Probabilità di aurora del NOAA SWPC, ridisegnata in Mercatore e in azimutale	הסתברות לזוהר קוטבי של NOAA SWPC, משורטטת מחדש בהיטל מרקטור ואזימוטלי
+Quadrati (LoTW + QLog)	ריבועים (LoTW + QLog)
+Arancio = lavorato, verde = LoTW, blu = QSL, grigio = confermato su tutte le bande 80-10 m (esclusi i 60 m)	כתום = בוצע קשר, ירוק = LoTW, כחול = QSL, אפור = מאושר בכל התדרים 80-10 m (ללא 60 m)
+Solo confermati	מאושרים בלבד
+Solo EME (PROP__MODE)	EME בלבד (PROP__MODE)
+Scarica da LoTW…	הורד מ-LoTW…
+Apri ADIF…	פתח ADIF…
+QSO del log QLog	QSO מיומן QLog
+Legge qlog.db (copia in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato	קורא את qlog.db (עותק לקריאה בלבד): ריבועים ירוקים = LoTW, כחולים = QSL, כתומים = בוצע קשר
+qlog.db: posizione standard di QLog	qlog.db: המיקום הרגיל של QLog
+Fonti degli spot	מקורות הדיווחים
+mqtt.pskreporter.info, più lo storico dell'ultima ora via HTTP	mqtt.pskreporter.info, וגם היסטוריית השעה האחרונה ב-HTTP
+telnet.reversebeacon.net porte 7000 (CW/RTTY) e 7001 (FT8/FT4)	telnet.reversebeacon.net יציאות 7000 (CW/RTTY) ו-7001 (FT8/FT4)
+DM4X (cluster telnet)	DM4X (אשכול telnet)
+dm4x.ddns.net:8500, spot PSKReporter in forma di cluster	dm4x.ddns.net:8500, דיווחי PSKReporter בצורת אשכול
+DXMAPS (2° cluster)	DXMAPS (אשכול שני)
+Rete skimmer	רשת skimmer
+Invia set/skimmer (o set/noskimmer) al secondo cluster	שולח set/skimmer (או set/noskimmer) לאשכול השני
+Decodifiche UDP (WSJT-X/MSHV)	פענוחי UDP (WSJT-X/MSHV)
+Porta e inoltro UDP in Impostazioni	יציאת UDP והעברה בהגדרות
+Tema	ערכת נושא
+Chiaro (YA-NEC)	בהיר (YA-NEC)
+Notte	לילה
+YA-GT — impostazioni	YA-GT — הגדרות
+Rimbalzo UDP: inoltra i pacchetti e riporta indietro le risposte	ממסר UDP: מעביר את החבילות ומחזיר את התשובות
+facoltative: 127.0.0.1:2333, 192.168.1.20:2237	אופציונלי: 127.0.0.1:2333, 192.168.1.20:2237
+Decodifiche UDP (protocollo WSJT-X: WSJT-X, JTDX, MSHV)	פענוחי UDP (פרוטוקול WSJT-X: WSJT-X, JTDX, MSHV)
+Ricezione: ascolta su	קליטה: האזנה ב
+Per l'indirizzo multicast (es. 224.0.0.1) YA-GT si unisce al gruppo; con 127.0.0.1 la porta non può essere la stessa di un altro programma in ascolto.	לכתובת multicast (למשל 224.0.0.1) YA-GT מצטרף לקבוצה; עם 127.0.0.1 היציאה לא יכולה להיות זהה ליציאה של תוכנה אחרת שמאזינה.
+Ritrasmissione: verso	העברה: אל
+Altre destinazioni	יעדים נוספים
+La destinazione principale è di solito QLog; nelle altre puoi aggiungere host:porta separati da virgola (GridTracker, JTAlert). I pacchetti passano identici, QSO registrati compresi, quindi QLog scrive il QSO da solo; le risposte (doppio clic, evidenziazioni) tornano al programma digitale. In QLog metti come porta WSJT-X la stessa porta di ritrasmissione.	היעד הראשי הוא בדרך כלל QLog; ביעדים האחרים אפשר להוסיף host:port מופרדים בפסיקים (GridTracker, JTAlert). החבילות עוברות ללא שינוי, כולל QSO שנרשמו, כך ש-QLog רושם את ה-QSO בעצמו; התשובות (לחיצה כפולה, הדגשות) חוזרות לתוכנה הדיגיטלית. ב-QLog הגדר כיציאת WSJT-X את אותה יציאת העברה.
+Log di QLog	יומן QLog
+Sfoglia…	עיון…
+Vuoto = posizione standard di QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Il file di QLog non viene mai modificato: si legge una copia.	ריק = המיקום הרגיל של QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). קובץ QLog לעולם אינו משתנה: נקרא עותק.
+Aggiornamento automatico	עדכון אוטומטי
+Controlla adesso	בדוק עכשיו
+Lingua	שפה
+La nuova lingua vale dal prossimo avvio del programma.	השפה החדשה תקפה מההפעלה הבאה של התוכנה.
+Salva	שמור
+Annulla	ביטול
+Scarica da LoTW	הורד מ-LoTW
+Ricorda il nome utente (la password non viene mai salvata)	זכור את שם המשתמש (הסיסמה לעולם אינה נשמרת)
+Vengono scaricati tutti i QSO caricati su LoTW, con i dettagli delle conferme (locatore del corrispondente). Con log grandi LoTW può impiegare qualche minuto.	כל ה-QSO שהועלו ל-LoTW מורדים, עם פרטי האישורים (הלוקטור של התחנה השנייה). ביומנים גדולים LoTW עשוי להזדקק לכמה דקות.
+Nome utente LoTW	שם משתמש LoTW
+Password LoTW	סיסמת LoTW
+Solo nominativo (facoltativo)	אות קריאה בלבד (אופציונלי)
+Scarica	הורד
+Spot di un nominativo, LoTW, QLog e decodifiche UDP su una mappa a livelli	דיווחים של אות קריאה, LoTW, QLog ופענוחי UDP על מפה בשכבות
+Contatti	יצירת קשר
+Sostieni il progetto: ko-fi.com/ic8tem	תמכו בפרויקט: ko-fi.com/ic8tem
+Riconoscimenti (credits)	תודות (credits)
+I dati restano accanto al programma (YA-GT.ini, CALL3.TXT, cartella Dati): nulla in AppData. La password LoTW non viene mai salvata.	הנתונים נשארים ליד התוכנה (YA-GT.ini, CALL3.TXT, תיקיית Dati): שום דבר ב-AppData. סיסמת LoTW לעולם אינה נשמרת.
+Chiudi	סגור
+YA-GT — avvio	YA-GT — הפעלה
+Spot, LoTW, QLog e decodifiche sulla mappa — di Costantino IC8TEM	דיווחים, LoTW, QLog ופענוחים על המפה — Costantino IC8TEM
+Nominativo	אות קריאה
+Locatore (6 caratteri)	לוקטור (6 תווים)
+Il locatore fa da centro della mappa azimutale e serve a calcolare distanza e azimut di ogni spot.	הלוקטור הוא מרכז המפה האזימוטלית ומשמש לחישוב המרחק והאזימוט של כל דיווח.
+Avvia	הפעל
+Esci	יציאה
+Stazioni che tu ricevi: bordo viola	תחנות שאתה קולט: מסגרת סגולה
+Decodifiche di WSJT-X/JTDX/MSHV via UDP: nuvoletta ovale	פענוחי WSJT-X/JTDX/MSHV ב-UDP: ענן סגלגל
+prop.kc2g.com: curve della MUF(3000) o della foF2	prop.kc2g.com: עקומות MUF(3000) או foF2
+Solo EME (PROP_MODE)	EME בלבד (PROP_MODE)
+Legge qlog.db (copia in sola lettura)	קורא את qlog.db (עותק לקריאה בלבד)
+Ricezione su	קליטה ב
+Ritrasmetti a	העבר אל
+Altre (facolt.)	אחרים (אופצ.)
+La destinazione principale è di solito QLog; nelle altre host:porta separati da virgola (GridTracker, JTAlert). Passano anche i QSO registrati, quindi QLog scrive il QSO da solo; le risposte tornano al programma digitale. In QLog metti come porta WSJT-X la porta di ritrasmissione.	היעד הראשי הוא בדרך כלל QLog; באחרים host:port מופרדים בפסיקים (GridTracker, JTAlert). גם QSO שנרשמו עוברים, כך ש-QLog רושם את ה-QSO בעצמו; התשובות חוזרות לתוכנה הדיגיטלית. ב-QLog הגדר כיציאת WSJT-X את יציאת ההעברה.
+Vuoto = posizione standard di QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Si legge una copia: il file di QLog non viene mai modificato.	ריק = המיקום הרגיל של QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). נקרא עותק: קובץ QLog לעולם אינו משתנה.
+Nome utente LoTW:	שם משתמש LoTW:
+Password LoTW:	סיסמת LoTW:
+Solo nominativo (facoltativo):	אות קריאה בלבד (אופציונלי):
+Mi sentono	שומעים אותי
+Sento io	אני שומע
+Mie decodifiche (UDP)	הפענוחים שלי (UDP)
+mi sentono	שומעים אותי
+sento io	אני שומע
+mie decodifiche (UDP)	הפענוחים שלי (UDP)
+lavorato	בוצע קשר
+tutte 80-10 m	כל 80-10 m
+non ancora controllato	עדיין לא נבדק
+PSKReporter — Philip Gladstone N1DQ: flusso MQTT (mqtt.pskreporter.info) e interfaccia HTTP	PSKReporter — Philip Gladstone N1DQ: זרם MQTT (mqtt.pskreporter.info) וממשק HTTP
+Cluster DM4X (dm4x.ddns.net:8500): spot PSKReporter in forma di cluster	אשכול DM4X (dm4x.ddns.net:8500): דיווחי PSKReporter בצורת אשכול
+DXMAPS — Gabriel Sampol EA6VQ: secondo cluster con rete skimmer (dxmaps.com:7300)	DXMAPS — Gabriel Sampol EA6VQ: אשכול שני עם רשת skimmer (dxmaps.com:7300)
+prop.kc2g.com — Andrew Rodland KC2G: mappe di propagazione MUF/foF2 (GeoJSON)	prop.kc2g.com — Andrew Rodland KC2G: מפות התפשטות MUF/foF2 (GeoJSON)
+NOAA Space Weather Prediction Center: modello OVATION Prime dell'ovale aurorale	NOAA Space Weather Prediction Center: מודל OVATION Prime של אליפסת הזוהר
+ARRL Logbook of The World (LoTW): report ADIF delle conferme	ARRL Logbook of The World (LoTW): דוח ADIF של האישורים
+QLog — Ladislav Foldyna OK1MLG: struttura del database qlog.db	QLog — Ladislav Foldyna OK1MLG: מבנה מסד הנתונים qlog.db
+Protocollo UDP di WSJT-X (K1JT e WSJT Development Group); JTDX; MSHV (LZ2HV)	פרוטוקול ה-UDP של WSJT-X (K1JT ו-WSJT Development Group); JTDX; MSHV (LZ2HV)
+CALL3.TXT: WSJT-X Improved (DG2YCB), CALL3 EME di W7GJ, grid_data.bin di JTDX, database di MSHV-IC8TEM e LIVETROPOVHF	CALL3.TXT: WSJT-X Improved (DG2YCB), EME CALL3 של W7GJ, grid_data.bin של JTDX, מסדי הנתונים של MSHV-IC8TEM ו-LIVETROPOVHF
+G7VRD: ricerca dei locatori per nominativo (api.g7vrd.co.uk)	G7VRD: חיפוש לוקטורים לפי אות קריאה (api.g7vrd.co.uk)
+cty.dat — Jim Reisert AD1C (country-files.com): prefissi e paesi DXCC	cty.dat — Jim Reisert AD1C (country-files.com): קידומות ומדינות DXCC
+Natural Earth: coste e confini (pubblico dominio)	Natural Earth: קווי חוף וגבולות (נחלת הכלל)
+Codice ripreso da LIVETROPOVHF e LoTW Grid Map v2 (IC8TEM)	קוד שנלקח מ-LIVETROPOVHF ומ-LoTW Grid Map v2 (IC8TEM)

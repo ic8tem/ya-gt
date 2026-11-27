@@ -1,0 +1,199 @@
+# YA-GT — ar — traduzione dell'interfaccia: <frase italiana><TAB><traduzione>; \n = a capo. Generato da tools/lingue (armonizzazione 27/11/2026).
+YA-GT — aggiornamento	YA-GT — تحديث
+Apri file ADIF del log	فتح ملف ADIF للسجل
+È stata installata la versione {0} di YA-GT.\nEntra in funzione al prossimo avvio del programma.	تم تثبيت الإصدار {0} من YA-GT.\nيسري عند التشغيل التالي للبرنامج.
+{0:HH:mm:ss} UTC   ·   prossimo aggiornamento tra {1}	{0:HH:mm:ss} UTC   ·   التحديث التالي بعد {1}
+Database di QLog (qlog.db)	قاعدة بيانات QLog (qlog.db)
+Porta UDP non valida.	منفذ UDP غير صالح.
+Indirizzo d'ascolto non valido.	عنوان الاستماع غير صالح.
+Porta di ritrasmissione non valida.	منفذ إعادة الإرسال غير صالح.
+La porta di ritrasmissione deve essere diversa da quella di ricezione.	يجب أن يختلف منفذ إعادة الإرسال عن منفذ الاستقبال.
+Inserisci nome utente e password di LoTW.	أدخل اسم المستخدم وكلمة المرور في LoTW.
+Aggiornamento automatico dal GitHub (ogni {0} minuti)	تحديث تلقائي من GitHub (كل {0} دقيقة)
+Stato: {0}	الحالة: {0}
+Ritrasmissione: {0}	إعادة الإرسال: {0}
+Errore di collegamento: {0}	خطأ في الاتصال: {0}
+Nominativo non valido.	نداء غير صالح.
+Il locatore deve avere 6 caratteri, es. JN70cn.	يجب أن يتكون المحدد من 6 أحرف، مثل JN70cn.
+Opacità	العتامة
+Banda scelta in alto	النطاق المختار في الأعلى
+Tutte le bande	كل النطاقات
+UHF e oltre	UHF وما فوق
+Tutti i file	كل الملفات
+nessuna stazione	لا توجد محطات
+Fonti:	المصادر:
+nessun QSO (scarica da LoTW, apri un ADIF o attiva QLog)	لا توجد اتصالات QSO (نزّل من LoTW أو افتح ملف ADIF أو فعّل QLog)
+confermato su tutte le bande 80-10 m	مؤكَّد على كل نطاقات 80-10 m
+confermato LoTW	مؤكَّد في LoTW
+confermato con QSL	مؤكَّد ببطاقة QSL
+lavorato, non confermato	تم الاتصال، غير مؤكَّد
+posizione del paese (cty.dat)	موقع البلد (cty.dat)
+Mi sente	يسمعني
+Sento	أسمع
+posizione da CALL3.TXT	الموقع من CALL3.TXT
+Mia decodifica	فك الترميز الخاص بي
+SNR dB (RBN CW: dB sul rumore)	SNR dB (RBN CW: dB فوق الضجيج)
+{0} stazioni · {1} quadrati · {2} paesi	{0} محطة · {1} مربع · {2} بلد
+più lontana: {0} {1:N0} km	الأبعد: {0} {1:N0} km
+migliore: {0} {1}	الأفضل: {0} {1}
+Statistiche · {0} · ultimi {1}	إحصاءات · {0} · آخر {1}
+Quadrati · {0}	المربعات · {0}
+lavorati {0} · confermati {1} ({2:0}%)	تم الاتصال {0} · مؤكَّد {1} ({2:0}%)
+LoTW {0} · solo QSL {1} · non confermati {2}	LoTW {0} · QSL فقط {1} · غير مؤكَّد {2}
+confermati su tutte le bande 80-10 m: {0}	مؤكَّد على كل نطاقات 80-10 m: {0}
+Aggiornato {0:HH:mm} UTC	تم التحديث {0:HH:mm} UTC
+KC2G ionosonda {0}: {1} {2:0.0} MHz (affidabilità {3:0.00})	مسبار الأيونوسفير KC2G {0}: {1} {2:0.0} MHz (الموثوقية {3:0.00})
+spento durante le prove automatiche	متوقف أثناء الاختبارات التلقائية
+spento nelle Impostazioni	متوقف في الإعدادات
+spento: la cartella del programma non è scrivibile (aggiornare a mano)	متوقف: لا يمكن الكتابة في مجلد البرنامج (حدّث يدويًا)
+gestito da un'altra finestra di YA-GT già aperta	تديره نافذة أخرى مفتوحة من YA-GT
+pacchetto troppo grande, non si scarica	الحزمة كبيرة جدًا، لن تُنزَّل
+pacchetto tar.gz non gestito su questa piattaforma	حزمة tar.gz غير مدعومة على هذه المنصة
+nessuna versione pubblicata su {0}	لا يوجد إصدار منشور على {0}
+versione pubblicata non leggibile: {0}	الإصدار المنشور غير مقروء: {0}
+hai già l'ultima versione ({0})	لديك بالفعل أحدث إصدار ({0})
+aggiornato: l'ultima versione è la {0} ({1})	محدّث: أحدث إصدار هو {0} ({1})
+versione {0} disponibile su {1}	الإصدار {0} متاح على {1}
+versione {0} pubblicata, ma senza il pacchetto {1}	نُشر الإصدار {0} لكن من دون الحزمة {1}
+versione {0}: mancano impronta o firma del pacchetto, non si installa	الإصدار {0}: بصمة الحزمة أو توقيعها مفقود، لن يُثبَّت
+scarico la versione {0} ({1})	جارٍ تنزيل الإصدار {0} ({1})
+versione {0}: impronta SHA-256 diversa, pacchetto scartato	الإصدار {0}: بصمة SHA-256 مختلفة، رُفضت الحزمة
+versione {0}: FIRMA NON VALIDA, pacchetto scartato	الإصدار {0}: التوقيع غير صالح، رُفضت الحزمة
+controllo non riuscito: {0} (riprovo fra {1} minuti)	فشل الفحص: {0} (إعادة المحاولة بعد {1} دقيقة)
+aggiornato da {0} a {1} il {2}	حُدّث من {0} إلى {1} في {2}
+versione {0} installata: entra in funzione al prossimo avvio di YA-GT	تم تثبيت الإصدار {0}: يسري عند التشغيل التالي لـ YA-GT
+installazione della {0} non riuscita, rimessa la {1}: {2}	فشل تثبيت {0}، أُعيد {1}: {2}
+LoTW (copia salvata)	LoTW (نسخة محفوظة)
+Collegamento a LoTW in corso…	جارٍ الاتصال بـ LoTW…
+LoTW ha rifiutato l'accesso: controlla nome utente e password.	رفض LoTW الوصول: تحقق من اسم المستخدم وكلمة المرور.
+Risposta inattesa da LoTW (non è un file ADIF). Riprova più tardi.	رد غير متوقع من LoTW (ليس ملف ADIF). أعد المحاولة لاحقًا.
+Il file ricevuto da LoTW sembra incompleto. Riprova.	يبدو الملف المستلم من LoTW غير مكتمل. أعد المحاولة.
+{0}: {1} QSO letti, {2} in totale	{0}: قُرئت {1} QSO، المجموع {2}
+Ricezione dati da LoTW: {0:N0} kB…	جارٍ استقبال البيانات من LoTW: {0:N0} kB…
+tutte le bande	كل النطاقات
+{0} mi sentono · {1} sento · {2} decodifiche	{0} يسمعونني · {1} أسمعهم · {2} فك ترميز
+G7VRD in coda {0}	G7VRD في الانتظار {0}
+ ⇄ {0} inoltro {1}/{2}	 ⇄ {0} إعادة إرسال {1}/{2}
+KC2G {0}: {1} curve, {2} ionosonde	KC2G {0}: {1} منحنى، {2} مسبار
+Aurora NOAA: previsione {0}	شفق NOAA: توقع {0}
+Proiezione	الإسقاط
+Mercatore	ميركاتور
+Azimutale	سمتي
+Aggiornamento	التحديث
+Banda	النطاق
+Tutte	الكل
+Spot degli ultimi	بلاغات آخر
+Aggiorna ora	حدّث الآن
+Vista intera	العرض الكامل
+Impostazioni	الإعدادات
+Livelli della mappa	طبقات الخريطة
+Statistiche (in alto a destra)	إحصاءات (أعلى اليمين)
+Chi mi sente (spot)	من يسمعني (بلاغات)
+Stazioni che ricevono il tuo segnale: fumetto con l'SNR, bordo blu	محطات تستقبل إشارتك: فقاعة مع SNR، إطار أزرق
+Chi sento io (spot)	من أسمع (بلاغات)
+Stazioni che tu ricevi (PSKReporter, tuo skimmer RBN): bordo viola	محطات تستقبلها (PSKReporter، جهاز RBN skimmer الخاص بك): إطار بنفسجي
+Le mie decodifiche (UDP)	فك الترميز الخاص بي (UDP)
+Decodifiche di WSJT-X/JTDX/MSHV ricevute via UDP: nuvoletta ovale	فك ترميز WSJT-X/JTDX/MSHV المستلم عبر UDP: سحابة بيضوية
+Nominativo nei fumetti	النداء في الفقاعات
+Percorsi (cerchio massimo)	المسارات (الدائرة العظمى)
+Griglia Maidenhead	شبكة Maidenhead
+Greyline (giorno/notte)	Greyline (نهار/ليل)
+Propagazione KC2G	انتشار KC2G
+prop.kc2g.com: curve della MUF(3000) o della foF2 e valori delle ionosonde	prop.kc2g.com: منحنيات MUF(3000) أو foF2 وقيم المسابير
+Aurora NOAA (OVATION)	شفق NOAA (OVATION)
+Probabilità di aurora del NOAA SWPC, ridisegnata in Mercatore e in azimutale	احتمال الشفق من NOAA SWPC، معاد رسمه بإسقاط ميركاتور والسمتي
+Quadrati (LoTW + QLog)	المربعات (LoTW + QLog)
+Arancio = lavorato, verde = LoTW, blu = QSL, grigio = confermato su tutte le bande 80-10 m (esclusi i 60 m)	برتقالي = تم الاتصال، أخضر = LoTW، أزرق = QSL، رمادي = مؤكَّد على كل نطاقات 80-10 m (عدا 60 m)
+Solo confermati	المؤكَّدة فقط
+Solo EME (PROP__MODE)	EME فقط (PROP__MODE)
+Scarica da LoTW…	تنزيل من LoTW…
+Apri ADIF…	فتح ADIF…
+QSO del log QLog	اتصالات سجل QLog
+Legge qlog.db (copia in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato	يقرأ qlog.db (نسخة للقراءة فقط): مربعات خضراء = LoTW، زرقاء = QSL، برتقالية = تم الاتصال
+qlog.db: posizione standard di QLog	qlog.db: الموقع الافتراضي لـ QLog
+Fonti degli spot	مصادر البلاغات
+mqtt.pskreporter.info, più lo storico dell'ultima ora via HTTP	mqtt.pskreporter.info، إضافة إلى سجل الساعة الأخيرة عبر HTTP
+telnet.reversebeacon.net porte 7000 (CW/RTTY) e 7001 (FT8/FT4)	telnet.reversebeacon.net المنفذان 7000 (CW/RTTY) و7001 (FT8/FT4)
+DM4X (cluster telnet)	DM4X (عنقود telnet)
+dm4x.ddns.net:8500, spot PSKReporter in forma di cluster	dm4x.ddns.net:8500، بلاغات PSKReporter بصيغة عنقود
+DXMAPS (2° cluster)	DXMAPS (العنقود الثاني)
+Rete skimmer	شبكة skimmer
+Invia set/skimmer (o set/noskimmer) al secondo cluster	يرسل set/skimmer (أو set/noskimmer) إلى العنقود الثاني
+Decodifiche UDP (WSJT-X/MSHV)	فك ترميز UDP (WSJT-X/MSHV)
+Porta e inoltro UDP in Impostazioni	منفذ UDP وإعادة الإرسال في الإعدادات
+Tema	السمة
+Chiaro (YA-NEC)	فاتح (YA-NEC)
+Notte	ليلي
+YA-GT — impostazioni	YA-GT — الإعدادات
+Rimbalzo UDP: inoltra i pacchetti e riporta indietro le risposte	ترحيل UDP: يعيد إرسال الحزم ويرجع الردود
+facoltative: 127.0.0.1:2333, 192.168.1.20:2237	اختياري: 127.0.0.1:2333, 192.168.1.20:2237
+Decodifiche UDP (protocollo WSJT-X: WSJT-X, JTDX, MSHV)	فك ترميز UDP (بروتوكول WSJT-X: WSJT-X، JTDX، MSHV)
+Ricezione: ascolta su	الاستقبال: استمع على
+Per l'indirizzo multicast (es. 224.0.0.1) YA-GT si unisce al gruppo; con 127.0.0.1 la porta non può essere la stessa di un altro programma in ascolto.	لعنوان البث المتعدد (مثل 224.0.0.1) ينضم YA-GT إلى المجموعة؛ ومع 127.0.0.1 لا يمكن أن يكون المنفذ نفس منفذ برنامج آخر يستمع.
+Ritrasmissione: verso	إعادة الإرسال: إلى
+Altre destinazioni	وجهات أخرى
+La destinazione principale è di solito QLog; nelle altre puoi aggiungere host:porta separati da virgola (GridTracker, JTAlert). I pacchetti passano identici, QSO registrati compresi, quindi QLog scrive il QSO da solo; le risposte (doppio clic, evidenziazioni) tornano al programma digitale. In QLog metti come porta WSJT-X la stessa porta di ritrasmissione.	الوجهة الرئيسية عادةً QLog؛ ويمكنك في الوجهات الأخرى إضافة host:port مفصولة بفواصل (GridTracker، JTAlert). تمر الحزم دون تغيير، بما فيها الاتصالات المسجلة، فيسجل QLog الاتصال بنفسه؛ وتعود الردود (النقر المزدوج، التمييز) إلى البرنامج الرقمي. في QLog اضبط منفذ WSJT-X على منفذ إعادة الإرسال نفسه.
+Log di QLog	سجل QLog
+Sfoglia…	استعراض…
+Vuoto = posizione standard di QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Il file di QLog non viene mai modificato: si legge una copia.	فارغ = الموقع الافتراضي لـ QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). لا يُعدَّل ملف QLog أبدًا: تُقرأ نسخة منه.
+Aggiornamento automatico	التحديث التلقائي
+Controlla adesso	افحص الآن
+Lingua	اللغة
+La nuova lingua vale dal prossimo avvio del programma.	تسري اللغة الجديدة من التشغيل التالي للبرنامج.
+Salva	حفظ
+Annulla	إلغاء
+Scarica da LoTW	تنزيل من LoTW
+Ricorda il nome utente (la password non viene mai salvata)	تذكّر اسم المستخدم (لا تُحفظ كلمة المرور أبدًا)
+Vengono scaricati tutti i QSO caricati su LoTW, con i dettagli delle conferme (locatore del corrispondente). Con log grandi LoTW può impiegare qualche minuto.	تُنزَّل كل الاتصالات المرفوعة إلى LoTW مع تفاصيل التأكيدات (محدد المحطة المقابلة). مع السجلات الكبيرة قد يستغرق LoTW بضع دقائق.
+Nome utente LoTW	اسم مستخدم LoTW
+Password LoTW	كلمة مرور LoTW
+Solo nominativo (facoltativo)	النداء فقط (اختياري)
+Scarica	تنزيل
+Spot di un nominativo, LoTW, QLog e decodifiche UDP su una mappa a livelli	بلاغات نداء وLoTW وQLog وفك ترميز UDP على خريطة متعددة الطبقات
+Contatti	التواصل
+Sostieni il progetto: ko-fi.com/ic8tem	ادعم المشروع: ko-fi.com/ic8tem
+Riconoscimenti (credits)	شكر وتقدير (credits)
+I dati restano accanto al programma (YA-GT.ini, CALL3.TXT, cartella Dati): nulla in AppData. La password LoTW non viene mai salvata.	تبقى البيانات بجوار البرنامج (YA-GT.ini، CALL3.TXT، مجلد Dati): لا شيء في AppData. لا تُحفظ كلمة مرور LoTW أبدًا.
+Chiudi	إغلاق
+YA-GT — avvio	YA-GT — البدء
+Spot, LoTW, QLog e decodifiche sulla mappa — di Costantino IC8TEM	البلاغات وLoTW وQLog وفك الترميز على الخريطة — Costantino IC8TEM
+Nominativo	النداء
+Locatore (6 caratteri)	المحدد (6 أحرف)
+Il locatore fa da centro della mappa azimutale e serve a calcolare distanza e azimut di ogni spot.	المحدد هو مركز الخريطة السمتية ويُستخدم لحساب مسافة كل بلاغ وسمته.
+Avvia	ابدأ
+Esci	خروج
+Stazioni che tu ricevi: bordo viola	محطات تستقبلها: إطار بنفسجي
+Decodifiche di WSJT-X/JTDX/MSHV via UDP: nuvoletta ovale	فك ترميز WSJT-X/JTDX/MSHV عبر UDP: سحابة بيضوية
+prop.kc2g.com: curve della MUF(3000) o della foF2	prop.kc2g.com: منحنيات MUF(3000) أو foF2
+Solo EME (PROP_MODE)	EME فقط (PROP_MODE)
+Legge qlog.db (copia in sola lettura)	يقرأ qlog.db (نسخة للقراءة فقط)
+Ricezione su	الاستقبال على
+Ritrasmetti a	إعادة الإرسال إلى
+Altre (facolt.)	أخرى (اختياري)
+La destinazione principale è di solito QLog; nelle altre host:porta separati da virgola (GridTracker, JTAlert). Passano anche i QSO registrati, quindi QLog scrive il QSO da solo; le risposte tornano al programma digitale. In QLog metti come porta WSJT-X la porta di ritrasmissione.	الوجهة الرئيسية عادةً QLog؛ وفي الأخرى host:port مفصولة بفواصل (GridTracker، JTAlert). تمر الاتصالات المسجلة أيضًا، فيسجل QLog الاتصال بنفسه؛ وتعود الردود إلى البرنامج الرقمي. في QLog اضبط منفذ WSJT-X على منفذ إعادة الإرسال.
+Vuoto = posizione standard di QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Si legge una copia: il file di QLog non viene mai modificato.	فارغ = الموقع الافتراضي لـ QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). تُقرأ نسخة: لا يُعدَّل ملف QLog أبدًا.
+Nome utente LoTW:	اسم مستخدم LoTW:
+Password LoTW:	كلمة مرور LoTW:
+Solo nominativo (facoltativo):	النداء فقط (اختياري):
+Mi sentono	يسمعونني
+Sento io	أسمع
+Mie decodifiche (UDP)	فك الترميز الخاص بي (UDP)
+mi sentono	يسمعونني
+sento io	أسمع
+mie decodifiche (UDP)	فك الترميز الخاص بي (UDP)
+lavorato	تم الاتصال
+tutte 80-10 m	كل 80-10 m
+non ancora controllato	لم يُفحص بعد
+PSKReporter — Philip Gladstone N1DQ: flusso MQTT (mqtt.pskreporter.info) e interfaccia HTTP	PSKReporter — Philip Gladstone N1DQ: تدفق MQTT (mqtt.pskreporter.info) وواجهة HTTP
+Cluster DM4X (dm4x.ddns.net:8500): spot PSKReporter in forma di cluster	عنقود DM4X (dm4x.ddns.net:8500): بلاغات PSKReporter بصيغة عنقود
+DXMAPS — Gabriel Sampol EA6VQ: secondo cluster con rete skimmer (dxmaps.com:7300)	DXMAPS — Gabriel Sampol EA6VQ: عنقود ثانٍ مع شبكة skimmer (dxmaps.com:7300)
+prop.kc2g.com — Andrew Rodland KC2G: mappe di propagazione MUF/foF2 (GeoJSON)	prop.kc2g.com — Andrew Rodland KC2G: خرائط انتشار MUF/foF2 (GeoJSON)
+NOAA Space Weather Prediction Center: modello OVATION Prime dell'ovale aurorale	NOAA Space Weather Prediction Center: نموذج OVATION Prime للشكل البيضوي للشفق
+ARRL Logbook of The World (LoTW): report ADIF delle conferme	ARRL Logbook of The World (LoTW): تقرير ADIF بالتأكيدات
+QLog — Ladislav Foldyna OK1MLG: struttura del database qlog.db	QLog — Ladislav Foldyna OK1MLG: بنية قاعدة البيانات qlog.db
+Protocollo UDP di WSJT-X (K1JT e WSJT Development Group); JTDX; MSHV (LZ2HV)	بروتوكول UDP في WSJT-X (K1JT وWSJT Development Group)؛ JTDX؛ MSHV (LZ2HV)
+CALL3.TXT: WSJT-X Improved (DG2YCB), CALL3 EME di W7GJ, grid_data.bin di JTDX, database di MSHV-IC8TEM e LIVETROPOVHF	CALL3.TXT: WSJT-X Improved (DG2YCB)، EME CALL3 من W7GJ، grid_data.bin من JTDX، قواعد بيانات MSHV-IC8TEM وLIVETROPOVHF
+G7VRD: ricerca dei locatori per nominativo (api.g7vrd.co.uk)	G7VRD: البحث عن المحددات حسب النداء (api.g7vrd.co.uk)
+cty.dat — Jim Reisert AD1C (country-files.com): prefissi e paesi DXCC	cty.dat — Jim Reisert AD1C (country-files.com): بادئات وبلدان DXCC
+Natural Earth: coste e confini (pubblico dominio)	Natural Earth: السواحل والحدود (ملكية عامة)
+Codice ripreso da LIVETROPOVHF e LoTW Grid Map v2 (IC8TEM)	شيفرة مأخوذة من LIVETROPOVHF وLoTW Grid Map v2 (IC8TEM)

@@ -132,7 +132,7 @@ public sealed class LotwLog
 
     public void LoadCached()
     {
-        try { if (File.Exists(ReportPath)) Merge(File.ReadAllBytes(ReportPath), true, "LoTW (copia salvata)"); } catch { }
+        try { if (File.Exists(ReportPath)) Merge(File.ReadAllBytes(ReportPath), true, L.T("LoTW (copia salvata)")); } catch { }
     }
 
     /// <summary>Unisce un ADIF (LoTW o log locale) ai QSO già presenti.</summary>
@@ -160,7 +160,7 @@ public sealed class LotwLog
             }
             Version++;
         }
-        Status = $"{what}: {n} QSO letti, {Qsos.Count} in totale";
+        Status = L.F("{0}: {1} QSO letti, {2} in totale", what, n, Qsos.Count);
         return n;
     }
 
@@ -171,7 +171,7 @@ public sealed class LotwLog
                      "&password=" + Uri.EscapeDataString(password) +
                      "&qso_query=1&qso_qsl=no&qso_qsldetail=yes&qso_mydetail=yes&qso_withown=yes";
         if (!string.IsNullOrWhiteSpace(ownCall)) url += "&qso_owncall=" + Uri.EscapeDataString(ownCall.Trim().ToUpperInvariant());
-        progress?.Report("Collegamento a LoTW in corso…");
+        progress?.Report(L.T("Collegamento a LoTW in corso…"));
         using (var resp = await http.GetAsync(url, HttpCompletionOption.ResponseHeadersRead, ct))
         using (var s = await resp.Content.ReadAsStreamAsync())
         using (var ms = new MemoryStream())
@@ -182,17 +182,17 @@ public sealed class LotwLog
             while ((r = await s.ReadAsync(buf, 0, buf.Length, ct)) > 0)
             {
                 ms.Write(buf, 0, r);
-                if ((DateTime.Now - last).TotalMilliseconds > 300) { last = DateTime.Now; progress?.Report($"Ricezione dati da LoTW: {ms.Length / 1024:N0} kB…"); }
+                if ((DateTime.Now - last).TotalMilliseconds > 300) { last = DateTime.Now; progress?.Report(L.F("Ricezione dati da LoTW: {0:N0} kB…", ms.Length / 1024)); }
             }
             var data = ms.ToArray();
             var head = Encoding.ASCII.GetString(data, 0, Math.Min(data.Length, 8000));
             var tail = Encoding.ASCII.GetString(data, Math.Max(0, data.Length - 2000), Math.Min(data.Length, 2000));
             if (head.IndexOf("<eoh>", StringComparison.OrdinalIgnoreCase) < 0)
                 return head.IndexOf("password", StringComparison.OrdinalIgnoreCase) >= 0 || head.IndexOf("username", StringComparison.OrdinalIgnoreCase) >= 0
-                    ? "LoTW ha rifiutato l'accesso: controlla nome utente e password."
-                    : "Risposta inattesa da LoTW (non è un file ADIF). Riprova più tardi.";
+                    ? L.T("LoTW ha rifiutato l'accesso: controlla nome utente e password.")
+                    : L.T("Risposta inattesa da LoTW (non è un file ADIF). Riprova più tardi.");
             if (tail.IndexOf("<app_lotw_eof>", StringComparison.OrdinalIgnoreCase) < 0 && tail.IndexOf("<eor>", StringComparison.OrdinalIgnoreCase) < 0 && tail.IndexOf("<eoh>", StringComparison.OrdinalIgnoreCase) < 0)
-                return "Il file ricevuto da LoTW sembra incompleto. Riprova.";
+                return L.T("Il file ricevuto da LoTW sembra incompleto. Riprova.");
             File.WriteAllBytes(ReportPath, data);
             Merge(data, true, "LoTW");
             return "";

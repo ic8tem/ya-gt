@@ -67,6 +67,7 @@ public sealed class StartWindow : Window
         DockPanel.SetDock(buttons, Dock.Bottom); root.Children.Add(buttons);
         root.Children.Add(form);
         Content = root;
+        Ui.Translate(this);
         Opened += (_, _) => { _call.Focus(); _call.SelectAll(); };
     }
 
@@ -75,8 +76,8 @@ public sealed class StartWindow : Window
         var call = (_call.Text ?? "").Trim().ToUpperInvariant();
         var loc = (_loc.Text ?? "").Trim();
         if (call.Length < 3 || !call.Any(char.IsDigit) || !call.Any(char.IsLetter) || call.Any(ch => !char.IsLetterOrDigit(ch) && ch != '/'))
-        { _err.Text = "Nominativo non valido."; return; }
-        if (!Locator.IsValid6(loc)) { _err.Text = "Il locatore deve avere 6 caratteri, es. JN70cn."; return; }
+        { _err.Text = L.T("Nominativo non valido."); return; }
+        if (!Locator.IsValid6(loc)) { _err.Text = L.T("Il locatore deve avere 6 caratteri, es. JN70cn."); return; }
         _st.SetStation(call, loc);
         Accepted = true;
         Close();

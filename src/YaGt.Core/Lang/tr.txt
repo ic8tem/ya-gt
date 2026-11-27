@@ -1,0 +1,199 @@
+# YA-GT — tr — traduzione dell'interfaccia: <frase italiana><TAB><traduzione>; \n = a capo. Generato da tools/lingue (armonizzazione 27/11/2026).
+YA-GT — aggiornamento	YA-GT — güncelleme
+Apri file ADIF del log	Kayıt defterinin ADIF dosyasını aç
+È stata installata la versione {0} di YA-GT.\nEntra in funzione al prossimo avvio del programma.	YA-GT'nin {0} sürümü kuruldu.\nProgramın bir sonraki açılışında etkinleşir.
+{0:HH:mm:ss} UTC   ·   prossimo aggiornamento tra {1}	{0:HH:mm:ss} UTC   ·   sonraki güncelleme {1} sonra
+Database di QLog (qlog.db)	QLog veritabanı (qlog.db)
+Porta UDP non valida.	Geçersiz UDP bağlantı noktası.
+Indirizzo d'ascolto non valido.	Geçersiz dinleme adresi.
+Porta di ritrasmissione non valida.	Geçersiz yönlendirme bağlantı noktası.
+La porta di ritrasmissione deve essere diversa da quella di ricezione.	Yönlendirme bağlantı noktası alım noktasından farklı olmalıdır.
+Inserisci nome utente e password di LoTW.	LoTW kullanıcı adını ve parolasını girin.
+Aggiornamento automatico dal GitHub (ogni {0} minuti)	GitHub'dan otomatik güncelleme (her {0} dakikada)
+Stato: {0}	Durum: {0}
+Ritrasmissione: {0}	Yönlendirme: {0}
+Errore di collegamento: {0}	Bağlantı hatası: {0}
+Nominativo non valido.	Geçersiz çağrı işareti.
+Il locatore deve avere 6 caratteri, es. JN70cn.	Lokatör 6 karakter olmalıdır, örn. JN70cn.
+Opacità	Opaklık
+Banda scelta in alto	Üstte seçilen bant
+Tutte le bande	Tüm bantlar
+UHF e oltre	UHF ve üstü
+Tutti i file	Tüm dosyalar
+nessuna stazione	istasyon yok
+Fonti:	Kaynaklar:
+nessun QSO (scarica da LoTW, apri un ADIF o attiva QLog)	QSO yok (LoTW'den indirin, bir ADIF açın veya QLog'u etkinleştirin)
+confermato su tutte le bande 80-10 m	80-10 m tüm bantlarda onaylandı
+confermato LoTW	LoTW'de onaylandı
+confermato con QSL	QSL ile onaylandı
+lavorato, non confermato	çalışıldı, onaylanmadı
+posizione del paese (cty.dat)	ülke konumu (cty.dat)
+Mi sente	Beni duyuyor
+Sento	Duyuyorum
+posizione da CALL3.TXT	CALL3.TXT'den konum
+Mia decodifica	Benim çözümlemem
+SNR dB (RBN CW: dB sul rumore)	SNR dB (RBN CW: gürültünün üzerinde dB)
+{0} stazioni · {1} quadrati · {2} paesi	{0} istasyon · {1} kare · {2} ülke
+più lontana: {0} {1:N0} km	en uzak: {0} {1:N0} km
+migliore: {0} {1}	en iyi: {0} {1}
+Statistiche · {0} · ultimi {1}	İstatistikler · {0} · son {1}
+Quadrati · {0}	Kareler · {0}
+lavorati {0} · confermati {1} ({2:0}%)	çalışılan {0} · onaylanan {1} (%{2:0})
+LoTW {0} · solo QSL {1} · non confermati {2}	LoTW {0} · yalnız QSL {1} · onaylanmamış {2}
+confermati su tutte le bande 80-10 m: {0}	80-10 m tüm bantlarda onaylanan: {0}
+Aggiornato {0:HH:mm} UTC	Güncellendi {0:HH:mm} UTC
+KC2G ionosonda {0}: {1} {2:0.0} MHz (affidabilità {3:0.00})	KC2G iyonosondu {0}: {1} {2:0.0} MHz (güvenilirlik {3:0.00})
+spento durante le prove automatiche	otomatik testler sırasında kapalı
+spento nelle Impostazioni	Ayarlar'da kapalı
+spento: la cartella del programma non è scrivibile (aggiornare a mano)	kapalı: program klasörü yazılabilir değil (elle güncelleyin)
+gestito da un'altra finestra di YA-GT già aperta	zaten açık olan başka bir YA-GT penceresi yönetiyor
+pacchetto troppo grande, non si scarica	paket çok büyük, indirilmiyor
+pacchetto tar.gz non gestito su questa piattaforma	tar.gz paketi bu platformda desteklenmiyor
+nessuna versione pubblicata su {0}	{0} üzerinde yayımlanmış sürüm yok
+versione pubblicata non leggibile: {0}	yayımlanan sürüm okunamıyor: {0}
+hai già l'ultima versione ({0})	zaten en son sürüme sahipsiniz ({0})
+aggiornato: l'ultima versione è la {0} ({1})	güncel: en son sürüm {0} ({1})
+versione {0} disponibile su {1}	{0} sürümü {1} üzerinde mevcut
+versione {0} pubblicata, ma senza il pacchetto {1}	{0} sürümü yayımlandı ama {1} paketi yok
+versione {0}: mancano impronta o firma del pacchetto, non si installa	{0} sürümü: paketin parmak izi veya imzası eksik, kurulmuyor
+scarico la versione {0} ({1})	{0} sürümü indiriliyor ({1})
+versione {0}: impronta SHA-256 diversa, pacchetto scartato	{0} sürümü: SHA-256 parmak izi farklı, paket reddedildi
+versione {0}: FIRMA NON VALIDA, pacchetto scartato	{0} sürümü: İMZA GEÇERSİZ, paket reddedildi
+controllo non riuscito: {0} (riprovo fra {1} minuti)	denetim başarısız: {0} ({1} dakika sonra yeniden denenecek)
+aggiornato da {0} a {1} il {2}	{0} sürümünden {1} sürümüne güncellendi, {2}
+versione {0} installata: entra in funzione al prossimo avvio di YA-GT	{0} sürümü kuruldu: YA-GT'nin bir sonraki açılışında etkinleşir
+installazione della {0} non riuscita, rimessa la {1}: {2}	{0} kurulumu başarısız, {1} geri yüklendi: {2}
+LoTW (copia salvata)	LoTW (kaydedilmiş kopya)
+Collegamento a LoTW in corso…	LoTW'ye bağlanılıyor…
+LoTW ha rifiutato l'accesso: controlla nome utente e password.	LoTW erişimi reddetti: kullanıcı adını ve parolayı kontrol edin.
+Risposta inattesa da LoTW (non è un file ADIF). Riprova più tardi.	LoTW'den beklenmeyen yanıt (ADIF dosyası değil). Daha sonra yeniden deneyin.
+Il file ricevuto da LoTW sembra incompleto. Riprova.	LoTW'den alınan dosya eksik görünüyor. Yeniden deneyin.
+{0}: {1} QSO letti, {2} in totale	{0}: {1} QSO okundu, toplam {2}
+Ricezione dati da LoTW: {0:N0} kB…	LoTW'den veri alınıyor: {0:N0} kB…
+tutte le bande	tüm bantlar
+{0} mi sentono · {1} sento · {2} decodifiche	{0} beni duyuyor · {1} duyuyorum · {2} çözümleme
+G7VRD in coda {0}	G7VRD kuyrukta {0}
+ ⇄ {0} inoltro {1}/{2}	 ⇄ {0} yönlendirme {1}/{2}
+KC2G {0}: {1} curve, {2} ionosonde	KC2G {0}: {1} eğri, {2} iyonosond
+Aurora NOAA: previsione {0}	NOAA kutup ışığı: tahmin {0}
+Proiezione	İzdüşüm
+Mercatore	Mercator
+Azimutale	Azimutal
+Aggiornamento	Güncelleme
+Banda	Bant
+Tutte	Tümü
+Spot degli ultimi	Son spotlar:
+Aggiorna ora	Şimdi güncelle
+Vista intera	Tüm görünüm
+Impostazioni	Ayarlar
+Livelli della mappa	Harita katmanları
+Statistiche (in alto a destra)	İstatistikler (sağ üstte)
+Chi mi sente (spot)	Beni kim duyuyor (spotlar)
+Stazioni che ricevono il tuo segnale: fumetto con l'SNR, bordo blu	Sinyalinizi alan istasyonlar: SNR'li balon, mavi kenar
+Chi sento io (spot)	Kimi duyuyorum (spotlar)
+Stazioni che tu ricevi (PSKReporter, tuo skimmer RBN): bordo viola	Aldığınız istasyonlar (PSKReporter, RBN skimmer'ınız): mor kenar
+Le mie decodifiche (UDP)	Çözümlemelerim (UDP)
+Decodifiche di WSJT-X/JTDX/MSHV ricevute via UDP: nuvoletta ovale	UDP ile alınan WSJT-X/JTDX/MSHV çözümlemeleri: oval bulut
+Nominativo nei fumetti	Balonlarda çağrı işareti
+Percorsi (cerchio massimo)	Yollar (büyük daire)
+Griglia Maidenhead	Maidenhead ızgarası
+Greyline (giorno/notte)	Greyline (gündüz/gece)
+Propagazione KC2G	KC2G yayılımı
+prop.kc2g.com: curve della MUF(3000) o della foF2 e valori delle ionosonde	prop.kc2g.com: MUF(3000) veya foF2 eğrileri ve iyonosond değerleri
+Aurora NOAA (OVATION)	NOAA kutup ışığı (OVATION)
+Probabilità di aurora del NOAA SWPC, ridisegnata in Mercatore e in azimutale	NOAA SWPC kutup ışığı olasılığı, Mercator ve azimutal olarak yeniden çizildi
+Quadrati (LoTW + QLog)	Kareler (LoTW + QLog)
+Arancio = lavorato, verde = LoTW, blu = QSL, grigio = confermato su tutte le bande 80-10 m (esclusi i 60 m)	Turuncu = çalışıldı, yeşil = LoTW, mavi = QSL, gri = 80-10 m tüm bantlarda onaylandı (60 m hariç)
+Solo confermati	Yalnızca onaylananlar
+Solo EME (PROP__MODE)	Yalnızca EME (PROP__MODE)
+Scarica da LoTW…	LoTW'den indir…
+Apri ADIF…	ADIF aç…
+QSO del log QLog	QLog kayıt defterinin QSO'ları
+Legge qlog.db (copia in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato	qlog.db'yi okur (salt okunur kopya): yeşil kareler = LoTW, mavi = QSL, turuncu = çalışıldı
+qlog.db: posizione standard di QLog	qlog.db: QLog'un standart konumu
+Fonti degli spot	Spot kaynakları
+mqtt.pskreporter.info, più lo storico dell'ultima ora via HTTP	mqtt.pskreporter.info, artı son saatin geçmişi HTTP ile
+telnet.reversebeacon.net porte 7000 (CW/RTTY) e 7001 (FT8/FT4)	telnet.reversebeacon.net 7000 (CW/RTTY) ve 7001 (FT8/FT4) bağlantı noktaları
+DM4X (cluster telnet)	DM4X (telnet kümesi)
+dm4x.ddns.net:8500, spot PSKReporter in forma di cluster	dm4x.ddns.net:8500, küme biçiminde PSKReporter spotları
+DXMAPS (2° cluster)	DXMAPS (2. küme)
+Rete skimmer	Skimmer ağı
+Invia set/skimmer (o set/noskimmer) al secondo cluster	İkinci kümeye set/skimmer (veya set/noskimmer) gönderir
+Decodifiche UDP (WSJT-X/MSHV)	UDP çözümlemeleri (WSJT-X/MSHV)
+Porta e inoltro UDP in Impostazioni	UDP bağlantı noktası ve yönlendirme Ayarlar'da
+Tema	Tema
+Chiaro (YA-NEC)	Açık (YA-NEC)
+Notte	Gece
+YA-GT — impostazioni	YA-GT — ayarlar
+Rimbalzo UDP: inoltra i pacchetti e riporta indietro le risposte	UDP aktarımı: paketleri iletir ve yanıtları geri gönderir
+facoltative: 127.0.0.1:2333, 192.168.1.20:2237	isteğe bağlı: 127.0.0.1:2333, 192.168.1.20:2237
+Decodifiche UDP (protocollo WSJT-X: WSJT-X, JTDX, MSHV)	UDP çözümlemeleri (WSJT-X protokolü: WSJT-X, JTDX, MSHV)
+Ricezione: ascolta su	Alım: dinleme adresi
+Per l'indirizzo multicast (es. 224.0.0.1) YA-GT si unisce al gruppo; con 127.0.0.1 la porta non può essere la stessa di un altro programma in ascolto.	Çok noktaya yayın adresinde (örn. 224.0.0.1) YA-GT gruba katılır; 127.0.0.1 ile bağlantı noktası dinleyen başka bir programınkiyle aynı olamaz.
+Ritrasmissione: verso	Yönlendirme: hedef
+Altre destinazioni	Diğer hedefler
+La destinazione principale è di solito QLog; nelle altre puoi aggiungere host:porta separati da virgola (GridTracker, JTAlert). I pacchetti passano identici, QSO registrati compresi, quindi QLog scrive il QSO da solo; le risposte (doppio clic, evidenziazioni) tornano al programma digitale. In QLog metti come porta WSJT-X la stessa porta di ritrasmissione.	Ana hedef genellikle QLog'dur; diğerlerine virgülle ayrılmış host:port ekleyebilirsiniz (GridTracker, JTAlert). Paketler kaydedilen QSO'lar dahil değişmeden geçer, böylece QLog QSO'yu kendisi kaydeder; yanıtlar (çift tıklama, vurgular) dijital programa geri döner. QLog'da WSJT-X bağlantı noktası olarak aynı yönlendirme noktasını ayarlayın.
+Log di QLog	QLog kayıt defteri
+Sfoglia…	Gözat…
+Vuoto = posizione standard di QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Il file di QLog non viene mai modificato: si legge una copia.	Boş = QLog'un standart konumu (%LOCALAPPDATA%\hamradio\QLog\qlog.db). QLog dosyası hiçbir zaman değiştirilmez: bir kopyası okunur.
+Aggiornamento automatico	Otomatik güncelleme
+Controlla adesso	Şimdi denetle
+Lingua	Dil
+La nuova lingua vale dal prossimo avvio del programma.	Yeni dil programın bir sonraki açılışından itibaren geçerlidir.
+Salva	Kaydet
+Annulla	İptal
+Scarica da LoTW	LoTW'den indir
+Ricorda il nome utente (la password non viene mai salvata)	Kullanıcı adını hatırla (parola hiçbir zaman kaydedilmez)
+Vengono scaricati tutti i QSO caricati su LoTW, con i dettagli delle conferme (locatore del corrispondente). Con log grandi LoTW può impiegare qualche minuto.	LoTW'ye yüklenen tüm QSO'lar onay ayrıntılarıyla (karşı istasyonun lokatörü) indirilir. Büyük kayıt defterlerinde LoTW birkaç dakika sürebilir.
+Nome utente LoTW	LoTW kullanıcı adı
+Password LoTW	LoTW parolası
+Solo nominativo (facoltativo)	Yalnızca çağrı işareti (isteğe bağlı)
+Scarica	İndir
+Spot di un nominativo, LoTW, QLog e decodifiche UDP su una mappa a livelli	Bir çağrı işaretinin spotları, LoTW, QLog ve UDP çözümlemeleri katmanlı bir haritada
+Contatti	İletişim
+Sostieni il progetto: ko-fi.com/ic8tem	Projeyi destekleyin: ko-fi.com/ic8tem
+Riconoscimenti (credits)	Teşekkürler (credits)
+I dati restano accanto al programma (YA-GT.ini, CALL3.TXT, cartella Dati): nulla in AppData. La password LoTW non viene mai salvata.	Veriler programın yanında kalır (YA-GT.ini, CALL3.TXT, Dati klasörü): AppData'da hiçbir şey yok. LoTW parolası hiçbir zaman kaydedilmez.
+Chiudi	Kapat
+YA-GT — avvio	YA-GT — başlangıç
+Spot, LoTW, QLog e decodifiche sulla mappa — di Costantino IC8TEM	Haritada spotlar, LoTW, QLog ve çözümlemeler — Costantino IC8TEM
+Nominativo	Çağrı işareti
+Locatore (6 caratteri)	Lokatör (6 karakter)
+Il locatore fa da centro della mappa azimutale e serve a calcolare distanza e azimut di ogni spot.	Lokatör azimutal haritanın merkezidir ve her spotun mesafesini ve azimutunu hesaplamak için kullanılır.
+Avvia	Başlat
+Esci	Çıkış
+Stazioni che tu ricevi: bordo viola	Aldığınız istasyonlar: mor kenar
+Decodifiche di WSJT-X/JTDX/MSHV via UDP: nuvoletta ovale	UDP ile WSJT-X/JTDX/MSHV çözümlemeleri: oval bulut
+prop.kc2g.com: curve della MUF(3000) o della foF2	prop.kc2g.com: MUF(3000) veya foF2 eğrileri
+Solo EME (PROP_MODE)	Yalnızca EME (PROP_MODE)
+Legge qlog.db (copia in sola lettura)	qlog.db'yi okur (salt okunur kopya)
+Ricezione su	Alım adresi
+Ritrasmetti a	Yönlendirilecek yer
+Altre (facolt.)	Diğerleri (isteğe bağlı)
+La destinazione principale è di solito QLog; nelle altre host:porta separati da virgola (GridTracker, JTAlert). Passano anche i QSO registrati, quindi QLog scrive il QSO da solo; le risposte tornano al programma digitale. In QLog metti come porta WSJT-X la porta di ritrasmissione.	Ana hedef genellikle QLog'dur; diğerlerinde virgülle ayrılmış host:port (GridTracker, JTAlert). Kaydedilen QSO'lar da geçer, böylece QLog QSO'yu kendisi kaydeder; yanıtlar dijital programa geri döner. QLog'da WSJT-X bağlantı noktası olarak yönlendirme noktasını ayarlayın.
+Vuoto = posizione standard di QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Si legge una copia: il file di QLog non viene mai modificato.	Boş = QLog'un standart konumu (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Bir kopyası okunur: QLog dosyası hiçbir zaman değiştirilmez.
+Nome utente LoTW:	LoTW kullanıcı adı:
+Password LoTW:	LoTW parolası:
+Solo nominativo (facoltativo):	Yalnızca çağrı işareti (isteğe bağlı):
+Mi sentono	Beni duyanlar
+Sento io	Duyuyorum
+Mie decodifiche (UDP)	Çözümlemelerim (UDP)
+mi sentono	beni duyanlar
+sento io	duyuyorum
+mie decodifiche (UDP)	çözümlemelerim (UDP)
+lavorato	çalışıldı
+tutte 80-10 m	tümü 80-10 m
+non ancora controllato	henüz denetlenmedi
+PSKReporter — Philip Gladstone N1DQ: flusso MQTT (mqtt.pskreporter.info) e interfaccia HTTP	PSKReporter — Philip Gladstone N1DQ: MQTT akışı (mqtt.pskreporter.info) ve HTTP arayüzü
+Cluster DM4X (dm4x.ddns.net:8500): spot PSKReporter in forma di cluster	DM4X kümesi (dm4x.ddns.net:8500): küme biçiminde PSKReporter spotları
+DXMAPS — Gabriel Sampol EA6VQ: secondo cluster con rete skimmer (dxmaps.com:7300)	DXMAPS — Gabriel Sampol EA6VQ: skimmer ağlı ikinci küme (dxmaps.com:7300)
+prop.kc2g.com — Andrew Rodland KC2G: mappe di propagazione MUF/foF2 (GeoJSON)	prop.kc2g.com — Andrew Rodland KC2G: MUF/foF2 yayılım haritaları (GeoJSON)
+NOAA Space Weather Prediction Center: modello OVATION Prime dell'ovale aurorale	NOAA Space Weather Prediction Center: kutup ışığı ovalinin OVATION Prime modeli
+ARRL Logbook of The World (LoTW): report ADIF delle conferme	ARRL Logbook of The World (LoTW): onayların ADIF raporu
+QLog — Ladislav Foldyna OK1MLG: struttura del database qlog.db	QLog — Ladislav Foldyna OK1MLG: qlog.db veritabanının yapısı
+Protocollo UDP di WSJT-X (K1JT e WSJT Development Group); JTDX; MSHV (LZ2HV)	WSJT-X UDP protokolü (K1JT ve WSJT Development Group); JTDX; MSHV (LZ2HV)
+CALL3.TXT: WSJT-X Improved (DG2YCB), CALL3 EME di W7GJ, grid_data.bin di JTDX, database di MSHV-IC8TEM e LIVETROPOVHF	CALL3.TXT: WSJT-X Improved (DG2YCB), W7GJ EME CALL3, JTDX grid_data.bin, MSHV-IC8TEM ve LIVETROPOVHF veritabanları
+G7VRD: ricerca dei locatori per nominativo (api.g7vrd.co.uk)	G7VRD: çağrı işaretine göre lokatör arama (api.g7vrd.co.uk)
+cty.dat — Jim Reisert AD1C (country-files.com): prefissi e paesi DXCC	cty.dat — Jim Reisert AD1C (country-files.com): DXCC önekleri ve ülkeleri
+Natural Earth: coste e confini (pubblico dominio)	Natural Earth: kıyı şeritleri ve sınırlar (kamu malı)
+Codice ripreso da LIVETROPOVHF e LoTW Grid Map v2 (IC8TEM)	LIVETROPOVHF ve LoTW Grid Map v2'den alınan kod (IC8TEM)

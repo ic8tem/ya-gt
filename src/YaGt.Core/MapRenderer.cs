@@ -168,34 +168,34 @@ public sealed class MapRenderer
     {
         var s = f.Stats;
         var lines = new List<(string text, uint col, bool bold, double size)>();
-        void L(string t, uint c = 0xFF111827, bool b = false, double sz = 10.5) => lines.Add((t, c, b, sz));
+        void Ln(string t, uint c = 0xFF111827, bool b = false, double sz = 10.5) => lines.Add((t, c, b, sz));
         string Snr(int? v) => v.HasValue ? (v.Value > 0 ? "+" : "") + v.Value + " dB" : "—";
         void Block(string title, uint col, DirStats d, bool show)
         {
             if (!show) return;
-            L(title, col, true, 11);
-            if (d.Stations == 0) { L("  nessuna stazione", 0xFF6D6D6D); return; }
-            L($"  {d.Stations} stazioni · {d.Squares} quadrati · {d.Countries} paesi");
-            L($"  più lontana: {d.MaxCall} {d.MaxKm:N0} km");
-            L($"  migliore: {d.BestCall} {Snr(d.BestSnr)}");
+            Ln(L.T(title), col, true, 11);
+            if (d.Stations == 0) { Ln("  " + L.T("nessuna stazione"), 0xFF6D6D6D); return; }
+            Ln("  " + L.F("{0} stazioni · {1} quadrati · {2} paesi", d.Stations, d.Squares, d.Countries));
+            Ln("  " + L.F("più lontana: {0} {1:N0} km", d.MaxCall, d.MaxKm));
+            Ln("  " + L.F("migliore: {0} {1}", d.BestCall, Snr(d.BestSnr)));
         }
-        L("Statistiche · " + s.Band + " · ultimi " + (st.AgeMin < 60 ? st.AgeMin + " min" : st.AgeMin / 60 + " h"), 0xFF1E293B, true, 11.5);
+        Ln(L.F("Statistiche · {0} · ultimi {1}", s.Band, st.AgeMin < 60 ? st.AgeMin + " min" : st.AgeMin / 60 + " h"), 0xFF1E293B, true, 11.5);
         Block("Mi sentono", ColHeardMe, s.HeardMe, st.LayerHeardMe);
         Block("Sento io", ColIHeard, s.IHeard, st.LayerIHeard);
         Block("Mie decodifiche (UDP)", ColDecode, s.Decodes, st.LayerDecodes);
-        if (s.BySource.Count > 0) L("Fonti: " + string.Join(", ", s.BySource.OrderByDescending(kv => kv.Value).Select(kv => kv.Key + " " + kv.Value)), 0xFF374151);
+        if (s.BySource.Count > 0) Ln(L.T("Fonti:") + " " + string.Join(", ", s.BySource.OrderByDescending(kv => kv.Value).Select(kv => kv.Key + " " + kv.Value)), 0xFF374151);
         if (st.LayerLotw)
         {
-            L("Quadrati · " + f.SquaresTitle, 0xFF1E293B, true, 11);
-            if (!s.HasSquares) L("  nessun QSO (scarica da LoTW, apri un ADIF o attiva QLog)", 0xFF6D6D6D);
+            Ln(L.F("Quadrati · {0}", f.SquaresTitle), 0xFF1E293B, true, 11);
+            if (!s.HasSquares) Ln("  " + L.T("nessun QSO (scarica da LoTW, apri un ADIF o attiva QLog)"), 0xFF6D6D6D);
             else
             {
-                L($"  lavorati {s.SqWorked} · confermati {s.SqConfirmed} ({(s.SqWorked > 0 ? 100.0 * s.SqConfirmed / s.SqWorked : 0):0}%)");
-                L($"  LoTW {s.SqLotw} · solo QSL {s.SqConfirmed - s.SqLotw} · non confermati {s.SqWorked - s.SqConfirmed}");
-                if (f.SquaresGrey) L($"  confermati su tutte le bande 80-10 m: {s.SqAllHf}");
+                Ln("  " + L.F("lavorati {0} · confermati {1} ({2:0}%)", s.SqWorked, s.SqConfirmed, s.SqWorked > 0 ? 100.0 * s.SqConfirmed / s.SqWorked : 0));
+                Ln("  " + L.F("LoTW {0} · solo QSL {1} · non confermati {2}", s.SqLotw, s.SqConfirmed - s.SqLotw, s.SqWorked - s.SqConfirmed));
+                if (f.SquaresGrey) Ln("  " + L.F("confermati su tutte le bande 80-10 m: {0}", s.SqAllHf));
             }
         }
-        L($"Aggiornato {f.Utc:HH:mm} UTC", 0xFF6D6D6D, false, 9.5);
+        Ln(L.F("Aggiornato {0:HH:mm} UTC", f.Utc), 0xFF6D6D6D, false, 9.5);
         double w = 0, h = 8;
         foreach (var l in lines) { var m = g.MeasureText(l.text, l.size, l.bold); w = Math.Max(w, m.X); h += m.Y + 1; }
         w += 16;
@@ -329,7 +329,7 @@ public sealed class MapRenderer
                 g.FillEllipse(p.X, p.Y, r, r, Theme.WithAlpha(0xFFFFFFFF, (int)(alpha * (0.4 + 0.6 * s.Confidence))));
                 g.StrokeEllipse(p.X, p.Y, r, r, Theme.WithAlpha(0xFF374151, alpha), 1);
                 g.DrawText(txt, p.X - sz.X / 2, p.Y - sz.Y / 2, 9, Theme.WithAlpha(0xFF111827, Math.Max(alpha, 180)), true);
-                Hits.Add(new HitArea { X = p.X - r, Y = p.Y - r, W = 2 * r, H = 2 * r, Text = $"KC2G ionosonda {s.Name}: {(k.Metric == "fof2" ? "foF2" : "MUF(D)")} {s.Value:0.0} MHz (affidabilità {s.Confidence:0.00})" });
+                Hits.Add(new HitArea { X = p.X - r, Y = p.Y - r, W = 2 * r, H = 2 * r, Text = L.F("KC2G ionosonda {0}: {1} {2:0.0} MHz (affidabilità {3:0.00})", s.Name, k.Metric == "fof2" ? "foF2" : "MUF(D)", s.Value, s.Confidence) });
             }
         }
     }
@@ -405,7 +405,7 @@ public sealed class MapRenderer
                     if (sz.X < b.Item3 - b.Item1 - 2)
                         g.DrawText(si.Grid, (b.Item1 + b.Item3) / 2 - sz.X / 2, (b.Item2 + b.Item4) / 2 - sz.Y / 2, 9, 0xC0000000, false);
                 }
-                var stato = f.SquaresGrey && si.AllHf ? "confermato su tutte le bande 80-10 m" : si.Lotw ? "confermato LoTW" : si.Qsl ? "confermato con QSL" : "lavorato, non confermato";
+                var stato = L.T(f.SquaresGrey && si.AllHf ? "confermato su tutte le bande 80-10 m" : si.Lotw ? "confermato LoTW" : si.Qsl ? "confermato con QSL" : "lavorato, non confermato");
                 Hits.Add(new HitArea { X = b.Item1, Y = b.Item2, W = b.Item3 - b.Item1, H = b.Item4 - b.Item2, Text = $"LoTW {si.Grid}: {si.Qsos} QSO, {stato}" });
             }
         }
@@ -430,7 +430,7 @@ public sealed class MapRenderer
                 if (p.X < -5 || p.X > Proj.Width + 5 || p.Y < -5 || p.Y > Proj.Height + 5) continue;
                 g.FillRect(p.X - 3, p.Y - 3, 6, 6, Theme.WithAlpha(col, 210));
                 g.StrokePolygon(new[] { new P2(p.X - 3, p.Y - 3), new P2(p.X + 3, p.Y - 3), new P2(p.X + 3, p.Y + 3), new P2(p.X - 3, p.Y + 3) }, 0xFF1F2937, 0.8);
-                Hits.Add(new HitArea { X = p.X - 4, Y = p.Y - 4, W = 8, H = 8, Text = $"QLog {q.Call}: {q.Qsos} QSO ({q.Bands}){(q.Lotw ? ", LoTW" : q.Qsl ? ", QSL" : "")}{(q.Approx ? " — posizione del paese (cty.dat)" : "")}" });
+                Hits.Add(new HitArea { X = p.X - 4, Y = p.Y - 4, W = 8, H = 8, Text = $"QLog {q.Call}: {q.Qsos} QSO ({q.Bands}){(q.Lotw ? ", LoTW" : q.Qsl ? ", QSL" : "")}{(q.Approx ? " — " + L.T("posizione del paese (cty.dat)") : "")}" });
             }
         }
     }
@@ -517,8 +517,8 @@ public sealed class MapRenderer
             var sz1 = g.MeasureText(snr, 12, true);
             var sz2 = st.BubbleCalls ? g.MeasureText(call, 9, false) : new P2(0, 0);
             double w = Math.Max(sz1.X, sz2.X) + 10, h = sz1.Y + (st.BubbleCalls ? sz2.Y : 0) + 5;
-            var tip = $"{(s.Dir == SpotDir.HeardMe ? "Mi sente" : "Sento")} {call} — {SnrScale.Text(s.Snr)} dB · {s.Band} {s.Mode} {s.FreqKHz:0.0} kHz · {s.Source} · {s.Time:HH:mm} UTC · {s.Km:N0} km, az {s.Az:0}°" +
-                      (s.PosApprox ? " · posizione del paese (cty.dat)" : s.PosSource == "call3" ? " · posizione da CALL3.TXT" : "") + (s.OtherGrid != "" ? " · " + s.OtherGrid : "");
+            var tip = $"{L.T(s.Dir == SpotDir.HeardMe ? "Mi sente" : "Sento")} {call} — {SnrScale.Text(s.Snr)} dB · {s.Band} {s.Mode} {s.FreqKHz:0.0} kHz · {s.Source} · {s.Time:HH:mm} UTC · {s.Km:N0} km, az {s.Az:0}°" +
+                      (s.PosApprox ? " · " + L.T("posizione del paese (cty.dat)") : s.PosSource == "call3" ? " · " + L.T("posizione da CALL3.TXT") : "") + (s.OtherGrid != "" ? " · " + s.OtherGrid : "");
             if (!FindSpot(placed, p, w, h, out var bx, out var by))
             {
                 Hits.Add(new HitArea { X = p.X - 5, Y = p.Y - 5, W = 10, H = 10, Text = tip });
@@ -563,7 +563,7 @@ public sealed class MapRenderer
                 var sz1 = g.MeasureText(snr, 12, true);
                 var sz2 = st.BubbleCalls ? g.MeasureText(d.Call, 9, false) : new P2(0, 0);
                 double w = Math.Max(sz1.X, sz2.X) + 22, h = sz1.Y + (st.BubbleCalls ? sz2.Y : 0) + 8;
-                var tip = $"Mia decodifica {d.Call} — {snr} dB · {d.Band} {d.Mode} · {d.Time:HH:mm} UTC · {d.Km:N0} km, az {d.Az:0}° · \"{d.Message}\"" + (d.PosApprox ? " · posizione del paese (cty.dat)" : "");
+                var tip = $"{L.T("Mia decodifica")} {d.Call} — {snr} dB · {d.Band} {d.Mode} · {d.Time:HH:mm} UTC · {d.Km:N0} km, az {d.Az:0}° · \"{d.Message}\"" + (d.PosApprox ? " · " + L.T("posizione del paese (cty.dat)") : "");
                 if (!FindSpot(placed, p, w, h + 8, out var bx, out var by))
                 {
                     Hits.Add(new HitArea { X = p.X - 6, Y = p.Y - 6, W = 12, H = 12, Text = tip });
@@ -607,7 +607,7 @@ public sealed class MapRenderer
         y -= boxH;
         g.FillRoundRect(x, y, boxW, boxH, 5, 0xE6FFFFFF);
         g.StrokeRoundRect(x, y, boxW, boxH, 5, 0xFFC3CBD5, 1);
-        g.DrawText("SNR dB (RBN CW: dB sul rumore)", x + 6, y + 2, 10, 0xFF374151, true);
+        g.DrawText(L.T("SNR dB (RBN CW: dB sul rumore)"), x + 6, y + 2, 10, 0xFF374151, true);
         double cx = x + 6;
         foreach (var it in items)
         {
@@ -621,6 +621,7 @@ public sealed class MapRenderer
         {
             if (cloud) { g.FillEllipse(cx + 7, ly + 6, 7, 5, 0xFFFFFFFF); g.StrokeEllipse(cx + 7, ly + 6, 7, 5, border, 1.6); }
             else { g.FillRoundRect(cx, ly + 1, 14, 10, 2, 0xFFFFFFFF); g.StrokeRoundRect(cx, ly + 1, 14, 10, 2, border, 1.6); }
+            t = L.T(t);
             g.DrawText(t, cx + 18, ly - 1, 10, 0xFF111827, false);
             cx += 18 + g.MeasureText(t, 10, false).X + 12;
         }
@@ -630,7 +631,7 @@ public sealed class MapRenderer
         if (st.LayerLotw)
         {
             ly += 16; cx = x + 6;
-            void Sq(uint col, string t) { g.FillRect(cx, ly + 1, 12, 10, col | 0x60000000); g.DrawText(t, cx + 16, ly - 1, 10, 0xFF111827, false); cx += 16 + g.MeasureText(t, 10, false).X + 10; }
+            void Sq(uint col, string t) { t = L.T(t); g.FillRect(cx, ly + 1, 12, 10, col | 0x60000000); g.DrawText(t, cx + 16, ly - 1, 10, 0xFF111827, false); cx += 16 + g.MeasureText(t, 10, false).X + 10; }
             Sq(LotwLog.ColWorked, "lavorato"); Sq(LotwLog.ColLotw, "LoTW"); Sq(LotwLog.ColQsl, "QSL");
             if (st.Current.SquaresGrey) Sq(LotwLog.ColAllHf, "tutte 80-10 m");
         }

@@ -1,0 +1,199 @@
+# YA-GT — hi — traduzione dell'interfaccia: <frase italiana><TAB><traduzione>; \n = a capo. Generato da tools/lingue (armonizzazione 27/11/2026).
+YA-GT — aggiornamento	YA-GT — अपडेट
+Apri file ADIF del log	लॉग की ADIF फ़ाइल खोलें
+È stata installata la versione {0} di YA-GT.\nEntra in funzione al prossimo avvio del programma.	YA-GT का संस्करण {0} इंस्टॉल हो गया है।\nयह प्रोग्राम के अगली बार शुरू होने पर लागू होगा।
+{0:HH:mm:ss} UTC   ·   prossimo aggiornamento tra {1}	{0:HH:mm:ss} UTC   ·   अगला अपडेट {1} में
+Database di QLog (qlog.db)	QLog डेटाबेस (qlog.db)
+Porta UDP non valida.	अमान्य UDP पोर्ट।
+Indirizzo d'ascolto non valido.	अमान्य सुनने का पता।
+Porta di ritrasmissione non valida.	अमान्य अग्रेषण पोर्ट।
+La porta di ritrasmissione deve essere diversa da quella di ricezione.	अग्रेषण पोर्ट प्राप्ति पोर्ट से अलग होना चाहिए।
+Inserisci nome utente e password di LoTW.	LoTW का उपयोगकर्ता नाम और पासवर्ड दर्ज करें।
+Aggiornamento automatico dal GitHub (ogni {0} minuti)	GitHub से स्वचालित अपडेट (हर {0} मिनट)
+Stato: {0}	स्थिति: {0}
+Ritrasmissione: {0}	अग्रेषण: {0}
+Errore di collegamento: {0}	कनेक्शन त्रुटि: {0}
+Nominativo non valido.	अमान्य कॉल साइन।
+Il locatore deve avere 6 caratteri, es. JN70cn.	लोकेटर में 6 अक्षर होने चाहिए, जैसे JN70cn।
+Opacità	अपारदर्शिता
+Banda scelta in alto	ऊपर चुना गया बैंड
+Tutte le bande	सभी बैंड
+UHF e oltre	UHF और ऊपर
+Tutti i file	सभी फ़ाइलें
+nessuna stazione	कोई स्टेशन नहीं
+Fonti:	स्रोत:
+nessun QSO (scarica da LoTW, apri un ADIF o attiva QLog)	कोई QSO नहीं (LoTW से डाउनलोड करें, ADIF खोलें या QLog चालू करें)
+confermato su tutte le bande 80-10 m	सभी बैंड 80-10 m पर पुष्ट
+confermato LoTW	LoTW पर पुष्ट
+confermato con QSL	QSL से पुष्ट
+lavorato, non confermato	संपर्क हुआ, पुष्ट नहीं
+posizione del paese (cty.dat)	देश की स्थिति (cty.dat)
+Mi sente	मुझे सुनता है
+Sento	मैं सुनता हूँ
+posizione da CALL3.TXT	CALL3.TXT से स्थिति
+Mia decodifica	मेरा डिकोड
+SNR dB (RBN CW: dB sul rumore)	SNR dB (RBN CW: शोर से ऊपर dB)
+{0} stazioni · {1} quadrati · {2} paesi	{0} स्टेशन · {1} वर्ग · {2} देश
+più lontana: {0} {1:N0} km	सबसे दूर: {0} {1:N0} km
+migliore: {0} {1}	सबसे अच्छा: {0} {1}
+Statistiche · {0} · ultimi {1}	आँकड़े · {0} · पिछले {1}
+Quadrati · {0}	वर्ग · {0}
+lavorati {0} · confermati {1} ({2:0}%)	संपर्क {0} · पुष्ट {1} ({2:0}%)
+LoTW {0} · solo QSL {1} · non confermati {2}	LoTW {0} · केवल QSL {1} · अपुष्ट {2}
+confermati su tutte le bande 80-10 m: {0}	सभी बैंड 80-10 m पर पुष्ट: {0}
+Aggiornato {0:HH:mm} UTC	{0:HH:mm} UTC पर अपडेट
+KC2G ionosonda {0}: {1} {2:0.0} MHz (affidabilità {3:0.00})	KC2G आयनोसोंड {0}: {1} {2:0.0} MHz (विश्वसनीयता {3:0.00})
+spento durante le prove automatiche	स्वचालित परीक्षणों के दौरान बंद
+spento nelle Impostazioni	सेटिंग्स में बंद
+spento: la cartella del programma non è scrivibile (aggiornare a mano)	बंद: प्रोग्राम फ़ोल्डर में लिखा नहीं जा सकता (हाथ से अपडेट करें)
+gestito da un'altra finestra di YA-GT già aperta	पहले से खुली दूसरी YA-GT विंडो द्वारा संभाला जा रहा है
+pacchetto troppo grande, non si scarica	पैकेज बहुत बड़ा है, डाउनलोड नहीं होगा
+pacchetto tar.gz non gestito su questa piattaforma	इस प्लेटफ़ॉर्म पर tar.gz पैकेज समर्थित नहीं है
+nessuna versione pubblicata su {0}	{0} पर कोई संस्करण प्रकाशित नहीं
+versione pubblicata non leggibile: {0}	प्रकाशित संस्करण पढ़ा नहीं जा सका: {0}
+hai già l'ultima versione ({0})	आपके पास पहले से नवीनतम संस्करण है ({0})
+aggiornato: l'ultima versione è la {0} ({1})	अद्यतित: नवीनतम संस्करण {0} है ({1})
+versione {0} disponibile su {1}	संस्करण {0} {1} पर उपलब्ध
+versione {0} pubblicata, ma senza il pacchetto {1}	संस्करण {0} प्रकाशित, पर पैकेज {1} के बिना
+versione {0}: mancano impronta o firma del pacchetto, non si installa	संस्करण {0}: पैकेज का फ़िंगरप्रिंट या हस्ताक्षर नहीं है, इंस्टॉल नहीं होगा
+scarico la versione {0} ({1})	संस्करण {0} डाउनलोड हो रहा है ({1})
+versione {0}: impronta SHA-256 diversa, pacchetto scartato	संस्करण {0}: SHA-256 फ़िंगरप्रिंट अलग है, पैकेज अस्वीकृत
+versione {0}: FIRMA NON VALIDA, pacchetto scartato	संस्करण {0}: हस्ताक्षर अमान्य, पैकेज अस्वीकृत
+controllo non riuscito: {0} (riprovo fra {1} minuti)	जाँच विफल: {0} ({1} मिनट में फिर प्रयास)
+aggiornato da {0} a {1} il {2}	{0} से {1} में अपडेट, {2}
+versione {0} installata: entra in funzione al prossimo avvio di YA-GT	संस्करण {0} इंस्टॉल: YA-GT के अगली बार शुरू होने पर लागू होगा
+installazione della {0} non riuscita, rimessa la {1}: {2}	{0} का इंस्टॉलेशन विफल, {1} बहाल: {2}
+LoTW (copia salvata)	LoTW (सहेजी गई प्रति)
+Collegamento a LoTW in corso…	LoTW से कनेक्ट हो रहा है…
+LoTW ha rifiutato l'accesso: controlla nome utente e password.	LoTW ने पहुँच अस्वीकार की: उपयोगकर्ता नाम और पासवर्ड जाँचें।
+Risposta inattesa da LoTW (non è un file ADIF). Riprova più tardi.	LoTW से अप्रत्याशित उत्तर (ADIF फ़ाइल नहीं)। बाद में फिर प्रयास करें।
+Il file ricevuto da LoTW sembra incompleto. Riprova.	LoTW से मिली फ़ाइल अधूरी लगती है। फिर प्रयास करें।
+{0}: {1} QSO letti, {2} in totale	{0}: {1} QSO पढ़े गए, कुल {2}
+Ricezione dati da LoTW: {0:N0} kB…	LoTW से डेटा प्राप्त हो रहा है: {0:N0} kB…
+tutte le bande	सभी बैंड
+{0} mi sentono · {1} sento · {2} decodifiche	{0} मुझे सुनते हैं · {1} मैं सुनता हूँ · {2} डिकोड
+G7VRD in coda {0}	G7VRD कतार में {0}
+ ⇄ {0} inoltro {1}/{2}	 ⇄ {0} अग्रेषण {1}/{2}
+KC2G {0}: {1} curve, {2} ionosonde	KC2G {0}: {1} वक्र, {2} आयनोसोंड
+Aurora NOAA: previsione {0}	NOAA ध्रुवीय ज्योति: पूर्वानुमान {0}
+Proiezione	प्रक्षेप
+Mercatore	मर्केटर
+Azimutale	दिगंशीय
+Aggiornamento	अपडेट
+Banda	बैंड
+Tutte	सभी
+Spot degli ultimi	पिछले के स्पॉट
+Aggiorna ora	अभी अपडेट करें
+Vista intera	पूरा दृश्य
+Impostazioni	सेटिंग्स
+Livelli della mappa	मानचित्र परतें
+Statistiche (in alto a destra)	आँकड़े (ऊपर दाएँ)
+Chi mi sente (spot)	मुझे कौन सुनता है (स्पॉट)
+Stazioni che ricevono il tuo segnale: fumetto con l'SNR, bordo blu	आपका सिग्नल पाने वाले स्टेशन: SNR वाला गुब्बारा, नीला किनारा
+Chi sento io (spot)	मैं किसे सुनता हूँ (स्पॉट)
+Stazioni che tu ricevi (PSKReporter, tuo skimmer RBN): bordo viola	आप जिन्हें पाते हैं (PSKReporter, आपका RBN स्किमर): बैंगनी किनारा
+Le mie decodifiche (UDP)	मेरे डिकोड (UDP)
+Decodifiche di WSJT-X/JTDX/MSHV ricevute via UDP: nuvoletta ovale	UDP से मिले WSJT-X/JTDX/MSHV डिकोड: अंडाकार बादल
+Nominativo nei fumetti	गुब्बारों में कॉल साइन
+Percorsi (cerchio massimo)	पथ (महावृत्त)
+Griglia Maidenhead	Maidenhead ग्रिड
+Greyline (giorno/notte)	ग्रेलाइन (दिन/रात)
+Propagazione KC2G	KC2G प्रसार
+prop.kc2g.com: curve della MUF(3000) o della foF2 e valori delle ionosonde	prop.kc2g.com: MUF(3000) या foF2 के वक्र और आयनोसोंड के मान
+Aurora NOAA (OVATION)	NOAA ध्रुवीय ज्योति (OVATION)
+Probabilità di aurora del NOAA SWPC, ridisegnata in Mercatore e in azimutale	NOAA SWPC की ध्रुवीय ज्योति संभावना, मर्केटर और दिगंशीय में फिर से बनाई गई
+Quadrati (LoTW + QLog)	वर्ग (LoTW + QLog)
+Arancio = lavorato, verde = LoTW, blu = QSL, grigio = confermato su tutte le bande 80-10 m (esclusi i 60 m)	नारंगी = संपर्क, हरा = LoTW, नीला = QSL, धूसर = सभी बैंड 80-10 m पर पुष्ट (60 m को छोड़कर)
+Solo confermati	केवल पुष्ट
+Solo EME (PROP__MODE)	केवल EME (PROP__MODE)
+Scarica da LoTW…	LoTW से डाउनलोड…
+Apri ADIF…	ADIF खोलें…
+QSO del log QLog	QLog लॉग के QSO
+Legge qlog.db (copia in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato	qlog.db पढ़ता है (केवल-पठन प्रति): हरे वर्ग = LoTW, नीले = QSL, नारंगी = संपर्क
+qlog.db: posizione standard di QLog	qlog.db: QLog का मानक स्थान
+Fonti degli spot	स्पॉट के स्रोत
+mqtt.pskreporter.info, più lo storico dell'ultima ora via HTTP	mqtt.pskreporter.info, साथ में HTTP से पिछले घंटे का इतिहास
+telnet.reversebeacon.net porte 7000 (CW/RTTY) e 7001 (FT8/FT4)	telnet.reversebeacon.net पोर्ट 7000 (CW/RTTY) और 7001 (FT8/FT4)
+DM4X (cluster telnet)	DM4X (telnet क्लस्टर)
+dm4x.ddns.net:8500, spot PSKReporter in forma di cluster	dm4x.ddns.net:8500, क्लस्टर रूप में PSKReporter स्पॉट
+DXMAPS (2° cluster)	DXMAPS (दूसरा क्लस्टर)
+Rete skimmer	स्किमर नेटवर्क
+Invia set/skimmer (o set/noskimmer) al secondo cluster	दूसरे क्लस्टर को set/skimmer (या set/noskimmer) भेजता है
+Decodifiche UDP (WSJT-X/MSHV)	UDP डिकोड (WSJT-X/MSHV)
+Porta e inoltro UDP in Impostazioni	UDP पोर्ट और अग्रेषण सेटिंग्स में
+Tema	थीम
+Chiaro (YA-NEC)	हल्का (YA-NEC)
+Notte	रात
+YA-GT — impostazioni	YA-GT — सेटिंग्स
+Rimbalzo UDP: inoltra i pacchetti e riporta indietro le risposte	UDP रिले: पैकेट आगे भेजता है और उत्तर वापस लाता है
+facoltative: 127.0.0.1:2333, 192.168.1.20:2237	वैकल्पिक: 127.0.0.1:2333, 192.168.1.20:2237
+Decodifiche UDP (protocollo WSJT-X: WSJT-X, JTDX, MSHV)	UDP डिकोड (WSJT-X प्रोटोकॉल: WSJT-X, JTDX, MSHV)
+Ricezione: ascolta su	प्राप्ति: इस पर सुनें
+Per l'indirizzo multicast (es. 224.0.0.1) YA-GT si unisce al gruppo; con 127.0.0.1 la porta non può essere la stessa di un altro programma in ascolto.	मल्टीकास्ट पते (जैसे 224.0.0.1) के लिए YA-GT समूह से जुड़ता है; 127.0.0.1 के साथ पोर्ट किसी दूसरे सुन रहे प्रोग्राम जैसा नहीं हो सकता।
+Ritrasmissione: verso	अग्रेषण: इस ओर
+Altre destinazioni	अन्य गंतव्य
+La destinazione principale è di solito QLog; nelle altre puoi aggiungere host:porta separati da virgola (GridTracker, JTAlert). I pacchetti passano identici, QSO registrati compresi, quindi QLog scrive il QSO da solo; le risposte (doppio clic, evidenziazioni) tornano al programma digitale. In QLog metti come porta WSJT-X la stessa porta di ritrasmissione.	मुख्य गंतव्य आम तौर पर QLog है; अन्य में आप अल्पविराम से अलग host:port जोड़ सकते हैं (GridTracker, JTAlert)। पैकेट बिना बदले गुजरते हैं, दर्ज QSO सहित, इसलिए QLog स्वयं QSO दर्ज करता है; उत्तर (डबल क्लिक, हाइलाइट) डिजिटल प्रोग्राम में लौटते हैं। QLog में WSJT-X पोर्ट वही अग्रेषण पोर्ट रखें।
+Log di QLog	QLog लॉग
+Sfoglia…	ब्राउज़ करें…
+Vuoto = posizione standard di QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Il file di QLog non viene mai modificato: si legge una copia.	खाली = QLog का मानक स्थान (%LOCALAPPDATA%\hamradio\QLog\qlog.db)। QLog फ़ाइल कभी नहीं बदली जाती: एक प्रति पढ़ी जाती है।
+Aggiornamento automatico	स्वचालित अपडेट
+Controlla adesso	अभी जाँचें
+Lingua	भाषा
+La nuova lingua vale dal prossimo avvio del programma.	नई भाषा प्रोग्राम के अगली बार शुरू होने से लागू होगी।
+Salva	सहेजें
+Annulla	रद्द करें
+Scarica da LoTW	LoTW से डाउनलोड करें
+Ricorda il nome utente (la password non viene mai salvata)	उपयोगकर्ता नाम याद रखें (पासवर्ड कभी सहेजा नहीं जाता)
+Vengono scaricati tutti i QSO caricati su LoTW, con i dettagli delle conferme (locatore del corrispondente). Con log grandi LoTW può impiegare qualche minuto.	LoTW पर अपलोड सभी QSO पुष्टि के विवरण (सामने वाले स्टेशन का लोकेटर) के साथ डाउनलोड होते हैं। बड़े लॉग में LoTW को कुछ मिनट लग सकते हैं।
+Nome utente LoTW	LoTW उपयोगकर्ता नाम
+Password LoTW	LoTW पासवर्ड
+Solo nominativo (facoltativo)	केवल कॉल साइन (वैकल्पिक)
+Scarica	डाउनलोड
+Spot di un nominativo, LoTW, QLog e decodifiche UDP su una mappa a livelli	कॉल साइन के स्पॉट, LoTW, QLog और UDP डिकोड परतों वाले मानचित्र पर
+Contatti	संपर्क
+Sostieni il progetto: ko-fi.com/ic8tem	परियोजना का समर्थन करें: ko-fi.com/ic8tem
+Riconoscimenti (credits)	आभार (credits)
+I dati restano accanto al programma (YA-GT.ini, CALL3.TXT, cartella Dati): nulla in AppData. La password LoTW non viene mai salvata.	डेटा प्रोग्राम के पास रहता है (YA-GT.ini, CALL3.TXT, Dati फ़ोल्डर): AppData में कुछ नहीं। LoTW पासवर्ड कभी सहेजा नहीं जाता।
+Chiudi	बंद करें
+YA-GT — avvio	YA-GT — प्रारंभ
+Spot, LoTW, QLog e decodifiche sulla mappa — di Costantino IC8TEM	मानचित्र पर स्पॉट, LoTW, QLog और डिकोड — Costantino IC8TEM
+Nominativo	कॉल साइन
+Locatore (6 caratteri)	लोकेटर (6 अक्षर)
+Il locatore fa da centro della mappa azimutale e serve a calcolare distanza e azimut di ogni spot.	लोकेटर दिगंशीय मानचित्र का केंद्र है और हर स्पॉट की दूरी और दिगंश की गणना में काम आता है।
+Avvia	शुरू करें
+Esci	बाहर निकलें
+Stazioni che tu ricevi: bordo viola	आप जिन्हें पाते हैं: बैंगनी किनारा
+Decodifiche di WSJT-X/JTDX/MSHV via UDP: nuvoletta ovale	UDP से WSJT-X/JTDX/MSHV डिकोड: अंडाकार बादल
+prop.kc2g.com: curve della MUF(3000) o della foF2	prop.kc2g.com: MUF(3000) या foF2 के वक्र
+Solo EME (PROP_MODE)	केवल EME (PROP_MODE)
+Legge qlog.db (copia in sola lettura)	qlog.db पढ़ता है (केवल-पठन प्रति)
+Ricezione su	प्राप्ति
+Ritrasmetti a	आगे भेजें
+Altre (facolt.)	अन्य (वैक.)
+La destinazione principale è di solito QLog; nelle altre host:porta separati da virgola (GridTracker, JTAlert). Passano anche i QSO registrati, quindi QLog scrive il QSO da solo; le risposte tornano al programma digitale. In QLog metti come porta WSJT-X la porta di ritrasmissione.	मुख्य गंतव्य आम तौर पर QLog है; अन्य में अल्पविराम से अलग host:port (GridTracker, JTAlert)। दर्ज QSO भी गुजरते हैं, इसलिए QLog स्वयं QSO दर्ज करता है; उत्तर डिजिटल प्रोग्राम में लौटते हैं। QLog में WSJT-X पोर्ट अग्रेषण पोर्ट रखें।
+Vuoto = posizione standard di QLog (%LOCALAPPDATA%\hamradio\QLog\qlog.db). Si legge una copia: il file di QLog non viene mai modificato.	खाली = QLog का मानक स्थान (%LOCALAPPDATA%\hamradio\QLog\qlog.db)। एक प्रति पढ़ी जाती है: QLog फ़ाइल कभी नहीं बदली जाती।
+Nome utente LoTW:	LoTW उपयोगकर्ता नाम:
+Password LoTW:	LoTW पासवर्ड:
+Solo nominativo (facoltativo):	केवल कॉल साइन (वैकल्पिक):
+Mi sentono	मुझे सुनते हैं
+Sento io	मैं सुनता हूँ
+Mie decodifiche (UDP)	मेरे डिकोड (UDP)
+mi sentono	मुझे सुनते हैं
+sento io	मैं सुनता हूँ
+mie decodifiche (UDP)	मेरे डिकोड (UDP)
+lavorato	संपर्क हुआ
+tutte 80-10 m	सभी 80-10 m
+non ancora controllato	अभी जाँचा नहीं
+PSKReporter — Philip Gladstone N1DQ: flusso MQTT (mqtt.pskreporter.info) e interfaccia HTTP	PSKReporter — Philip Gladstone N1DQ: MQTT धारा (mqtt.pskreporter.info) और HTTP इंटरफ़ेस
+Cluster DM4X (dm4x.ddns.net:8500): spot PSKReporter in forma di cluster	DM4X क्लस्टर (dm4x.ddns.net:8500): क्लस्टर रूप में PSKReporter स्पॉट
+DXMAPS — Gabriel Sampol EA6VQ: secondo cluster con rete skimmer (dxmaps.com:7300)	DXMAPS — Gabriel Sampol EA6VQ: स्किमर नेटवर्क वाला दूसरा क्लस्टर (dxmaps.com:7300)
+prop.kc2g.com — Andrew Rodland KC2G: mappe di propagazione MUF/foF2 (GeoJSON)	prop.kc2g.com — Andrew Rodland KC2G: MUF/foF2 प्रसार मानचित्र (GeoJSON)
+NOAA Space Weather Prediction Center: modello OVATION Prime dell'ovale aurorale	NOAA Space Weather Prediction Center: ध्रुवीय ज्योति अंडाकार का OVATION Prime मॉडल
+ARRL Logbook of The World (LoTW): report ADIF delle conferme	ARRL Logbook of The World (LoTW): पुष्टियों की ADIF रिपोर्ट
+QLog — Ladislav Foldyna OK1MLG: struttura del database qlog.db	QLog — Ladislav Foldyna OK1MLG: qlog.db डेटाबेस की संरचना
+Protocollo UDP di WSJT-X (K1JT e WSJT Development Group); JTDX; MSHV (LZ2HV)	WSJT-X का UDP प्रोटोकॉल (K1JT और WSJT Development Group); JTDX; MSHV (LZ2HV)
+CALL3.TXT: WSJT-X Improved (DG2YCB), CALL3 EME di W7GJ, grid_data.bin di JTDX, database di MSHV-IC8TEM e LIVETROPOVHF	CALL3.TXT: WSJT-X Improved (DG2YCB), W7GJ का EME CALL3, JTDX का grid_data.bin, MSHV-IC8TEM और LIVETROPOVHF डेटाबेस
+G7VRD: ricerca dei locatori per nominativo (api.g7vrd.co.uk)	G7VRD: कॉल साइन से लोकेटर खोज (api.g7vrd.co.uk)
+cty.dat — Jim Reisert AD1C (country-files.com): prefissi e paesi DXCC	cty.dat — Jim Reisert AD1C (country-files.com): DXCC उपसर्ग और देश
+Natural Earth: coste e confini (pubblico dominio)	Natural Earth: तटरेखाएँ और सीमाएँ (सार्वजनिक डोमेन)
+Codice ripreso da LIVETROPOVHF e LoTW Grid Map v2 (IC8TEM)	LIVETROPOVHF और LoTW Grid Map v2 से लिया गया कोड (IC8TEM)
