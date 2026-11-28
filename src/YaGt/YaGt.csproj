@@ -28,6 +28,8 @@
     <PackageReference Include="Avalonia.Themes.Fluent" Version="11.3.*" />
     <PackageReference Include="MQTTnet" Version="4.3.*" />
     <PackageReference Include="Microsoft.Data.Sqlite" Version="9.0.*" />
+    <PackageReference Include="MySqlConnector" Version="2.4.*" />
+    <PackageReference Include="System.Data.OleDb" Version="9.0.*" />
   </ItemGroup>
 
   <ItemGroup>

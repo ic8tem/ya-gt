@@ -208,6 +208,7 @@ public sealed class MainForm : Form
             st.Start(); _conn.Text = st.ConnectionsText(); StartTour();
             if (!string.IsNullOrEmpty(st.UpdateMessage)) _hover.Text = "YA-GT " + st.UpdateMessage;
         };
+        st.UdpProblems += r => { try { BeginInvoke((Action)(() => { using (var f = new UdpCheckForm(st, r)) f.ShowDialog(this); })); } catch { } };
         Updater.Ready += v => { try { BeginInvoke((Action)(() => MessageBox.Show(this, L.F("È stata installata la versione {0} di YA-GT.\nEntra in funzione al prossimo avvio del programma.", v), L.T("YA-GT — aggiornamento"), MessageBoxButtons.OK, MessageBoxIcon.Information))); } catch { } };
     }
 
@@ -262,7 +263,7 @@ public sealed class MainForm : Form
         p.Controls.Add(Ind(Track(_st.Kc2gAlpha, v => { _st.Kc2gAlpha = v; Redraw(); })));
         p.Controls.Add(W.Check("Aurora NOAA (OVATION)", _st.LayerAurora, v => { _st.LayerAurora = v; _st.SaveSettings(); if (v) _st.RefreshNow(); else _map.Invalidate(); }));
         p.Controls.Add(Ind(Track(_st.AuroraAlpha, v => { _st.AuroraAlpha = v; Redraw(); })));
-        p.Controls.Add(W.Check("Quadrati (LoTW + QLog)", _st.LayerLotw, v => { _st.LayerLotw = v; _st.SaveSettings(); if (v) _st.RefreshNow(); else _st.Rebuild(); }, _tips, "Arancio = lavorato, verde = LoTW, blu = QSL, grigio = confermato su tutte le bande 80-10 m (esclusi i 60 m)"));
+        p.Controls.Add(W.Check("Quadrati (LoTW + log)", _st.LayerLotw, v => { _st.LayerLotw = v; _st.SaveSettings(); if (v) _st.RefreshNow(); else _st.Rebuild(); }, _tips, "Arancio = lavorato, verde = LoTW, blu = QSL, grigio = confermato su tutte le bande 80-10 m (esclusi i 60 m)"));
         _lotwTag = new ComboBox { DropDownStyle = ComboBoxStyle.DropDownList, Width = 190 };
         FillLotwTags();
         _lotwTag.SelectedIndexChanged += (_, _) => { if (_lotwTag.SelectedIndex >= 0 && _lotwTag.SelectedIndex < _lotwTags.Count) { _st.LotwTag = _lotwTags[_lotwTag.SelectedIndex]; Rebuild(); } };
@@ -273,7 +274,7 @@ public sealed class MainForm : Form
         lb.Controls.Add(W.Button("Scarica da LoTW…", () => { using (var f = new LotwForm(_st)) f.ShowDialog(this); FillLotwTags(); _st.Rebuild(); }));
         lb.Controls.Add(W.Button("Apri ADIF…", OpenAdif));
         p.Controls.Add(Ind(lb));
-        p.Controls.Add(W.Check("QSO del log QLog", _st.LayerQLog, v => { _st.LayerQLog = v; _st.SaveSettings(); if (v) _st.RefreshNow(); else _map.Invalidate(); }, _tips, "Legge qlog.db (copia in sola lettura)"));
+        p.Controls.Add(W.Check("QSO dei log (QLog e altri)", _st.LayerQLog, v => { _st.LayerQLog = v; _st.SaveSettings(); if (v) _st.RefreshNow(); else _map.Invalidate(); }, _tips, "Legge qlog.db e, se scelto nelle Impostazioni, gli altri log scelti nelle Impostazioni (copie in sola lettura)"));
 
         p.Controls.Add(Sec("Fonti degli spot"));
         p.Controls.Add(W.Check("PSKReporter (MQTT)", _st.SrcPsk, v => { _st.SrcPsk = v; _st.SaveSettings(); _st.ApplySources(); }));
@@ -300,7 +301,7 @@ public sealed class MainForm : Form
         _lotwTag.Items.Clear(); _lotwTags.Clear();
         void Add(string tag, string title) { _lotwTags.Add(tag); _lotwTag.Items.Add(title); }
         Add("BAND", L.T("Banda scelta in alto")); Add("ALL", L.T("Tutte le bande")); Add("G:1", "HF 80-10 m"); Add("G:2", "VHF 6 m-1,25 m"); Add("G:3", L.T("UHF e oltre"));
-        foreach (var b in _st.Lotw.BandsPresent(_st.QLog.Qsos)) Add("B:" + b, b);
+        foreach (var b in _st.Lotw.BandsPresent(_st.LogQsos())) Add("B:" + b, b);
         var idx = _lotwTags.IndexOf(keep);
         _lotwTag.SelectedIndex = idx >= 0 ? idx : 0;
     }
@@ -350,7 +351,8 @@ public sealed class SettingsForm : Form
         FormBorderStyle = FormBorderStyle.FixedDialog; MaximizeBox = false; MinimizeBox = false;
         StartPosition = FormStartPosition.CenterParent;
         AutoScaleMode = AutoScaleMode.Dpi;
-        ClientSize = new Size(560, 632);
+        ClientSize = new Size(580, 600);
+        AutoScroll = true;
         Font = W.Ui;
         BackColor = W.C(W.Th.Page);
         int y = 12;
@@ -380,7 +382,39 @@ public sealed class SettingsForm : Form
         browse.Click += (_, _) => { using (var d = new OpenFileDialog { Filter = "qlog.db|*.db|" + L.T("Tutti i file") + "|*.*" }) if (d.ShowDialog(this) == DialogResult.OK) qlog.Text = d.FileName; };
         y += 30;
         Lab("Vuoto = posizione standard di QLog (%LOCALAPPDATA%\\hamradio\\QLog\\qlog.db). Si legge una copia: il file di QLog non viene mai modificato.", 14, y, false, 520).ForeColor = W.C(W.Th.Muted);
-        y += 44;
+        y += 40;
+        var bUdp = new Button { Text = "Verifica UDP…", Location = new Point(14, y), Size = new Size(110, 26) }; Controls.Add(bUdp);
+        bUdp.Click += (_, _) => { using (var f = new UdpCheckForm(st)) f.ShowDialog(this); };
+        var udpStart = new CheckBox { Text = "Controlla all'avvio WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM, QLog", Checked = st.UdpCheckAtStart, Location = new Point(132, y + 4), AutoSize = true }; Controls.Add(udpStart);
+        y += 32;
+        Lab("UDP secondaria (ADIF)", 14, y + 3);
+        var u2 = new ComboBox { DropDownStyle = ComboBoxStyle.DropDownList, Location = new Point(150, y), Width = 170 }; Controls.Add(u2);
+        u2.Items.AddRange(new object[] { "non toccarla, solo avvisi", "mandala a", "spegnila" });
+        u2.SelectedIndex = st.Udp2Mode == "set" ? 1 : st.Udp2Mode == "off" ? 2 : 0;
+        var u2h = new TextBox { Text = st.Udp2Host, Location = new Point(326, y), Width = 110 }; Controls.Add(u2h);
+        Lab("porta", 442, y + 3);
+        var u2p = new TextBox { Text = st.Udp2Port.ToString(CultureInfo.InvariantCulture), Location = new Point(484, y), Width = 56 }; Controls.Add(u2p);
+        y += 26;
+        var u2hint = Lab("Porta solo l'ADIF dei QSO a un altro log (Log4OM, N1MM, HRD…). Di base YA-GT non la tocca e segnala solo le scelte fuorvianti.", 14, y, false, 530);
+        u2hint.ForeColor = W.C(W.Th.Muted);
+        y += 36;
+        Lab("Altri log di stazione", 14, y, true).ForeColor = W.C(W.Th.Accent); y += 24;
+        var logs = new TextBox { Text = st.LogSources.Replace("\n", "\r\n"), Location = new Point(14, y), Size = new Size(530, 84), Multiline = true, ScrollBars = ScrollBars.Both, WordWrap = false, Font = new Font("Consolas", 8.5f) }; Controls.Add(logs);
+        void AddLine(string l) { var t = logs.Text.TrimEnd(); if (!StationLogs.Lines(t).Contains(l)) logs.Text = (t == "" ? "" : t + "\r\n") + l; }
+        y += 90;
+        var bFile = new Button { Text = "Aggiungi file…", Location = new Point(14, y), Size = new Size(110, 26) }; Controls.Add(bFile);
+        var bFind = new Button { Text = "Trova sul computer", Location = new Point(128, y), Size = new Size(130, 26) }; Controls.Add(bFind);
+        var bMy = new Button { Text = "+ MySQL", Location = new Point(262, y), Size = new Size(76, 26) }; Controls.Add(bMy);
+        var bWl = new Button { Text = "+ Wavelog", Location = new Point(342, y), Size = new Size(84, 26) }; Controls.Add(bWl);
+        var bQrz = new Button { Text = "+ QRZ", Location = new Point(430, y), Size = new Size(64, 26) }; Controls.Add(bQrz);
+        bFile.Click += (_, _) => { using (var d = new OpenFileDialog { Multiselect = true, Filter = "Log (ADIF, Cabrillo, SQLite, Access)|*.adi;*.adif;*.adx;*.log;*.cbr;*.SQLite;*.s3db;*.db;*.dat;*.sql;*.mdb;*.accdb|Tutti i file|*.*" }) if (d.ShowDialog(this) == DialogResult.OK) foreach (var f in d.FileNames) AddLine(f); };
+        bMy.Click += (_, _) => AddLine("mysql: server=localhost;port=3306;database=NOME;user=UTENTE;password=PASSWORD");
+        bWl.Click += (_, _) => AddLine("wavelog: https://INDIRIZZO CHIAVE_API ID_STAZIONE");
+        bQrz.Click += (_, _) => AddLine("qrz: CHIAVE_API_LOGBOOK");
+        y += 30;
+        var logHint = Lab("Uno per riga (# = spenta): ADIF/ADX (WSJT-X, JTDX, MSHV, Logger32), Cabrillo, SQLite (Log4OM, N1MM+, KLog), Access (DXKeeper, ACLog, Swisslog, HRD; serve il driver Access), MySQL (CQRLOG, HRD), Wavelog/Cloudlog, QRZ. I file degli altri programmi non vengono mai modificati.", 14, y, false, 530);
+        logHint.ForeColor = W.C(W.Th.Muted); logHint.Size = new Size(530, 46);
+        y += 50;
         Lab("Aggiornamento automatico", 14, y, true).ForeColor = W.C(W.Th.Accent); y += 24;
         var auto = new CheckBox { Text = L.F("Aggiornamento automatico dal GitHub (ogni {0} minuti)", Updater.IntervalMinutes), Checked = Updater.Enabled, Location = new Point(14, y), AutoSize = true }; Controls.Add(auto);
         var now = new Button { Text = "Controlla adesso", Location = new Point(400, y - 3), Size = new Size(130, 26) }; Controls.Add(now);
@@ -399,9 +433,11 @@ public sealed class SettingsForm : Form
         Lab("La nuova lingua vale dal prossimo avvio del programma.", 244, y + 3).ForeColor = W.C(W.Th.Muted);
         y += 30;
         var err = Lab("", 14, y, false, 520); err.ForeColor = Color.Firebrick;
-        var ok = new Button { Text = "Salva", Location = new Point(452, 588), Size = new Size(90, 30), BackColor = W.C(W.Th.Accent), ForeColor = Color.White, FlatStyle = FlatStyle.Flat };
-        var cancel = new Button { Text = "Annulla", Location = new Point(354, 588), Size = new Size(90, 30), DialogResult = DialogResult.Cancel };
+        bFind.Click += (_, _) => { var k = StationLogs.FindKnown(); foreach (var f in k) AddLine(f); if (k.Count == 0) err.Text = "Nessun log trovato nelle cartelle abituali."; };
+        var ok = new Button { Text = "Salva", Location = new Point(452, y + 30), Size = new Size(90, 30), BackColor = W.C(W.Th.Accent), ForeColor = Color.White, FlatStyle = FlatStyle.Flat };
+        var cancel = new Button { Text = "Annulla", Location = new Point(354, y + 30), Size = new Size(90, 30), DialogResult = DialogResult.Cancel };
         Controls.Add(ok); Controls.Add(cancel);
+        ClientSize = new Size(600, Math.Min(y + 80, Screen.PrimaryScreen.WorkingArea.Height - 60));
         AcceptButton = ok; CancelButton = cancel;
         ok.Click += (_, _) =>
         {
@@ -416,12 +452,18 @@ public sealed class SettingsForm : Form
             st.Udp.ForwardHost = fh; st.Udp.ForwardPort = fp; st.Udp.ForwardTo = fwdTo.Text.Trim();
             st.QLogPath = qlog.Text.Trim();
             if (lang.SelectedIndex >= 0) st.S.Set("lingua", L.All[lang.SelectedIndex][0]);
+            st.LogSources = string.Join("\n", StationLogs.Lines(logs.Text));
+            st.UdpCheckAtStart = udpStart.Checked;
+            if (u2.SelectedIndex == 1 && (!int.TryParse(u2p.Text, NumberStyles.Integer, CultureInfo.InvariantCulture, out var p2) || p2 <= 0 || p2 > 65535)) { err.Text = "Porta della UDP secondaria non valida."; return; }
+            st.Udp2Mode = u2.SelectedIndex == 1 ? "set" : u2.SelectedIndex == 2 ? "off" : "warn";
+            st.Udp2Host = u2h.Text.Trim() == "" ? "127.0.0.1" : u2h.Text.Trim();
+            if (int.TryParse(u2p.Text, NumberStyles.Integer, CultureInfo.InvariantCulture, out var p3) && p3 > 0 && p3 <= 65535) st.Udp2Port = p3;
             bool wasOn = Updater.Enabled;
             Updater.Enabled = auto.Checked;
             if (Updater.Enabled && !wasOn) Updater.Start(); else if (!Updater.Enabled) Updater.Stop();
             st.SaveSettings();
             st.RestartUdp();
-            if (st.LayerQLog) st.RefreshNow();
+            if (st.LayerQLog || st.LayerLotw) st.RefreshNow();
             DialogResult = DialogResult.OK;
             Close();
         };
@@ -525,5 +567,75 @@ public sealed class AboutForm : Form
         AcceptButton = close;
         Controls.Add(p);
         W.Translate(this);
+    }
+}
+
+/// <summary>Verifica UDP: impostazioni di WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+ e QLog confrontate con quelle di YA-GT, con la correzione.</summary>
+public sealed class UdpCheckForm : Form
+{
+    readonly AppState _st;
+    readonly RichTextBox _box;
+    readonly Button _fix;
+    List<UdpDoctor.Finding> _res = new List<UdpDoctor.Finding>();
+
+    public UdpCheckForm(AppState st, List<UdpDoctor.Finding> first = null)
+    {
+        _st = st;
+        Text = "YA-GT — verifica UDP";
+        Icon = W.AppIcon();
+        Font = W.Ui;
+        BackColor = W.C(W.Th.Page);
+        StartPosition = FormStartPosition.CenterParent;
+        ClientSize = new Size(760, 520);
+        var t = st.UdpTarget();
+        var head = new Label
+        {
+            Dock = DockStyle.Top, Height = 58, Padding = new Padding(10, 8, 10, 0), ForeColor = W.C(W.Th.Muted),
+            Text = $"YA-GT ascolta su {t.ListenHost}:{t.ListenPort}" + (t.Forward ? $" e ritrasmette a {t.ForwardHost}:{t.ForwardPort}" : " (rimbalzo UDP spento)") +
+                   ". \"Correggi\" mette questi valori nei programmi chiusi, dopo averne copiato le impostazioni nella cartella Dati\\copie-impostazioni. I programmi aperti vanno chiusi prima: alla chiusura riscrivono le loro impostazioni.",
+        };
+        _box = new RichTextBox { Dock = DockStyle.Fill, ReadOnly = true, BorderStyle = BorderStyle.None, BackColor = Color.White, Font = new Font("Segoe UI", 9.5f) };
+        var bar = new FlowLayoutPanel { Dock = DockStyle.Bottom, Height = 44, FlowDirection = FlowDirection.RightToLeft, Padding = new Padding(8) };
+        var close = new Button { Text = "Chiudi", Size = new Size(90, 28) };
+        _fix = new Button { Text = "Correggi", Size = new Size(100, 28), BackColor = W.C(W.Th.Accent), ForeColor = Color.White, FlatStyle = FlatStyle.Flat };
+        var again = new Button { Text = "Ricontrolla", Size = new Size(100, 28) };
+        bar.Controls.Add(close); bar.Controls.Add(_fix); bar.Controls.Add(again);
+        Controls.Add(_box); Controls.Add(head); Controls.Add(bar);
+        close.Click += (_, _) => Close();
+        again.Click += async (_, _) => await Run();
+        _fix.Click += async (_, _) =>
+        {
+            _fix.Enabled = false;
+            var done = await Task.Run(() => UdpDoctor.FixAll(_res));
+            await Run(string.Join("\n", done));
+        };
+        if (first != null) ShowList(first, ""); else Shown += async (_, _) => await Run();
+    }
+
+    async Task Run(string extra = "")
+    {
+        _box.Text = "Controllo in corso…";
+        _fix.Enabled = false;
+        var r = await Task.Run(() => { try { return _st.CheckUdp(); } catch (Exception ex) { return new List<UdpDoctor.Finding> { new UdpDoctor.Finding { Program = "Verifica", Text = ex.Message } }; } });
+        ShowList(r, extra);
+    }
+
+    void ShowList(List<UdpDoctor.Finding> r, string extra)
+    {
+        _res = r;
+        _box.Clear();
+        foreach (var f in r)
+        {
+            _box.SelectionFont = new Font("Segoe UI", 10f, FontStyle.Bold);
+            _box.SelectionColor = f.Ok ? Color.FromArgb(46, 125, 50) : Color.Firebrick;
+            _box.AppendText((f.Ok ? "✔  " : "✘  ") + f.Program + (f.Running ? "  (aperto)" : "") + "\n");
+            _box.SelectionFont = new Font("Segoe UI", 9.5f);
+            _box.SelectionColor = Color.Black;
+            _box.AppendText("     " + f.Text + "\n");
+            if (f.File != "") { _box.SelectionColor = Color.Gray; _box.SelectionFont = new Font("Segoe UI", 8.5f); _box.AppendText("     " + f.File + "\n"); }
+            _box.AppendText("\n");
+        }
+        if (extra != "") { _box.SelectionColor = Color.Black; _box.SelectionFont = new Font("Segoe UI", 9.5f, FontStyle.Bold); _box.AppendText(extra + "\n"); }
+        _fix.Enabled = r.Any(x => x.Fix != null);
     }
 }

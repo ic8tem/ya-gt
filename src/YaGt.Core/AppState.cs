@@ -2,7 +2,7 @@ using System.Globalization;
 
 namespace YaGt.Core;
 
-/// <summary>Una stazione di QLog da mostrare sulla mappa.</summary>
+/// <summary>Una stazione del log (QLog o Log4OM) da mostrare sulla mappa.</summary>
 public sealed class QLogPoint
 {
     public string Call = "";
@@ -58,6 +58,26 @@ public sealed class AppState
     public readonly AuroraData Aurora = new AuroraData();
     public readonly LotwLog Lotw = new LotwLog();
     public readonly QLogDb QLog = new QLogDb();
+    /// <summary>Altri log di stazione (file ADIF/Cabrillo/SQLite/Access, MySQL, Wavelog, QRZ), uno per riga.</summary>
+    public readonly StationLogs Logs = new StationLogs();
+    /// <summary>Controllo delle impostazioni UDP degli altri programmi all'avvio (si avvisa solo se c'è qualcosa da correggere).</summary>
+    public bool UdpCheckAtStart = true;
+    /// <summary>UDP secondaria (ADIF) degli altri programmi: "warn" solo avvisi (predefinito), "set" verso Udp2Host:Udp2Port, "off" spenta.</summary>
+    public string Udp2Mode = "warn";
+    public string Udp2Host = "127.0.0.1";
+    public int Udp2Port = 2333;
+    /// <summary>Esito del controllo all'avvio quando ha trovato problemi.</summary>
+    public event Action<List<UdpDoctor.Finding>> UdpProblems;
+
+    public UdpDoctor.Target UdpTarget() => new UdpDoctor.Target
+    {
+        ListenHost = Udp.ListenAddress, ListenPort = Udp.ListenPort, Forward = Udp.Forward && UdpEnabled,
+        ForwardHost = Udp.ForwardHost, ForwardPort = Udp.ForwardPort,
+        SecondaryMode = Udp2Mode, SecondaryHost = Udp2Host, SecondaryPort = Udp2Port,
+    };
+
+    public List<UdpDoctor.Finding> CheckUdp() => UdpDoctor.Check(UdpTarget(), QLogPath, null);
+    public string LogSources = "";
     public readonly Dictionary<string, TelnetFeed> Feeds = new Dictionary<string, TelnetFeed>();
     public readonly HttpClient Http;
 
@@ -174,6 +194,11 @@ public sealed class AppState
         Proj = S.Get("proj", "merc") == "azi" ? ProjKind.Azimuthal : ProjKind.Mercator;
         ThemeKey = S.Get("theme", "chiaro");
         QLogPath = S.Get("qlog_path", "");
+        LogSources = string.Join("\n", S.Get("log_sources", "").Split('|'));
+        UdpCheckAtStart = S.GetBool("udp_check_start", true);
+        Udp2Mode = S.Get("udp2_mode", "warn"); if (Udp2Mode != "set" && Udp2Mode != "off") Udp2Mode = "warn";
+        Udp2Host = S.Get("udp2_host", "127.0.0.1");
+        Udp2Port = S.GetInt("udp2_port", 2333);
         Updater.Enabled = S.GetBool("auto_update", true);
     }
 
@@ -190,7 +215,7 @@ public sealed class AppState
         S.SetBool("udp", UdpEnabled); S.Set("udp_addr", Udp.ListenAddress); S.SetInt("udp_port", Udp.ListenPort);
         S.SetBool("udp_forward", Udp.Forward); S.Set("udp_forward_host", Udp.ForwardHost); S.SetInt("udp_forward_port", Udp.ForwardPort); S.Set("udp_forward_to", Udp.ForwardTo);
         S.Set("band", BandFilter); S.SetInt("age_min", AgeMin); S.SetInt("refresh_min", RefreshMin);
-        S.Set("proj", Proj == ProjKind.Azimuthal ? "azi" : "merc"); S.Set("theme", ThemeKey); S.Set("qlog_path", QLogPath); S.SetBool("auto_update", Updater.Enabled);
+        S.Set("proj", Proj == ProjKind.Azimuthal ? "azi" : "merc"); S.Set("theme", ThemeKey); S.Set("qlog_path", QLogPath); S.Set("log_sources", string.Join("|", StationLogs.Lines(LogSources))); S.SetBool("udp_check_start", UdpCheckAtStart); S.Set("udp2_mode", Udp2Mode); S.Set("udp2_host", Udp2Host); S.SetInt("udp2_port", Udp2Port); S.SetBool("auto_update", Updater.Enabled);
         S.Save();
     }
 
@@ -223,6 +248,8 @@ public sealed class AppState
             }
             catch (Exception ex) { ErrorLog.Write("avvio", ex); }
             RefreshNow(true);
+            if (UdpCheckAtStart && UdpEnabled && Environment.GetEnvironmentVariable("YAGT_SKIPSTART") != "1")
+                try { var r = CheckUdp(); if (r.Any(x => !x.Ok)) UdpProblems?.Invoke(r); } catch (Exception ex) { ErrorLog.Write("verifica UDP", ex); }
         });
         Mqtt.MyCall = MyCall;
         Mqtt.Spot += OnSpot;
@@ -326,6 +353,7 @@ public sealed class AppState
                 if (LayerKc2g) jobs.Add(Kc2g.LoadAsync(Http, Kc2gMetric, ct));
                 if (LayerAurora) jobs.Add(Aurora.LoadAsync(Http, ct));
                 if (LayerQLog || LayerLotw) jobs.Add(Task.Run(() => QLog.Load(QLogPath)));
+                if (LayerQLog || LayerLotw) jobs.Add(Task.Run(() => Logs.LoadAsync(LogSources, Http, ct)));
                 try { await Task.WhenAll(jobs); } catch { }
                 Spots.Prune(DateTime.UtcNow, Math.Max(AgeMin, 120));
                 Decodes.Prune(DateTime.UtcNow, Math.Max(AgeMin, 120));
@@ -426,16 +454,30 @@ public sealed class AppState
 
     readonly List<QsoRecord> _live = new List<QsoRecord>();
 
-    /// <summary>Il log di QLog più i QSO appena registrati arrivati via UDP (finché QLog non li ha nel database).</summary>
+    /// <summary>Il log di QLog, gli altri log di stazione più i QSO appena registrati arrivati via UDP (finché il log non li ha nel database).</summary>
     public List<QsoRecord> LogQsos()
     {
         var baseList = QLog.Qsos;
+        var l4 = Logs.Qsos;
         List<QsoRecord> live;
         lock (_live) live = _live.ToList();
-        if (live.Count == 0) return baseList;
-        var have = new HashSet<string>(baseList.Select(q => q.Key));
-        var list = baseList.ToList();
-        foreach (var q in live) if (have.Add(q.Key)) list.Add(q);
+        if (live.Count == 0 && l4.Count == 0) return baseList;
+        var have = new Dictionary<string, QsoRecord>();
+        var list = new List<QsoRecord>();
+        foreach (var q in baseList.Concat(l4).Concat(live))
+        {
+            if (have.TryGetValue(q.Key, out var o))
+            {
+                // stesso QSO in due log: si tengono le conferme di entrambi
+                if (q.Lotw && !o.Lotw || q.Qsl && !o.Qsl)
+                {
+                    var m = new QsoRecord { Call = o.Call, Band = o.Band, Mode = o.Mode, PropMode = o.PropMode, Date = o.Date, Time = o.Time, Grid = o.Grid, Grids = o.Grids, Lotw = o.Lotw || q.Lotw, Qsl = o.Qsl || q.Qsl };
+                    list[list.IndexOf(o)] = m; have[q.Key] = m;
+                }
+                continue;
+            }
+            have[q.Key] = q; list.Add(q);
+        }
         return list;
     }
 
@@ -488,6 +530,7 @@ public sealed class AppState
         if (LayerKc2g && Kc2g.Status != "") parts.Add(Kc2g.Status);
         if (LayerAurora && Aurora.Status != "") parts.Add(Aurora.Status);
         if (LayerQLog && QLog.Status != "") parts.Add(QLog.Status);
+        if ((LayerQLog || LayerLotw) && Logs.Status != "") parts.Add(Logs.Status);
         if (LayerLotw && Lotw.Status != "") parts.Add(Lotw.Status);
         if (G7Lookup.Pending > 0) parts.Add(L.F("G7VRD in coda {0}", G7Lookup.Pending));
         return string.Join("  ·  ", parts);

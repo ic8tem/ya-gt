@@ -62,6 +62,7 @@ public sealed class MainWindow : Window
             st.Start(); _conn.Text = st.ConnectionsText();
             if (!string.IsNullOrEmpty(st.UpdateMessage)) _hover.Text = "YA-GT " + st.UpdateMessage;
         };
+        st.UdpProblems += r => Dispatcher.UIThread.Post(() => { try { new UdpCheckWindow(st, r).ShowDialog(this); } catch { } });
         Updater.Ready += v => Dispatcher.UIThread.Post(() =>
         {
             var w = new Window
@@ -156,7 +157,7 @@ public sealed class MainWindow : Window
         p.Children.Add(Ui.Check("Aurora NOAA (OVATION)", _st.LayerAurora, v => { _st.LayerAurora = v; _st.SaveSettings(); if (v) _st.RefreshNow(); else _map.InvalidateVisual(); }, "Probabilità di aurora del NOAA SWPC, ridisegnata in Mercatore e in azimutale"));
         p.Children.Add(Indent(new StackPanel { Orientation = Orientation.Horizontal, Children = { Ui.Label("Opacità", 11, false, Ui.Th.Muted), Slider(_st.AuroraAlpha, v => { _st.AuroraAlpha = v; Redraw(); }) } }));
 
-        p.Children.Add(Ui.Check("Quadrati (LoTW + QLog)", _st.LayerLotw, v => { _st.LayerLotw = v; _st.SaveSettings(); if (v) _st.RefreshNow(); else _st.Rebuild(); }, "Arancio = lavorato, verde = LoTW, blu = QSL, grigio = confermato su tutte le bande 80-10 m (esclusi i 60 m)"));
+        p.Children.Add(Ui.Check("Quadrati (LoTW + log)", _st.LayerLotw, v => { _st.LayerLotw = v; _st.SaveSettings(); if (v) _st.RefreshNow(); else _st.Rebuild(); }, "Arancio = lavorato, verde = LoTW, blu = QSL, grigio = confermato su tutte le bande 80-10 m (esclusi i 60 m)"));
         _lotwTag = new ComboBox { FontSize = 12, Width = 190, Margin = new Thickness(2) };
         FillLotwTags();
         _lotwTag.SelectionChanged += (_, _) => { if (_lotwTag.SelectedItem is ComboBoxItem it && it.Tag is string tag) { _st.LotwTag = tag; Rebuild(); } };
@@ -172,8 +173,8 @@ public sealed class MainWindow : Window
             }
         }));
 
-        p.Children.Add(Ui.Check("QSO del log QLog", _st.LayerQLog, v => { _st.LayerQLog = v; _st.SaveSettings(); if (v) _st.RefreshNow(); else _map.InvalidateVisual(); }, "Legge qlog.db (copia in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato"));
-        p.Children.Add(Indent(Ui.Label(string.IsNullOrEmpty(_st.QLogPath) ? "qlog.db: posizione standard di QLog" : _st.QLogPath, 10, false, Ui.Th.Muted)));
+        p.Children.Add(Ui.Check("QSO dei log (QLog e altri)", _st.LayerQLog, v => { _st.LayerQLog = v; _st.SaveSettings(); if (v) _st.RefreshNow(); else _map.InvalidateVisual(); }, "Legge qlog.db e, se scelto nelle Impostazioni, gli altri log scelti nelle Impostazioni (copie in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato"));
+        p.Children.Add(Indent(Ui.Label((string.IsNullOrEmpty(_st.QLogPath) ? "qlog.db: posizione standard di QLog" : _st.QLogPath) + (StationLogs.Lines(_st.LogSources).Any() ? $" · altri log: {StationLogs.Lines(_st.LogSources).Count()}" : ""), 10, false, Ui.Th.Muted)));
 
         p.Children.Add(Ui.Section("Fonti degli spot"));
         p.Children.Add(Ui.Check("PSKReporter (MQTT)", _st.SrcPsk, v => { _st.SrcPsk = v; _st.SaveSettings(); _st.ApplySources(); }, "mqtt.pskreporter.info, più lo storico dell'ultima ora via HTTP"));
@@ -204,7 +205,7 @@ public sealed class MainWindow : Window
         _lotwTag.Items.Clear();
         void Add(string tag, string title) { _lotwTag.Items.Add(new ComboBoxItem { Content = L.T(title), Tag = tag }); }
         Add("BAND", "Banda scelta in alto"); Add("ALL", "Tutte le bande"); Add("G:1", "HF 80-10 m"); Add("G:2", "VHF 6 m-1,25 m"); Add("G:3", "UHF e oltre");
-        foreach (var b in _st.Lotw.BandsPresent(_st.QLog.Qsos)) Add("B:" + b, b);
+        foreach (var b in _st.Lotw.BandsPresent(_st.LogQsos())) Add("B:" + b, b);
         var idx = _lotwTag.Items.Cast<ComboBoxItem>().ToList().FindIndex(i => (string)i.Tag == keep);
         _lotwTag.SelectedIndex = idx >= 0 ? idx : 0;
     }
