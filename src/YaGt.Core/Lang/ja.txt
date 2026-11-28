@@ -197,3 +197,104 @@ G7VRD: ricerca dei locatori per nominativo (api.g7vrd.co.uk)	G7VRD: コールサ
 cty.dat — Jim Reisert AD1C (country-files.com): prefissi e paesi DXCC	cty.dat — Jim Reisert AD1C (country-files.com): DXCC プリフィックスと国
 Natural Earth: coste e confini (pubblico dominio)	Natural Earth: 海岸線と国境（パブリックドメイン）
 Codice ripreso da LIVETROPOVHF e LoTW Grid Map v2 (IC8TEM)	LIVETROPOVHF と LoTW Grid Map v2 から流用したコード (IC8TEM)
+: file non trovato	: ファイルが見つかりません
+manca il driver di Microsoft Access (Access Database Engine) per questa versione di Windows	この Windows 用の Microsoft Access ドライバー (Access Database Engine) がありません
+i database Access si leggono solo su Windows	Access データベースは Windows でのみ読めます
+manca il driver di Microsoft Access a 64 bit (Microsoft Access Database Engine)	64 ビット版 Microsoft Access ドライバー (Microsoft Access Database Engine) がありません
+: tabella del log non trovata	: ログのテーブルが見つかりません
+Wavelog: scrivi indirizzo, chiave API e numero della stazione	Wavelog: アドレス、API キー、局番号を入力してください
+QRZ: manca la chiave API del logbook	QRZ: ログブックの API キーがありません
+risposta non valida	無効な応答
+invio dei QSO acceso ma senza destinazione (DestinationIPs vuoto)	QSO 送信はオンですが宛先がありません (DestinationIPs が空)
+manda l'XML alla porta {0}, dove ascolta YA-GT con il protocollo WSJT-X	XML をポート {0} に送っています。そこでは YA-GT が WSJT-X プロトコルで受信しています
+manda l'XML alla porta WSJT-X di QLog ({0}): QLog non legge l'XML di N1MM	XML を QLog の WSJT-X ポート ({0}) に送っています: QLog は N1MM の XML を読めません
+manda l'XML al ricevitore ADIF di QLog ({0}): QLog lì aspetta l'ADIF, non l'XML di N1MM	XML を QLog の ADIF 受信 ({0}) に送っています: QLog はそこで N1MM の XML ではなく ADIF を待っています
+nessun programma ascolta sulla porta {0}	ポート {0} で受信しているプログラムはありません
+in YA-GT hai scelto di spegnere gli invii secondari	YA-GT でサブ送信をオフにすることを選びました
+manda i QSO a 	QSO の送り先: 
+invio dei QSO spento	QSO 送信オフ
+ (YA-GT non lo tocca)	 (YA-GT は変更しません)
+N1MM Logger+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe il file .ini)	N1MM Logger+: 開いています。閉じてから再試行してください (閉じるときに .ini ファイルを書き直します)
+N1MM Logger+: invio dei QSO spento (copia in {0})	N1MM Logger+: QSO 送信をオフにしました (コピー: {0})
+N1MM Logger+: tolte le destinazioni sbagliate	N1MM Logger+: 誤った宛先を削除しました
+ e spento l'invio	 、送信をオフにしました
+ (copia in {0})	 (コピー: {0})
+ — per farlo correggere scegli in Impostazioni "spegnila" o "mandala a" per la UDP secondaria	 — 修正するには設定でサブ UDP に「オフにする」か「送り先」を選んでください
+non leggibile: 	読み取れません: 
+ — 2° server UDP (ADIF)	 — 第 2 UDP サーバー (ADIF)
+invio dei QSO spento (YA-GT non lo tocca)	QSO 送信オフ (YA-GT は変更しません)
+Verifica	チェック
+nessun programma trovato (WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+, CQRLOG, QLog)	プログラムが見つかりません (WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+, CQRLOG, QLog)
+ — invio ADIF "N1MM"	 — ADIF 送信「N1MM」
+manda l'ADIF alla porta {0}, dove ascolta YA-GT con il protocollo WSJT-X: va su un'altra porta	ADIF をポート {0} に送っています。そこでは YA-GT が WSJT-X プロトコルで受信しています: 別のポートを使ってください
+manda l'ADIF alla porta WSJT-X di QLog ({0}): QLog lì aspetta il protocollo WSJT-X, non l'ADIF	ADIF を QLog の WSJT-X ポート ({0}) に送っています: QLog はそこで ADIF ではなく WSJT-X プロトコルを待っています
+manda l'ADIF a QLog ({0}) mentre QLog riceve già il QSO dal rimbalzo di YA-GT: rischio di QSO doppi	ADIF を QLog ({0}) に送っていますが、QLog は YA-GT の中継ですでに QSO を受け取っています: QSO が重複するおそれ
+nessun programma ascolta sulla porta {0} (log chiuso o porta sbagliata)	ポート {0} で受信しているプログラムはありません (ログが閉じているかポートが違います)
+in YA-GT hai scelto di mandarla a {0}:{1}	YA-GT で {0}:{1} に送ることを選びました
+in YA-GT hai scelto di spegnerla	YA-GT でオフにすることを選びました
+ADIF a {0}:{1}	ADIF → {0}:{1}
+spenta	オフ
+ (YA-GT non la tocca)	 (YA-GT は変更しません)
+: è aperto, chiudilo e riprova	: 開いています。閉じてから再試行してください
+: ADIF verso {0}:{1}	: ADIF → {0}:{1}
+: UDP secondaria spenta	: サブ UDP をオフにしました
+ — per farla correggere scegli in Impostazioni la destinazione della UDP secondaria (ora: solo avvisi)	 — 修正するには設定でサブ UDP の宛先を選んでください (現在: 警告のみ)
+manda a {0} invece di {1}	{1} ではなく {0} に送っています
+porta {0} invece di {1}	{1} ではなくポート {0}
+"Accetta richieste UDP" spento (le risposte di QLog e degli altri vengono ignorate)	「UDP 要求を受け付ける」がオフ (QLog などからの返信は無視されます)
+{0} altre configurazioni con un'altra porta	別のポートを使う設定がほかに {0} 件
+manda a {0}, richieste UDP accettate	{0} に送信、UDP 要求を受け付けます
+{0}: è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)	{0}: 開いています。閉じてから再試行してください (閉じるときに設定を書き直します)
+{0}: corretto (copia in {1})	{0}: 修正しました (コピー: {1})
+"Enable Decoded Text" spento (YA-GT non vede le decodifiche)	「Enable Decoded Text」がオフ (YA-GT はデコードを見られません)
+"Enable Logged QSO" spento (i QSO non arrivano a QLog)	「Enable Logged QSO」がオフ (QSO が QLog に届きません)
+manda a {0} decodifiche e QSO	デコードと QSO を {0} に送っています
+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)	: 開いています。閉じてから再試行してください (閉じるときに設定を書き直します)
+invio UDP dei QSO spento	QSO の UDP 送信オフ
+manda i QSO a {0}	QSO を {0} に送っています
+server UDP primario spento	メイン UDP サーバーがオフ
+"Accetta richieste UDP" spento	「UDP 要求を受け付ける」がオフ
+Aurora: è aperta, chiudila e riprova	Aurora: 開いています。閉じてから再試行してください
+Aurora: corretta (copia in {0})	Aurora: 修正しました (コピー: {0})
+in YA-GT il rimbalzo UDP è spento: accendilo nelle Impostazioni, altrimenti a QLog non arriva nulla	YA-GT の UDP 中継がオフです: 設定でオンにしてください。そうしないと QLog に何も届きません
+ascolta sulla {0}, la stessa porta di YA-GT: i due programmi si rubano i pacchetti	{0} で受信しています。YA-GT と同じポートです: 2 つのプログラムがパケットを奪い合います
+ascolta sulla {0}, ma YA-GT ritrasmette sulla {1}	{0} で受信していますが、YA-GT は {1} に中継しています
+ascolta sulla {0}, dove YA-GT ritrasmette	{0} で受信しています。YA-GT の中継先です
+QLog: è aperto, chiudilo e riprova	QLog: 開いています。閉じてから再試行してください
+QLog: ora ascolta sulla {0} (copia in {1})	QLog: 現在 {0} で受信しています (コピー: {1})
+ — accendi anche il rimbalzo UDP in YA-GT	 — YA-GT の UDP 中継もオンにしてください
+Porta	ポート
+qualcuno ascolta sulla porta di ritrasmissione (di solito QLog)	中継ポートで受信しているプログラムがあります (通常は QLog)
+nessun programma ascolta sulla porta di ritrasmissione: apri QLog o controlla la sua porta	中継ポートで受信しているプログラムはありません: QLog を開くかそのポートを確認してください
+porta UDP {0} già occupata (forse da QLog o GridTracker): metti quel programma su un'altra porta, es. 2238, e scrivila tra gli inoltri	UDP ポート {0} はすでに使われています (QLog か GridTracker かもしれません): そのプログラムを別のポート (例 2238) に移し、転送先に追加してください
+l'inoltro non può puntare alla porta d'ascolto 	転送先を受信ポートにすることはできません 
+Controlla all'avvio le impostazioni UDP degli altri programmi	起動時にほかのプログラムの UDP 設定をチェックする
+Verifica UDP…	UDP チェック…
+non toccarla, solo avvisi	変更しない、警告のみ
+mandala a	送り先
+spegnila	オフにする
+UDP secondaria (ADIF)	サブ UDP (ADIF)
+Porta solo l'ADIF dei QSO a un altro log (Log4OM, N1MM, HRD…). Di base YA-GT non la tocca e segnala solo le scelte fuorvianti.	QSO の ADIF だけを別のログ (Log4OM, N1MM, HRD…) へ運びます。初期設定では YA-GT は変更せず、誤解を招く設定だけを知らせます。
+Altri log di stazione	ほかの局のログ
+Aggiungi file…	ファイルを追加…
+Log di stazione	局のログ
+Trova i log sul computer	コンピューターでログを探す
+Nessun log trovato nelle cartelle abituali.	いつものフォルダーにログが見つかりません。
+Uno per riga (# = spenta): file ADIF, Cabrillo, SQLite o Access, oppure mysql:, wavelog:, qrz:. I file si rileggono quando cambiano, i log in rete ogni 30 minuti. I file degli altri programmi non vengono mai modificati.	1 行に 1 つ (# = オフ): ADIF、Cabrillo、SQLite、Access のファイル、または mysql:, wavelog:, qrz:。ファイルは変わると読み直し、オンラインのログは 30 分ごとです。ほかのプログラムのファイルは決して変更しません。
+Porta della UDP secondaria non valida.	サブ UDP のポートが無効です。
+YA-GT — verifica UDP	YA-GT — UDP チェック
+YA-GT ascolta su {0}:{1}	YA-GT は {0}:{1} で受信
+ e ritrasmette a {0}:{1}	 、{0}:{1} へ中継
+ (rimbalzo UDP spento)	 (UDP 中継オフ)
+"Correggi" mette questi valori nei programmi chiusi, dopo averne copiato le impostazioni nella cartella Dati\copie-impostazioni. I programmi aperti vanno chiusi prima: alla chiusura riscrivono le loro impostazioni.	「修正」は、設定を Dati\copie-impostazioni フォルダーにコピーしたあと、閉じているプログラムにこれらの値を書き込みます。開いているプログラムは先に閉じてください: 閉じるときに設定を書き直します。
+Controllo in corso…	チェック中…
+aperto	開いている
+QSO dei log (QLog e altri)	ログの QSO (QLog など)
+Legge qlog.db e gli altri log scelti nelle Impostazioni (copie in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato	qlog.db と設定で選んだほかのログを読みます (読み取り専用コピー): 緑 = LoTW、青 = QSL、オレンジ = 交信済み
+Legge qlog.db e gli altri log scelti nelle Impostazioni (copie in sola lettura)	qlog.db と設定で選んだほかのログを読みます (読み取り専用コピー)
+Quadrati (LoTW + log)	グリッド (LoTW + ログ)
+Correggi	修正
+Ricontrolla	再チェック
+Log (ADIF, Cabrillo, SQLite, Access)	ログ (ADIF, Cabrillo, SQLite, Access)
+CQRLOG: è aperto, chiudilo e riprova	CQRLOG: 開いています。閉じてから再試行してください
+CQRLOG: ora ascolta sulla {0} (copia in {1})	CQRLOG: 現在 {0} で受信しています (コピー: {1})

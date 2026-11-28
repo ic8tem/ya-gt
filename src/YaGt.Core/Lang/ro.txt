@@ -197,3 +197,104 @@ G7VRD: ricerca dei locatori per nominativo (api.g7vrd.co.uk)	G7VRD: căutarea lo
 cty.dat — Jim Reisert AD1C (country-files.com): prefissi e paesi DXCC	cty.dat — Jim Reisert AD1C (country-files.com): prefixe și țări DXCC
 Natural Earth: coste e confini (pubblico dominio)	Natural Earth: coaste și granițe (domeniu public)
 Codice ripreso da LIVETROPOVHF e LoTW Grid Map v2 (IC8TEM)	Cod preluat din LIVETROPOVHF și LoTW Grid Map v2 (IC8TEM)
+: file non trovato	: fișier negăsit
+manca il driver di Microsoft Access (Access Database Engine) per questa versione di Windows	lipsește driverul Microsoft Access (Access Database Engine) pentru această versiune de Windows
+i database Access si leggono solo su Windows	bazele de date Access se pot citi doar în Windows
+manca il driver di Microsoft Access a 64 bit (Microsoft Access Database Engine)	lipsește driverul Microsoft Access pe 64 de biți (Microsoft Access Database Engine)
+: tabella del log non trovata	: tabelul jurnalului nu a fost găsit
+Wavelog: scrivi indirizzo, chiave API e numero della stazione	Wavelog: scrie adresa, cheia API și numărul stației
+QRZ: manca la chiave API del logbook	QRZ: lipsește cheia API a jurnalului
+risposta non valida	răspuns nevalid
+invio dei QSO acceso ma senza destinazione (DestinationIPs vuoto)	trimiterea QSO este pornită, dar fără destinație (DestinationIPs gol)
+manda l'XML alla porta {0}, dove ascolta YA-GT con il protocollo WSJT-X	trimite XML-ul pe portul {0}, unde YA-GT ascultă cu protocolul WSJT-X
+manda l'XML alla porta WSJT-X di QLog ({0}): QLog non legge l'XML di N1MM	trimite XML-ul pe portul WSJT-X al QLog ({0}): QLog nu citește XML-ul N1MM
+manda l'XML al ricevitore ADIF di QLog ({0}): QLog lì aspetta l'ADIF, non l'XML di N1MM	trimite XML-ul la receptorul ADIF al QLog ({0}): acolo QLog așteaptă ADIF, nu XML-ul N1MM
+nessun programma ascolta sulla porta {0}	niciun program nu ascultă pe portul {0}
+in YA-GT hai scelto di spegnere gli invii secondari	în YA-GT ai ales să oprești trimiterile secundare
+manda i QSO a 	trimite QSO-urile la 
+invio dei QSO spento	trimiterea QSO oprită
+ (YA-GT non lo tocca)	 (YA-GT nu o atinge)
+N1MM Logger+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe il file .ini)	N1MM Logger+: este deschis, închide-l și încearcă din nou (la închidere ar rescrie fișierul .ini)
+N1MM Logger+: invio dei QSO spento (copia in {0})	N1MM Logger+: trimiterea QSO oprită (copie în {0})
+N1MM Logger+: tolte le destinazioni sbagliate	N1MM Logger+: destinațiile greșite eliminate
+ e spento l'invio	 și trimiterea oprită
+ (copia in {0})	 (copie în {0})
+ — per farlo correggere scegli in Impostazioni "spegnila" o "mandala a" per la UDP secondaria	 — ca să fie corectat, alege în Setări „oprește-l” sau „trimite-l la” pentru UDP-ul secundar
+non leggibile: 	ilizibil: 
+ — 2° server UDP (ADIF)	 — al 2-lea server UDP (ADIF)
+invio dei QSO spento (YA-GT non lo tocca)	trimiterea QSO oprită (YA-GT nu o atinge)
+Verifica	Verificare
+nessun programma trovato (WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+, CQRLOG, QLog)	niciun program găsit (WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+, CQRLOG, QLog)
+ — invio ADIF "N1MM"	 — trimitere ADIF „N1MM”
+manda l'ADIF alla porta {0}, dove ascolta YA-GT con il protocollo WSJT-X: va su un'altra porta	trimite ADIF-ul pe portul {0}, unde YA-GT ascultă cu protocolul WSJT-X: folosește alt port
+manda l'ADIF alla porta WSJT-X di QLog ({0}): QLog lì aspetta il protocollo WSJT-X, non l'ADIF	trimite ADIF-ul pe portul WSJT-X al QLog ({0}): acolo QLog așteaptă protocolul WSJT-X, nu ADIF
+manda l'ADIF a QLog ({0}) mentre QLog riceve già il QSO dal rimbalzo di YA-GT: rischio di QSO doppi	trimite ADIF-ul la QLog ({0}) în timp ce QLog primește deja QSO-ul prin retransmisia YA-GT: risc de QSO dublate
+nessun programma ascolta sulla porta {0} (log chiuso o porta sbagliata)	niciun program nu ascultă pe portul {0} (jurnal închis sau port greșit)
+in YA-GT hai scelto di mandarla a {0}:{1}	în YA-GT ai ales să-l trimiți la {0}:{1}
+in YA-GT hai scelto di spegnerla	în YA-GT ai ales să-l oprești
+ADIF a {0}:{1}	ADIF la {0}:{1}
+spenta	oprit
+ (YA-GT non la tocca)	 (YA-GT nu-l atinge)
+: è aperto, chiudilo e riprova	: este deschis, închide-l și încearcă din nou
+: ADIF verso {0}:{1}	: ADIF către {0}:{1}
+: UDP secondaria spenta	: UDP secundar oprit
+ — per farla correggere scegli in Impostazioni la destinazione della UDP secondaria (ora: solo avvisi)	 — ca să fie corectat, alege în Setări destinația UDP-ului secundar (acum: doar avertismente)
+manda a {0} invece di {1}	trimite la {0} în loc de {1}
+porta {0} invece di {1}	portul {0} în loc de {1}
+"Accetta richieste UDP" spento (le risposte di QLog e degli altri vengono ignorate)	„Acceptă cereri UDP” oprit (răspunsurile QLog și ale celorlalți sunt ignorate)
+{0} altre configurazioni con un'altra porta	{0} alte configurații cu alt port
+manda a {0}, richieste UDP accettate	trimite la {0}, cereri UDP acceptate
+{0}: è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)	{0}: este deschis, închide-l și încearcă din nou (la închidere și-ar rescrie setările)
+{0}: corretto (copia in {1})	{0}: corectat (copie în {1})
+"Enable Decoded Text" spento (YA-GT non vede le decodifiche)	„Enable Decoded Text” oprit (YA-GT nu vede decodările)
+"Enable Logged QSO" spento (i QSO non arrivano a QLog)	„Enable Logged QSO” oprit (QSO-urile nu ajung la QLog)
+manda a {0} decodifiche e QSO	trimite decodări și QSO-uri la {0}
+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)	: este deschis, închide-l și încearcă din nou (la închidere și-ar rescrie setările)
+invio UDP dei QSO spento	trimiterea UDP a QSO-urilor oprită
+manda i QSO a {0}	trimite QSO-urile la {0}
+server UDP primario spento	server UDP principal oprit
+"Accetta richieste UDP" spento	„Acceptă cereri UDP” oprit
+Aurora: è aperta, chiudila e riprova	Aurora: este deschisă, închide-o și încearcă din nou
+Aurora: corretta (copia in {0})	Aurora: corectată (copie în {0})
+in YA-GT il rimbalzo UDP è spento: accendilo nelle Impostazioni, altrimenti a QLog non arriva nulla	în YA-GT retransmisia UDP e oprită: pornește-o în Setări, altfel la QLog nu ajunge nimic
+ascolta sulla {0}, la stessa porta di YA-GT: i due programmi si rubano i pacchetti	ascultă pe {0}, același port ca YA-GT: cele două programe își fură pachetele
+ascolta sulla {0}, ma YA-GT ritrasmette sulla {1}	ascultă pe {0}, dar YA-GT retransmite pe {1}
+ascolta sulla {0}, dove YA-GT ritrasmette	ascultă pe {0}, unde retransmite YA-GT
+QLog: è aperto, chiudilo e riprova	QLog: este deschis, închide-l și încearcă din nou
+QLog: ora ascolta sulla {0} (copia in {1})	QLog: acum ascultă pe {0} (copie în {1})
+ — accendi anche il rimbalzo UDP in YA-GT	 — pornește și retransmisia UDP în YA-GT
+Porta	Port
+qualcuno ascolta sulla porta di ritrasmissione (di solito QLog)	cineva ascultă pe portul de retransmisie (de obicei QLog)
+nessun programma ascolta sulla porta di ritrasmissione: apri QLog o controlla la sua porta	niciun program nu ascultă pe portul de retransmisie: deschide QLog sau verifică-i portul
+porta UDP {0} già occupata (forse da QLog o GridTracker): metti quel programma su un'altra porta, es. 2238, e scrivila tra gli inoltri	portul UDP {0} e deja ocupat (poate de QLog sau GridTracker): mută acel program pe alt port, de ex. 2238, și adaugă-l la redirecționări
+l'inoltro non può puntare alla porta d'ascolto 	redirecționarea nu poate indica portul de ascultare 
+Controlla all'avvio le impostazioni UDP degli altri programmi	La pornire verifică setările UDP ale celorlalte programe
+Verifica UDP…	Verificare UDP…
+non toccarla, solo avvisi	nu-l atinge, doar avertismente
+mandala a	trimite-l la
+spegnila	oprește-l
+UDP secondaria (ADIF)	UDP secundar (ADIF)
+Porta solo l'ADIF dei QSO a un altro log (Log4OM, N1MM, HRD…). Di base YA-GT non la tocca e segnala solo le scelte fuorvianti.	Duce doar ADIF-ul QSO-urilor la alt jurnal (Log4OM, N1MM, HRD…). Implicit YA-GT nu-l atinge și semnalează doar alegerile înșelătoare.
+Altri log di stazione	Alte jurnale de stație
+Aggiungi file…	Adaugă fișier…
+Log di stazione	Jurnale de stație
+Trova i log sul computer	Caută jurnalele pe calculator
+Nessun log trovato nelle cartelle abituali.	Niciun jurnal găsit în dosarele obișnuite.
+Uno per riga (# = spenta): file ADIF, Cabrillo, SQLite o Access, oppure mysql:, wavelog:, qrz:. I file si rileggono quando cambiano, i log in rete ogni 30 minuti. I file degli altri programmi non vengono mai modificati.	Unul pe rând (# = oprit): fișiere ADIF, Cabrillo, SQLite sau Access, ori mysql:, wavelog:, qrz:. Fișierele se recitesc când se schimbă, jurnalele online la fiecare 30 de minute. Fișierele altor programe nu sunt modificate niciodată.
+Porta della UDP secondaria non valida.	Port UDP secundar nevalid.
+YA-GT — verifica UDP	YA-GT — verificare UDP
+YA-GT ascolta su {0}:{1}	YA-GT ascultă pe {0}:{1}
+ e ritrasmette a {0}:{1}	 și retransmite la {0}:{1}
+ (rimbalzo UDP spento)	 (retransmisie UDP oprită)
+"Correggi" mette questi valori nei programmi chiusi, dopo averne copiato le impostazioni nella cartella Dati\copie-impostazioni. I programmi aperti vanno chiusi prima: alla chiusura riscrivono le loro impostazioni.	„Corectează” scrie aceste valori în programele închise, după ce le copiază setările în dosarul Dati\copie-impostazioni. Programele deschise trebuie închise mai întâi: la închidere își rescriu setările.
+Controllo in corso…	Se verifică…
+aperto	deschis
+QSO dei log (QLog e altri)	QSO din jurnale (QLog și altele)
+Legge qlog.db e gli altri log scelti nelle Impostazioni (copie in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato	Citește qlog.db și celelalte jurnale alese în Setări (copii doar pentru citire): pătrate verzi = LoTW, albastre = QSL, portocalii = lucrate
+Legge qlog.db e gli altri log scelti nelle Impostazioni (copie in sola lettura)	Citește qlog.db și celelalte jurnale alese în Setări (copii doar pentru citire)
+Quadrati (LoTW + log)	Pătrate (LoTW + jurnale)
+Correggi	Corectează
+Ricontrolla	Verifică din nou
+Log (ADIF, Cabrillo, SQLite, Access)	Jurnal (ADIF, Cabrillo, SQLite, Access)
+CQRLOG: è aperto, chiudilo e riprova	CQRLOG: este deschis, închide-l și încearcă din nou
+CQRLOG: ora ascolta sulla {0} (copia in {1})	CQRLOG: acum ascultă pe {0} (copie în {1})

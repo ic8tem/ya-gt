@@ -173,7 +173,7 @@ public sealed class MainWindow : Window
             }
         }));
 
-        p.Children.Add(Ui.Check("QSO dei log (QLog e altri)", _st.LayerQLog, v => { _st.LayerQLog = v; _st.SaveSettings(); if (v) _st.RefreshNow(); else _map.InvalidateVisual(); }, "Legge qlog.db e, se scelto nelle Impostazioni, gli altri log scelti nelle Impostazioni (copie in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato"));
+        p.Children.Add(Ui.Check("QSO dei log (QLog e altri)", _st.LayerQLog, v => { _st.LayerQLog = v; _st.SaveSettings(); if (v) _st.RefreshNow(); else _map.InvalidateVisual(); }, "Legge qlog.db e gli altri log scelti nelle Impostazioni (copie in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato"));
         p.Children.Add(Indent(Ui.Label((string.IsNullOrEmpty(_st.QLogPath) ? "qlog.db: posizione standard di QLog" : _st.QLogPath) + (StationLogs.Lines(_st.LogSources).Any() ? $" · altri log: {StationLogs.Lines(_st.LogSources).Count()}" : ""), 10, false, Ui.Th.Muted)));
 
         p.Children.Add(Ui.Section("Fonti degli spot"));

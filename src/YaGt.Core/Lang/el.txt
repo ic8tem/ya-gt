@@ -197,3 +197,104 @@ G7VRD: ricerca dei locatori per nominativo (api.g7vrd.co.uk)	G7VRD: αναζήτ
 cty.dat — Jim Reisert AD1C (country-files.com): prefissi e paesi DXCC	cty.dat — Jim Reisert AD1C (country-files.com): προθέματα και χώρες DXCC
 Natural Earth: coste e confini (pubblico dominio)	Natural Earth: ακτογραμμές και σύνορα (δημόσιος τομέας)
 Codice ripreso da LIVETROPOVHF e LoTW Grid Map v2 (IC8TEM)	Κώδικας από το LIVETROPOVHF και το LoTW Grid Map v2 (IC8TEM)
+: file non trovato	: το αρχείο δεν βρέθηκε
+manca il driver di Microsoft Access (Access Database Engine) per questa versione di Windows	λείπει το πρόγραμμα οδήγησης Microsoft Access (Access Database Engine) για αυτή την έκδοση των Windows
+i database Access si leggono solo su Windows	οι βάσεις Access διαβάζονται μόνο στα Windows
+manca il driver di Microsoft Access a 64 bit (Microsoft Access Database Engine)	λείπει το πρόγραμμα οδήγησης Microsoft Access 64 bit (Microsoft Access Database Engine)
+: tabella del log non trovata	: ο πίνακας του ημερολογίου δεν βρέθηκε
+Wavelog: scrivi indirizzo, chiave API e numero della stazione	Wavelog: γράψε διεύθυνση, κλειδί API και αριθμό σταθμού
+QRZ: manca la chiave API del logbook	QRZ: λείπει το κλειδί API του ημερολογίου
+risposta non valida	μη έγκυρη απάντηση
+invio dei QSO acceso ma senza destinazione (DestinationIPs vuoto)	η αποστολή QSO είναι ενεργή αλλά χωρίς προορισμό (DestinationIPs κενό)
+manda l'XML alla porta {0}, dove ascolta YA-GT con il protocollo WSJT-X	στέλνει το XML στη θύρα {0}, όπου το YA-GT ακούει με το πρωτόκολλο WSJT-X
+manda l'XML alla porta WSJT-X di QLog ({0}): QLog non legge l'XML di N1MM	στέλνει το XML στη θύρα WSJT-X του QLog ({0}): το QLog δεν διαβάζει το XML του N1MM
+manda l'XML al ricevitore ADIF di QLog ({0}): QLog lì aspetta l'ADIF, non l'XML di N1MM	στέλνει το XML στον δέκτη ADIF του QLog ({0}): εκεί το QLog περιμένει ADIF, όχι το XML του N1MM
+nessun programma ascolta sulla porta {0}	κανένα πρόγραμμα δεν ακούει στη θύρα {0}
+in YA-GT hai scelto di spegnere gli invii secondari	στο YA-GT επέλεξες να απενεργοποιήσεις τις δευτερεύουσες αποστολές
+manda i QSO a 	στέλνει τα QSO στο 
+invio dei QSO spento	αποστολή QSO ανενεργή
+ (YA-GT non lo tocca)	 (το YA-GT δεν την αγγίζει)
+N1MM Logger+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe il file .ini)	N1MM Logger+: είναι ανοιχτό, κλείσ' το και ξαναδοκίμασε (στο κλείσιμο θα ξανάγραφε το αρχείο .ini)
+N1MM Logger+: invio dei QSO spento (copia in {0})	N1MM Logger+: η αποστολή QSO απενεργοποιήθηκε (αντίγραφο στο {0})
+N1MM Logger+: tolte le destinazioni sbagliate	N1MM Logger+: αφαιρέθηκαν οι λάθος προορισμοί
+ e spento l'invio	 και απενεργοποιήθηκε η αποστολή
+ (copia in {0})	 (αντίγραφο στο {0})
+ — per farlo correggere scegli in Impostazioni "spegnila" o "mandala a" per la UDP secondaria	 — για διόρθωση διάλεξε στις Ρυθμίσεις «απενεργοποίησέ το» ή «στείλ' το στο» για το δευτερεύον UDP
+non leggibile: 	μη αναγνώσιμο: 
+ — 2° server UDP (ADIF)	 — 2ος διακομιστής UDP (ADIF)
+invio dei QSO spento (YA-GT non lo tocca)	αποστολή QSO ανενεργή (το YA-GT δεν την αγγίζει)
+Verifica	Έλεγχος
+nessun programma trovato (WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+, CQRLOG, QLog)	δεν βρέθηκε κανένα πρόγραμμα (WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+, CQRLOG, QLog)
+ — invio ADIF "N1MM"	 — αποστολή ADIF «N1MM»
+manda l'ADIF alla porta {0}, dove ascolta YA-GT con il protocollo WSJT-X: va su un'altra porta	στέλνει το ADIF στη θύρα {0}, όπου το YA-GT ακούει με το πρωτόκολλο WSJT-X: χρησιμοποίησε άλλη θύρα
+manda l'ADIF alla porta WSJT-X di QLog ({0}): QLog lì aspetta il protocollo WSJT-X, non l'ADIF	στέλνει το ADIF στη θύρα WSJT-X του QLog ({0}): εκεί το QLog περιμένει το πρωτόκολλο WSJT-X, όχι ADIF
+manda l'ADIF a QLog ({0}) mentre QLog riceve già il QSO dal rimbalzo di YA-GT: rischio di QSO doppi	στέλνει το ADIF στο QLog ({0}) ενώ το QLog ήδη λαμβάνει το QSO από την αναμετάδοση του YA-GT: κίνδυνος διπλών QSO
+nessun programma ascolta sulla porta {0} (log chiuso o porta sbagliata)	κανένα πρόγραμμα δεν ακούει στη θύρα {0} (ημερολόγιο κλειστό ή λάθος θύρα)
+in YA-GT hai scelto di mandarla a {0}:{1}	στο YA-GT επέλεξες να το στέλνεις στο {0}:{1}
+in YA-GT hai scelto di spegnerla	στο YA-GT επέλεξες να το απενεργοποιήσεις
+ADIF a {0}:{1}	ADIF στο {0}:{1}
+spenta	ανενεργό
+ (YA-GT non la tocca)	 (το YA-GT δεν το αγγίζει)
+: è aperto, chiudilo e riprova	: είναι ανοιχτό, κλείσ' το και ξαναδοκίμασε
+: ADIF verso {0}:{1}	: ADIF προς {0}:{1}
+: UDP secondaria spenta	: το δευτερεύον UDP απενεργοποιήθηκε
+ — per farla correggere scegli in Impostazioni la destinazione della UDP secondaria (ora: solo avvisi)	 — για διόρθωση διάλεξε στις Ρυθμίσεις τον προορισμό του δευτερεύοντος UDP (τώρα: μόνο προειδοποιήσεις)
+manda a {0} invece di {1}	στέλνει στο {0} αντί για {1}
+porta {0} invece di {1}	θύρα {0} αντί για {1}
+"Accetta richieste UDP" spento (le risposte di QLog e degli altri vengono ignorate)	«Αποδοχή αιτημάτων UDP» ανενεργό (οι απαντήσεις του QLog και των άλλων αγνοούνται)
+{0} altre configurazioni con un'altra porta	{0} άλλες ρυθμίσεις με άλλη θύρα
+manda a {0}, richieste UDP accettate	στέλνει στο {0}, αιτήματα UDP αποδεκτά
+{0}: è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)	{0}: είναι ανοιχτό, κλείσ' το και ξαναδοκίμασε (στο κλείσιμο θα ξανάγραφε τις ρυθμίσεις του)
+{0}: corretto (copia in {1})	{0}: διορθώθηκε (αντίγραφο στο {1})
+"Enable Decoded Text" spento (YA-GT non vede le decodifiche)	«Enable Decoded Text» ανενεργό (το YA-GT δεν βλέπει τις αποκωδικοποιήσεις)
+"Enable Logged QSO" spento (i QSO non arrivano a QLog)	«Enable Logged QSO» ανενεργό (τα QSO δεν φτάνουν στο QLog)
+manda a {0} decodifiche e QSO	στέλνει αποκωδικοποιήσεις και QSO στο {0}
+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)	: είναι ανοιχτό, κλείσ' το και ξαναδοκίμασε (στο κλείσιμο θα ξανάγραφε τις ρυθμίσεις του)
+invio UDP dei QSO spento	αποστολή QSO μέσω UDP ανενεργή
+manda i QSO a {0}	στέλνει τα QSO στο {0}
+server UDP primario spento	κύριος διακομιστής UDP ανενεργός
+"Accetta richieste UDP" spento	«Αποδοχή αιτημάτων UDP» ανενεργό
+Aurora: è aperta, chiudila e riprova	Aurora: είναι ανοιχτό, κλείσ' το και ξαναδοκίμασε
+Aurora: corretta (copia in {0})	Aurora: διορθώθηκε (αντίγραφο στο {0})
+in YA-GT il rimbalzo UDP è spento: accendilo nelle Impostazioni, altrimenti a QLog non arriva nulla	στο YA-GT η αναμετάδοση UDP είναι ανενεργή: ενεργοποίησέ τη στις Ρυθμίσεις, αλλιώς στο QLog δεν φτάνει τίποτα
+ascolta sulla {0}, la stessa porta di YA-GT: i due programmi si rubano i pacchetti	ακούει στη {0}, την ίδια θύρα με το YA-GT: τα δύο προγράμματα κλέβουν το ένα τα πακέτα του άλλου
+ascolta sulla {0}, ma YA-GT ritrasmette sulla {1}	ακούει στη {0}, αλλά το YA-GT αναμεταδίδει στη {1}
+ascolta sulla {0}, dove YA-GT ritrasmette	ακούει στη {0}, όπου αναμεταδίδει το YA-GT
+QLog: è aperto, chiudilo e riprova	QLog: είναι ανοιχτό, κλείσ' το και ξαναδοκίμασε
+QLog: ora ascolta sulla {0} (copia in {1})	QLog: τώρα ακούει στη {0} (αντίγραφο στο {1})
+ — accendi anche il rimbalzo UDP in YA-GT	 — ενεργοποίησε και την αναμετάδοση UDP στο YA-GT
+Porta	Θύρα
+qualcuno ascolta sulla porta di ritrasmissione (di solito QLog)	κάποιος ακούει στη θύρα αναμετάδοσης (συνήθως το QLog)
+nessun programma ascolta sulla porta di ritrasmissione: apri QLog o controlla la sua porta	κανένα πρόγραμμα δεν ακούει στη θύρα αναμετάδοσης: άνοιξε το QLog ή έλεγξε τη θύρα του
+porta UDP {0} già occupata (forse da QLog o GridTracker): metti quel programma su un'altra porta, es. 2238, e scrivila tra gli inoltri	η θύρα UDP {0} είναι ήδη κατειλημμένη (ίσως από το QLog ή το GridTracker): βάλε εκείνο το πρόγραμμα σε άλλη θύρα, π.χ. 2238, και πρόσθεσέ τη στις προωθήσεις
+l'inoltro non può puntare alla porta d'ascolto 	η προώθηση δεν μπορεί να δείχνει στη θύρα ακρόασης 
+Controlla all'avvio le impostazioni UDP degli altri programmi	Έλεγχος κατά την εκκίνηση των ρυθμίσεων UDP των άλλων προγραμμάτων
+Verifica UDP…	Έλεγχος UDP…
+non toccarla, solo avvisi	μην το αγγίζεις, μόνο προειδοποιήσεις
+mandala a	στείλ' το στο
+spegnila	απενεργοποίησέ το
+UDP secondaria (ADIF)	Δευτερεύον UDP (ADIF)
+Porta solo l'ADIF dei QSO a un altro log (Log4OM, N1MM, HRD…). Di base YA-GT non la tocca e segnala solo le scelte fuorvianti.	Μεταφέρει μόνο το ADIF των QSO σε άλλο ημερολόγιο (Log4OM, N1MM, HRD…). Από προεπιλογή το YA-GT δεν το αγγίζει και επισημαίνει μόνο τις παραπλανητικές επιλογές.
+Altri log di stazione	Άλλα ημερολόγια σταθμού
+Aggiungi file…	Προσθήκη αρχείου…
+Log di stazione	Ημερολόγια σταθμού
+Trova i log sul computer	Εύρεση ημερολογίων στον υπολογιστή
+Nessun log trovato nelle cartelle abituali.	Δεν βρέθηκε ημερολόγιο στους συνηθισμένους φακέλους.
+Uno per riga (# = spenta): file ADIF, Cabrillo, SQLite o Access, oppure mysql:, wavelog:, qrz:. I file si rileggono quando cambiano, i log in rete ogni 30 minuti. I file degli altri programmi non vengono mai modificati.	Ένα ανά γραμμή (# = ανενεργό): αρχεία ADIF, Cabrillo, SQLite ή Access, ή mysql:, wavelog:, qrz:. Τα αρχεία ξαναδιαβάζονται όταν αλλάζουν, τα διαδικτυακά ημερολόγια κάθε 30 λεπτά. Τα αρχεία άλλων προγραμμάτων δεν αλλάζουν ποτέ.
+Porta della UDP secondaria non valida.	Μη έγκυρη θύρα δευτερεύοντος UDP.
+YA-GT — verifica UDP	YA-GT — έλεγχος UDP
+YA-GT ascolta su {0}:{1}	Το YA-GT ακούει στο {0}:{1}
+ e ritrasmette a {0}:{1}	 και αναμεταδίδει στο {0}:{1}
+ (rimbalzo UDP spento)	 (αναμετάδοση UDP ανενεργή)
+"Correggi" mette questi valori nei programmi chiusi, dopo averne copiato le impostazioni nella cartella Dati\copie-impostazioni. I programmi aperti vanno chiusi prima: alla chiusura riscrivono le loro impostazioni.	Η «Διόρθωση» γράφει αυτές τις τιμές στα κλειστά προγράμματα, αφού αντιγράψει τις ρυθμίσεις τους στον φάκελο Dati\copie-impostazioni. Τα ανοιχτά προγράμματα πρέπει πρώτα να κλείσουν: στο κλείσιμο ξαναγράφουν τις ρυθμίσεις τους.
+Controllo in corso…	Έλεγχος σε εξέλιξη…
+aperto	ανοιχτό
+QSO dei log (QLog e altri)	QSO από τα ημερολόγια (QLog και άλλα)
+Legge qlog.db e gli altri log scelti nelle Impostazioni (copie in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato	Διαβάζει το qlog.db και τα άλλα ημερολόγια που επιλέχθηκαν στις Ρυθμίσεις (αντίγραφα μόνο για ανάγνωση): πράσινα τετράγωνα = LoTW, μπλε = QSL, πορτοκαλί = πραγματοποιήθηκε
+Legge qlog.db e gli altri log scelti nelle Impostazioni (copie in sola lettura)	Διαβάζει το qlog.db και τα άλλα ημερολόγια που επιλέχθηκαν στις Ρυθμίσεις (αντίγραφα μόνο για ανάγνωση)
+Quadrati (LoTW + log)	Τετράγωνα (LoTW + ημερολόγια)
+Correggi	Διόρθωση
+Ricontrolla	Νέος έλεγχος
+Log (ADIF, Cabrillo, SQLite, Access)	Ημερολόγιο (ADIF, Cabrillo, SQLite, Access)
+CQRLOG: è aperto, chiudilo e riprova	CQRLOG: είναι ανοιχτό, κλείσ' το και ξαναδοκίμασε
+CQRLOG: ora ascolta sulla {0} (copia in {1})	CQRLOG: τώρα ακούει στη {0} (αντίγραφο στο {1})

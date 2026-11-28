@@ -197,3 +197,104 @@ G7VRD: ricerca dei locatori per nominativo (api.g7vrd.co.uk)	G7VRD: חיפוש �
 cty.dat — Jim Reisert AD1C (country-files.com): prefissi e paesi DXCC	cty.dat — Jim Reisert AD1C (country-files.com): קידומות ומדינות DXCC
 Natural Earth: coste e confini (pubblico dominio)	Natural Earth: קווי חוף וגבולות (נחלת הכלל)
 Codice ripreso da LIVETROPOVHF e LoTW Grid Map v2 (IC8TEM)	קוד שנלקח מ-LIVETROPOVHF ומ-LoTW Grid Map v2 (IC8TEM)
+: file non trovato	: הקובץ לא נמצא
+manca il driver di Microsoft Access (Access Database Engine) per questa versione di Windows	חסר מנהל ההתקן של Microsoft Access ‏(Access Database Engine) לגרסה זו של Windows
+i database Access si leggono solo su Windows	מסדי נתונים של Access נקראים רק ב-Windows
+manca il driver di Microsoft Access a 64 bit (Microsoft Access Database Engine)	חסר מנהל ההתקן של Microsoft Access ב-64 סיביות (Microsoft Access Database Engine)
+: tabella del log non trovata	: טבלת היומן לא נמצאה
+Wavelog: scrivi indirizzo, chiave API e numero della stazione	Wavelog: הזן כתובת, מפתח API ומספר תחנה
+QRZ: manca la chiave API del logbook	QRZ: חסר מפתח ה-API של היומן
+risposta non valida	תשובה לא תקינה
+invio dei QSO acceso ma senza destinazione (DestinationIPs vuoto)	שליחת QSO פעילה אך ללא יעד (DestinationIPs ריק)
+manda l'XML alla porta {0}, dove ascolta YA-GT con il protocollo WSJT-X	שולח את ה-XML ליציאה {0}, שבה YA-GT מאזין בפרוטוקול WSJT-X
+manda l'XML alla porta WSJT-X di QLog ({0}): QLog non legge l'XML di N1MM	שולח את ה-XML ליציאת WSJT-X של QLog ‏({0}): QLog אינו קורא XML של N1MM
+manda l'XML al ricevitore ADIF di QLog ({0}): QLog lì aspetta l'ADIF, non l'XML di N1MM	שולח את ה-XML למקלט ADIF של QLog ‏({0}): שם QLog מצפה ל-ADIF ולא ל-XML של N1MM
+nessun programma ascolta sulla porta {0}	אף תוכנה אינה מאזינה ביציאה {0}
+in YA-GT hai scelto di spegnere gli invii secondari	ב-YA-GT בחרת לכבות את השליחה המשנית
+manda i QSO a 	שולח את ה-QSO אל 
+invio dei QSO spento	שליחת QSO כבויה
+ (YA-GT non lo tocca)	 (YA-GT לא נוגע בה)
+N1MM Logger+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe il file .ini)	N1MM Logger+: פתוח, סגור אותו ונסה שוב (בסגירה הוא ידרוס את קובץ ה-.ini)
+N1MM Logger+: invio dei QSO spento (copia in {0})	N1MM Logger+: שליחת QSO כובתה (עותק ב-{0})
+N1MM Logger+: tolte le destinazioni sbagliate	N1MM Logger+: היעדים השגויים הוסרו
+ e spento l'invio	 והשליחה כובתה
+ (copia in {0})	 (עותק ב-{0})
+ — per farlo correggere scegli in Impostazioni "spegnila" o "mandala a" per la UDP secondaria	 — לתיקון בחר בהגדרות "כבה אותה" או "שלח אותה אל" עבור ה-UDP המשני
+non leggibile: 	לא קריא: 
+ — 2° server UDP (ADIF)	 — שרת UDP שני (ADIF)
+invio dei QSO spento (YA-GT non lo tocca)	שליחת QSO כבויה (YA-GT לא נוגע בה)
+Verifica	בדיקה
+nessun programma trovato (WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+, CQRLOG, QLog)	לא נמצאה אף תוכנה (WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+, CQRLOG, QLog)
+ — invio ADIF "N1MM"	 — שליחת ADIF "N1MM"
+manda l'ADIF alla porta {0}, dove ascolta YA-GT con il protocollo WSJT-X: va su un'altra porta	שולח את ה-ADIF ליציאה {0}, שבה YA-GT מאזין בפרוטוקול WSJT-X: השתמש ביציאה אחרת
+manda l'ADIF alla porta WSJT-X di QLog ({0}): QLog lì aspetta il protocollo WSJT-X, non l'ADIF	שולח את ה-ADIF ליציאת WSJT-X של QLog ‏({0}): שם QLog מצפה לפרוטוקול WSJT-X ולא ל-ADIF
+manda l'ADIF a QLog ({0}) mentre QLog riceve già il QSO dal rimbalzo di YA-GT: rischio di QSO doppi	שולח את ה-ADIF ל-QLog ‏({0}) בזמן ש-QLog כבר מקבל את ה-QSO מההעברה של YA-GT: סכנת QSO כפולים
+nessun programma ascolta sulla porta {0} (log chiuso o porta sbagliata)	אף תוכנה אינה מאזינה ביציאה {0} (היומן סגור או יציאה שגויה)
+in YA-GT hai scelto di mandarla a {0}:{1}	ב-YA-GT בחרת לשלוח אותה אל {0}:{1}
+in YA-GT hai scelto di spegnerla	ב-YA-GT בחרת לכבות אותה
+ADIF a {0}:{1}	ADIF אל {0}:{1}
+spenta	כבויה
+ (YA-GT non la tocca)	 (YA-GT לא נוגע בה)
+: è aperto, chiudilo e riprova	: פתוח, סגור אותו ונסה שוב
+: ADIF verso {0}:{1}	: ADIF אל {0}:{1}
+: UDP secondaria spenta	: ה-UDP המשני כובה
+ — per farla correggere scegli in Impostazioni la destinazione della UDP secondaria (ora: solo avvisi)	 — לתיקון בחר בהגדרות את יעד ה-UDP המשני (כעת: אזהרות בלבד)
+manda a {0} invece di {1}	שולח אל {0} במקום {1}
+porta {0} invece di {1}	יציאה {0} במקום {1}
+"Accetta richieste UDP" spento (le risposte di QLog e degli altri vengono ignorate)	"קבל בקשות UDP" כבוי (התשובות של QLog והאחרים נדחות)
+{0} altre configurazioni con un'altra porta	{0} תצורות נוספות עם יציאה אחרת
+manda a {0}, richieste UDP accettate	שולח אל {0}, בקשות UDP מתקבלות
+{0}: è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)	{0}: פתוח, סגור אותו ונסה שוב (בסגירה הוא ידרוס את ההגדרות שלו)
+{0}: corretto (copia in {1})	{0}: תוקן (עותק ב-{1})
+"Enable Decoded Text" spento (YA-GT non vede le decodifiche)	"Enable Decoded Text" כבוי (YA-GT אינו רואה את הפענוחים)
+"Enable Logged QSO" spento (i QSO non arrivano a QLog)	"Enable Logged QSO" כבוי (ה-QSO אינם מגיעים ל-QLog)
+manda a {0} decodifiche e QSO	שולח פענוחים ו-QSO אל {0}
+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)	: פתוח, סגור אותו ונסה שוב (בסגירה הוא ידרוס את ההגדרות שלו)
+invio UDP dei QSO spento	שליחת QSO ב-UDP כבויה
+manda i QSO a {0}	שולח את ה-QSO אל {0}
+server UDP primario spento	שרת UDP ראשי כבוי
+"Accetta richieste UDP" spento	"קבל בקשות UDP" כבוי
+Aurora: è aperta, chiudila e riprova	Aurora: פתוח, סגור אותו ונסה שוב
+Aurora: corretta (copia in {0})	Aurora: תוקן (עותק ב-{0})
+in YA-GT il rimbalzo UDP è spento: accendilo nelle Impostazioni, altrimenti a QLog non arriva nulla	ב-YA-GT העברת UDP כבויה: הפעל אותה בהגדרות, אחרת שום דבר לא יגיע ל-QLog
+ascolta sulla {0}, la stessa porta di YA-GT: i due programmi si rubano i pacchetti	מאזין ב-{0}, אותה יציאה כמו YA-GT: שתי התוכנות גונבות זו לזו חבילות
+ascolta sulla {0}, ma YA-GT ritrasmette sulla {1}	מאזין ב-{0}, אך YA-GT מעביר ל-{1}
+ascolta sulla {0}, dove YA-GT ritrasmette	מאזין ב-{0}, לשם YA-GT מעביר
+QLog: è aperto, chiudilo e riprova	QLog: פתוח, סגור אותו ונסה שוב
+QLog: ora ascolta sulla {0} (copia in {1})	QLog: מאזין כעת ב-{0} (עותק ב-{1})
+ — accendi anche il rimbalzo UDP in YA-GT	 — הפעל גם את העברת UDP ב-YA-GT
+Porta	יציאה
+qualcuno ascolta sulla porta di ritrasmissione (di solito QLog)	מישהו מאזין ביציאת ההעברה (בדרך כלל QLog)
+nessun programma ascolta sulla porta di ritrasmissione: apri QLog o controlla la sua porta	אף תוכנה אינה מאזינה ביציאת ההעברה: פתח את QLog או בדוק את היציאה שלו
+porta UDP {0} già occupata (forse da QLog o GridTracker): metti quel programma su un'altra porta, es. 2238, e scrivila tra gli inoltri	יציאת UDP ‏{0} כבר בשימוש (אולי של QLog או GridTracker): העבר את התוכנה הזו ליציאה אחרת, למשל 2238, והוסף אותה להעברות
+l'inoltro non può puntare alla porta d'ascolto 	ההעברה אינה יכולה להצביע על יציאת ההאזנה 
+Controlla all'avvio le impostazioni UDP degli altri programmi	בדוק בעת ההפעלה את הגדרות ה-UDP של התוכנות האחרות
+Verifica UDP…	בדיקת UDP…
+non toccarla, solo avvisi	אל תיגע, אזהרות בלבד
+mandala a	שלח אותה אל
+spegnila	כבה אותה
+UDP secondaria (ADIF)	UDP משני (ADIF)
+Porta solo l'ADIF dei QSO a un altro log (Log4OM, N1MM, HRD…). Di base YA-GT non la tocca e segnala solo le scelte fuorvianti.	מעביר רק את ה-ADIF של ה-QSO ליומן אחר (Log4OM, N1MM, HRD…). כברירת מחדל YA-GT לא נוגע בו ומתריע רק על בחירות מטעות.
+Altri log di stazione	יומני תחנה נוספים
+Aggiungi file…	הוסף קובץ…
+Log di stazione	יומני תחנה
+Trova i log sul computer	חפש יומנים במחשב
+Nessun log trovato nelle cartelle abituali.	לא נמצא יומן בתיקיות הרגילות.
+Uno per riga (# = spenta): file ADIF, Cabrillo, SQLite o Access, oppure mysql:, wavelog:, qrz:. I file si rileggono quando cambiano, i log in rete ogni 30 minuti. I file degli altri programmi non vengono mai modificati.	אחד בכל שורה (# = כבוי): קובצי ADIF‏, Cabrillo‏, SQLite או Access, או mysql:, wavelog:, qrz:. קבצים נקראים מחדש כשהם משתנים, יומנים מקוונים כל 30 דקות. קבצים של תוכנות אחרות לעולם אינם משתנים.
+Porta della UDP secondaria non valida.	יציאת UDP משני לא תקינה.
+YA-GT — verifica UDP	YA-GT — בדיקת UDP
+YA-GT ascolta su {0}:{1}	YA-GT מאזין ב-{0}:{1}
+ e ritrasmette a {0}:{1}	 ומעביר אל {0}:{1}
+ (rimbalzo UDP spento)	 (העברת UDP כבויה)
+"Correggi" mette questi valori nei programmi chiusi, dopo averne copiato le impostazioni nella cartella Dati\copie-impostazioni. I programmi aperti vanno chiusi prima: alla chiusura riscrivono le loro impostazioni.	"תקן" כותב ערכים אלה בתוכנות הסגורות, לאחר העתקת ההגדרות שלהן לתיקייה Dati\copie-impostazioni. יש לסגור קודם תוכנות פתוחות: בסגירה הן דורסות את ההגדרות שלהן.
+Controllo in corso…	בודק…
+aperto	פתוח
+QSO dei log (QLog e altri)	QSO מהיומנים (QLog ואחרים)
+Legge qlog.db e gli altri log scelti nelle Impostazioni (copie in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato	קורא את qlog.db ואת היומנים האחרים שנבחרו בהגדרות (עותקים לקריאה בלבד): ריבועים ירוקים = LoTW, כחולים = QSL, כתומים = בוצע
+Legge qlog.db e gli altri log scelti nelle Impostazioni (copie in sola lettura)	קורא את qlog.db ואת היומנים האחרים שנבחרו בהגדרות (עותקים לקריאה בלבד)
+Quadrati (LoTW + log)	ריבועים (LoTW + יומנים)
+Correggi	תקן
+Ricontrolla	בדוק שוב
+Log (ADIF, Cabrillo, SQLite, Access)	יומן (ADIF, Cabrillo, SQLite, Access)
+CQRLOG: è aperto, chiudilo e riprova	CQRLOG: פתוח, סגור אותו ונסה שוב
+CQRLOG: ora ascolta sulla {0} (copia in {1})	CQRLOG: מאזין כעת ב-{0} (עותק ב-{1})

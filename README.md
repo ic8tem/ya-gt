@@ -82,6 +82,7 @@ In *Impostazioni → Verifica UDP…* YA-GT legge le impostazioni UDP degli altr
 | MadModem | `settings.mad` accanto al programma o nella cartella utente | invio UDP dei QSO, server e porta |
 | Aurora | `%APPDATA%\Aurora\settings-motore.json` | `UDPServer`, `UDPServerPort`, `AcceptUDPRequests` |
 | N1MM Logger+ | `Documenti\N1MM Logger+\N1MM Logger.ini`, sezione `[ExternalBroadcast]` | invio dei QSO (XML): avvisi se va alla porta di YA-GT o di QLog o se nessuno ascolta; spegnimento o pulizia delle destinazioni sbagliate a scelta |
+| CQRLOG (Linux) | `~/.config/cqrlog/cqrlog.cfg` (o `local.cfg`), sezione `[wsjt]` | porta d'ascolto WSJT-X uguale alla porta di ritrasmissione di YA-GT |
 | QLog | tabella `log_param` del suo `qlog.db` | porta d'ascolto WSJT-X uguale alla porta di ritrasmissione di YA-GT |
 
 **UDP secondaria (ADIF).** Molti programmi hanno anche un secondo invio UDP con il solo ADIF del QSO, pensato per un altro log: il 2° server UDP di JTDX, MSHV e Aurora, l'invio "N1MM Logger+" di WSJT-X. Di base YA-GT **non la tocca**, perché può alimentare altri programmi (Log4OM, N1MM, HRD, GridTracker…), ma segnala con un avviso le scelte fuorvianti: ADIF mandato alla porta di YA-GT o alla porta WSJT-X di QLog (protocollo sbagliato), ADIF mandato al ricevitore ADIF di QLog mentre QLog riceve già il QSO dal rimbalzo (QSO doppi), nessun programma in ascolto. In *Impostazioni* si può scegliere invece di farla impostare verso un indirizzo e una porta, oppure di farla spegnere.
@@ -142,7 +143,7 @@ By **Costantino Cerrotta • IC8TEM** — ccerrotta@gmail.com · ic8tem@gmail.co
 - **Station positions**: the bundled ~18 MB **CALL3.TXT** (LIVETROPOVHF merged with the MSHV-IC8TEM locator databases), one universal file; web corrections are written into it; automatic look-ups (G7VRD) every 6 hours; cty.dat country position as a last resort.
 - **LoTW** (from LoTW Grid Map v2): orange = worked, green = LoTW confirmed, blue = QSL only, grey = confirmed on **each** of 80, 40, 30, 20, 17, 15, 12 and 10 m (60 m excluded); groups All, HF 80-10 m, VHF, UHF and single bands. The password is never stored.
 - **QLog**: reads a copy of `qlog.db` (table `contacts`), never modifies QLog's file.
-- **UDP check**: reads and, on request, fixes the UDP settings of WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+ and QLog (only when they are closed, after a backup copy); also at start-up.
+- **UDP check**: reads and, on request, fixes the UDP settings of WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+, CQRLOG and QLog (only when they are closed, after a backup copy); also at start-up.
 - **Other station logs**: ADIF/ADX (WSJT-X, JTDX, MSHV, Logger32…), Cabrillo, SQLite (Log4OM 2/1, N1MM Logger+, KLog, MacLoggerDX), Access on Windows (DXKeeper, ACLog, Swisslog, HRD), MySQL/MariaDB (CQRLOG, HRD), Wavelog/Cloudlog and QRZ Logbook APIs. Other programs' files are never modified: databases are read from a copy.
 - **Automatic updates** from GitHub every 3 minutes (signed packages; YA-GT.ini, CALL3.TXT and Dati are never touched).
 - **Install**: Windows 10/11 setup or portable zip; Linux x86_64/aarch64 tar.gz; Windows 7 SP1/8.1 packages for .NET Framework 4.8. All data stays next to the program, nothing in AppData.

@@ -197,3 +197,104 @@ G7VRD: ricerca dei locatori per nominativo (api.g7vrd.co.uk)	G7VRD: lokaatorite 
 cty.dat — Jim Reisert AD1C (country-files.com): prefissi e paesi DXCC	cty.dat — Jim Reisert AD1C (country-files.com): DXCC eesliited ja riigid
 Natural Earth: coste e confini (pubblico dominio)	Natural Earth: rannajooned ja piirid (avalik omand)
 Codice ripreso da LIVETROPOVHF e LoTW Grid Map v2 (IC8TEM)	Kood võetud LIVETROPOVHF-ist ja LoTW Grid Map v2-st (IC8TEM)
+: file non trovato	: faili ei leitud
+manca il driver di Microsoft Access (Access Database Engine) per questa versione di Windows	selle Windowsi versiooni jaoks puudub Microsoft Accessi draiver (Access Database Engine)
+i database Access si leggono solo su Windows	Accessi andmebaase saab lugeda ainult Windowsis
+manca il driver di Microsoft Access a 64 bit (Microsoft Access Database Engine)	puudub Microsoft Accessi 64-bitine draiver (Microsoft Access Database Engine)
+: tabella del log non trovata	: logi tabelit ei leitud
+Wavelog: scrivi indirizzo, chiave API e numero della stazione	Wavelog: sisesta aadress, API-võti ja jaama number
+QRZ: manca la chiave API del logbook	QRZ: logiraamatu API-võti puudub
+risposta non valida	vigane vastus
+invio dei QSO acceso ma senza destinazione (DestinationIPs vuoto)	QSO-de saatmine on sees, kuid sihtkohata (DestinationIPs tühi)
+manda l'XML alla porta {0}, dove ascolta YA-GT con il protocollo WSJT-X	saadab XML-i porti {0}, kus YA-GT kuulab WSJT-X-protokolliga
+manda l'XML alla porta WSJT-X di QLog ({0}): QLog non legge l'XML di N1MM	saadab XML-i QLogi WSJT-X-porti ({0}): QLog ei loe N1MM-i XML-i
+manda l'XML al ricevitore ADIF di QLog ({0}): QLog lì aspetta l'ADIF, non l'XML di N1MM	saadab XML-i QLogi ADIF-vastuvõtjale ({0}): seal ootab QLog ADIF-i, mitte N1MM-i XML-i
+nessun programma ascolta sulla porta {0}	ükski programm ei kuula porti {0}
+in YA-GT hai scelto di spegnere gli invii secondari	YA-GT-s valisid teisese saatmise väljalülitamise
+manda i QSO a 	saadab QSO-d aadressile 
+invio dei QSO spento	QSO-de saatmine väljas
+ (YA-GT non lo tocca)	 (YA-GT seda ei puutu)
+N1MM Logger+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe il file .ini)	N1MM Logger+: on avatud, sulge see ja proovi uuesti (sulgemisel kirjutaks see .ini-faili üle)
+N1MM Logger+: invio dei QSO spento (copia in {0})	N1MM Logger+: QSO-de saatmine välja lülitatud (koopia: {0})
+N1MM Logger+: tolte le destinazioni sbagliate	N1MM Logger+: valed sihtkohad eemaldatud
+ e spento l'invio	 ja saatmine välja lülitatud
+ (copia in {0})	 (koopia: {0})
+ — per farlo correggere scegli in Impostazioni "spegnila" o "mandala a" per la UDP secondaria	 — parandamiseks vali Seadetes teisese UDP jaoks „lülita välja“ või „saada aadressile“
+non leggibile: 	loetamatu: 
+ — 2° server UDP (ADIF)	 — 2. UDP-server (ADIF)
+invio dei QSO spento (YA-GT non lo tocca)	QSO-de saatmine väljas (YA-GT seda ei puutu)
+Verifica	Kontroll
+nessun programma trovato (WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+, CQRLOG, QLog)	ühtki programmi ei leitud (WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+, CQRLOG, QLog)
+ — invio ADIF "N1MM"	 — ADIF-i saatmine „N1MM“
+manda l'ADIF alla porta {0}, dove ascolta YA-GT con il protocollo WSJT-X: va su un'altra porta	saadab ADIF-i porti {0}, kus YA-GT kuulab WSJT-X-protokolliga: kasuta teist porti
+manda l'ADIF alla porta WSJT-X di QLog ({0}): QLog lì aspetta il protocollo WSJT-X, non l'ADIF	saadab ADIF-i QLogi WSJT-X-porti ({0}): seal ootab QLog WSJT-X-protokolli, mitte ADIF-i
+manda l'ADIF a QLog ({0}) mentre QLog riceve già il QSO dal rimbalzo di YA-GT: rischio di QSO doppi	saadab ADIF-i QLogile ({0}), kuigi QLog saab QSO juba YA-GT edastuse kaudu: topelt-QSO-de oht
+nessun programma ascolta sulla porta {0} (log chiuso o porta sbagliata)	ükski programm ei kuula porti {0} (logi suletud või vale port)
+in YA-GT hai scelto di mandarla a {0}:{1}	YA-GT-s valisid selle saatmise aadressile {0}:{1}
+in YA-GT hai scelto di spegnerla	YA-GT-s valisid selle väljalülitamise
+ADIF a {0}:{1}	ADIF aadressile {0}:{1}
+spenta	väljas
+ (YA-GT non la tocca)	 (YA-GT seda ei puutu)
+: è aperto, chiudilo e riprova	: on avatud, sulge see ja proovi uuesti
+: ADIF verso {0}:{1}	: ADIF aadressile {0}:{1}
+: UDP secondaria spenta	: teisene UDP välja lülitatud
+ — per farla correggere scegli in Impostazioni la destinazione della UDP secondaria (ora: solo avvisi)	 — parandamiseks vali Seadetes teisese UDP sihtkoht (praegu: ainult hoiatused)
+manda a {0} invece di {1}	saadab aadressile {0}, mitte {1}
+porta {0} invece di {1}	port {0}, mitte {1}
+"Accetta richieste UDP" spento (le risposte di QLog e degli altri vengono ignorate)	„Nõustu UDP-päringutega“ väljas (QLogi ja teiste vastuseid eiratakse)
+{0} altre configurazioni con un'altra porta	{0} muud seadistust teise pordiga
+manda a {0}, richieste UDP accettate	saadab aadressile {0}, UDP-päringud lubatud
+{0}: è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)	{0}: on avatud, sulge see ja proovi uuesti (sulgemisel kirjutaks see oma seaded üle)
+{0}: corretto (copia in {1})	{0}: parandatud (koopia: {1})
+"Enable Decoded Text" spento (YA-GT non vede le decodifiche)	„Enable Decoded Text“ väljas (YA-GT ei näe dekodeeringuid)
+"Enable Logged QSO" spento (i QSO non arrivano a QLog)	„Enable Logged QSO“ väljas (QSO-d ei jõua QLogi)
+manda a {0} decodifiche e QSO	saadab dekodeeringud ja QSO-d aadressile {0}
+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)	: on avatud, sulge see ja proovi uuesti (sulgemisel kirjutaks see oma seaded üle)
+invio UDP dei QSO spento	QSO-de UDP-saatmine väljas
+manda i QSO a {0}	saadab QSO-d aadressile {0}
+server UDP primario spento	peamine UDP-server väljas
+"Accetta richieste UDP" spento	„Nõustu UDP-päringutega“ väljas
+Aurora: è aperta, chiudila e riprova	Aurora: on avatud, sulge see ja proovi uuesti
+Aurora: corretta (copia in {0})	Aurora: parandatud (koopia: {0})
+in YA-GT il rimbalzo UDP è spento: accendilo nelle Impostazioni, altrimenti a QLog non arriva nulla	YA-GT-s on UDP-edastus väljas: lülita see Seadetes sisse, muidu ei jõua QLogi midagi
+ascolta sulla {0}, la stessa porta di YA-GT: i due programmi si rubano i pacchetti	kuulab porti {0}, sama porti kui YA-GT: kaks programmi varastavad teineteise pakette
+ascolta sulla {0}, ma YA-GT ritrasmette sulla {1}	kuulab porti {0}, kuid YA-GT edastab porti {1}
+ascolta sulla {0}, dove YA-GT ritrasmette	kuulab porti {0}, kuhu YA-GT edastab
+QLog: è aperto, chiudilo e riprova	QLog: on avatud, sulge see ja proovi uuesti
+QLog: ora ascolta sulla {0} (copia in {1})	QLog: kuulab nüüd porti {0} (koopia: {1})
+ — accendi anche il rimbalzo UDP in YA-GT	 — lülita ka YA-GT UDP-edastus sisse
+Porta	Port
+qualcuno ascolta sulla porta di ritrasmissione (di solito QLog)	keegi kuulab edastusporti (tavaliselt QLog)
+nessun programma ascolta sulla porta di ritrasmissione: apri QLog o controlla la sua porta	ükski programm ei kuula edastusporti: ava QLog või kontrolli selle porti
+porta UDP {0} già occupata (forse da QLog o GridTracker): metti quel programma su un'altra porta, es. 2238, e scrivila tra gli inoltri	UDP-port {0} on juba kasutusel (võib-olla QLogi või GridTrackeri poolt): pane see programm teise porti, nt 2238, ja lisa see edastuste hulka
+l'inoltro non può puntare alla porta d'ascolto 	edastus ei tohi osutada kuulamispordile 
+Controlla all'avvio le impostazioni UDP degli altri programmi	Kontrolli käivitamisel teiste programmide UDP-seadeid
+Verifica UDP…	UDP kontroll…
+non toccarla, solo avvisi	ära puutu, ainult hoiatused
+mandala a	saada aadressile
+spegnila	lülita välja
+UDP secondaria (ADIF)	Teisene UDP (ADIF)
+Porta solo l'ADIF dei QSO a un altro log (Log4OM, N1MM, HRD…). Di base YA-GT non la tocca e segnala solo le scelte fuorvianti.	Viib ainult QSO-de ADIF-i teise logisse (Log4OM, N1MM, HRD…). Vaikimisi YA-GT seda ei puutu ja märgib ainult eksitavaid valikuid.
+Altri log di stazione	Muud jaama logid
+Aggiungi file…	Lisa fail…
+Log di stazione	Jaama logid
+Trova i log sul computer	Otsi logisid arvutist
+Nessun log trovato nelle cartelle abituali.	Tavapärastest kaustadest logi ei leitud.
+Uno per riga (# = spenta): file ADIF, Cabrillo, SQLite o Access, oppure mysql:, wavelog:, qrz:. I file si rileggono quando cambiano, i log in rete ogni 30 minuti. I file degli altri programmi non vengono mai modificati.	Üks rea kohta (# = väljas): ADIF-, Cabrillo-, SQLite- või Access-failid või mysql:, wavelog:, qrz:. Faile loetakse muutumisel uuesti, võrgulogisid iga 30 minuti järel. Teiste programmide faile ei muudeta kunagi.
+Porta della UDP secondaria non valida.	Teisese UDP port on vigane.
+YA-GT — verifica UDP	YA-GT — UDP kontroll
+YA-GT ascolta su {0}:{1}	YA-GT kuulab aadressil {0}:{1}
+ e ritrasmette a {0}:{1}	 ja edastab aadressile {0}:{1}
+ (rimbalzo UDP spento)	 (UDP-edastus väljas)
+"Correggi" mette questi valori nei programmi chiusi, dopo averne copiato le impostazioni nella cartella Dati\copie-impostazioni. I programmi aperti vanno chiusi prima: alla chiusura riscrivono le loro impostazioni.	„Paranda“ kirjutab need väärtused suletud programmidesse pärast nende seadete kopeerimist kausta Dati\copie-impostazioni. Avatud programmid tuleb enne sulgeda: sulgemisel kirjutavad nad oma seaded üle.
+Controllo in corso…	Kontrollin…
+aperto	avatud
+QSO dei log (QLog e altri)	Logide QSO-d (QLog ja teised)
+Legge qlog.db e gli altri log scelti nelle Impostazioni (copie in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato	Loeb qlog.db-d ja teisi Seadetes valitud logisid (kirjutuskaitstud koopiad): rohelised ruudud = LoTW, sinised = QSL, oranžid = töötatud
+Legge qlog.db e gli altri log scelti nelle Impostazioni (copie in sola lettura)	Loeb qlog.db-d ja teisi Seadetes valitud logisid (kirjutuskaitstud koopiad)
+Quadrati (LoTW + log)	Ruudud (LoTW + logid)
+Correggi	Paranda
+Ricontrolla	Kontrolli uuesti
+Log (ADIF, Cabrillo, SQLite, Access)	Logi (ADIF, Cabrillo, SQLite, Access)
+CQRLOG: è aperto, chiudilo e riprova	CQRLOG: on avatud, sulge see ja proovi uuesti
+CQRLOG: ora ascolta sulla {0} (copia in {1})	CQRLOG: kuulab nüüd porti {0} (koopia: {1})

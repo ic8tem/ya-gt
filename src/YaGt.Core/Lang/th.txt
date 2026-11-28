@@ -197,3 +197,104 @@ G7VRD: ricerca dei locatori per nominativo (api.g7vrd.co.uk)	G7VRD: ค้นห
 cty.dat — Jim Reisert AD1C (country-files.com): prefissi e paesi DXCC	cty.dat — Jim Reisert AD1C (country-files.com): คำนำหน้าและประเทศ DXCC
 Natural Earth: coste e confini (pubblico dominio)	Natural Earth: แนวชายฝั่งและพรมแดน (สาธารณสมบัติ)
 Codice ripreso da LIVETROPOVHF e LoTW Grid Map v2 (IC8TEM)	โค้ดที่นำมาจาก LIVETROPOVHF และ LoTW Grid Map v2 (IC8TEM)
+: file non trovato	: ไม่พบไฟล์
+manca il driver di Microsoft Access (Access Database Engine) per questa versione di Windows	ไม่มีไดรเวอร์ Microsoft Access (Access Database Engine) สำหรับ Windows รุ่นนี้
+i database Access si leggono solo su Windows	ฐานข้อมูล Access อ่านได้เฉพาะบน Windows
+manca il driver di Microsoft Access a 64 bit (Microsoft Access Database Engine)	ไม่มีไดรเวอร์ Microsoft Access แบบ 64 บิต (Microsoft Access Database Engine)
+: tabella del log non trovata	: ไม่พบตารางของล็อก
+Wavelog: scrivi indirizzo, chiave API e numero della stazione	Wavelog: ใส่ที่อยู่ คีย์ API และหมายเลขสถานี
+QRZ: manca la chiave API del logbook	QRZ: ไม่มีคีย์ API ของสมุดล็อก
+risposta non valida	คำตอบไม่ถูกต้อง
+invio dei QSO acceso ma senza destinazione (DestinationIPs vuoto)	เปิดการส่ง QSO แต่ไม่มีปลายทาง (DestinationIPs ว่าง)
+manda l'XML alla porta {0}, dove ascolta YA-GT con il protocollo WSJT-X	ส่ง XML ไปยังพอร์ต {0} ซึ่ง YA-GT ฟังด้วยโปรโตคอล WSJT-X
+manda l'XML alla porta WSJT-X di QLog ({0}): QLog non legge l'XML di N1MM	ส่ง XML ไปยังพอร์ต WSJT-X ของ QLog ({0}): QLog อ่าน XML ของ N1MM ไม่ได้
+manda l'XML al ricevitore ADIF di QLog ({0}): QLog lì aspetta l'ADIF, non l'XML di N1MM	ส่ง XML ไปยังตัวรับ ADIF ของ QLog ({0}): ที่นั่น QLog รอ ADIF ไม่ใช่ XML ของ N1MM
+nessun programma ascolta sulla porta {0}	ไม่มีโปรแกรมใดฟังที่พอร์ต {0}
+in YA-GT hai scelto di spegnere gli invii secondari	ใน YA-GT คุณเลือกปิดการส่งสำรอง
+manda i QSO a 	ส่ง QSO ไปที่ 
+invio dei QSO spento	ปิดการส่ง QSO
+ (YA-GT non lo tocca)	 (YA-GT ไม่แตะต้อง)
+N1MM Logger+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe il file .ini)	N1MM Logger+: เปิดอยู่ ปิดแล้วลองใหม่ (ตอนปิดจะเขียนไฟล์ .ini ทับ)
+N1MM Logger+: invio dei QSO spento (copia in {0})	N1MM Logger+: ปิดการส่ง QSO แล้ว (สำเนาใน {0})
+N1MM Logger+: tolte le destinazioni sbagliate	N1MM Logger+: ลบปลายทางที่ผิดแล้ว
+ e spento l'invio	 และปิดการส่งแล้ว
+ (copia in {0})	 (สำเนาใน {0})
+ — per farlo correggere scegli in Impostazioni "spegnila" o "mandala a" per la UDP secondaria	 — หากต้องการให้แก้ ให้เลือก "ปิด" หรือ "ส่งไปที่" สำหรับ UDP สำรองในการตั้งค่า
+non leggibile: 	อ่านไม่ได้: 
+ — 2° server UDP (ADIF)	 — เซิร์ฟเวอร์ UDP ตัวที่ 2 (ADIF)
+invio dei QSO spento (YA-GT non lo tocca)	ปิดการส่ง QSO (YA-GT ไม่แตะต้อง)
+Verifica	ตรวจสอบ
+nessun programma trovato (WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+, CQRLOG, QLog)	ไม่พบโปรแกรมใด (WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+, CQRLOG, QLog)
+ — invio ADIF "N1MM"	 — การส่ง ADIF "N1MM"
+manda l'ADIF alla porta {0}, dove ascolta YA-GT con il protocollo WSJT-X: va su un'altra porta	ส่ง ADIF ไปยังพอร์ต {0} ซึ่ง YA-GT ฟังด้วยโปรโตคอล WSJT-X: ใช้พอร์ตอื่น
+manda l'ADIF alla porta WSJT-X di QLog ({0}): QLog lì aspetta il protocollo WSJT-X, non l'ADIF	ส่ง ADIF ไปยังพอร์ต WSJT-X ของ QLog ({0}): ที่นั่น QLog รอโปรโตคอล WSJT-X ไม่ใช่ ADIF
+manda l'ADIF a QLog ({0}) mentre QLog riceve già il QSO dal rimbalzo di YA-GT: rischio di QSO doppi	ส่ง ADIF ไปยัง QLog ({0}) ขณะที่ QLog ได้รับ QSO จากการส่งต่อของ YA-GT อยู่แล้ว: เสี่ยง QSO ซ้ำ
+nessun programma ascolta sulla porta {0} (log chiuso o porta sbagliata)	ไม่มีโปรแกรมใดฟังที่พอร์ต {0} (ล็อกปิดอยู่หรือพอร์ตผิด)
+in YA-GT hai scelto di mandarla a {0}:{1}	ใน YA-GT คุณเลือกส่งไปที่ {0}:{1}
+in YA-GT hai scelto di spegnerla	ใน YA-GT คุณเลือกปิด
+ADIF a {0}:{1}	ADIF ไปที่ {0}:{1}
+spenta	ปิด
+ (YA-GT non la tocca)	 (YA-GT ไม่แตะต้อง)
+: è aperto, chiudilo e riprova	: เปิดอยู่ ปิดแล้วลองใหม่
+: ADIF verso {0}:{1}	: ADIF ไปที่ {0}:{1}
+: UDP secondaria spenta	: ปิด UDP สำรองแล้ว
+ — per farla correggere scegli in Impostazioni la destinazione della UDP secondaria (ora: solo avvisi)	 — หากต้องการให้แก้ ให้เลือกปลายทางของ UDP สำรองในการตั้งค่า (ตอนนี้: แจ้งเตือนเท่านั้น)
+manda a {0} invece di {1}	ส่งไปที่ {0} แทน {1}
+porta {0} invece di {1}	พอร์ต {0} แทน {1}
+"Accetta richieste UDP" spento (le risposte di QLog e degli altri vengono ignorate)	ปิด "ยอมรับคำขอ UDP" (คำตอบจาก QLog และอื่น ๆ ถูกละเลย)
+{0} altre configurazioni con un'altra porta	มีการตั้งค่าอื่นอีก {0} ชุดที่ใช้พอร์ตอื่น
+manda a {0}, richieste UDP accettate	ส่งไปที่ {0} ยอมรับคำขอ UDP
+{0}: è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)	{0}: เปิดอยู่ ปิดแล้วลองใหม่ (ตอนปิดจะเขียนการตั้งค่าของตัวเองทับ)
+{0}: corretto (copia in {1})	{0}: แก้แล้ว (สำเนาใน {1})
+"Enable Decoded Text" spento (YA-GT non vede le decodifiche)	ปิด "Enable Decoded Text" (YA-GT ไม่เห็นการถอดรหัส)
+"Enable Logged QSO" spento (i QSO non arrivano a QLog)	ปิด "Enable Logged QSO" (QSO ไปไม่ถึง QLog)
+manda a {0} decodifiche e QSO	ส่งการถอดรหัสและ QSO ไปที่ {0}
+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)	: เปิดอยู่ ปิดแล้วลองใหม่ (ตอนปิดจะเขียนการตั้งค่าของตัวเองทับ)
+invio UDP dei QSO spento	ปิดการส่ง QSO ทาง UDP
+manda i QSO a {0}	ส่ง QSO ไปที่ {0}
+server UDP primario spento	ปิดเซิร์ฟเวอร์ UDP หลัก
+"Accetta richieste UDP" spento	ปิด "ยอมรับคำขอ UDP"
+Aurora: è aperta, chiudila e riprova	Aurora: เปิดอยู่ ปิดแล้วลองใหม่
+Aurora: corretta (copia in {0})	Aurora: แก้แล้ว (สำเนาใน {0})
+in YA-GT il rimbalzo UDP è spento: accendilo nelle Impostazioni, altrimenti a QLog non arriva nulla	ใน YA-GT การส่งต่อ UDP ปิดอยู่: เปิดในการตั้งค่า ไม่อย่างนั้นจะไม่มีอะไรไปถึง QLog
+ascolta sulla {0}, la stessa porta di YA-GT: i due programmi si rubano i pacchetti	ฟังที่ {0} พอร์ตเดียวกับ YA-GT: สองโปรแกรมแย่งแพ็กเก็ตกัน
+ascolta sulla {0}, ma YA-GT ritrasmette sulla {1}	ฟังที่ {0} แต่ YA-GT ส่งต่อไปที่ {1}
+ascolta sulla {0}, dove YA-GT ritrasmette	ฟังที่ {0} ซึ่ง YA-GT ส่งต่อไป
+QLog: è aperto, chiudilo e riprova	QLog: เปิดอยู่ ปิดแล้วลองใหม่
+QLog: ora ascolta sulla {0} (copia in {1})	QLog: ตอนนี้ฟังที่ {0} (สำเนาใน {1})
+ — accendi anche il rimbalzo UDP in YA-GT	 — เปิดการส่งต่อ UDP ใน YA-GT ด้วย
+Porta	พอร์ต
+qualcuno ascolta sulla porta di ritrasmissione (di solito QLog)	มีโปรแกรมฟังที่พอร์ตส่งต่อ (ปกติคือ QLog)
+nessun programma ascolta sulla porta di ritrasmissione: apri QLog o controlla la sua porta	ไม่มีโปรแกรมใดฟังที่พอร์ตส่งต่อ: เปิด QLog หรือตรวจพอร์ตของมัน
+porta UDP {0} già occupata (forse da QLog o GridTracker): metti quel programma su un'altra porta, es. 2238, e scrivila tra gli inoltri	พอร์ต UDP {0} ถูกใช้อยู่แล้ว (อาจเป็น QLog หรือ GridTracker): ย้ายโปรแกรมนั้นไปพอร์ตอื่น เช่น 2238 แล้วเพิ่มลงในรายการส่งต่อ
+l'inoltro non può puntare alla porta d'ascolto 	การส่งต่อชี้ไปที่พอร์ตฟังไม่ได้ 
+Controlla all'avvio le impostazioni UDP degli altri programmi	ตรวจการตั้งค่า UDP ของโปรแกรมอื่นตอนเริ่มโปรแกรม
+Verifica UDP…	ตรวจสอบ UDP…
+non toccarla, solo avvisi	ไม่แตะต้อง แจ้งเตือนเท่านั้น
+mandala a	ส่งไปที่
+spegnila	ปิด
+UDP secondaria (ADIF)	UDP สำรอง (ADIF)
+Porta solo l'ADIF dei QSO a un altro log (Log4OM, N1MM, HRD…). Di base YA-GT non la tocca e segnala solo le scelte fuorvianti.	นำเฉพาะ ADIF ของ QSO ไปยังล็อกอื่น (Log4OM, N1MM, HRD…) ค่าเริ่มต้นคือ YA-GT ไม่แตะต้องและแจ้งเฉพาะตัวเลือกที่ชวนเข้าใจผิด
+Altri log di stazione	ล็อกอื่นของสถานี
+Aggiungi file…	เพิ่มไฟล์…
+Log di stazione	ล็อกของสถานี
+Trova i log sul computer	ค้นหาล็อกในคอมพิวเตอร์
+Nessun log trovato nelle cartelle abituali.	ไม่พบล็อกในโฟลเดอร์ปกติ
+Uno per riga (# = spenta): file ADIF, Cabrillo, SQLite o Access, oppure mysql:, wavelog:, qrz:. I file si rileggono quando cambiano, i log in rete ogni 30 minuti. I file degli altri programmi non vengono mai modificati.	บรรทัดละหนึ่งรายการ (# = ปิด): ไฟล์ ADIF, Cabrillo, SQLite หรือ Access หรือ mysql:, wavelog:, qrz: ไฟล์จะอ่านใหม่เมื่อเปลี่ยน ล็อกออนไลน์ทุก 30 นาที ไฟล์ของโปรแกรมอื่นไม่ถูกแก้ไขเลย
+Porta della UDP secondaria non valida.	พอร์ต UDP สำรองไม่ถูกต้อง
+YA-GT — verifica UDP	YA-GT — ตรวจสอบ UDP
+YA-GT ascolta su {0}:{1}	YA-GT ฟังที่ {0}:{1}
+ e ritrasmette a {0}:{1}	 และส่งต่อไปที่ {0}:{1}
+ (rimbalzo UDP spento)	 (ปิดการส่งต่อ UDP)
+"Correggi" mette questi valori nei programmi chiusi, dopo averne copiato le impostazioni nella cartella Dati\copie-impostazioni. I programmi aperti vanno chiusi prima: alla chiusura riscrivono le loro impostazioni.	"แก้ไข" จะเขียนค่าเหล่านี้ลงในโปรแกรมที่ปิดอยู่ หลังจากคัดลอกการตั้งค่าไปไว้ในโฟลเดอร์ Dati\copie-impostazioni โปรแกรมที่เปิดอยู่ต้องปิดก่อน: ตอนปิดจะเขียนการตั้งค่าของตัวเองทับ
+Controllo in corso…	กำลังตรวจสอบ…
+aperto	เปิดอยู่
+QSO dei log (QLog e altri)	QSO จากล็อก (QLog และอื่น ๆ)
+Legge qlog.db e gli altri log scelti nelle Impostazioni (copie in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato	อ่าน qlog.db และล็อกอื่นที่เลือกในการตั้งค่า (สำเนาอ่านอย่างเดียว): ช่องสีเขียว = LoTW สีน้ำเงิน = QSL สีส้ม = ติดต่อแล้ว
+Legge qlog.db e gli altri log scelti nelle Impostazioni (copie in sola lettura)	อ่าน qlog.db และล็อกอื่นที่เลือกในการตั้งค่า (สำเนาอ่านอย่างเดียว)
+Quadrati (LoTW + log)	ช่อง (LoTW + ล็อก)
+Correggi	แก้ไข
+Ricontrolla	ตรวจอีกครั้ง
+Log (ADIF, Cabrillo, SQLite, Access)	ล็อก (ADIF, Cabrillo, SQLite, Access)
+CQRLOG: è aperto, chiudilo e riprova	CQRLOG: เปิดอยู่ ปิดแล้วลองใหม่
+CQRLOG: ora ascolta sulla {0} (copia in {1})	CQRLOG: ตอนนี้ฟังที่ {0} (สำเนาใน {1})

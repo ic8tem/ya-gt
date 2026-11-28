@@ -197,3 +197,104 @@ G7VRD: ricerca dei locatori per nominativo (api.g7vrd.co.uk)	G7VRD: поиск �
 cty.dat — Jim Reisert AD1C (country-files.com): prefissi e paesi DXCC	cty.dat — Jim Reisert AD1C (country-files.com): префиксы и страны DXCC
 Natural Earth: coste e confini (pubblico dominio)	Natural Earth: береговые линии и границы (общественное достояние)
 Codice ripreso da LIVETROPOVHF e LoTW Grid Map v2 (IC8TEM)	Код взят из LIVETROPOVHF и LoTW Grid Map v2 (IC8TEM)
+: file non trovato	: файл не найден
+manca il driver di Microsoft Access (Access Database Engine) per questa versione di Windows	отсутствует драйвер Microsoft Access (Access Database Engine) для этой версии Windows
+i database Access si leggono solo su Windows	базы Access читаются только в Windows
+manca il driver di Microsoft Access a 64 bit (Microsoft Access Database Engine)	отсутствует 64-битный драйвер Microsoft Access (Microsoft Access Database Engine)
+: tabella del log non trovata	: таблица журнала не найдена
+Wavelog: scrivi indirizzo, chiave API e numero della stazione	Wavelog: укажите адрес, ключ API и номер станции
+QRZ: manca la chiave API del logbook	QRZ: отсутствует ключ API журнала
+risposta non valida	неверный ответ
+invio dei QSO acceso ma senza destinazione (DestinationIPs vuoto)	отправка QSO включена, но без адресата (DestinationIPs пусто)
+manda l'XML alla porta {0}, dove ascolta YA-GT con il protocollo WSJT-X	отправляет XML на порт {0}, где YA-GT слушает по протоколу WSJT-X
+manda l'XML alla porta WSJT-X di QLog ({0}): QLog non legge l'XML di N1MM	отправляет XML на порт WSJT-X программы QLog ({0}): QLog не читает XML от N1MM
+manda l'XML al ricevitore ADIF di QLog ({0}): QLog lì aspetta l'ADIF, non l'XML di N1MM	отправляет XML на приёмник ADIF программы QLog ({0}): там QLog ждёт ADIF, а не XML от N1MM
+nessun programma ascolta sulla porta {0}	ни одна программа не слушает порт {0}
+in YA-GT hai scelto di spegnere gli invii secondari	в YA-GT вы выбрали выключить дополнительную отправку
+manda i QSO a 	отправляет QSO на 
+invio dei QSO spento	отправка QSO выключена
+ (YA-GT non lo tocca)	 (YA-GT её не трогает)
+N1MM Logger+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe il file .ini)	N1MM Logger+: открыт, закройте его и повторите (при закрытии он перезапишет файл .ini)
+N1MM Logger+: invio dei QSO spento (copia in {0})	N1MM Logger+: отправка QSO выключена (копия в {0})
+N1MM Logger+: tolte le destinazioni sbagliate	N1MM Logger+: неверные адресаты удалены
+ e spento l'invio	 и отправка выключена
+ (copia in {0})	 (копия в {0})
+ — per farlo correggere scegli in Impostazioni "spegnila" o "mandala a" per la UDP secondaria	 — чтобы исправить, выберите в Настройках «выключить» или «отправлять на» для второго UDP
+non leggibile: 	не читается: 
+ — 2° server UDP (ADIF)	 — 2-й сервер UDP (ADIF)
+invio dei QSO spento (YA-GT non lo tocca)	отправка QSO выключена (YA-GT её не трогает)
+Verifica	Проверка
+nessun programma trovato (WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+, CQRLOG, QLog)	программы не найдены (WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+, CQRLOG, QLog)
+ — invio ADIF "N1MM"	 — отправка ADIF «N1MM»
+manda l'ADIF alla porta {0}, dove ascolta YA-GT con il protocollo WSJT-X: va su un'altra porta	отправляет ADIF на порт {0}, где YA-GT слушает по протоколу WSJT-X: используйте другой порт
+manda l'ADIF alla porta WSJT-X di QLog ({0}): QLog lì aspetta il protocollo WSJT-X, non l'ADIF	отправляет ADIF на порт WSJT-X программы QLog ({0}): там QLog ждёт протокол WSJT-X, а не ADIF
+manda l'ADIF a QLog ({0}) mentre QLog riceve già il QSO dal rimbalzo di YA-GT: rischio di QSO doppi	отправляет ADIF в QLog ({0}), хотя QLog уже получает QSO через ретрансляцию YA-GT: риск двойных QSO
+nessun programma ascolta sulla porta {0} (log chiuso o porta sbagliata)	ни одна программа не слушает порт {0} (журнал закрыт или порт неверный)
+in YA-GT hai scelto di mandarla a {0}:{1}	в YA-GT вы выбрали отправлять его на {0}:{1}
+in YA-GT hai scelto di spegnerla	в YA-GT вы выбрали его выключить
+ADIF a {0}:{1}	ADIF на {0}:{1}
+spenta	выключен
+ (YA-GT non la tocca)	 (YA-GT его не трогает)
+: è aperto, chiudilo e riprova	: открыт, закройте его и повторите
+: ADIF verso {0}:{1}	: ADIF на {0}:{1}
+: UDP secondaria spenta	: второй UDP выключен
+ — per farla correggere scegli in Impostazioni la destinazione della UDP secondaria (ora: solo avvisi)	 — чтобы исправить, выберите в Настройках адресата второго UDP (сейчас: только предупреждения)
+manda a {0} invece di {1}	отправляет на {0} вместо {1}
+porta {0} invece di {1}	порт {0} вместо {1}
+"Accetta richieste UDP" spento (le risposte di QLog e degli altri vengono ignorate)	«Принимать UDP-запросы» выключено (ответы QLog и других игнорируются)
+{0} altre configurazioni con un'altra porta	ещё {0} конфигураций с другим портом
+manda a {0}, richieste UDP accettate	отправляет на {0}, UDP-запросы принимаются
+{0}: è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)	{0}: открыт, закройте его и повторите (при закрытии он перезапишет свои настройки)
+{0}: corretto (copia in {1})	{0}: исправлено (копия в {1})
+"Enable Decoded Text" spento (YA-GT non vede le decodifiche)	«Enable Decoded Text» выключено (YA-GT не видит декодирования)
+"Enable Logged QSO" spento (i QSO non arrivano a QLog)	«Enable Logged QSO» выключено (QSO не доходят до QLog)
+manda a {0} decodifiche e QSO	отправляет декодирования и QSO на {0}
+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)	: открыт, закройте его и повторите (при закрытии он перезапишет свои настройки)
+invio UDP dei QSO spento	отправка QSO по UDP выключена
+manda i QSO a {0}	отправляет QSO на {0}
+server UDP primario spento	основной сервер UDP выключен
+"Accetta richieste UDP" spento	«Принимать UDP-запросы» выключено
+Aurora: è aperta, chiudila e riprova	Aurora: открыта, закройте её и повторите
+Aurora: corretta (copia in {0})	Aurora: исправлено (копия в {0})
+in YA-GT il rimbalzo UDP è spento: accendilo nelle Impostazioni, altrimenti a QLog non arriva nulla	в YA-GT ретрансляция UDP выключена: включите её в Настройках, иначе до QLog ничего не дойдёт
+ascolta sulla {0}, la stessa porta di YA-GT: i due programmi si rubano i pacchetti	слушает {0}, тот же порт, что и YA-GT: программы воруют друг у друга пакеты
+ascolta sulla {0}, ma YA-GT ritrasmette sulla {1}	слушает {0}, но YA-GT ретранслирует на {1}
+ascolta sulla {0}, dove YA-GT ritrasmette	слушает {0}, куда ретранслирует YA-GT
+QLog: è aperto, chiudilo e riprova	QLog: открыт, закройте его и повторите
+QLog: ora ascolta sulla {0} (copia in {1})	QLog: теперь слушает {0} (копия в {1})
+ — accendi anche il rimbalzo UDP in YA-GT	 — включите также ретрансляцию UDP в YA-GT
+Porta	Порт
+qualcuno ascolta sulla porta di ritrasmissione (di solito QLog)	кто-то слушает порт ретрансляции (обычно QLog)
+nessun programma ascolta sulla porta di ritrasmissione: apri QLog o controlla la sua porta	ни одна программа не слушает порт ретрансляции: откройте QLog или проверьте его порт
+porta UDP {0} già occupata (forse da QLog o GridTracker): metti quel programma su un'altra porta, es. 2238, e scrivila tra gli inoltri	порт UDP {0} уже занят (возможно, QLog или GridTracker): переведите ту программу на другой порт, например 2238, и добавьте его в пересылки
+l'inoltro non può puntare alla porta d'ascolto 	пересылка не может указывать на порт приёма 
+Controlla all'avvio le impostazioni UDP degli altri programmi	Проверять при запуске настройки UDP других программ
+Verifica UDP…	Проверка UDP…
+non toccarla, solo avvisi	не трогать, только предупреждения
+mandala a	отправлять на
+spegnila	выключить
+UDP secondaria (ADIF)	Второй UDP (ADIF)
+Porta solo l'ADIF dei QSO a un altro log (Log4OM, N1MM, HRD…). Di base YA-GT non la tocca e segnala solo le scelte fuorvianti.	Передаёт только ADIF связей в другой журнал (Log4OM, N1MM, HRD…). По умолчанию YA-GT его не трогает и лишь указывает на вводящие в заблуждение настройки.
+Altri log di stazione	Другие журналы станции
+Aggiungi file…	Добавить файл…
+Log di stazione	Журналы станции
+Trova i log sul computer	Найти журналы на компьютере
+Nessun log trovato nelle cartelle abituali.	В обычных папках журналы не найдены.
+Uno per riga (# = spenta): file ADIF, Cabrillo, SQLite o Access, oppure mysql:, wavelog:, qrz:. I file si rileggono quando cambiano, i log in rete ogni 30 minuti. I file degli altri programmi non vengono mai modificati.	По одному в строке (# = выключено): файлы ADIF, Cabrillo, SQLite или Access, либо mysql:, wavelog:, qrz:. Файлы перечитываются при изменении, сетевые журналы каждые 30 минут. Файлы других программ никогда не изменяются.
+Porta della UDP secondaria non valida.	Неверный порт второго UDP.
+YA-GT — verifica UDP	YA-GT — проверка UDP
+YA-GT ascolta su {0}:{1}	YA-GT слушает {0}:{1}
+ e ritrasmette a {0}:{1}	 и ретранслирует на {0}:{1}
+ (rimbalzo UDP spento)	 (ретрансляция UDP выключена)
+"Correggi" mette questi valori nei programmi chiusi, dopo averne copiato le impostazioni nella cartella Dati\copie-impostazioni. I programmi aperti vanno chiusi prima: alla chiusura riscrivono le loro impostazioni.	«Исправить» записывает эти значения в закрытые программы, предварительно скопировав их настройки в папку Dati\copie-impostazioni. Открытые программы нужно сначала закрыть: при закрытии они перезаписывают свои настройки.
+Controllo in corso…	Идёт проверка…
+aperto	открыт
+QSO dei log (QLog e altri)	QSO из журналов (QLog и другие)
+Legge qlog.db e gli altri log scelti nelle Impostazioni (copie in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato	Читает qlog.db и другие журналы, выбранные в Настройках (копии только для чтения): зелёные квадраты = LoTW, синие = QSL, оранжевые = проведено
+Legge qlog.db e gli altri log scelti nelle Impostazioni (copie in sola lettura)	Читает qlog.db и другие журналы, выбранные в Настройках (копии только для чтения)
+Quadrati (LoTW + log)	Квадраты (LoTW + журналы)
+Correggi	Исправить
+Ricontrolla	Проверить снова
+Log (ADIF, Cabrillo, SQLite, Access)	Журнал (ADIF, Cabrillo, SQLite, Access)
+CQRLOG: è aperto, chiudilo e riprova	CQRLOG: открыт, закройте его и повторите
+CQRLOG: ora ascolta sulla {0} (copia in {1})	CQRLOG: теперь слушает {0} (копия в {1})

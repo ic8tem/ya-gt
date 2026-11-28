@@ -8,6 +8,8 @@
 Tutti i dati restano accanto al programma (`YA-GT.ini`, `CALL3.TXT`, cartella `Dati`): niente in AppData. La password LoTW non viene mai salvata.
 *All data stays next to the program: nothing in AppData. The LoTW password is never stored.*
 
+**1.1.1**: verifica UDP anche per CQRLOG; tutte le scritte nuove (verifica UDP, UDP secondaria, altri log di stazione) tradotte nelle 37 lingue. / *UDP check also for CQRLOG; all new texts (UDP check, secondary UDP, other station logs) translated into the 37 languages.*
+
 **1.1.0**: interfaccia in 37 lingue, le stesse di tutti i programmi IC8TEM (YA-NEC, YA-MS, YAEC, E-LAYER ANALYZER, LIVETROPOVHF, IP-DESK-CTRL); al primo avvio la lingua del sistema, poi si sceglie in Impostazioni > Lingua (vale dal riavvio). / *Interface in 37 languages, the same as all IC8TEM programs; on first start the system language, then choose it in Settings > Language (applies after a restart).*
 
 **1.1.0** (log e UDP): verifica UDP con correzione automatica di WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+ e QLog (anche all'avvio), con gli avvisi sulla UDP secondaria ADIF; lettura di tanti altri log di stazione insieme a QLog: ADIF/ADX (WSJT-X, JTDX, MSHV…), Cabrillo, SQLite (Log4OM, N1MM Logger+, KLog, MacLoggerDX), Access (DXKeeper, ACLog, Swisslog, HRD), MySQL (CQRLOG, HRD), Wavelog/Cloudlog, QRZ Logbook; ricerca automatica dei log sul computer. / *UDP check with automatic fixing of WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+ and QLog settings (also at start-up); reads many other station logs together with QLog: ADIF/ADX, Cabrillo, SQLite (Log4OM, N1MM Logger+, KLog, MacLoggerDX), Access (DXKeeper, ACLog, Swisslog, HRD), MySQL (CQRLOG, HRD), Wavelog/Cloudlog, QRZ Logbook; automatic search of logs on the computer.*

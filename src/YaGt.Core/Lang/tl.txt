@@ -197,3 +197,104 @@ G7VRD: ricerca dei locatori per nominativo (api.g7vrd.co.uk)	G7VRD: paghahanap n
 cty.dat — Jim Reisert AD1C (country-files.com): prefissi e paesi DXCC	cty.dat — Jim Reisert AD1C (country-files.com): mga DXCC prefix at bansa
 Natural Earth: coste e confini (pubblico dominio)	Natural Earth: mga baybayin at hangganan (pampublikong domain)
 Codice ripreso da LIVETROPOVHF e LoTW Grid Map v2 (IC8TEM)	Code na kinuha mula sa LIVETROPOVHF at LoTW Grid Map v2 (IC8TEM)
+: file non trovato	: hindi nakita ang file
+manca il driver di Microsoft Access (Access Database Engine) per questa versione di Windows	walang driver ng Microsoft Access (Access Database Engine) para sa bersyong ito ng Windows
+i database Access si leggono solo su Windows	sa Windows lang nababasa ang mga database ng Access
+manca il driver di Microsoft Access a 64 bit (Microsoft Access Database Engine)	walang 64-bit na driver ng Microsoft Access (Microsoft Access Database Engine)
+: tabella del log non trovata	: hindi nakita ang table ng log
+Wavelog: scrivi indirizzo, chiave API e numero della stazione	Wavelog: ilagay ang address, API key at numero ng istasyon
+QRZ: manca la chiave API del logbook	QRZ: walang API key ng logbook
+risposta non valida	hindi wastong sagot
+invio dei QSO acceso ma senza destinazione (DestinationIPs vuoto)	naka-on ang pagpapadala ng QSO pero walang destinasyon (walang laman ang DestinationIPs)
+manda l'XML alla porta {0}, dove ascolta YA-GT con il protocollo WSJT-X	ipinapadala ang XML sa port {0}, kung saan nakikinig ang YA-GT gamit ang protocol ng WSJT-X
+manda l'XML alla porta WSJT-X di QLog ({0}): QLog non legge l'XML di N1MM	ipinapadala ang XML sa WSJT-X port ng QLog ({0}): hindi binabasa ng QLog ang XML ng N1MM
+manda l'XML al ricevitore ADIF di QLog ({0}): QLog lì aspetta l'ADIF, non l'XML di N1MM	ipinapadala ang XML sa ADIF receiver ng QLog ({0}): ADIF ang hinihintay doon ng QLog, hindi XML ng N1MM
+nessun programma ascolta sulla porta {0}	walang programang nakikinig sa port {0}
+in YA-GT hai scelto di spegnere gli invii secondari	sa YA-GT pinili mong i-off ang pangalawang pagpapadala
+manda i QSO a 	ipinapadala ang mga QSO sa 
+invio dei QSO spento	naka-off ang pagpapadala ng QSO
+ (YA-GT non lo tocca)	 (hindi ito ginagalaw ng YA-GT)
+N1MM Logger+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe il file .ini)	N1MM Logger+: bukas ito, isara at subukang muli (sa pagsara ay papalitan nito ang .ini file)
+N1MM Logger+: invio dei QSO spento (copia in {0})	N1MM Logger+: in-off ang pagpapadala ng QSO (kopya sa {0})
+N1MM Logger+: tolte le destinazioni sbagliate	N1MM Logger+: tinanggal ang maling mga destinasyon
+ e spento l'invio	 at in-off ang pagpapadala
+ (copia in {0})	 (kopya sa {0})
+ — per farlo correggere scegli in Impostazioni "spegnila" o "mandala a" per la UDP secondaria	 — para maitama, piliin sa Mga Setting ang "i-off ito" o "ipadala sa" para sa pangalawang UDP
+non leggibile: 	hindi mabasa: 
+ — 2° server UDP (ADIF)	 — ika-2 UDP server (ADIF)
+invio dei QSO spento (YA-GT non lo tocca)	naka-off ang pagpapadala ng QSO (hindi ito ginagalaw ng YA-GT)
+Verifica	Pagsusuri
+nessun programma trovato (WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+, CQRLOG, QLog)	walang nakitang programa (WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+, CQRLOG, QLog)
+ — invio ADIF "N1MM"	 — pagpapadala ng ADIF "N1MM"
+manda l'ADIF alla porta {0}, dove ascolta YA-GT con il protocollo WSJT-X: va su un'altra porta	ipinapadala ang ADIF sa port {0}, kung saan nakikinig ang YA-GT gamit ang protocol ng WSJT-X: gumamit ng ibang port
+manda l'ADIF alla porta WSJT-X di QLog ({0}): QLog lì aspetta il protocollo WSJT-X, non l'ADIF	ipinapadala ang ADIF sa WSJT-X port ng QLog ({0}): protocol ng WSJT-X ang hinihintay doon ng QLog, hindi ADIF
+manda l'ADIF a QLog ({0}) mentre QLog riceve già il QSO dal rimbalzo di YA-GT: rischio di QSO doppi	ipinapadala ang ADIF sa QLog ({0}) habang natatanggap na ng QLog ang QSO mula sa relay ng YA-GT: panganib ng dobleng QSO
+nessun programma ascolta sulla porta {0} (log chiuso o porta sbagliata)	walang programang nakikinig sa port {0} (sarado ang log o mali ang port)
+in YA-GT hai scelto di mandarla a {0}:{1}	sa YA-GT pinili mong ipadala ito sa {0}:{1}
+in YA-GT hai scelto di spegnerla	sa YA-GT pinili mong i-off ito
+ADIF a {0}:{1}	ADIF sa {0}:{1}
+spenta	naka-off
+ (YA-GT non la tocca)	 (hindi ito ginagalaw ng YA-GT)
+: è aperto, chiudilo e riprova	: bukas ito, isara at subukang muli
+: ADIF verso {0}:{1}	: ADIF papunta sa {0}:{1}
+: UDP secondaria spenta	: in-off ang pangalawang UDP
+ — per farla correggere scegli in Impostazioni la destinazione della UDP secondaria (ora: solo avvisi)	 — para maitama, piliin sa Mga Setting ang destinasyon ng pangalawang UDP (ngayon: babala lang)
+manda a {0} invece di {1}	ipinapadala sa {0} sa halip na {1}
+porta {0} invece di {1}	port {0} sa halip na {1}
+"Accetta richieste UDP" spento (le risposte di QLog e degli altri vengono ignorate)	naka-off ang "Tanggapin ang mga UDP request" (binabalewala ang mga sagot ng QLog at ng iba)
+{0} altre configurazioni con un'altra porta	{0} pang configuration na may ibang port
+manda a {0}, richieste UDP accettate	ipinapadala sa {0}, tinatanggap ang mga UDP request
+{0}: è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)	{0}: bukas ito, isara at subukang muli (sa pagsara ay papalitan nito ang sariling mga setting)
+{0}: corretto (copia in {1})	{0}: naitama (kopya sa {1})
+"Enable Decoded Text" spento (YA-GT non vede le decodifiche)	naka-off ang "Enable Decoded Text" (hindi nakikita ng YA-GT ang mga decode)
+"Enable Logged QSO" spento (i QSO non arrivano a QLog)	naka-off ang "Enable Logged QSO" (hindi umaabot sa QLog ang mga QSO)
+manda a {0} decodifiche e QSO	ipinapadala ang mga decode at QSO sa {0}
+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)	: bukas ito, isara at subukang muli (sa pagsara ay papalitan nito ang sariling mga setting)
+invio UDP dei QSO spento	naka-off ang pagpapadala ng QSO sa UDP
+manda i QSO a {0}	ipinapadala ang mga QSO sa {0}
+server UDP primario spento	naka-off ang pangunahing UDP server
+"Accetta richieste UDP" spento	naka-off ang "Tanggapin ang mga UDP request"
+Aurora: è aperta, chiudila e riprova	Aurora: bukas ito, isara at subukang muli
+Aurora: corretta (copia in {0})	Aurora: naitama (kopya sa {0})
+in YA-GT il rimbalzo UDP è spento: accendilo nelle Impostazioni, altrimenti a QLog non arriva nulla	sa YA-GT naka-off ang UDP relay: i-on ito sa Mga Setting, kung hindi ay walang aabot sa QLog
+ascolta sulla {0}, la stessa porta di YA-GT: i due programmi si rubano i pacchetti	nakikinig sa {0}, parehong port ng YA-GT: nagnanakawan ng packet ang dalawang programa
+ascolta sulla {0}, ma YA-GT ritrasmette sulla {1}	nakikinig sa {0}, pero sa {1} nagpapasa ang YA-GT
+ascolta sulla {0}, dove YA-GT ritrasmette	nakikinig sa {0}, kung saan nagpapasa ang YA-GT
+QLog: è aperto, chiudilo e riprova	QLog: bukas ito, isara at subukang muli
+QLog: ora ascolta sulla {0} (copia in {1})	QLog: nakikinig na ngayon sa {0} (kopya sa {1})
+ — accendi anche il rimbalzo UDP in YA-GT	 — i-on din ang UDP relay sa YA-GT
+Porta	Port
+qualcuno ascolta sulla porta di ritrasmissione (di solito QLog)	may nakikinig sa port ng pagpapasa (karaniwan ay QLog)
+nessun programma ascolta sulla porta di ritrasmissione: apri QLog o controlla la sua porta	walang programang nakikinig sa port ng pagpapasa: buksan ang QLog o suriin ang port nito
+porta UDP {0} già occupata (forse da QLog o GridTracker): metti quel programma su un'altra porta, es. 2238, e scrivila tra gli inoltri	ginagamit na ang UDP port {0} (baka ng QLog o GridTracker): ilipat ang programang iyon sa ibang port, hal. 2238, at idagdag ito sa mga pagpapasa
+l'inoltro non può puntare alla porta d'ascolto 	hindi puwedeng tumuro ang pagpapasa sa port ng pakikinig 
+Controlla all'avvio le impostazioni UDP degli altri programmi	Sa pagsisimula, suriin ang mga UDP setting ng ibang programa
+Verifica UDP…	Pagsusuri ng UDP…
+non toccarla, solo avvisi	huwag galawin, babala lang
+mandala a	ipadala sa
+spegnila	i-off ito
+UDP secondaria (ADIF)	Pangalawang UDP (ADIF)
+Porta solo l'ADIF dei QSO a un altro log (Log4OM, N1MM, HRD…). Di base YA-GT non la tocca e segnala solo le scelte fuorvianti.	Dinadala lang ang ADIF ng mga QSO sa ibang log (Log4OM, N1MM, HRD…). Bilang default, hindi ito ginagalaw ng YA-GT at ipinapaalam lang ang nakalilitong mga pagpili.
+Altri log di stazione	Iba pang log ng istasyon
+Aggiungi file…	Magdagdag ng file…
+Log di stazione	Mga log ng istasyon
+Trova i log sul computer	Hanapin ang mga log sa computer
+Nessun log trovato nelle cartelle abituali.	Walang nakitang log sa karaniwang mga folder.
+Uno per riga (# = spenta): file ADIF, Cabrillo, SQLite o Access, oppure mysql:, wavelog:, qrz:. I file si rileggono quando cambiano, i log in rete ogni 30 minuti. I file degli altri programmi non vengono mai modificati.	Isa bawat linya (# = naka-off): mga file na ADIF, Cabrillo, SQLite o Access, o mysql:, wavelog:, qrz:. Binabasa muli ang mga file kapag nagbago, ang mga online log bawat 30 minuto. Hindi kailanman binabago ang mga file ng ibang programa.
+Porta della UDP secondaria non valida.	Hindi wastong port ng pangalawang UDP.
+YA-GT — verifica UDP	YA-GT — pagsusuri ng UDP
+YA-GT ascolta su {0}:{1}	Nakikinig ang YA-GT sa {0}:{1}
+ e ritrasmette a {0}:{1}	 at nagpapasa sa {0}:{1}
+ (rimbalzo UDP spento)	 (naka-off ang UDP relay)
+"Correggi" mette questi valori nei programmi chiusi, dopo averne copiato le impostazioni nella cartella Dati\copie-impostazioni. I programmi aperti vanno chiusi prima: alla chiusura riscrivono le loro impostazioni.	Isinusulat ng "Itama" ang mga halagang ito sa mga saradong programa, matapos kopyahin ang kanilang mga setting sa folder na Dati\copie-impostazioni. Kailangang isara muna ang mga bukas na programa: sa pagsara ay papalitan nila ang kanilang mga setting.
+Controllo in corso…	Sinusuri…
+aperto	bukas
+QSO dei log (QLog e altri)	Mga QSO mula sa mga log (QLog at iba pa)
+Legge qlog.db e gli altri log scelti nelle Impostazioni (copie in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato	Binabasa ang qlog.db at ang ibang log na pinili sa Mga Setting (mga kopyang read-only): berdeng kahon = LoTW, asul = QSL, kahel = nagawa
+Legge qlog.db e gli altri log scelti nelle Impostazioni (copie in sola lettura)	Binabasa ang qlog.db at ang ibang log na pinili sa Mga Setting (mga kopyang read-only)
+Quadrati (LoTW + log)	Mga kahon (LoTW + log)
+Correggi	Itama
+Ricontrolla	Suriin muli
+Log (ADIF, Cabrillo, SQLite, Access)	Log (ADIF, Cabrillo, SQLite, Access)
+CQRLOG: è aperto, chiudilo e riprova	CQRLOG: bukas ito, isara at subukang muli
+CQRLOG: ora ascolta sulla {0} (copia in {1})	CQRLOG: nakikinig na ngayon sa {0} (kopya sa {1})

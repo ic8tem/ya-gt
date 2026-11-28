@@ -197,3 +197,104 @@ G7VRD: ricerca dei locatori per nominativo (api.g7vrd.co.uk)	G7VRD：按呼号�
 cty.dat — Jim Reisert AD1C (country-files.com): prefissi e paesi DXCC	cty.dat — Jim Reisert AD1C (country-files.com)：DXCC 前缀和国家
 Natural Earth: coste e confini (pubblico dominio)	Natural Earth：海岸线和国界（公有领域）
 Codice ripreso da LIVETROPOVHF e LoTW Grid Map v2 (IC8TEM)	取自 LIVETROPOVHF 和 LoTW Grid Map v2 的代码 (IC8TEM)
+: file non trovato	: 未找到文件
+manca il driver di Microsoft Access (Access Database Engine) per questa versione di Windows	缺少此 Windows 版本的 Microsoft Access 驱动程序 (Access Database Engine)
+i database Access si leggono solo su Windows	Access 数据库只能在 Windows 上读取
+manca il driver di Microsoft Access a 64 bit (Microsoft Access Database Engine)	缺少 64 位 Microsoft Access 驱动程序 (Microsoft Access Database Engine)
+: tabella del log non trovata	: 未找到日志表
+Wavelog: scrivi indirizzo, chiave API e numero della stazione	Wavelog：请填写地址、API 密钥和电台编号
+QRZ: manca la chiave API del logbook	QRZ：缺少日志簿的 API 密钥
+risposta non valida	无效的响应
+invio dei QSO acceso ma senza destinazione (DestinationIPs vuoto)	QSO 发送已开启但没有目标 (DestinationIPs 为空)
+manda l'XML alla porta {0}, dove ascolta YA-GT con il protocollo WSJT-X	将 XML 发送到端口 {0}，YA-GT 在该端口以 WSJT-X 协议监听
+manda l'XML alla porta WSJT-X di QLog ({0}): QLog non legge l'XML di N1MM	将 XML 发送到 QLog 的 WSJT-X 端口 ({0})：QLog 不读取 N1MM 的 XML
+manda l'XML al ricevitore ADIF di QLog ({0}): QLog lì aspetta l'ADIF, non l'XML di N1MM	将 XML 发送到 QLog 的 ADIF 接收器 ({0})：QLog 在那里等待 ADIF，而不是 N1MM 的 XML
+nessun programma ascolta sulla porta {0}	没有程序在端口 {0} 上监听
+in YA-GT hai scelto di spegnere gli invii secondari	在 YA-GT 中你选择了关闭副发送
+manda i QSO a 	将 QSO 发送到 
+invio dei QSO spento	QSO 发送已关闭
+ (YA-GT non lo tocca)	 (YA-GT 不会改动)
+N1MM Logger+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe il file .ini)	N1MM Logger+：程序已打开，请关闭后重试（关闭时它会重写 .ini 文件）
+N1MM Logger+: invio dei QSO spento (copia in {0})	N1MM Logger+：已关闭 QSO 发送（副本在 {0}）
+N1MM Logger+: tolte le destinazioni sbagliate	N1MM Logger+：已删除错误的目标
+ e spento l'invio	 并关闭了发送
+ (copia in {0})	 (副本在 {0})
+ — per farlo correggere scegli in Impostazioni "spegnila" o "mandala a" per la UDP secondaria	 — 如需修正，请在设置中为副 UDP 选择“关闭”或“发送到”
+non leggibile: 	无法读取: 
+ — 2° server UDP (ADIF)	 — 第 2 个 UDP 服务器 (ADIF)
+invio dei QSO spento (YA-GT non lo tocca)	QSO 发送已关闭 (YA-GT 不会改动)
+Verifica	检查
+nessun programma trovato (WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+, CQRLOG, QLog)	未找到任何程序 (WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+, CQRLOG, QLog)
+ — invio ADIF "N1MM"	 — “N1MM” ADIF 发送
+manda l'ADIF alla porta {0}, dove ascolta YA-GT con il protocollo WSJT-X: va su un'altra porta	将 ADIF 发送到端口 {0}，YA-GT 在该端口以 WSJT-X 协议监听：请使用其他端口
+manda l'ADIF alla porta WSJT-X di QLog ({0}): QLog lì aspetta il protocollo WSJT-X, non l'ADIF	将 ADIF 发送到 QLog 的 WSJT-X 端口 ({0})：QLog 在那里等待 WSJT-X 协议，而不是 ADIF
+manda l'ADIF a QLog ({0}) mentre QLog riceve già il QSO dal rimbalzo di YA-GT: rischio di QSO doppi	将 ADIF 发送到 QLog ({0})，而 QLog 已通过 YA-GT 转发收到 QSO：可能产生重复 QSO
+nessun programma ascolta sulla porta {0} (log chiuso o porta sbagliata)	没有程序在端口 {0} 上监听（日志已关闭或端口错误）
+in YA-GT hai scelto di mandarla a {0}:{1}	在 YA-GT 中你选择了将其发送到 {0}:{1}
+in YA-GT hai scelto di spegnerla	在 YA-GT 中你选择了关闭它
+ADIF a {0}:{1}	ADIF 发往 {0}:{1}
+spenta	已关闭
+ (YA-GT non la tocca)	 (YA-GT 不会改动)
+: è aperto, chiudilo e riprova	: 程序已打开，请关闭后重试
+: ADIF verso {0}:{1}	: ADIF 发往 {0}:{1}
+: UDP secondaria spenta	: 副 UDP 已关闭
+ — per farla correggere scegli in Impostazioni la destinazione della UDP secondaria (ora: solo avvisi)	 — 如需修正，请在设置中选择副 UDP 的目标（当前：仅提示）
+manda a {0} invece di {1}	发送到 {0} 而不是 {1}
+porta {0} invece di {1}	端口 {0} 而不是 {1}
+"Accetta richieste UDP" spento (le risposte di QLog e degli altri vengono ignorate)	“接受 UDP 请求”已关闭（QLog 及其他程序的回复会被忽略）
+{0} altre configurazioni con un'altra porta	另有 {0} 个配置使用其他端口
+manda a {0}, richieste UDP accettate	发送到 {0}，接受 UDP 请求
+{0}: è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)	{0}：程序已打开，请关闭后重试（关闭时它会重写自己的设置）
+{0}: corretto (copia in {1})	{0}：已修正（副本在 {1}）
+"Enable Decoded Text" spento (YA-GT non vede le decodifiche)	“Enable Decoded Text”已关闭（YA-GT 看不到解码）
+"Enable Logged QSO" spento (i QSO non arrivano a QLog)	“Enable Logged QSO”已关闭（QSO 无法到达 QLog）
+manda a {0} decodifiche e QSO	将解码和 QSO 发送到 {0}
+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)	: 程序已打开，请关闭后重试（关闭时它会重写自己的设置）
+invio UDP dei QSO spento	QSO 的 UDP 发送已关闭
+manda i QSO a {0}	将 QSO 发送到 {0}
+server UDP primario spento	主 UDP 服务器已关闭
+"Accetta richieste UDP" spento	“接受 UDP 请求”已关闭
+Aurora: è aperta, chiudila e riprova	Aurora：程序已打开，请关闭后重试
+Aurora: corretta (copia in {0})	Aurora：已修正（副本在 {0}）
+in YA-GT il rimbalzo UDP è spento: accendilo nelle Impostazioni, altrimenti a QLog non arriva nulla	YA-GT 的 UDP 转发已关闭：请在设置中开启，否则 QLog 收不到任何内容
+ascolta sulla {0}, la stessa porta di YA-GT: i due programmi si rubano i pacchetti	在 {0} 上监听，与 YA-GT 同一端口：两个程序会互相抢走数据包
+ascolta sulla {0}, ma YA-GT ritrasmette sulla {1}	在 {0} 上监听，但 YA-GT 转发到 {1}
+ascolta sulla {0}, dove YA-GT ritrasmette	在 {0} 上监听，正是 YA-GT 转发的端口
+QLog: è aperto, chiudilo e riprova	QLog：程序已打开，请关闭后重试
+QLog: ora ascolta sulla {0} (copia in {1})	QLog：现在在 {0} 上监听（副本在 {1}）
+ — accendi anche il rimbalzo UDP in YA-GT	 — 同时请开启 YA-GT 的 UDP 转发
+Porta	端口
+qualcuno ascolta sulla porta di ritrasmissione (di solito QLog)	有程序在转发端口上监听（通常是 QLog）
+nessun programma ascolta sulla porta di ritrasmissione: apri QLog o controlla la sua porta	没有程序在转发端口上监听：请打开 QLog 或检查其端口
+porta UDP {0} già occupata (forse da QLog o GridTracker): metti quel programma su un'altra porta, es. 2238, e scrivila tra gli inoltri	UDP 端口 {0} 已被占用（可能是 QLog 或 GridTracker）：请将该程序改到其他端口，例如 2238，并把它加入转发列表
+l'inoltro non può puntare alla porta d'ascolto 	转发不能指向监听端口 
+Controlla all'avvio le impostazioni UDP degli altri programmi	启动时检查其他程序的 UDP 设置
+Verifica UDP…	UDP 检查…
+non toccarla, solo avvisi	不改动，仅提示
+mandala a	发送到
+spegnila	关闭
+UDP secondaria (ADIF)	副 UDP (ADIF)
+Porta solo l'ADIF dei QSO a un altro log (Log4OM, N1MM, HRD…). Di base YA-GT non la tocca e segnala solo le scelte fuorvianti.	只把 QSO 的 ADIF 送往另一个日志 (Log4OM, N1MM, HRD…)。默认情况下 YA-GT 不改动它，只提示误导性的设置。
+Altri log di stazione	其他电台日志
+Aggiungi file…	添加文件…
+Log di stazione	电台日志
+Trova i log sul computer	在电脑上查找日志
+Nessun log trovato nelle cartelle abituali.	在常用文件夹中未找到日志。
+Uno per riga (# = spenta): file ADIF, Cabrillo, SQLite o Access, oppure mysql:, wavelog:, qrz:. I file si rileggono quando cambiano, i log in rete ogni 30 minuti. I file degli altri programmi non vengono mai modificati.	每行一个（# = 关闭）：ADIF、Cabrillo、SQLite 或 Access 文件，或 mysql:, wavelog:, qrz:。文件变化时重新读取，在线日志每 30 分钟一次。绝不修改其他程序的文件。
+Porta della UDP secondaria non valida.	副 UDP 端口无效。
+YA-GT — verifica UDP	YA-GT — UDP 检查
+YA-GT ascolta su {0}:{1}	YA-GT 在 {0}:{1} 上监听
+ e ritrasmette a {0}:{1}	 并转发到 {0}:{1}
+ (rimbalzo UDP spento)	 (UDP 转发已关闭)
+"Correggi" mette questi valori nei programmi chiusi, dopo averne copiato le impostazioni nella cartella Dati\copie-impostazioni. I programmi aperti vanno chiusi prima: alla chiusura riscrivono le loro impostazioni.	“修正”会把这些值写入已关闭的程序，写入前先把它们的设置复制到 Dati\copie-impostazioni 文件夹。已打开的程序需先关闭：关闭时它们会重写自己的设置。
+Controllo in corso…	正在检查…
+aperto	已打开
+QSO dei log (QLog e altri)	日志中的 QSO（QLog 及其他）
+Legge qlog.db e gli altri log scelti nelle Impostazioni (copie in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato	读取 qlog.db 和设置中选定的其他日志（只读副本）：绿色方格 = LoTW，蓝色 = QSL，橙色 = 已通联
+Legge qlog.db e gli altri log scelti nelle Impostazioni (copie in sola lettura)	读取 qlog.db 和设置中选定的其他日志（只读副本）
+Quadrati (LoTW + log)	方格 (LoTW + 日志)
+Correggi	修正
+Ricontrolla	重新检查
+Log (ADIF, Cabrillo, SQLite, Access)	日志 (ADIF, Cabrillo, SQLite, Access)
+CQRLOG: è aperto, chiudilo e riprova	CQRLOG：程序已打开，请关闭后重试
+CQRLOG: ora ascolta sulla {0} (copia in {1})	CQRLOG：现在在 {0} 上监听（副本在 {1}）

@@ -197,3 +197,104 @@ G7VRD: ricerca dei locatori per nominativo (api.g7vrd.co.uk)	G7VRD: opslag af lo
 cty.dat — Jim Reisert AD1C (country-files.com): prefissi e paesi DXCC	cty.dat — Jim Reisert AD1C (country-files.com): DXCC-præfikser og lande
 Natural Earth: coste e confini (pubblico dominio)	Natural Earth: kyster og grænser (offentligt domæne)
 Codice ripreso da LIVETROPOVHF e LoTW Grid Map v2 (IC8TEM)	Kode hentet fra LIVETROPOVHF og LoTW Grid Map v2 (IC8TEM)
+: file non trovato	: filen blev ikke fundet
+manca il driver di Microsoft Access (Access Database Engine) per questa versione di Windows	driveren til Microsoft Access (Access Database Engine) til denne Windows-version mangler
+i database Access si leggono solo su Windows	Access-databaser kan kun læses i Windows
+manca il driver di Microsoft Access a 64 bit (Microsoft Access Database Engine)	64-bit driveren til Microsoft Access (Microsoft Access Database Engine) mangler
+: tabella del log non trovata	: logtabellen blev ikke fundet
+Wavelog: scrivi indirizzo, chiave API e numero della stazione	Wavelog: skriv adresse, API-nøgle og stationsnummer
+QRZ: manca la chiave API del logbook	QRZ: logbogens API-nøgle mangler
+risposta non valida	ugyldigt svar
+invio dei QSO acceso ma senza destinazione (DestinationIPs vuoto)	QSO-afsendelse er slået til, men uden mål (DestinationIPs tom)
+manda l'XML alla porta {0}, dove ascolta YA-GT con il protocollo WSJT-X	sender XML til port {0}, hvor YA-GT lytter med WSJT-X-protokollen
+manda l'XML alla porta WSJT-X di QLog ({0}): QLog non legge l'XML di N1MM	sender XML til QLogs WSJT-X-port ({0}): QLog læser ikke N1MM's XML
+manda l'XML al ricevitore ADIF di QLog ({0}): QLog lì aspetta l'ADIF, non l'XML di N1MM	sender XML til QLogs ADIF-modtager ({0}): der venter QLog ADIF, ikke N1MM's XML
+nessun programma ascolta sulla porta {0}	intet program lytter på port {0}
+in YA-GT hai scelto di spegnere gli invii secondari	i YA-GT har du valgt at slå den anden afsendelse fra
+manda i QSO a 	sender QSO'erne til 
+invio dei QSO spento	QSO-afsendelse slået fra
+ (YA-GT non lo tocca)	 (YA-GT rører den ikke)
+N1MM Logger+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe il file .ini)	N1MM Logger+: er åbent, luk det og prøv igen (ved lukning ville det omskrive .ini-filen)
+N1MM Logger+: invio dei QSO spento (copia in {0})	N1MM Logger+: QSO-afsendelse slået fra (kopi i {0})
+N1MM Logger+: tolte le destinazioni sbagliate	N1MM Logger+: forkerte mål fjernet
+ e spento l'invio	 og afsendelsen slået fra
+ (copia in {0})	 (kopi i {0})
+ — per farlo correggere scegli in Impostazioni "spegnila" o "mandala a" per la UDP secondaria	 — for at få det rettet, vælg "slå den fra" eller "send den til" for den anden UDP i Indstillinger
+non leggibile: 	ulæselig: 
+ — 2° server UDP (ADIF)	 — 2. UDP-server (ADIF)
+invio dei QSO spento (YA-GT non lo tocca)	QSO-afsendelse slået fra (YA-GT rører den ikke)
+Verifica	Kontrol
+nessun programma trovato (WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+, CQRLOG, QLog)	intet program fundet (WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+, CQRLOG, QLog)
+ — invio ADIF "N1MM"	 — ADIF-afsendelse "N1MM"
+manda l'ADIF alla porta {0}, dove ascolta YA-GT con il protocollo WSJT-X: va su un'altra porta	sender ADIF til port {0}, hvor YA-GT lytter med WSJT-X-protokollen: brug en anden port
+manda l'ADIF alla porta WSJT-X di QLog ({0}): QLog lì aspetta il protocollo WSJT-X, non l'ADIF	sender ADIF til QLogs WSJT-X-port ({0}): der venter QLog WSJT-X-protokollen, ikke ADIF
+manda l'ADIF a QLog ({0}) mentre QLog riceve già il QSO dal rimbalzo di YA-GT: rischio di QSO doppi	sender ADIF til QLog ({0}), mens QLog allerede får QSO'en via YA-GT's videresendelse: risiko for dobbelte QSO'er
+nessun programma ascolta sulla porta {0} (log chiuso o porta sbagliata)	intet program lytter på port {0} (loggen lukket eller forkert port)
+in YA-GT hai scelto di mandarla a {0}:{1}	i YA-GT har du valgt at sende den til {0}:{1}
+in YA-GT hai scelto di spegnerla	i YA-GT har du valgt at slå den fra
+ADIF a {0}:{1}	ADIF til {0}:{1}
+spenta	slået fra
+ (YA-GT non la tocca)	 (YA-GT rører den ikke)
+: è aperto, chiudilo e riprova	: er åbent, luk det og prøv igen
+: ADIF verso {0}:{1}	: ADIF til {0}:{1}
+: UDP secondaria spenta	: anden UDP slået fra
+ — per farla correggere scegli in Impostazioni la destinazione della UDP secondaria (ora: solo avvisi)	 — for at få det rettet, vælg målet for den anden UDP i Indstillinger (nu: kun advarsler)
+manda a {0} invece di {1}	sender til {0} i stedet for {1}
+porta {0} invece di {1}	port {0} i stedet for {1}
+"Accetta richieste UDP" spento (le risposte di QLog e degli altri vengono ignorate)	"Accepter UDP-forespørgsler" slået fra (svar fra QLog og de andre ignoreres)
+{0} altre configurazioni con un'altra porta	{0} andre konfigurationer med en anden port
+manda a {0}, richieste UDP accettate	sender til {0}, UDP-forespørgsler accepteres
+{0}: è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)	{0}: er åbent, luk det og prøv igen (ved lukning ville det omskrive sine indstillinger)
+{0}: corretto (copia in {1})	{0}: rettet (kopi i {1})
+"Enable Decoded Text" spento (YA-GT non vede le decodifiche)	"Enable Decoded Text" slået fra (YA-GT ser ikke afkodningerne)
+"Enable Logged QSO" spento (i QSO non arrivano a QLog)	"Enable Logged QSO" slået fra (QSO'erne når ikke frem til QLog)
+manda a {0} decodifiche e QSO	sender afkodninger og QSO'er til {0}
+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)	: er åbent, luk det og prøv igen (ved lukning ville det omskrive sine indstillinger)
+invio UDP dei QSO spento	UDP-afsendelse af QSO'er slået fra
+manda i QSO a {0}	sender QSO'erne til {0}
+server UDP primario spento	primær UDP-server slået fra
+"Accetta richieste UDP" spento	"Accepter UDP-forespørgsler" slået fra
+Aurora: è aperta, chiudila e riprova	Aurora: er åbent, luk det og prøv igen
+Aurora: corretta (copia in {0})	Aurora: rettet (kopi i {0})
+in YA-GT il rimbalzo UDP è spento: accendilo nelle Impostazioni, altrimenti a QLog non arriva nulla	i YA-GT er UDP-videresendelsen slået fra: slå den til i Indstillinger, ellers når intet frem til QLog
+ascolta sulla {0}, la stessa porta di YA-GT: i due programmi si rubano i pacchetti	lytter på {0}, samme port som YA-GT: de to programmer stjæler hinandens pakker
+ascolta sulla {0}, ma YA-GT ritrasmette sulla {1}	lytter på {0}, men YA-GT videresender på {1}
+ascolta sulla {0}, dove YA-GT ritrasmette	lytter på {0}, hvortil YA-GT videresender
+QLog: è aperto, chiudilo e riprova	QLog: er åbent, luk det og prøv igen
+QLog: ora ascolta sulla {0} (copia in {1})	QLog: lytter nu på {0} (kopi i {1})
+ — accendi anche il rimbalzo UDP in YA-GT	 — slå også UDP-videresendelsen til i YA-GT
+Porta	Port
+qualcuno ascolta sulla porta di ritrasmissione (di solito QLog)	nogen lytter på videresendelsesporten (normalt QLog)
+nessun programma ascolta sulla porta di ritrasmissione: apri QLog o controlla la sua porta	intet program lytter på videresendelsesporten: åbn QLog eller kontrollér dens port
+porta UDP {0} già occupata (forse da QLog o GridTracker): metti quel programma su un'altra porta, es. 2238, e scrivila tra gli inoltri	UDP-port {0} er allerede optaget (måske af QLog eller GridTracker): flyt det program til en anden port, f.eks. 2238, og tilføj den til videresendelserne
+l'inoltro non può puntare alla porta d'ascolto 	videresendelsen må ikke pege på lytteporten 
+Controlla all'avvio le impostazioni UDP degli altri programmi	Kontrollér ved opstart de andre programmers UDP-indstillinger
+Verifica UDP…	UDP-kontrol…
+non toccarla, solo avvisi	rør den ikke, kun advarsler
+mandala a	send den til
+spegnila	slå den fra
+UDP secondaria (ADIF)	Anden UDP (ADIF)
+Porta solo l'ADIF dei QSO a un altro log (Log4OM, N1MM, HRD…). Di base YA-GT non la tocca e segnala solo le scelte fuorvianti.	Fører kun QSO'ernes ADIF til en anden log (Log4OM, N1MM, HRD…). Som standard rører YA-GT den ikke og påpeger kun vildledende valg.
+Altri log di stazione	Andre stationslogge
+Aggiungi file…	Tilføj fil…
+Log di stazione	Stationslogge
+Trova i log sul computer	Find loggene på computeren
+Nessun log trovato nelle cartelle abituali.	Ingen log fundet i de sædvanlige mapper.
+Uno per riga (# = spenta): file ADIF, Cabrillo, SQLite o Access, oppure mysql:, wavelog:, qrz:. I file si rileggono quando cambiano, i log in rete ogni 30 minuti. I file degli altri programmi non vengono mai modificati.	Én pr. linje (# = slået fra): ADIF-, Cabrillo-, SQLite- eller Access-filer, eller mysql:, wavelog:, qrz:. Filerne genlæses, når de ændres, onlinelogge hvert 30. minut. Andre programmers filer ændres aldrig.
+Porta della UDP secondaria non valida.	Ugyldig port for den anden UDP.
+YA-GT — verifica UDP	YA-GT — UDP-kontrol
+YA-GT ascolta su {0}:{1}	YA-GT lytter på {0}:{1}
+ e ritrasmette a {0}:{1}	 og videresender til {0}:{1}
+ (rimbalzo UDP spento)	 (UDP-videresendelse slået fra)
+"Correggi" mette questi valori nei programmi chiusi, dopo averne copiato le impostazioni nella cartella Dati\copie-impostazioni. I programmi aperti vanno chiusi prima: alla chiusura riscrivono le loro impostazioni.	"Ret" skriver disse værdier i de lukkede programmer, efter at deres indstillinger er kopieret til mappen Dati\copie-impostazioni. Åbne programmer skal lukkes først: ved lukning omskriver de deres indstillinger.
+Controllo in corso…	Kontrollerer…
+aperto	åbent
+QSO dei log (QLog e altri)	QSO'er fra loggene (QLog og andre)
+Legge qlog.db e gli altri log scelti nelle Impostazioni (copie in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato	Læser qlog.db og de andre logge valgt i Indstillinger (skrivebeskyttede kopier): grønne felter = LoTW, blå = QSL, orange = kørt
+Legge qlog.db e gli altri log scelti nelle Impostazioni (copie in sola lettura)	Læser qlog.db og de andre logge valgt i Indstillinger (skrivebeskyttede kopier)
+Quadrati (LoTW + log)	Felter (LoTW + logge)
+Correggi	Ret
+Ricontrolla	Kontrollér igen
+Log (ADIF, Cabrillo, SQLite, Access)	Log (ADIF, Cabrillo, SQLite, Access)
+CQRLOG: è aperto, chiudilo e riprova	CQRLOG: er åbent, luk det og prøv igen
+CQRLOG: ora ascolta sulla {0} (copia in {1})	CQRLOG: lytter nu på {0} (kopi i {1})

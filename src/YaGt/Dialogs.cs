@@ -53,13 +53,13 @@ public sealed class SettingsWindow : Window
             }
         });
         p.Children.Add(Ui.Label("Vuoto = posizione standard di QLog (%LOCALAPPDATA%\\hamradio\\QLog\\qlog.db). Il file di QLog non viene mai modificato: si legge una copia.", 11, false, Ui.Th.Muted));
-        var udpStart = new CheckBox { Content = "All'avvio controlla le impostazioni UDP di WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+ e QLog", IsChecked = st.UdpCheckAtStart };
+        var udpStart = new CheckBox { Content = "Controlla all'avvio le impostazioni UDP degli altri programmi", IsChecked = st.UdpCheckAtStart };
         p.Children.Add(new StackPanel { Orientation = Orientation.Horizontal, Spacing = 8, Children = { Ui.Button("Verifica UDP…", () => new UdpCheckWindow(st).ShowDialog(this)), udpStart } });
-        var u2 = new ComboBox { Width = 230, ItemsSource = new[] { "non toccarla, solo avvisi", "mandala a", "spegnila" }, SelectedIndex = st.Udp2Mode == "set" ? 1 : st.Udp2Mode == "off" ? 2 : 0 };
+        var u2 = new ComboBox { Width = 230, ItemsSource = new[] { L.T("non toccarla, solo avvisi"), L.T("mandala a"), L.T("spegnila") }, SelectedIndex = st.Udp2Mode == "set" ? 1 : st.Udp2Mode == "off" ? 2 : 0 };
         var u2h = new TextBox { Text = st.Udp2Host, Width = 130 };
         var u2p = new TextBox { Text = st.Udp2Port.ToString(CultureInfo.InvariantCulture), Width = 70 };
-        p.Children.Add(new StackPanel { Orientation = Orientation.Horizontal, Spacing = 8, Children = { Ui.Label("UDP secondaria (ADIF) di JTDX, WSJT-X, MSHV, Aurora:"), u2, u2h, Ui.Label("porta"), u2p } });
-        p.Children.Add(Ui.Label("La UDP secondaria porta solo l'ADIF dei QSO a un altro log (Log4OM, N1MM, HRD, GridTracker…). Di base YA-GT non la tocca, perché può alimentare altri programmi: segnala solo le scelte fuorvianti (stessa porta di YA-GT o di QLog, QSO doppi, nessuno in ascolto).", 11, false, Ui.Th.Muted));
+        p.Children.Add(new StackPanel { Orientation = Orientation.Horizontal, Spacing = 8, Children = { Ui.Label("UDP secondaria (ADIF)"), u2, u2h, Ui.Label("porta"), u2p } });
+        p.Children.Add(Ui.Label("Porta solo l'ADIF dei QSO a un altro log (Log4OM, N1MM, HRD…). Di base YA-GT non la tocca e segnala solo le scelte fuorvianti.", 11, false, Ui.Th.Muted));
         p.Children.Add(Ui.Section("Altri log di stazione"));
         var logs = new TextBox { Text = st.LogSources, AcceptsReturn = true, TextWrapping = TextWrapping.NoWrap, Height = 110, Width = 540, FontFamily = new FontFamily("Consolas,DejaVu Sans Mono,monospace"), FontSize = 11 };
         void AddLine(string l) { var t = (logs.Text ?? "").TrimEnd(); if (!StationLogs.Lines(t).Contains(l)) logs.Text = (t == "" ? "" : t + "\n") + l; }
@@ -77,13 +77,13 @@ public sealed class SettingsWindow : Window
                     } });
                     foreach (var f in files) { var lp = f.TryGetLocalPath(); if (lp != null) AddLine(lp); }
                 }),
-                Ui.Button("Trova i log sul computer", () => { var k = StationLogs.FindKnown(); foreach (var f in k) AddLine(f); if (k.Count == 0) err.Text = "Nessun log trovato nelle cartelle abituali."; }),
+                Ui.Button(L.T("Trova i log sul computer"), () => { var k = StationLogs.FindKnown(); foreach (var f in k) AddLine(f); if (k.Count == 0) err.Text = L.T("Nessun log trovato nelle cartelle abituali."); }),
                 Ui.Button("+ MySQL", () => AddLine("mysql: server=localhost;port=3306;database=NOME;user=UTENTE;password=PASSWORD")),
                 Ui.Button("+ Wavelog / Cloudlog", () => AddLine("wavelog: https://INDIRIZZO CHIAVE_API ID_STAZIONE")),
                 Ui.Button("+ QRZ", () => AddLine("qrz: CHIAVE_API_LOGBOOK")),
             }
         });
-        p.Children.Add(Ui.Label("Uno per riga (# all'inizio = riga spenta). File: ADIF/ADX di WSJT-X, JTDX, MSHV, Logger32, UcxLog; Cabrillo; SQLite di Log4OM, N1MM Logger+, KLog, MacLoggerDX; Access di DXKeeper, ACLog, Swisslog, HRD (solo Windows, serve il driver Access). In rete: MySQL/MariaDB (CQRLOG, HRD, Log4OM), Wavelog/Cloudlog, QRZ (abbonamento QRZ). I file si rileggono quando cambiano, i log in rete ogni 30 minuti. I file degli altri programmi non vengono mai modificati: i database si leggono da una copia. Password e chiavi restano solo in YA-GT.ini.", 11, false, Ui.Th.Muted));
+        p.Children.Add(Ui.Label("Uno per riga (# = spenta): file ADIF, Cabrillo, SQLite o Access, oppure mysql:, wavelog:, qrz:. I file si rileggono quando cambiano, i log in rete ogni 30 minuti. I file degli altri programmi non vengono mai modificati.", 11, false, Ui.Th.Muted));
         p.Children.Add(Ui.Section("Aggiornamento automatico"));
         var auto = new CheckBox { Content = L.F("Aggiornamento automatico dal GitHub (ogni {0} minuti)", Updater.IntervalMinutes), IsChecked = Updater.Enabled };
         var upd = Ui.Label(L.F("Stato: {0}", L.T(Updater.Status)), 11, false, Ui.Th.Muted);
@@ -113,7 +113,7 @@ public sealed class SettingsWindow : Window
             if (lang.SelectedIndex >= 0) st.S.Set("lingua", L.All[lang.SelectedIndex][0]);
             st.LogSources = string.Join("\n", StationLogs.Lines(logs.Text ?? ""));
             st.UdpCheckAtStart = udpStart.IsChecked == true;
-            if (u2.SelectedIndex == 1 && (!int.TryParse(u2p.Text, NumberStyles.Integer, CultureInfo.InvariantCulture, out var p2) || p2 <= 0 || p2 > 65535)) { err.Text = "Porta della UDP secondaria non valida."; return; }
+            if (u2.SelectedIndex == 1 && (!int.TryParse(u2p.Text, NumberStyles.Integer, CultureInfo.InvariantCulture, out var p2) || p2 <= 0 || p2 > 65535)) { err.Text = L.T("Porta della UDP secondaria non valida."); return; }
             st.Udp2Mode = u2.SelectedIndex == 1 ? "set" : u2.SelectedIndex == 2 ? "off" : "warn";
             st.Udp2Host = (u2h.Text ?? "").Trim() == "" ? "127.0.0.1" : (u2h.Text ?? "").Trim();
             if (int.TryParse(u2p.Text, NumberStyles.Integer, CultureInfo.InvariantCulture, out var p3) && p3 > 0 && p3 <= 65535) st.Udp2Port = p3;
@@ -267,8 +267,8 @@ public sealed class UdpCheckWindow : Window
         _fix = Ui.Button("Correggi", Fix, true);
         var again = Ui.Button("Ricontrolla", () => Run());
         var close = Ui.Button("Chiudi", Close);
-        var head = Ui.Label($"YA-GT ascolta su {t.ListenHost}:{t.ListenPort}" + (t.Forward ? $" e ritrasmette a {t.ForwardHost}:{t.ForwardPort}" : " (rimbalzo UDP spento)") +
-            ". \"Correggi\" mette questi valori nei programmi chiusi, dopo averne copiato le impostazioni nella cartella Dati\\copie-impostazioni. I programmi aperti vanno chiusi prima: alla chiusura riscrivono le loro impostazioni.", 12, false, Ui.Th.Muted);
+        var head = Ui.Label(L.F("YA-GT ascolta su {0}:{1}", t.ListenHost, t.ListenPort) + (t.Forward ? L.F(" e ritrasmette a {0}:{1}", t.ForwardHost, t.ForwardPort) : L.T(" (rimbalzo UDP spento)")) +
+            ". " + L.T("\"Correggi\" mette questi valori nei programmi chiusi, dopo averne copiato le impostazioni nella cartella Dati\\copie-impostazioni. I programmi aperti vanno chiusi prima: alla chiusura riscrivono le loro impostazioni."), 12, false, Ui.Th.Muted);
         var buttons = new StackPanel { Orientation = Orientation.Horizontal, HorizontalAlignment = HorizontalAlignment.Right, Spacing = 6, Margin = new Thickness(12), Children = { again, _fix, close } };
         var root = new DockPanel();
         DockPanel.SetDock(buttons, Dock.Bottom);
@@ -282,7 +282,7 @@ public sealed class UdpCheckWindow : Window
     async void Run()
     {
         _list.Children.Clear();
-        _list.Children.Add(Ui.Label("Controllo in corso…", 12, false, Ui.Th.Muted));
+        _list.Children.Add(Ui.Label(L.T("Controllo in corso…"), 12, false, Ui.Th.Muted));
         _fix.IsEnabled = false;
         var r = await Task.Run(() => { try { return _st.CheckUdp(); } catch (Exception ex) { return new List<UdpDoctor.Finding> { new UdpDoctor.Finding { Program = "Verifica", Text = ex.Message } }; } });
         Show(r);
@@ -295,7 +295,7 @@ public sealed class UdpCheckWindow : Window
         foreach (var f in r)
         {
             var line = new StackPanel { Spacing = 1 };
-            line.Children.Add(Ui.Label((f.Ok ? "✔  " : "✘  ") + f.Program + (f.Running ? "  (aperto)" : ""), 13, true, f.Ok ? 0xFF2E7D32u : 0xFFB22222u));
+            line.Children.Add(Ui.Label((f.Ok ? "✔  " : "✘  ") + f.Program + (f.Running ? "  (" + L.T("aperto") + ")" : ""), 13, true, f.Ok ? 0xFF2E7D32u : 0xFFB22222u));
             line.Children.Add(Ui.Label("     " + f.Text, 12, false, Ui.Th.Text));
             if (f.File != "") line.Children.Add(Ui.Label("     " + f.File, 10, false, Ui.Th.Muted));
             _list.Children.Add(line);

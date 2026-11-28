@@ -197,3 +197,104 @@ G7VRD: ricerca dei locatori per nominativo (api.g7vrd.co.uk)
 cty.dat — Jim Reisert AD1C (country-files.com): prefissi e paesi DXCC
 Natural Earth: coste e confini (pubblico dominio)
 Codice ripreso da LIVETROPOVHF e LoTW Grid Map v2 (IC8TEM)
+: file non trovato
+manca il driver di Microsoft Access (Access Database Engine) per questa versione di Windows
+i database Access si leggono solo su Windows
+manca il driver di Microsoft Access a 64 bit (Microsoft Access Database Engine)
+: tabella del log non trovata
+Wavelog: scrivi indirizzo, chiave API e numero della stazione
+QRZ: manca la chiave API del logbook
+risposta non valida
+invio dei QSO acceso ma senza destinazione (DestinationIPs vuoto)
+manda l'XML alla porta {0}, dove ascolta YA-GT con il protocollo WSJT-X
+manda l'XML alla porta WSJT-X di QLog ({0}): QLog non legge l'XML di N1MM
+manda l'XML al ricevitore ADIF di QLog ({0}): QLog lì aspetta l'ADIF, non l'XML di N1MM
+nessun programma ascolta sulla porta {0}
+in YA-GT hai scelto di spegnere gli invii secondari
+manda i QSO a 
+invio dei QSO spento
+ (YA-GT non lo tocca)
+N1MM Logger+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe il file .ini)
+N1MM Logger+: invio dei QSO spento (copia in {0})
+N1MM Logger+: tolte le destinazioni sbagliate
+ e spento l'invio
+ (copia in {0})
+ — per farlo correggere scegli in Impostazioni "spegnila" o "mandala a" per la UDP secondaria
+non leggibile: 
+ — 2° server UDP (ADIF)
+invio dei QSO spento (YA-GT non lo tocca)
+Verifica
+nessun programma trovato (WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+, CQRLOG, QLog)
+ — invio ADIF "N1MM"
+manda l'ADIF alla porta {0}, dove ascolta YA-GT con il protocollo WSJT-X: va su un'altra porta
+manda l'ADIF alla porta WSJT-X di QLog ({0}): QLog lì aspetta il protocollo WSJT-X, non l'ADIF
+manda l'ADIF a QLog ({0}) mentre QLog riceve già il QSO dal rimbalzo di YA-GT: rischio di QSO doppi
+nessun programma ascolta sulla porta {0} (log chiuso o porta sbagliata)
+in YA-GT hai scelto di mandarla a {0}:{1}
+in YA-GT hai scelto di spegnerla
+ADIF a {0}:{1}
+spenta
+ (YA-GT non la tocca)
+: è aperto, chiudilo e riprova
+: ADIF verso {0}:{1}
+: UDP secondaria spenta
+ — per farla correggere scegli in Impostazioni la destinazione della UDP secondaria (ora: solo avvisi)
+manda a {0} invece di {1}
+porta {0} invece di {1}
+"Accetta richieste UDP" spento (le risposte di QLog e degli altri vengono ignorate)
+{0} altre configurazioni con un'altra porta
+manda a {0}, richieste UDP accettate
+{0}: è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)
+{0}: corretto (copia in {1})
+"Enable Decoded Text" spento (YA-GT non vede le decodifiche)
+"Enable Logged QSO" spento (i QSO non arrivano a QLog)
+manda a {0} decodifiche e QSO
+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)
+invio UDP dei QSO spento
+manda i QSO a {0}
+server UDP primario spento
+"Accetta richieste UDP" spento
+Aurora: è aperta, chiudila e riprova
+Aurora: corretta (copia in {0})
+in YA-GT il rimbalzo UDP è spento: accendilo nelle Impostazioni, altrimenti a QLog non arriva nulla
+ascolta sulla {0}, la stessa porta di YA-GT: i due programmi si rubano i pacchetti
+ascolta sulla {0}, ma YA-GT ritrasmette sulla {1}
+ascolta sulla {0}, dove YA-GT ritrasmette
+QLog: è aperto, chiudilo e riprova
+QLog: ora ascolta sulla {0} (copia in {1})
+ — accendi anche il rimbalzo UDP in YA-GT
+Porta
+qualcuno ascolta sulla porta di ritrasmissione (di solito QLog)
+nessun programma ascolta sulla porta di ritrasmissione: apri QLog o controlla la sua porta
+porta UDP {0} già occupata (forse da QLog o GridTracker): metti quel programma su un'altra porta, es. 2238, e scrivila tra gli inoltri
+l'inoltro non può puntare alla porta d'ascolto 
+Controlla all'avvio le impostazioni UDP degli altri programmi
+Verifica UDP…
+non toccarla, solo avvisi
+mandala a
+spegnila
+UDP secondaria (ADIF)
+Porta solo l'ADIF dei QSO a un altro log (Log4OM, N1MM, HRD…). Di base YA-GT non la tocca e segnala solo le scelte fuorvianti.
+Altri log di stazione
+Aggiungi file…
+Log di stazione
+Trova i log sul computer
+Nessun log trovato nelle cartelle abituali.
+Uno per riga (# = spenta): file ADIF, Cabrillo, SQLite o Access, oppure mysql:, wavelog:, qrz:. I file si rileggono quando cambiano, i log in rete ogni 30 minuti. I file degli altri programmi non vengono mai modificati.
+Porta della UDP secondaria non valida.
+YA-GT — verifica UDP
+YA-GT ascolta su {0}:{1}
+ e ritrasmette a {0}:{1}
+ (rimbalzo UDP spento)
+"Correggi" mette questi valori nei programmi chiusi, dopo averne copiato le impostazioni nella cartella Dati\copie-impostazioni. I programmi aperti vanno chiusi prima: alla chiusura riscrivono le loro impostazioni.
+Controllo in corso…
+aperto
+QSO dei log (QLog e altri)
+Legge qlog.db e gli altri log scelti nelle Impostazioni (copie in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato
+Legge qlog.db e gli altri log scelti nelle Impostazioni (copie in sola lettura)
+Quadrati (LoTW + log)
+Correggi
+Ricontrolla
+Log (ADIF, Cabrillo, SQLite, Access)
+CQRLOG: è aperto, chiudilo e riprova
+CQRLOG: ora ascolta sulla {0} (copia in {1})

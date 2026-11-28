@@ -197,3 +197,104 @@ G7VRD: ricerca dei locatori per nominativo (api.g7vrd.co.uk)	G7VRD: soek lokator
 cty.dat — Jim Reisert AD1C (country-files.com): prefissi e paesi DXCC	cty.dat — Jim Reisert AD1C (country-files.com): DXCC-voorvoegsels en -lande
 Natural Earth: coste e confini (pubblico dominio)	Natural Earth: kuslyne en grense (publieke domein)
 Codice ripreso da LIVETROPOVHF e LoTW Grid Map v2 (IC8TEM)	Kode oorgeneem uit LIVETROPOVHF en LoTW Grid Map v2 (IC8TEM)
+: file non trovato	: lêer nie gevind nie
+manca il driver di Microsoft Access (Access Database Engine) per questa versione di Windows	die Microsoft Access-drywer (Access Database Engine) vir hierdie Windows-weergawe ontbreek
+i database Access si leggono solo su Windows	Access-databasisse kan slegs in Windows gelees word
+manca il driver di Microsoft Access a 64 bit (Microsoft Access Database Engine)	die 64-bis Microsoft Access-drywer (Microsoft Access Database Engine) ontbreek
+: tabella del log non trovata	: logtabel nie gevind nie
+Wavelog: scrivi indirizzo, chiave API e numero della stazione	Wavelog: tik adres, API-sleutel en stasienommer in
+QRZ: manca la chiave API del logbook	QRZ: die API-sleutel van die logboek ontbreek
+risposta non valida	ongeldige antwoord
+invio dei QSO acceso ma senza destinazione (DestinationIPs vuoto)	QSO-stuur is aan maar sonder bestemming (DestinationIPs leeg)
+manda l'XML alla porta {0}, dove ascolta YA-GT con il protocollo WSJT-X	stuur die XML na poort {0}, waar YA-GT met die WSJT-X-protokol luister
+manda l'XML alla porta WSJT-X di QLog ({0}): QLog non legge l'XML di N1MM	stuur die XML na QLog se WSJT-X-poort ({0}): QLog lees nie N1MM se XML nie
+manda l'XML al ricevitore ADIF di QLog ({0}): QLog lì aspetta l'ADIF, non l'XML di N1MM	stuur die XML na QLog se ADIF-ontvanger ({0}): QLog verwag daar ADIF, nie N1MM se XML nie
+nessun programma ascolta sulla porta {0}	geen program luister op poort {0} nie
+in YA-GT hai scelto di spegnere gli invii secondari	in YA-GT het jy gekies om die tweede stuur af te skakel
+manda i QSO a 	stuur die QSO's na 
+invio dei QSO spento	QSO-stuur af
+ (YA-GT non lo tocca)	 (YA-GT raak dit nie aan nie)
+N1MM Logger+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe il file .ini)	N1MM Logger+: is oop, maak dit toe en probeer weer (by toemaak sou dit die .ini-lêer oorskryf)
+N1MM Logger+: invio dei QSO spento (copia in {0})	N1MM Logger+: QSO-stuur afgeskakel (kopie in {0})
+N1MM Logger+: tolte le destinazioni sbagliate	N1MM Logger+: verkeerde bestemmings verwyder
+ e spento l'invio	 en stuur afgeskakel
+ (copia in {0})	 (kopie in {0})
+ — per farlo correggere scegli in Impostazioni "spegnila" o "mandala a" per la UDP secondaria	 — om dit reg te laat maak, kies "skakel dit af" of "stuur dit na" vir die tweede UDP in Instellings
+non leggibile: 	onleesbaar: 
+ — 2° server UDP (ADIF)	 — 2de UDP-bediener (ADIF)
+invio dei QSO spento (YA-GT non lo tocca)	QSO-stuur af (YA-GT raak dit nie aan nie)
+Verifica	Kontrole
+nessun programma trovato (WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+, CQRLOG, QLog)	geen program gevind nie (WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+, CQRLOG, QLog)
+ — invio ADIF "N1MM"	 — ADIF-stuur "N1MM"
+manda l'ADIF alla porta {0}, dove ascolta YA-GT con il protocollo WSJT-X: va su un'altra porta	stuur die ADIF na poort {0}, waar YA-GT met die WSJT-X-protokol luister: gebruik 'n ander poort
+manda l'ADIF alla porta WSJT-X di QLog ({0}): QLog lì aspetta il protocollo WSJT-X, non l'ADIF	stuur die ADIF na QLog se WSJT-X-poort ({0}): QLog verwag daar die WSJT-X-protokol, nie ADIF nie
+manda l'ADIF a QLog ({0}) mentre QLog riceve già il QSO dal rimbalzo di YA-GT: rischio di QSO doppi	stuur die ADIF na QLog ({0}) terwyl QLog die QSO reeds deur YA-GT se aanstuur kry: gevaar van dubbele QSO's
+nessun programma ascolta sulla porta {0} (log chiuso o porta sbagliata)	geen program luister op poort {0} nie (log toe of verkeerde poort)
+in YA-GT hai scelto di mandarla a {0}:{1}	in YA-GT het jy gekies om dit na {0}:{1} te stuur
+in YA-GT hai scelto di spegnerla	in YA-GT het jy gekies om dit af te skakel
+ADIF a {0}:{1}	ADIF na {0}:{1}
+spenta	af
+ (YA-GT non la tocca)	 (YA-GT raak dit nie aan nie)
+: è aperto, chiudilo e riprova	: is oop, maak dit toe en probeer weer
+: ADIF verso {0}:{1}	: ADIF na {0}:{1}
+: UDP secondaria spenta	: tweede UDP afgeskakel
+ — per farla correggere scegli in Impostazioni la destinazione della UDP secondaria (ora: solo avvisi)	 — om dit reg te laat maak, kies die bestemming van die tweede UDP in Instellings (nou: slegs waarskuwings)
+manda a {0} invece di {1}	stuur na {0} in plaas van {1}
+porta {0} invece di {1}	poort {0} in plaas van {1}
+"Accetta richieste UDP" spento (le risposte di QLog e degli altri vengono ignorate)	"Aanvaar UDP-versoeke" af (antwoorde van QLog en die ander word geïgnoreer)
+{0} altre configurazioni con un'altra porta	{0} ander konfigurasies met 'n ander poort
+manda a {0}, richieste UDP accettate	stuur na {0}, UDP-versoeke aanvaar
+{0}: è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)	{0}: is oop, maak dit toe en probeer weer (by toemaak sou dit sy instellings oorskryf)
+{0}: corretto (copia in {1})	{0}: reggemaak (kopie in {1})
+"Enable Decoded Text" spento (YA-GT non vede le decodifiche)	"Enable Decoded Text" af (YA-GT sien nie die dekoderings nie)
+"Enable Logged QSO" spento (i QSO non arrivano a QLog)	"Enable Logged QSO" af (die QSO's bereik nie QLog nie)
+manda a {0} decodifiche e QSO	stuur dekoderings en QSO's na {0}
+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)	: is oop, maak dit toe en probeer weer (by toemaak sou dit sy instellings oorskryf)
+invio UDP dei QSO spento	UDP-stuur van QSO's af
+manda i QSO a {0}	stuur die QSO's na {0}
+server UDP primario spento	primêre UDP-bediener af
+"Accetta richieste UDP" spento	"Aanvaar UDP-versoeke" af
+Aurora: è aperta, chiudila e riprova	Aurora: is oop, maak dit toe en probeer weer
+Aurora: corretta (copia in {0})	Aurora: reggemaak (kopie in {0})
+in YA-GT il rimbalzo UDP è spento: accendilo nelle Impostazioni, altrimenti a QLog non arriva nulla	in YA-GT is die UDP-aanstuur af: skakel dit in Instellings aan, anders bereik niks QLog nie
+ascolta sulla {0}, la stessa porta di YA-GT: i due programmi si rubano i pacchetti	luister op {0}, dieselfde poort as YA-GT: die twee programme steel mekaar se pakkies
+ascolta sulla {0}, ma YA-GT ritrasmette sulla {1}	luister op {0}, maar YA-GT stuur aan op {1}
+ascolta sulla {0}, dove YA-GT ritrasmette	luister op {0}, waarheen YA-GT aanstuur
+QLog: è aperto, chiudilo e riprova	QLog: is oop, maak dit toe en probeer weer
+QLog: ora ascolta sulla {0} (copia in {1})	QLog: luister nou op {0} (kopie in {1})
+ — accendi anche il rimbalzo UDP in YA-GT	 — skakel ook die UDP-aanstuur in YA-GT aan
+Porta	Poort
+qualcuno ascolta sulla porta di ritrasmissione (di solito QLog)	iemand luister op die aanstuurpoort (gewoonlik QLog)
+nessun programma ascolta sulla porta di ritrasmissione: apri QLog o controlla la sua porta	geen program luister op die aanstuurpoort nie: maak QLog oop of kontroleer sy poort
+porta UDP {0} già occupata (forse da QLog o GridTracker): metti quel programma su un'altra porta, es. 2238, e scrivila tra gli inoltri	UDP-poort {0} reeds in gebruik (dalk deur QLog of GridTracker): skuif daardie program na 'n ander poort, bv. 2238, en voeg dit by die aanstuurlys
+l'inoltro non può puntare alla porta d'ascolto 	die aanstuur mag nie na die luisterpoort wys nie 
+Controlla all'avvio le impostazioni UDP degli altri programmi	Kontroleer by begin die UDP-instellings van die ander programme
+Verifica UDP…	UDP-kontrole…
+non toccarla, solo avvisi	moenie dit aanraak nie, slegs waarskuwings
+mandala a	stuur dit na
+spegnila	skakel dit af
+UDP secondaria (ADIF)	Tweede UDP (ADIF)
+Porta solo l'ADIF dei QSO a un altro log (Log4OM, N1MM, HRD…). Di base YA-GT non la tocca e segnala solo le scelte fuorvianti.	Dra slegs die ADIF van die QSO's na 'n ander log (Log4OM, N1MM, HRD…). By verstek raak YA-GT dit nie aan nie en wys slegs op misleidende keuses.
+Altri log di stazione	Ander stasielogs
+Aggiungi file…	Voeg lêer by…
+Log di stazione	Stasielogs
+Trova i log sul computer	Soek logs op die rekenaar
+Nessun log trovato nelle cartelle abituali.	Geen log in die gewone vouers gevind nie.
+Uno per riga (# = spenta): file ADIF, Cabrillo, SQLite o Access, oppure mysql:, wavelog:, qrz:. I file si rileggono quando cambiano, i log in rete ogni 30 minuti. I file degli altri programmi non vengono mai modificati.	Een per reël (# = af): ADIF-, Cabrillo-, SQLite- of Access-lêers, of mysql:, wavelog:, qrz:. Lêers word weer gelees wanneer hulle verander, aanlyn logs elke 30 minute. Ander programme se lêers word nooit verander nie.
+Porta della UDP secondaria non valida.	Ongeldige poort van die tweede UDP.
+YA-GT — verifica UDP	YA-GT — UDP-kontrole
+YA-GT ascolta su {0}:{1}	YA-GT luister op {0}:{1}
+ e ritrasmette a {0}:{1}	 en stuur aan na {0}:{1}
+ (rimbalzo UDP spento)	 (UDP-aanstuur af)
+"Correggi" mette questi valori nei programmi chiusi, dopo averne copiato le impostazioni nella cartella Dati\copie-impostazioni. I programmi aperti vanno chiusi prima: alla chiusura riscrivono le loro impostazioni.	"Maak reg" skryf hierdie waardes in die toe programme nadat hul instellings na die vouer Dati\copie-impostazioni gekopieer is. Oop programme moet eers toegemaak word: by toemaak skryf hulle hul instellings oor.
+Controllo in corso…	Kontroleer tans…
+aperto	oop
+QSO dei log (QLog e altri)	QSO's uit die logs (QLog en ander)
+Legge qlog.db e gli altri log scelti nelle Impostazioni (copie in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato	Lees qlog.db en die ander logs gekies in Instellings (leesalleen-kopieë): groen blokke = LoTW, blou = QSL, oranje = gewerk
+Legge qlog.db e gli altri log scelti nelle Impostazioni (copie in sola lettura)	Lees qlog.db en die ander logs gekies in Instellings (leesalleen-kopieë)
+Quadrati (LoTW + log)	Blokke (LoTW + logs)
+Correggi	Maak reg
+Ricontrolla	Kontroleer weer
+Log (ADIF, Cabrillo, SQLite, Access)	Log (ADIF, Cabrillo, SQLite, Access)
+CQRLOG: è aperto, chiudilo e riprova	CQRLOG: is oop, maak dit toe en probeer weer
+CQRLOG: ora ascolta sulla {0} (copia in {1})	CQRLOG: luister nou op {0} (kopie in {1})

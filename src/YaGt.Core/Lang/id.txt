@@ -197,3 +197,104 @@ G7VRD: ricerca dei locatori per nominativo (api.g7vrd.co.uk)	G7VRD: pencarian lo
 cty.dat — Jim Reisert AD1C (country-files.com): prefissi e paesi DXCC	cty.dat — Jim Reisert AD1C (country-files.com): prefiks dan negara DXCC
 Natural Earth: coste e confini (pubblico dominio)	Natural Earth: garis pantai dan perbatasan (domain publik)
 Codice ripreso da LIVETROPOVHF e LoTW Grid Map v2 (IC8TEM)	Kode diambil dari LIVETROPOVHF dan LoTW Grid Map v2 (IC8TEM)
+: file non trovato	: file tidak ditemukan
+manca il driver di Microsoft Access (Access Database Engine) per questa versione di Windows	driver Microsoft Access (Access Database Engine) untuk versi Windows ini tidak ada
+i database Access si leggono solo su Windows	basis data Access hanya bisa dibaca di Windows
+manca il driver di Microsoft Access a 64 bit (Microsoft Access Database Engine)	driver Microsoft Access 64-bit (Microsoft Access Database Engine) tidak ada
+: tabella del log non trovata	: tabel log tidak ditemukan
+Wavelog: scrivi indirizzo, chiave API e numero della stazione	Wavelog: isi alamat, kunci API, dan nomor stasiun
+QRZ: manca la chiave API del logbook	QRZ: kunci API logbook tidak ada
+risposta non valida	jawaban tidak valid
+invio dei QSO acceso ma senza destinazione (DestinationIPs vuoto)	pengiriman QSO aktif tetapi tanpa tujuan (DestinationIPs kosong)
+manda l'XML alla porta {0}, dove ascolta YA-GT con il protocollo WSJT-X	mengirim XML ke port {0}, tempat YA-GT mendengarkan dengan protokol WSJT-X
+manda l'XML alla porta WSJT-X di QLog ({0}): QLog non legge l'XML di N1MM	mengirim XML ke port WSJT-X milik QLog ({0}): QLog tidak membaca XML dari N1MM
+manda l'XML al ricevitore ADIF di QLog ({0}): QLog lì aspetta l'ADIF, non l'XML di N1MM	mengirim XML ke penerima ADIF milik QLog ({0}): di sana QLog menunggu ADIF, bukan XML dari N1MM
+nessun programma ascolta sulla porta {0}	tidak ada program yang mendengarkan di port {0}
+in YA-GT hai scelto di spegnere gli invii secondari	di YA-GT Anda memilih mematikan pengiriman sekunder
+manda i QSO a 	mengirim QSO ke 
+invio dei QSO spento	pengiriman QSO mati
+ (YA-GT non lo tocca)	 (YA-GT tidak menyentuhnya)
+N1MM Logger+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe il file .ini)	N1MM Logger+: sedang terbuka, tutup lalu coba lagi (saat ditutup ia akan menulis ulang file .ini)
+N1MM Logger+: invio dei QSO spento (copia in {0})	N1MM Logger+: pengiriman QSO dimatikan (salinan di {0})
+N1MM Logger+: tolte le destinazioni sbagliate	N1MM Logger+: tujuan yang salah dihapus
+ e spento l'invio	 dan pengiriman dimatikan
+ (copia in {0})	 (salinan di {0})
+ — per farlo correggere scegli in Impostazioni "spegnila" o "mandala a" per la UDP secondaria	 — agar diperbaiki, pilih "matikan" atau "kirim ke" untuk UDP sekunder di Pengaturan
+non leggibile: 	tidak terbaca: 
+ — 2° server UDP (ADIF)	 — server UDP ke-2 (ADIF)
+invio dei QSO spento (YA-GT non lo tocca)	pengiriman QSO mati (YA-GT tidak menyentuhnya)
+Verifica	Pemeriksaan
+nessun programma trovato (WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+, CQRLOG, QLog)	tidak ada program ditemukan (WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+, CQRLOG, QLog)
+ — invio ADIF "N1MM"	 — pengiriman ADIF "N1MM"
+manda l'ADIF alla porta {0}, dove ascolta YA-GT con il protocollo WSJT-X: va su un'altra porta	mengirim ADIF ke port {0}, tempat YA-GT mendengarkan dengan protokol WSJT-X: gunakan port lain
+manda l'ADIF alla porta WSJT-X di QLog ({0}): QLog lì aspetta il protocollo WSJT-X, non l'ADIF	mengirim ADIF ke port WSJT-X milik QLog ({0}): di sana QLog menunggu protokol WSJT-X, bukan ADIF
+manda l'ADIF a QLog ({0}) mentre QLog riceve già il QSO dal rimbalzo di YA-GT: rischio di QSO doppi	mengirim ADIF ke QLog ({0}) padahal QLog sudah menerima QSO dari relai YA-GT: risiko QSO ganda
+nessun programma ascolta sulla porta {0} (log chiuso o porta sbagliata)	tidak ada program yang mendengarkan di port {0} (log tertutup atau port salah)
+in YA-GT hai scelto di mandarla a {0}:{1}	di YA-GT Anda memilih mengirimnya ke {0}:{1}
+in YA-GT hai scelto di spegnerla	di YA-GT Anda memilih mematikannya
+ADIF a {0}:{1}	ADIF ke {0}:{1}
+spenta	mati
+ (YA-GT non la tocca)	 (YA-GT tidak menyentuhnya)
+: è aperto, chiudilo e riprova	: sedang terbuka, tutup lalu coba lagi
+: ADIF verso {0}:{1}	: ADIF ke {0}:{1}
+: UDP secondaria spenta	: UDP sekunder dimatikan
+ — per farla correggere scegli in Impostazioni la destinazione della UDP secondaria (ora: solo avvisi)	 — agar diperbaiki, pilih tujuan UDP sekunder di Pengaturan (sekarang: hanya peringatan)
+manda a {0} invece di {1}	mengirim ke {0} alih-alih {1}
+porta {0} invece di {1}	port {0} alih-alih {1}
+"Accetta richieste UDP" spento (le risposte di QLog e degli altri vengono ignorate)	"Terima permintaan UDP" mati (balasan dari QLog dan lainnya diabaikan)
+{0} altre configurazioni con un'altra porta	{0} konfigurasi lain dengan port lain
+manda a {0}, richieste UDP accettate	mengirim ke {0}, permintaan UDP diterima
+{0}: è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)	{0}: sedang terbuka, tutup lalu coba lagi (saat ditutup ia akan menulis ulang pengaturannya)
+{0}: corretto (copia in {1})	{0}: diperbaiki (salinan di {1})
+"Enable Decoded Text" spento (YA-GT non vede le decodifiche)	"Enable Decoded Text" mati (YA-GT tidak melihat dekode)
+"Enable Logged QSO" spento (i QSO non arrivano a QLog)	"Enable Logged QSO" mati (QSO tidak sampai ke QLog)
+manda a {0} decodifiche e QSO	mengirim dekode dan QSO ke {0}
+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)	: sedang terbuka, tutup lalu coba lagi (saat ditutup ia akan menulis ulang pengaturannya)
+invio UDP dei QSO spento	pengiriman QSO lewat UDP mati
+manda i QSO a {0}	mengirim QSO ke {0}
+server UDP primario spento	server UDP utama mati
+"Accetta richieste UDP" spento	"Terima permintaan UDP" mati
+Aurora: è aperta, chiudila e riprova	Aurora: sedang terbuka, tutup lalu coba lagi
+Aurora: corretta (copia in {0})	Aurora: diperbaiki (salinan di {0})
+in YA-GT il rimbalzo UDP è spento: accendilo nelle Impostazioni, altrimenti a QLog non arriva nulla	di YA-GT relai UDP mati: nyalakan di Pengaturan, kalau tidak tidak ada yang sampai ke QLog
+ascolta sulla {0}, la stessa porta di YA-GT: i due programmi si rubano i pacchetti	mendengarkan di {0}, port yang sama dengan YA-GT: kedua program saling mencuri paket
+ascolta sulla {0}, ma YA-GT ritrasmette sulla {1}	mendengarkan di {0}, tetapi YA-GT meneruskan ke {1}
+ascolta sulla {0}, dove YA-GT ritrasmette	mendengarkan di {0}, tempat YA-GT meneruskan
+QLog: è aperto, chiudilo e riprova	QLog: sedang terbuka, tutup lalu coba lagi
+QLog: ora ascolta sulla {0} (copia in {1})	QLog: sekarang mendengarkan di {0} (salinan di {1})
+ — accendi anche il rimbalzo UDP in YA-GT	 — nyalakan juga relai UDP di YA-GT
+Porta	Port
+qualcuno ascolta sulla porta di ritrasmissione (di solito QLog)	ada yang mendengarkan di port penerusan (biasanya QLog)
+nessun programma ascolta sulla porta di ritrasmissione: apri QLog o controlla la sua porta	tidak ada program yang mendengarkan di port penerusan: buka QLog atau periksa port-nya
+porta UDP {0} già occupata (forse da QLog o GridTracker): metti quel programma su un'altra porta, es. 2238, e scrivila tra gli inoltri	port UDP {0} sudah dipakai (mungkin oleh QLog atau GridTracker): pindahkan program itu ke port lain, mis. 2238, lalu tambahkan ke daftar penerusan
+l'inoltro non può puntare alla porta d'ascolto 	penerusan tidak boleh mengarah ke port dengar 
+Controlla all'avvio le impostazioni UDP degli altri programmi	Saat mulai, periksa pengaturan UDP program lain
+Verifica UDP…	Pemeriksaan UDP…
+non toccarla, solo avvisi	jangan disentuh, hanya peringatan
+mandala a	kirim ke
+spegnila	matikan
+UDP secondaria (ADIF)	UDP sekunder (ADIF)
+Porta solo l'ADIF dei QSO a un altro log (Log4OM, N1MM, HRD…). Di base YA-GT non la tocca e segnala solo le scelte fuorvianti.	Hanya membawa ADIF QSO ke log lain (Log4OM, N1MM, HRD…). Secara bawaan YA-GT tidak menyentuhnya dan hanya menandai pilihan yang menyesatkan.
+Altri log di stazione	Log stasiun lainnya
+Aggiungi file…	Tambah file…
+Log di stazione	Log stasiun
+Trova i log sul computer	Cari log di komputer
+Nessun log trovato nelle cartelle abituali.	Tidak ada log di folder biasa.
+Uno per riga (# = spenta): file ADIF, Cabrillo, SQLite o Access, oppure mysql:, wavelog:, qrz:. I file si rileggono quando cambiano, i log in rete ogni 30 minuti. I file degli altri programmi non vengono mai modificati.	Satu per baris (# = mati): file ADIF, Cabrillo, SQLite, atau Access, atau mysql:, wavelog:, qrz:. File dibaca ulang saat berubah, log daring tiap 30 menit. File program lain tidak pernah diubah.
+Porta della UDP secondaria non valida.	Port UDP sekunder tidak valid.
+YA-GT — verifica UDP	YA-GT — pemeriksaan UDP
+YA-GT ascolta su {0}:{1}	YA-GT mendengarkan di {0}:{1}
+ e ritrasmette a {0}:{1}	 dan meneruskan ke {0}:{1}
+ (rimbalzo UDP spento)	 (relai UDP mati)
+"Correggi" mette questi valori nei programmi chiusi, dopo averne copiato le impostazioni nella cartella Dati\copie-impostazioni. I programmi aperti vanno chiusi prima: alla chiusura riscrivono le loro impostazioni.	"Perbaiki" menulis nilai-nilai ini ke program yang tertutup, setelah menyalin pengaturannya ke folder Dati\copie-impostazioni. Program yang terbuka harus ditutup dulu: saat ditutup mereka menulis ulang pengaturannya.
+Controllo in corso…	Sedang memeriksa…
+aperto	terbuka
+QSO dei log (QLog e altri)	QSO dari log (QLog dan lainnya)
+Legge qlog.db e gli altri log scelti nelle Impostazioni (copie in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato	Membaca qlog.db dan log lain yang dipilih di Pengaturan (salinan hanya-baca): kotak hijau = LoTW, biru = QSL, oranye = dikerjakan
+Legge qlog.db e gli altri log scelti nelle Impostazioni (copie in sola lettura)	Membaca qlog.db dan log lain yang dipilih di Pengaturan (salinan hanya-baca)
+Quadrati (LoTW + log)	Kotak (LoTW + log)
+Correggi	Perbaiki
+Ricontrolla	Periksa lagi
+Log (ADIF, Cabrillo, SQLite, Access)	Log (ADIF, Cabrillo, SQLite, Access)
+CQRLOG: è aperto, chiudilo e riprova	CQRLOG: sedang terbuka, tutup lalu coba lagi
+CQRLOG: ora ascolta sulla {0} (copia in {1})	CQRLOG: sekarang mendengarkan di {0} (salinan di {1})

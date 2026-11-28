@@ -197,3 +197,104 @@ G7VRD: ricerca dei locatori per nominativo (api.g7vrd.co.uk)	G7VRD: lokatoru mek
 cty.dat — Jim Reisert AD1C (country-files.com): prefissi e paesi DXCC	cty.dat — Jim Reisert AD1C (country-files.com): DXCC prefiksi un valstis
 Natural Earth: coste e confini (pubblico dominio)	Natural Earth: krasta līnijas un robežas (publiskais īpašums)
 Codice ripreso da LIVETROPOVHF e LoTW Grid Map v2 (IC8TEM)	Kods ņemts no LIVETROPOVHF un LoTW Grid Map v2 (IC8TEM)
+: file non trovato	: fails nav atrasts
+manca il driver di Microsoft Access (Access Database Engine) per questa versione di Windows	šai Windows versijai trūkst Microsoft Access draivera (Access Database Engine)
+i database Access si leggono solo su Windows	Access datubāzes var lasīt tikai Windows vidē
+manca il driver di Microsoft Access a 64 bit (Microsoft Access Database Engine)	trūkst Microsoft Access 64 bitu draivera (Microsoft Access Database Engine)
+: tabella del log non trovata	: žurnāla tabula nav atrasta
+Wavelog: scrivi indirizzo, chiave API e numero della stazione	Wavelog: ievadi adresi, API atslēgu un stacijas numuru
+QRZ: manca la chiave API del logbook	QRZ: trūkst žurnāla API atslēgas
+risposta non valida	nederīga atbilde
+invio dei QSO acceso ma senza destinazione (DestinationIPs vuoto)	QSO sūtīšana ir ieslēgta, bet bez galamērķa (DestinationIPs tukšs)
+manda l'XML alla porta {0}, dove ascolta YA-GT con il protocollo WSJT-X	sūta XML uz portu {0}, kur YA-GT klausās ar WSJT-X protokolu
+manda l'XML alla porta WSJT-X di QLog ({0}): QLog non legge l'XML di N1MM	sūta XML uz QLog WSJT-X portu ({0}): QLog nelasa N1MM XML
+manda l'XML al ricevitore ADIF di QLog ({0}): QLog lì aspetta l'ADIF, non l'XML di N1MM	sūta XML uz QLog ADIF uztvērēju ({0}): tur QLog gaida ADIF, nevis N1MM XML
+nessun programma ascolta sulla porta {0}	neviena programma neklausās portā {0}
+in YA-GT hai scelto di spegnere gli invii secondari	YA-GT tu izvēlējies izslēgt otro sūtīšanu
+manda i QSO a 	sūta QSO uz 
+invio dei QSO spento	QSO sūtīšana izslēgta
+ (YA-GT non lo tocca)	 (YA-GT to neaiztiek)
+N1MM Logger+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe il file .ini)	N1MM Logger+: ir atvērts, aizver to un mēģini vēlreiz (aizverot tas pārrakstītu .ini failu)
+N1MM Logger+: invio dei QSO spento (copia in {0})	N1MM Logger+: QSO sūtīšana izslēgta (kopija: {0})
+N1MM Logger+: tolte le destinazioni sbagliate	N1MM Logger+: nepareizie galamērķi noņemti
+ e spento l'invio	 un sūtīšana izslēgta
+ (copia in {0})	 (kopija: {0})
+ — per farlo correggere scegli in Impostazioni "spegnila" o "mandala a" per la UDP secondaria	 — lai to izlabotu, Iestatījumos otrajam UDP izvēlies „izslēgt“ vai „sūtīt uz“
+non leggibile: 	nelasāms: 
+ — 2° server UDP (ADIF)	 — 2. UDP serveris (ADIF)
+invio dei QSO spento (YA-GT non lo tocca)	QSO sūtīšana izslēgta (YA-GT to neaiztiek)
+Verifica	Pārbaude
+nessun programma trovato (WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+, CQRLOG, QLog)	neviena programma nav atrasta (WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+, CQRLOG, QLog)
+ — invio ADIF "N1MM"	 — ADIF sūtīšana „N1MM“
+manda l'ADIF alla porta {0}, dove ascolta YA-GT con il protocollo WSJT-X: va su un'altra porta	sūta ADIF uz portu {0}, kur YA-GT klausās ar WSJT-X protokolu: izmanto citu portu
+manda l'ADIF alla porta WSJT-X di QLog ({0}): QLog lì aspetta il protocollo WSJT-X, non l'ADIF	sūta ADIF uz QLog WSJT-X portu ({0}): tur QLog gaida WSJT-X protokolu, nevis ADIF
+manda l'ADIF a QLog ({0}) mentre QLog riceve già il QSO dal rimbalzo di YA-GT: rischio di QSO doppi	sūta ADIF uz QLog ({0}), lai gan QLog jau saņem QSO caur YA-GT pārsūtīšanu: dubultu QSO risks
+nessun programma ascolta sulla porta {0} (log chiuso o porta sbagliata)	neviena programma neklausās portā {0} (žurnāls aizvērts vai nepareizs ports)
+in YA-GT hai scelto di mandarla a {0}:{1}	YA-GT tu izvēlējies to sūtīt uz {0}:{1}
+in YA-GT hai scelto di spegnerla	YA-GT tu izvēlējies to izslēgt
+ADIF a {0}:{1}	ADIF uz {0}:{1}
+spenta	izslēgta
+ (YA-GT non la tocca)	 (YA-GT to neaiztiek)
+: è aperto, chiudilo e riprova	: ir atvērts, aizver to un mēģini vēlreiz
+: ADIF verso {0}:{1}	: ADIF uz {0}:{1}
+: UDP secondaria spenta	: otrais UDP izslēgts
+ — per farla correggere scegli in Impostazioni la destinazione della UDP secondaria (ora: solo avvisi)	 — lai to izlabotu, Iestatījumos izvēlies otrā UDP galamērķi (pašlaik: tikai brīdinājumi)
+manda a {0} invece di {1}	sūta uz {0}, nevis {1}
+porta {0} invece di {1}	ports {0}, nevis {1}
+"Accetta richieste UDP" spento (le risposte di QLog e degli altri vengono ignorate)	„Pieņemt UDP pieprasījumus“ izslēgts (QLog un citu atbildes tiek ignorētas)
+{0} altre configurazioni con un'altra porta	{0} citas konfigurācijas ar citu portu
+manda a {0}, richieste UDP accettate	sūta uz {0}, UDP pieprasījumi tiek pieņemti
+{0}: è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)	{0}: ir atvērts, aizver to un mēģini vēlreiz (aizverot tas pārrakstītu savus iestatījumus)
+{0}: corretto (copia in {1})	{0}: izlabots (kopija: {1})
+"Enable Decoded Text" spento (YA-GT non vede le decodifiche)	„Enable Decoded Text“ izslēgts (YA-GT neredz dekodējumus)
+"Enable Logged QSO" spento (i QSO non arrivano a QLog)	„Enable Logged QSO“ izslēgts (QSO nenonāk līdz QLog)
+manda a {0} decodifiche e QSO	sūta dekodējumus un QSO uz {0}
+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)	: ir atvērts, aizver to un mēģini vēlreiz (aizverot tas pārrakstītu savus iestatījumus)
+invio UDP dei QSO spento	QSO UDP sūtīšana izslēgta
+manda i QSO a {0}	sūta QSO uz {0}
+server UDP primario spento	galvenais UDP serveris izslēgts
+"Accetta richieste UDP" spento	„Pieņemt UDP pieprasījumus“ izslēgts
+Aurora: è aperta, chiudila e riprova	Aurora: ir atvērta, aizver to un mēģini vēlreiz
+Aurora: corretta (copia in {0})	Aurora: izlabota (kopija: {0})
+in YA-GT il rimbalzo UDP è spento: accendilo nelle Impostazioni, altrimenti a QLog non arriva nulla	YA-GT UDP pārsūtīšana ir izslēgta: ieslēdz to Iestatījumos, citādi līdz QLog nekas nenonāk
+ascolta sulla {0}, la stessa porta di YA-GT: i due programmi si rubano i pacchetti	klausās portā {0}, tajā pašā, kur YA-GT: abas programmas zog viena otras paketes
+ascolta sulla {0}, ma YA-GT ritrasmette sulla {1}	klausās portā {0}, bet YA-GT pārsūta uz {1}
+ascolta sulla {0}, dove YA-GT ritrasmette	klausās portā {0}, uz kurieni YA-GT pārsūta
+QLog: è aperto, chiudilo e riprova	QLog: ir atvērts, aizver to un mēģini vēlreiz
+QLog: ora ascolta sulla {0} (copia in {1})	QLog: tagad klausās portā {0} (kopija: {1})
+ — accendi anche il rimbalzo UDP in YA-GT	 — ieslēdz arī YA-GT UDP pārsūtīšanu
+Porta	Ports
+qualcuno ascolta sulla porta di ritrasmissione (di solito QLog)	kāds klausās pārsūtīšanas portā (parasti QLog)
+nessun programma ascolta sulla porta di ritrasmissione: apri QLog o controlla la sua porta	neviena programma neklausās pārsūtīšanas portā: atver QLog vai pārbaudi tā portu
+porta UDP {0} già occupata (forse da QLog o GridTracker): metti quel programma su un'altra porta, es. 2238, e scrivila tra gli inoltri	UDP ports {0} jau aizņemts (varbūt QLog vai GridTracker): pārliec šo programmu uz citu portu, piem. 2238, un pievieno to pārsūtīšanām
+l'inoltro non può puntare alla porta d'ascolto 	pārsūtīšana nedrīkst norādīt uz klausīšanās portu 
+Controlla all'avvio le impostazioni UDP degli altri programmi	Startējot pārbaudīt citu programmu UDP iestatījumus
+Verifica UDP…	UDP pārbaude…
+non toccarla, solo avvisi	neaiztikt, tikai brīdinājumi
+mandala a	sūtīt uz
+spegnila	izslēgt
+UDP secondaria (ADIF)	Otrais UDP (ADIF)
+Porta solo l'ADIF dei QSO a un altro log (Log4OM, N1MM, HRD…). Di base YA-GT non la tocca e segnala solo le scelte fuorvianti.	Nes tikai QSO ADIF uz citu žurnālu (Log4OM, N1MM, HRD…). Pēc noklusējuma YA-GT to neaiztiek un norāda tikai uz maldinošām izvēlēm.
+Altri log di stazione	Citi stacijas žurnāli
+Aggiungi file…	Pievienot failu…
+Log di stazione	Stacijas žurnāli
+Trova i log sul computer	Meklēt žurnālus datorā
+Nessun log trovato nelle cartelle abituali.	Ierastajās mapēs neviens žurnāls nav atrasts.
+Uno per riga (# = spenta): file ADIF, Cabrillo, SQLite o Access, oppure mysql:, wavelog:, qrz:. I file si rileggono quando cambiano, i log in rete ogni 30 minuti. I file degli altri programmi non vengono mai modificati.	Viens rindā (# = izslēgts): ADIF, Cabrillo, SQLite vai Access faili, vai mysql:, wavelog:, qrz:. Faili tiek pārlasīti, kad mainās, tiešsaistes žurnāli ik pēc 30 minūtēm. Citu programmu faili nekad netiek mainīti.
+Porta della UDP secondaria non valida.	Nederīgs otrā UDP ports.
+YA-GT — verifica UDP	YA-GT — UDP pārbaude
+YA-GT ascolta su {0}:{1}	YA-GT klausās {0}:{1}
+ e ritrasmette a {0}:{1}	 un pārsūta uz {0}:{1}
+ (rimbalzo UDP spento)	 (UDP pārsūtīšana izslēgta)
+"Correggi" mette questi valori nei programmi chiusi, dopo averne copiato le impostazioni nella cartella Dati\copie-impostazioni. I programmi aperti vanno chiusi prima: alla chiusura riscrivono le loro impostazioni.	„Labot“ ieraksta šīs vērtības aizvērtajās programmās pēc to iestatījumu kopēšanas mapē Dati\copie-impostazioni. Atvērtās programmas vispirms jāaizver: aizverot tās pārraksta savus iestatījumus.
+Controllo in corso…	Pārbauda…
+aperto	atvērts
+QSO dei log (QLog e altri)	Žurnālu QSO (QLog un citi)
+Legge qlog.db e gli altri log scelti nelle Impostazioni (copie in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato	Lasa qlog.db un citus Iestatījumos izvēlētos žurnālus (tikai lasāmas kopijas): zaļi lauki = LoTW, zili = QSL, oranži = strādāts
+Legge qlog.db e gli altri log scelti nelle Impostazioni (copie in sola lettura)	Lasa qlog.db un citus Iestatījumos izvēlētos žurnālus (tikai lasāmas kopijas)
+Quadrati (LoTW + log)	Lauki (LoTW + žurnāli)
+Correggi	Labot
+Ricontrolla	Pārbaudīt vēlreiz
+Log (ADIF, Cabrillo, SQLite, Access)	Žurnāls (ADIF, Cabrillo, SQLite, Access)
+CQRLOG: è aperto, chiudilo e riprova	CQRLOG: ir atvērts, aizver to un mēģini vēlreiz
+CQRLOG: ora ascolta sulla {0} (copia in {1})	CQRLOG: tagad klausās portā {0} (kopija: {1})

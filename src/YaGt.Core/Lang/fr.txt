@@ -197,3 +197,104 @@ G7VRD: ricerca dei locatori per nominativo (api.g7vrd.co.uk)	G7VRD : recherche d
 cty.dat — Jim Reisert AD1C (country-files.com): prefissi e paesi DXCC	cty.dat — Jim Reisert AD1C (country-files.com) : préfixes et pays DXCC
 Natural Earth: coste e confini (pubblico dominio)	Natural Earth : côtes et frontières (domaine public)
 Codice ripreso da LIVETROPOVHF e LoTW Grid Map v2 (IC8TEM)	Code repris de LIVETROPOVHF et de LoTW Grid Map v2 (IC8TEM)
+: file non trovato	: fichier introuvable
+manca il driver di Microsoft Access (Access Database Engine) per questa versione di Windows	le pilote Microsoft Access (Access Database Engine) manque pour cette version de Windows
+i database Access si leggono solo su Windows	les bases Access ne se lisent que sous Windows
+manca il driver di Microsoft Access a 64 bit (Microsoft Access Database Engine)	le pilote Microsoft Access 64 bits (Microsoft Access Database Engine) manque
+: tabella del log non trovata	: table du journal introuvable
+Wavelog: scrivi indirizzo, chiave API e numero della stazione	Wavelog : indiquez l'adresse, la clé API et le numéro de station
+QRZ: manca la chiave API del logbook	QRZ : la clé API du carnet manque
+risposta non valida	réponse non valide
+invio dei QSO acceso ma senza destinazione (DestinationIPs vuoto)	envoi des QSO activé mais sans destination (DestinationIPs vide)
+manda l'XML alla porta {0}, dove ascolta YA-GT con il protocollo WSJT-X	envoie le XML au port {0}, où YA-GT écoute avec le protocole WSJT-X
+manda l'XML alla porta WSJT-X di QLog ({0}): QLog non legge l'XML di N1MM	envoie le XML au port WSJT-X de QLog ({0}) : QLog ne lit pas le XML de N1MM
+manda l'XML al ricevitore ADIF di QLog ({0}): QLog lì aspetta l'ADIF, non l'XML di N1MM	envoie le XML au récepteur ADIF de QLog ({0}) : QLog y attend de l'ADIF, pas le XML de N1MM
+nessun programma ascolta sulla porta {0}	aucun programme n'écoute sur le port {0}
+in YA-GT hai scelto di spegnere gli invii secondari	dans YA-GT vous avez choisi de couper les envois secondaires
+manda i QSO a 	envoie les QSO à 
+invio dei QSO spento	envoi des QSO coupé
+ (YA-GT non lo tocca)	 (YA-GT n'y touche pas)
+N1MM Logger+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe il file .ini)	N1MM Logger+ : il est ouvert, fermez-le et réessayez (à la fermeture il réécrirait le fichier .ini)
+N1MM Logger+: invio dei QSO spento (copia in {0})	N1MM Logger+ : envoi des QSO coupé (copie dans {0})
+N1MM Logger+: tolte le destinazioni sbagliate	N1MM Logger+ : destinations erronées retirées
+ e spento l'invio	 et envoi coupé
+ (copia in {0})	 (copie dans {0})
+ — per farlo correggere scegli in Impostazioni "spegnila" o "mandala a" per la UDP secondaria	 — pour le faire corriger, choisissez « la couper » ou « l'envoyer à » pour l'UDP secondaire dans les Réglages
+non leggibile: 	illisible : 
+ — 2° server UDP (ADIF)	 — 2e serveur UDP (ADIF)
+invio dei QSO spento (YA-GT non lo tocca)	envoi des QSO coupé (YA-GT n'y touche pas)
+Verifica	Vérification
+nessun programma trovato (WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+, CQRLOG, QLog)	aucun programme trouvé (WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+, CQRLOG, QLog)
+ — invio ADIF "N1MM"	 — envoi ADIF « N1MM »
+manda l'ADIF alla porta {0}, dove ascolta YA-GT con il protocollo WSJT-X: va su un'altra porta	envoie l'ADIF au port {0}, où YA-GT écoute avec le protocole WSJT-X : utilisez un autre port
+manda l'ADIF alla porta WSJT-X di QLog ({0}): QLog lì aspetta il protocollo WSJT-X, non l'ADIF	envoie l'ADIF au port WSJT-X de QLog ({0}) : QLog y attend le protocole WSJT-X, pas l'ADIF
+manda l'ADIF a QLog ({0}) mentre QLog riceve già il QSO dal rimbalzo di YA-GT: rischio di QSO doppi	envoie l'ADIF à QLog ({0}) alors que QLog reçoit déjà le QSO par le relais de YA-GT : risque de QSO en double
+nessun programma ascolta sulla porta {0} (log chiuso o porta sbagliata)	aucun programme n'écoute sur le port {0} (journal fermé ou mauvais port)
+in YA-GT hai scelto di mandarla a {0}:{1}	dans YA-GT vous avez choisi de l'envoyer à {0}:{1}
+in YA-GT hai scelto di spegnerla	dans YA-GT vous avez choisi de la couper
+ADIF a {0}:{1}	ADIF vers {0}:{1}
+spenta	coupée
+ (YA-GT non la tocca)	 (YA-GT n'y touche pas)
+: è aperto, chiudilo e riprova	: il est ouvert, fermez-le et réessayez
+: ADIF verso {0}:{1}	: ADIF vers {0}:{1}
+: UDP secondaria spenta	: UDP secondaire coupée
+ — per farla correggere scegli in Impostazioni la destinazione della UDP secondaria (ora: solo avvisi)	 — pour la faire corriger, choisissez la destination de l'UDP secondaire dans les Réglages (pour l'instant : avertissements seulement)
+manda a {0} invece di {1}	envoie à {0} au lieu de {1}
+porta {0} invece di {1}	port {0} au lieu de {1}
+"Accetta richieste UDP" spento (le risposte di QLog e degli altri vengono ignorate)	« Accepter les requêtes UDP » désactivé (les réponses de QLog et des autres sont ignorées)
+{0} altre configurazioni con un'altra porta	{0} autres configurations avec un autre port
+manda a {0}, richieste UDP accettate	envoie à {0}, requêtes UDP acceptées
+{0}: è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)	{0} : il est ouvert, fermez-le et réessayez (à la fermeture il réécrirait ses réglages)
+{0}: corretto (copia in {1})	{0} : corrigé (copie dans {1})
+"Enable Decoded Text" spento (YA-GT non vede le decodifiche)	« Enable Decoded Text » désactivé (YA-GT ne voit pas les décodages)
+"Enable Logged QSO" spento (i QSO non arrivano a QLog)	« Enable Logged QSO » désactivé (les QSO n'arrivent pas à QLog)
+manda a {0} decodifiche e QSO	envoie décodages et QSO à {0}
+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)	: il est ouvert, fermez-le et réessayez (à la fermeture il réécrirait ses réglages)
+invio UDP dei QSO spento	envoi UDP des QSO coupé
+manda i QSO a {0}	envoie les QSO à {0}
+server UDP primario spento	serveur UDP principal coupé
+"Accetta richieste UDP" spento	« Accepter les requêtes UDP » désactivé
+Aurora: è aperta, chiudila e riprova	Aurora : elle est ouverte, fermez-la et réessayez
+Aurora: corretta (copia in {0})	Aurora : corrigée (copie dans {0})
+in YA-GT il rimbalzo UDP è spento: accendilo nelle Impostazioni, altrimenti a QLog non arriva nulla	dans YA-GT le relais UDP est coupé : activez-le dans les Réglages, sinon rien n'arrive à QLog
+ascolta sulla {0}, la stessa porta di YA-GT: i due programmi si rubano i pacchetti	écoute sur {0}, le même port que YA-GT : les deux programmes se volent les paquets
+ascolta sulla {0}, ma YA-GT ritrasmette sulla {1}	écoute sur {0}, mais YA-GT retransmet sur {1}
+ascolta sulla {0}, dove YA-GT ritrasmette	écoute sur {0}, où YA-GT retransmet
+QLog: è aperto, chiudilo e riprova	QLog : il est ouvert, fermez-le et réessayez
+QLog: ora ascolta sulla {0} (copia in {1})	QLog : écoute maintenant sur {0} (copie dans {1})
+ — accendi anche il rimbalzo UDP in YA-GT	 — activez aussi le relais UDP dans YA-GT
+Porta	Port
+qualcuno ascolta sulla porta di ritrasmissione (di solito QLog)	quelqu'un écoute sur le port de retransmission (en général QLog)
+nessun programma ascolta sulla porta di ritrasmissione: apri QLog o controlla la sua porta	aucun programme n'écoute sur le port de retransmission : ouvrez QLog ou vérifiez son port
+porta UDP {0} già occupata (forse da QLog o GridTracker): metti quel programma su un'altra porta, es. 2238, e scrivila tra gli inoltri	port UDP {0} déjà occupé (peut-être par QLog ou GridTracker) : mettez ce programme sur un autre port, p. ex. 2238, et ajoutez-le aux renvois
+l'inoltro non può puntare alla porta d'ascolto 	le renvoi ne peut pas viser le port d'écoute 
+Controlla all'avvio le impostazioni UDP degli altri programmi	Vérifier au démarrage les réglages UDP des autres programmes
+Verifica UDP…	Vérification UDP…
+non toccarla, solo avvisi	ne pas y toucher, avertissements seulement
+mandala a	l'envoyer à
+spegnila	la couper
+UDP secondaria (ADIF)	UDP secondaire (ADIF)
+Porta solo l'ADIF dei QSO a un altro log (Log4OM, N1MM, HRD…). Di base YA-GT non la tocca e segnala solo le scelte fuorvianti.	Ne transporte que l'ADIF des QSO vers un autre journal (Log4OM, N1MM, HRD…). Par défaut YA-GT n'y touche pas et signale seulement les choix trompeurs.
+Altri log di stazione	Autres journaux de station
+Aggiungi file…	Ajouter un fichier…
+Log di stazione	Journaux de station
+Trova i log sul computer	Chercher les journaux sur l'ordinateur
+Nessun log trovato nelle cartelle abituali.	Aucun journal trouvé dans les dossiers habituels.
+Uno per riga (# = spenta): file ADIF, Cabrillo, SQLite o Access, oppure mysql:, wavelog:, qrz:. I file si rileggono quando cambiano, i log in rete ogni 30 minuti. I file degli altri programmi non vengono mai modificati.	Un par ligne (# = désactivé) : fichiers ADIF, Cabrillo, SQLite ou Access, ou mysql:, wavelog:, qrz:. Les fichiers sont relus quand ils changent, les journaux en ligne toutes les 30 minutes. Les fichiers des autres programmes ne sont jamais modifiés.
+Porta della UDP secondaria non valida.	Port de l'UDP secondaire non valide.
+YA-GT — verifica UDP	YA-GT — vérification UDP
+YA-GT ascolta su {0}:{1}	YA-GT écoute sur {0}:{1}
+ e ritrasmette a {0}:{1}	 et retransmet à {0}:{1}
+ (rimbalzo UDP spento)	 (relais UDP coupé)
+"Correggi" mette questi valori nei programmi chiusi, dopo averne copiato le impostazioni nella cartella Dati\copie-impostazioni. I programmi aperti vanno chiusi prima: alla chiusura riscrivono le loro impostazioni.	« Corriger » écrit ces valeurs dans les programmes fermés, après avoir copié leurs réglages dans le dossier Dati\copie-impostazioni. Les programmes ouverts doivent d'abord être fermés : à la fermeture ils réécrivent leurs réglages.
+Controllo in corso…	Vérification en cours…
+aperto	ouvert
+QSO dei log (QLog e altri)	QSO des journaux (QLog et autres)
+Legge qlog.db e gli altri log scelti nelle Impostazioni (copie in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato	Lit qlog.db et les autres journaux choisis dans les Réglages (copies en lecture seule) : carrés verts = LoTW, bleus = QSL, orange = contacté
+Legge qlog.db e gli altri log scelti nelle Impostazioni (copie in sola lettura)	Lit qlog.db et les autres journaux choisis dans les Réglages (copies en lecture seule)
+Quadrati (LoTW + log)	Carrés (LoTW + journaux)
+Correggi	Corriger
+Ricontrolla	Vérifier à nouveau
+Log (ADIF, Cabrillo, SQLite, Access)	Journal (ADIF, Cabrillo, SQLite, Access)
+CQRLOG: è aperto, chiudilo e riprova	CQRLOG : il est ouvert, fermez-le et réessayez
+CQRLOG: ora ascolta sulla {0} (copia in {1})	CQRLOG : écoute maintenant sur {0} (copie dans {1})

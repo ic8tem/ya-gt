@@ -197,3 +197,104 @@ G7VRD: ricerca dei locatori per nominativo (api.g7vrd.co.uk)	G7VRD: lokatorių p
 cty.dat — Jim Reisert AD1C (country-files.com): prefissi e paesi DXCC	cty.dat — Jim Reisert AD1C (country-files.com): DXCC prefiksai ir šalys
 Natural Earth: coste e confini (pubblico dominio)	Natural Earth: pakrantės ir sienos (viešoji nuosavybė)
 Codice ripreso da LIVETROPOVHF e LoTW Grid Map v2 (IC8TEM)	Kodas paimtas iš LIVETROPOVHF ir LoTW Grid Map v2 (IC8TEM)
+: file non trovato	: failas nerastas
+manca il driver di Microsoft Access (Access Database Engine) per questa versione di Windows	šiai Windows versijai trūksta Microsoft Access tvarkyklės (Access Database Engine)
+i database Access si leggono solo su Windows	Access duomenų bazes galima skaityti tik Windows sistemoje
+manca il driver di Microsoft Access a 64 bit (Microsoft Access Database Engine)	trūksta 64 bitų Microsoft Access tvarkyklės (Microsoft Access Database Engine)
+: tabella del log non trovata	: žurnalo lentelė nerasta
+Wavelog: scrivi indirizzo, chiave API e numero della stazione	Wavelog: įrašykite adresą, API raktą ir stoties numerį
+QRZ: manca la chiave API del logbook	QRZ: trūksta žurnalo API rakto
+risposta non valida	netinkamas atsakymas
+invio dei QSO acceso ma senza destinazione (DestinationIPs vuoto)	QSO siuntimas įjungtas, bet be paskirties (DestinationIPs tuščias)
+manda l'XML alla porta {0}, dove ascolta YA-GT con il protocollo WSJT-X	siunčia XML į prievadą {0}, kuriame YA-GT klausosi WSJT-X protokolu
+manda l'XML alla porta WSJT-X di QLog ({0}): QLog non legge l'XML di N1MM	siunčia XML į QLog WSJT-X prievadą ({0}): QLog neskaito N1MM XML
+manda l'XML al ricevitore ADIF di QLog ({0}): QLog lì aspetta l'ADIF, non l'XML di N1MM	siunčia XML į QLog ADIF imtuvą ({0}): ten QLog laukia ADIF, ne N1MM XML
+nessun programma ascolta sulla porta {0}	jokia programa neklauso prievado {0}
+in YA-GT hai scelto di spegnere gli invii secondari	YA-GT pasirinkote išjungti antrinį siuntimą
+manda i QSO a 	siunčia QSO į 
+invio dei QSO spento	QSO siuntimas išjungtas
+ (YA-GT non lo tocca)	 (YA-GT jo neliečia)
+N1MM Logger+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe il file .ini)	N1MM Logger+: atidarytas, uždarykite jį ir bandykite dar kartą (uždarant jis perrašytų .ini failą)
+N1MM Logger+: invio dei QSO spento (copia in {0})	N1MM Logger+: QSO siuntimas išjungtas (kopija: {0})
+N1MM Logger+: tolte le destinazioni sbagliate	N1MM Logger+: neteisingos paskirtys pašalintos
+ e spento l'invio	 ir siuntimas išjungtas
+ (copia in {0})	 (kopija: {0})
+ — per farlo correggere scegli in Impostazioni "spegnila" o "mandala a" per la UDP secondaria	 — kad būtų pataisyta, Nustatymuose antriniam UDP pasirinkite „išjungti“ arba „siųsti į“
+non leggibile: 	neįskaitoma: 
+ — 2° server UDP (ADIF)	 — 2-asis UDP serveris (ADIF)
+invio dei QSO spento (YA-GT non lo tocca)	QSO siuntimas išjungtas (YA-GT jo neliečia)
+Verifica	Patikra
+nessun programma trovato (WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+, CQRLOG, QLog)	nerasta jokios programos (WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+, CQRLOG, QLog)
+ — invio ADIF "N1MM"	 — ADIF siuntimas „N1MM“
+manda l'ADIF alla porta {0}, dove ascolta YA-GT con il protocollo WSJT-X: va su un'altra porta	siunčia ADIF į prievadą {0}, kuriame YA-GT klausosi WSJT-X protokolu: naudokite kitą prievadą
+manda l'ADIF alla porta WSJT-X di QLog ({0}): QLog lì aspetta il protocollo WSJT-X, non l'ADIF	siunčia ADIF į QLog WSJT-X prievadą ({0}): ten QLog laukia WSJT-X protokolo, ne ADIF
+manda l'ADIF a QLog ({0}) mentre QLog riceve già il QSO dal rimbalzo di YA-GT: rischio di QSO doppi	siunčia ADIF į QLog ({0}), nors QLog jau gauna QSO per YA-GT persiuntimą: dvigubų QSO rizika
+nessun programma ascolta sulla porta {0} (log chiuso o porta sbagliata)	jokia programa neklauso prievado {0} (žurnalas uždarytas arba neteisingas prievadas)
+in YA-GT hai scelto di mandarla a {0}:{1}	YA-GT pasirinkote ją siųsti į {0}:{1}
+in YA-GT hai scelto di spegnerla	YA-GT pasirinkote ją išjungti
+ADIF a {0}:{1}	ADIF į {0}:{1}
+spenta	išjungta
+ (YA-GT non la tocca)	 (YA-GT jos neliečia)
+: è aperto, chiudilo e riprova	: atidarytas, uždarykite jį ir bandykite dar kartą
+: ADIF verso {0}:{1}	: ADIF į {0}:{1}
+: UDP secondaria spenta	: antrinis UDP išjungtas
+ — per farla correggere scegli in Impostazioni la destinazione della UDP secondaria (ora: solo avvisi)	 — kad būtų pataisyta, Nustatymuose pasirinkite antrinio UDP paskirtį (dabar: tik įspėjimai)
+manda a {0} invece di {1}	siunčia į {0} vietoj {1}
+porta {0} invece di {1}	prievadas {0} vietoj {1}
+"Accetta richieste UDP" spento (le risposte di QLog e degli altri vengono ignorate)	„Priimti UDP užklausas“ išjungta (QLog ir kitų atsakymai ignoruojami)
+{0} altre configurazioni con un'altra porta	{0} kitos konfigūracijos su kitu prievadu
+manda a {0}, richieste UDP accettate	siunčia į {0}, UDP užklausos priimamos
+{0}: è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)	{0}: atidarytas, uždarykite jį ir bandykite dar kartą (uždarant jis perrašytų savo nustatymus)
+{0}: corretto (copia in {1})	{0}: pataisyta (kopija: {1})
+"Enable Decoded Text" spento (YA-GT non vede le decodifiche)	„Enable Decoded Text“ išjungta (YA-GT nemato dekodavimų)
+"Enable Logged QSO" spento (i QSO non arrivano a QLog)	„Enable Logged QSO“ išjungta (QSO nepasiekia QLog)
+manda a {0} decodifiche e QSO	siunčia dekodavimus ir QSO į {0}
+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)	: atidarytas, uždarykite jį ir bandykite dar kartą (uždarant jis perrašytų savo nustatymus)
+invio UDP dei QSO spento	QSO UDP siuntimas išjungtas
+manda i QSO a {0}	siunčia QSO į {0}
+server UDP primario spento	pagrindinis UDP serveris išjungtas
+"Accetta richieste UDP" spento	„Priimti UDP užklausas“ išjungta
+Aurora: è aperta, chiudila e riprova	Aurora: atidaryta, uždarykite ją ir bandykite dar kartą
+Aurora: corretta (copia in {0})	Aurora: pataisyta (kopija: {0})
+in YA-GT il rimbalzo UDP è spento: accendilo nelle Impostazioni, altrimenti a QLog non arriva nulla	YA-GT UDP persiuntimas išjungtas: įjunkite jį Nustatymuose, kitaip į QLog niekas nepateks
+ascolta sulla {0}, la stessa porta di YA-GT: i due programmi si rubano i pacchetti	klausosi prievado {0}, to paties kaip YA-GT: abi programos vagia viena kitos paketus
+ascolta sulla {0}, ma YA-GT ritrasmette sulla {1}	klausosi prievado {0}, bet YA-GT persiunčia į {1}
+ascolta sulla {0}, dove YA-GT ritrasmette	klausosi prievado {0}, į kurį YA-GT persiunčia
+QLog: è aperto, chiudilo e riprova	QLog: atidarytas, uždarykite jį ir bandykite dar kartą
+QLog: ora ascolta sulla {0} (copia in {1})	QLog: dabar klausosi prievado {0} (kopija: {1})
+ — accendi anche il rimbalzo UDP in YA-GT	 — įjunkite ir YA-GT UDP persiuntimą
+Porta	Prievadas
+qualcuno ascolta sulla porta di ritrasmissione (di solito QLog)	kažkas klausosi persiuntimo prievado (paprastai QLog)
+nessun programma ascolta sulla porta di ritrasmissione: apri QLog o controlla la sua porta	jokia programa neklauso persiuntimo prievado: atidarykite QLog arba patikrinkite jo prievadą
+porta UDP {0} già occupata (forse da QLog o GridTracker): metti quel programma su un'altra porta, es. 2238, e scrivila tra gli inoltri	UDP prievadas {0} jau užimtas (galbūt QLog ar GridTracker): perkelkite tą programą į kitą prievadą, pvz. 2238, ir įrašykite jį tarp persiuntimų
+l'inoltro non può puntare alla porta d'ascolto 	persiuntimas negali rodyti į klausymosi prievadą 
+Controlla all'avvio le impostazioni UDP degli altri programmi	Paleidžiant tikrinti kitų programų UDP nustatymus
+Verifica UDP…	UDP patikra…
+non toccarla, solo avvisi	neliesti, tik įspėjimai
+mandala a	siųsti į
+spegnila	išjungti
+UDP secondaria (ADIF)	Antrinis UDP (ADIF)
+Porta solo l'ADIF dei QSO a un altro log (Log4OM, N1MM, HRD…). Di base YA-GT non la tocca e segnala solo le scelte fuorvianti.	Neša tik QSO ADIF į kitą žurnalą (Log4OM, N1MM, HRD…). Pagal nutylėjimą YA-GT jos neliečia ir nurodo tik klaidinančius pasirinkimus.
+Altri log di stazione	Kiti stoties žurnalai
+Aggiungi file…	Pridėti failą…
+Log di stazione	Stoties žurnalai
+Trova i log sul computer	Ieškoti žurnalų kompiuteryje
+Nessun log trovato nelle cartelle abituali.	Įprastuose aplankuose žurnalų nerasta.
+Uno per riga (# = spenta): file ADIF, Cabrillo, SQLite o Access, oppure mysql:, wavelog:, qrz:. I file si rileggono quando cambiano, i log in rete ogni 30 minuti. I file degli altri programmi non vengono mai modificati.	Po vieną eilutėje (# = išjungta): ADIF, Cabrillo, SQLite ar Access failai arba mysql:, wavelog:, qrz:. Failai perskaitomi iš naujo, kai pasikeičia, internetiniai žurnalai kas 30 minučių. Kitų programų failai niekada nekeičiami.
+Porta della UDP secondaria non valida.	Netinkamas antrinio UDP prievadas.
+YA-GT — verifica UDP	YA-GT — UDP patikra
+YA-GT ascolta su {0}:{1}	YA-GT klausosi {0}:{1}
+ e ritrasmette a {0}:{1}	 ir persiunčia į {0}:{1}
+ (rimbalzo UDP spento)	 (UDP persiuntimas išjungtas)
+"Correggi" mette questi valori nei programmi chiusi, dopo averne copiato le impostazioni nella cartella Dati\copie-impostazioni. I programmi aperti vanno chiusi prima: alla chiusura riscrivono le loro impostazioni.	„Taisyti“ įrašo šias reikšmes į uždarytas programas, prieš tai nukopijavus jų nustatymus į aplanką Dati\copie-impostazioni. Atidarytas programas pirmiausia reikia uždaryti: uždarant jos perrašo savo nustatymus.
+Controllo in corso…	Tikrinama…
+aperto	atidarytas
+QSO dei log (QLog e altri)	Žurnalų QSO (QLog ir kiti)
+Legge qlog.db e gli altri log scelti nelle Impostazioni (copie in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato	Skaito qlog.db ir kitus Nustatymuose pasirinktus žurnalus (tik skaitymo kopijos): žali kvadratai = LoTW, mėlyni = QSL, oranžiniai = dirbta
+Legge qlog.db e gli altri log scelti nelle Impostazioni (copie in sola lettura)	Skaito qlog.db ir kitus Nustatymuose pasirinktus žurnalus (tik skaitymo kopijos)
+Quadrati (LoTW + log)	Kvadratai (LoTW + žurnalai)
+Correggi	Taisyti
+Ricontrolla	Tikrinti dar kartą
+Log (ADIF, Cabrillo, SQLite, Access)	Žurnalas (ADIF, Cabrillo, SQLite, Access)
+CQRLOG: è aperto, chiudilo e riprova	CQRLOG: atidarytas, uždarykite jį ir bandykite dar kartą
+CQRLOG: ora ascolta sulla {0} (copia in {1})	CQRLOG: dabar klausosi prievado {0} (kopija: {1})

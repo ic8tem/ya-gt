@@ -109,7 +109,7 @@ public sealed class StationLogs
     void ReadFile(Source s)
     {
         var path = s.Line;
-        if (!File.Exists(path)) { s.Qsos = new List<QsoRecord>(); s.Status = Path.GetFileName(path) + ": file non trovato"; return; }
+        if (!File.Exists(path)) { s.Qsos = new List<QsoRecord>(); s.Status = Path.GetFileName(path) + L.T(": file non trovato"); return; }
         var fi = new FileInfo(path);
         var stamp = fi.LastWriteTimeUtc.Ticks + "/" + fi.Length;
         foreach (var suf in new[] { "-wal", "-journal" })
@@ -226,9 +226,9 @@ public sealed class StationLogs
             }
             catch (Exception ex) { last = ex; }
         }
-        throw new Exception("manca il driver di Microsoft Access (Access Database Engine) per questa versione di Windows" + (last != null ? " — " + last.Message : ""));
+        throw new Exception(L.T("manca il driver di Microsoft Access (Access Database Engine) per questa versione di Windows") + (last != null ? " — " + last.Message : ""));
 #else
-        if (!OperatingSystem.IsWindows()) throw new Exception("i database Access si leggono solo su Windows");
+        if (!OperatingSystem.IsWindows()) throw new Exception(L.T("i database Access si leggono solo su Windows"));
         Exception last = null;
         foreach (var prov in new[] { "Microsoft.ACE.OLEDB.16.0", "Microsoft.ACE.OLEDB.12.0", "Microsoft.Jet.OLEDB.4.0" })
         {
@@ -240,7 +240,7 @@ public sealed class StationLogs
             }
             catch (Exception ex) { last = ex; }
         }
-        throw new Exception("manca il driver di Microsoft Access a 64 bit (Microsoft Access Database Engine)" + (last != null ? " — " + last.Message : ""));
+        throw new Exception(L.T("manca il driver di Microsoft Access a 64 bit (Microsoft Access Database Engine)") + (last != null ? " — " + last.Message : ""));
 #endif
     }
 
@@ -335,7 +335,7 @@ public sealed class StationLogs
                 }
                 catch { }
             }
-            if (best == null) { s.Qsos = new List<QsoRecord>(); s.Status = label + ": tabella del log non trovata"; return; }
+            if (best == null) { s.Qsos = new List<QsoRecord>(); s.Status = label + L.T(": tabella del log non trovata"); return; }
 
             var list = new List<QsoRecord>();
             using (var cmd = con.CreateCommand())
@@ -495,7 +495,7 @@ public sealed class StationLogs
     async Task Wavelog(Source s, HttpClient http, CancellationToken ct)
     {
         var a = Arg(s.Line).Split(new[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries);
-        if (a.Length < 3) { s.Status = "Wavelog: scrivi indirizzo, chiave API e numero della stazione"; return; }
+        if (a.Length < 3) { s.Status = L.T("Wavelog: scrivi indirizzo, chiave API e numero della stazione"); return; }
         var url = a[0].TrimEnd('/');
         if (!url.Contains("/index.php")) url += "/index.php";
         var body = JsonSerializer.Serialize(new Dictionary<string, object> { ["key"] = a[1], ["station_id"] = a[2], ["fetchfromid"] = 0 });
@@ -517,7 +517,7 @@ public sealed class StationLogs
     async Task Qrz(Source s, HttpClient http, CancellationToken ct)
     {
         var key = Arg(s.Line);
-        if (key == "") { s.Status = "QRZ: manca la chiave API del logbook"; return; }
+        if (key == "") { s.Status = L.T("QRZ: manca la chiave API del logbook"); return; }
         var all = new List<QsoRecord>();
         long after = 0;
         for (int page = 0; page < 400; page++)
@@ -535,7 +535,7 @@ public sealed class StationLogs
                 kv.TryGetValue("RESULT", out var result);
                 if (!string.Equals(result, "OK", StringComparison.OrdinalIgnoreCase))
                 {
-                    if (all.Count == 0) { s.Status = "QRZ: " + (kv.TryGetValue("REASON", out var why) ? why : "risposta non valida"); return; }
+                    if (all.Count == 0) { s.Status = "QRZ: " + (kv.TryGetValue("REASON", out var why) ? why : L.T("risposta non valida")); return; }
                     break;
                 }
                 kv.TryGetValue("ADIF", out var adif);

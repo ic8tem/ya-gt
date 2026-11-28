@@ -197,3 +197,104 @@ G7VRD: ricerca dei locatori per nominativo (api.g7vrd.co.uk)	G7VRD: কল স�
 cty.dat — Jim Reisert AD1C (country-files.com): prefissi e paesi DXCC	cty.dat — Jim Reisert AD1C (country-files.com): DXCC উপসর্গ ও দেশ
 Natural Earth: coste e confini (pubblico dominio)	Natural Earth: উপকূলরেখা ও সীমান্ত (পাবলিক ডোমেইন)
 Codice ripreso da LIVETROPOVHF e LoTW Grid Map v2 (IC8TEM)	LIVETROPOVHF ও LoTW Grid Map v2 থেকে নেওয়া কোড (IC8TEM)
+: file non trovato	: ফাইল পাওয়া যায়নি
+manca il driver di Microsoft Access (Access Database Engine) per questa versione di Windows	Windows-এর এই সংস্করণের জন্য Microsoft Access ড্রাইভার (Access Database Engine) নেই
+i database Access si leggono solo su Windows	Access ডেটাবেস কেবল Windows-এ পড়া যায়
+manca il driver di Microsoft Access a 64 bit (Microsoft Access Database Engine)	64-বিট Microsoft Access ড্রাইভার (Microsoft Access Database Engine) নেই
+: tabella del log non trovata	: লগের টেবিল পাওয়া যায়নি
+Wavelog: scrivi indirizzo, chiave API e numero della stazione	Wavelog: ঠিকানা, API কী আর স্টেশন নম্বর লিখুন
+QRZ: manca la chiave API del logbook	QRZ: লগবুকের API কী নেই
+risposta non valida	অবৈধ উত্তর
+invio dei QSO acceso ma senza destinazione (DestinationIPs vuoto)	QSO পাঠানো চালু কিন্তু কোনো গন্তব্য নেই (DestinationIPs খালি)
+manda l'XML alla porta {0}, dove ascolta YA-GT con il protocollo WSJT-X	XML পোর্ট {0}-এ পাঠায়, যেখানে YA-GT WSJT-X প্রোটোকলে শোনে
+manda l'XML alla porta WSJT-X di QLog ({0}): QLog non legge l'XML di N1MM	XML QLog-এর WSJT-X পোর্টে ({0}) পাঠায়: QLog N1MM-এর XML পড়ে না
+manda l'XML al ricevitore ADIF di QLog ({0}): QLog lì aspetta l'ADIF, non l'XML di N1MM	XML QLog-এর ADIF রিসিভারে ({0}) পাঠায়: সেখানে QLog ADIF চায়, N1MM-এর XML নয়
+nessun programma ascolta sulla porta {0}	পোর্ট {0}-এ কোনো প্রোগ্রাম শুনছে না
+in YA-GT hai scelto di spegnere gli invii secondari	YA-GT-তে আপনি দ্বিতীয় পাঠানো বন্ধ করা বেছে নিয়েছেন
+manda i QSO a 	QSO পাঠায়: 
+invio dei QSO spento	QSO পাঠানো বন্ধ
+ (YA-GT non lo tocca)	 (YA-GT এটি ছোঁয় না)
+N1MM Logger+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe il file .ini)	N1MM Logger+: খোলা আছে, বন্ধ করে আবার চেষ্টা করুন (বন্ধ হওয়ার সময় এটি .ini ফাইল আবার লিখবে)
+N1MM Logger+: invio dei QSO spento (copia in {0})	N1MM Logger+: QSO পাঠানো বন্ধ করা হয়েছে (কপি {0}-এ)
+N1MM Logger+: tolte le destinazioni sbagliate	N1MM Logger+: ভুল গন্তব্য সরানো হয়েছে
+ e spento l'invio	 এবং পাঠানো বন্ধ করা হয়েছে
+ (copia in {0})	 (কপি {0}-এ)
+ — per farlo correggere scegli in Impostazioni "spegnila" o "mandala a" per la UDP secondaria	 — ঠিক করাতে সেটিংসে দ্বিতীয় UDP-এর জন্য "বন্ধ করুন" বা "এখানে পাঠান" বেছে নিন
+non leggibile: 	পড়া যায় না: 
+ — 2° server UDP (ADIF)	 — দ্বিতীয় UDP সার্ভার (ADIF)
+invio dei QSO spento (YA-GT non lo tocca)	QSO পাঠানো বন্ধ (YA-GT এটি ছোঁয় না)
+Verifica	যাচাই
+nessun programma trovato (WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+, CQRLOG, QLog)	কোনো প্রোগ্রাম পাওয়া যায়নি (WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+, CQRLOG, QLog)
+ — invio ADIF "N1MM"	 — ADIF পাঠানো "N1MM"
+manda l'ADIF alla porta {0}, dove ascolta YA-GT con il protocollo WSJT-X: va su un'altra porta	ADIF পোর্ট {0}-এ পাঠায়, যেখানে YA-GT WSJT-X প্রোটোকলে শোনে: অন্য পোর্ট ব্যবহার করুন
+manda l'ADIF alla porta WSJT-X di QLog ({0}): QLog lì aspetta il protocollo WSJT-X, non l'ADIF	ADIF QLog-এর WSJT-X পোর্টে ({0}) পাঠায়: সেখানে QLog WSJT-X প্রোটোকল চায়, ADIF নয়
+manda l'ADIF a QLog ({0}) mentre QLog riceve già il QSO dal rimbalzo di YA-GT: rischio di QSO doppi	ADIF QLog-এ ({0}) পাঠায়, অথচ QLog আগেই YA-GT-এর রিলে থেকে QSO পাচ্ছে: দ্বিগুণ QSO-র ঝুঁকি
+nessun programma ascolta sulla porta {0} (log chiuso o porta sbagliata)	পোর্ট {0}-এ কোনো প্রোগ্রাম শুনছে না (লগ বন্ধ বা ভুল পোর্ট)
+in YA-GT hai scelto di mandarla a {0}:{1}	YA-GT-তে আপনি এটি {0}:{1}-এ পাঠানো বেছে নিয়েছেন
+in YA-GT hai scelto di spegnerla	YA-GT-তে আপনি এটি বন্ধ করা বেছে নিয়েছেন
+ADIF a {0}:{1}	ADIF → {0}:{1}
+spenta	বন্ধ
+ (YA-GT non la tocca)	 (YA-GT এটি ছোঁয় না)
+: è aperto, chiudilo e riprova	: খোলা আছে, বন্ধ করে আবার চেষ্টা করুন
+: ADIF verso {0}:{1}	: ADIF → {0}:{1}
+: UDP secondaria spenta	: দ্বিতীয় UDP বন্ধ
+ — per farla correggere scegli in Impostazioni la destinazione della UDP secondaria (ora: solo avvisi)	 — ঠিক করাতে সেটিংসে দ্বিতীয় UDP-এর গন্তব্য বেছে নিন (এখন: কেবল সতর্কবার্তা)
+manda a {0} invece di {1}	{1}-এর বদলে {0}-এ পাঠায়
+porta {0} invece di {1}	{1}-এর বদলে পোর্ট {0}
+"Accetta richieste UDP" spento (le risposte di QLog e degli altri vengono ignorate)	"UDP অনুরোধ গ্রহণ" বন্ধ (QLog ও অন্যদের উত্তর উপেক্ষিত হয়)
+{0} altre configurazioni con un'altra porta	অন্য পোর্টসহ আরও {0}টি কনফিগারেশন
+manda a {0}, richieste UDP accettate	{0}-এ পাঠায়, UDP অনুরোধ গৃহীত
+{0}: è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)	{0}: খোলা আছে, বন্ধ করে আবার চেষ্টা করুন (বন্ধ হওয়ার সময় এটি নিজের সেটিংস আবার লিখবে)
+{0}: corretto (copia in {1})	{0}: ঠিক করা হয়েছে (কপি {1}-এ)
+"Enable Decoded Text" spento (YA-GT non vede le decodifiche)	"Enable Decoded Text" বন্ধ (YA-GT ডিকোড দেখে না)
+"Enable Logged QSO" spento (i QSO non arrivano a QLog)	"Enable Logged QSO" বন্ধ (QSO QLog-এ পৌঁছায় না)
+manda a {0} decodifiche e QSO	ডিকোড ও QSO {0}-এ পাঠায়
+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)	: খোলা আছে, বন্ধ করে আবার চেষ্টা করুন (বন্ধ হওয়ার সময় এটি নিজের সেটিংস আবার লিখবে)
+invio UDP dei QSO spento	QSO-র UDP পাঠানো বন্ধ
+manda i QSO a {0}	QSO {0}-এ পাঠায়
+server UDP primario spento	প্রধান UDP সার্ভার বন্ধ
+"Accetta richieste UDP" spento	"UDP অনুরোধ গ্রহণ" বন্ধ
+Aurora: è aperta, chiudila e riprova	Aurora: খোলা আছে, বন্ধ করে আবার চেষ্টা করুন
+Aurora: corretta (copia in {0})	Aurora: ঠিক করা হয়েছে (কপি {0}-এ)
+in YA-GT il rimbalzo UDP è spento: accendilo nelle Impostazioni, altrimenti a QLog non arriva nulla	YA-GT-তে UDP রিলে বন্ধ: সেটিংসে চালু করুন, নইলে QLog-এ কিছুই পৌঁছাবে না
+ascolta sulla {0}, la stessa porta di YA-GT: i due programmi si rubano i pacchetti	{0}-এ শোনে, YA-GT-এর একই পোর্ট: দুটি প্রোগ্রাম একে অপরের প্যাকেট চুরি করে
+ascolta sulla {0}, ma YA-GT ritrasmette sulla {1}	{0}-এ শোনে, কিন্তু YA-GT {1}-এ পাঠায়
+ascolta sulla {0}, dove YA-GT ritrasmette	{0}-এ শোনে, যেখানে YA-GT পাঠায়
+QLog: è aperto, chiudilo e riprova	QLog: খোলা আছে, বন্ধ করে আবার চেষ্টা করুন
+QLog: ora ascolta sulla {0} (copia in {1})	QLog: এখন {0}-এ শোনে (কপি {1}-এ)
+ — accendi anche il rimbalzo UDP in YA-GT	 — YA-GT-তে UDP রিলেও চালু করুন
+Porta	পোর্ট
+qualcuno ascolta sulla porta di ritrasmissione (di solito QLog)	কেউ রিলে পোর্টে শুনছে (সাধারণত QLog)
+nessun programma ascolta sulla porta di ritrasmissione: apri QLog o controlla la sua porta	রিলে পোর্টে কোনো প্রোগ্রাম শুনছে না: QLog খুলুন বা এর পোর্ট দেখুন
+porta UDP {0} già occupata (forse da QLog o GridTracker): metti quel programma su un'altra porta, es. 2238, e scrivila tra gli inoltri	UDP পোর্ট {0} ইতিমধ্যে ব্যস্ত (সম্ভবত QLog বা GridTracker): সেই প্রোগ্রামটি অন্য পোর্টে নিন, যেমন 2238, এবং রিলের তালিকায় যোগ করুন
+l'inoltro non può puntare alla porta d'ascolto 	রিলে শোনার পোর্টের দিকে হতে পারে না 
+Controlla all'avvio le impostazioni UDP degli altri programmi	শুরুতে অন্য প্রোগ্রামগুলোর UDP সেটিংস যাচাই করুন
+Verifica UDP…	UDP যাচাই…
+non toccarla, solo avvisi	ছোঁবেন না, কেবল সতর্কবার্তা
+mandala a	এখানে পাঠান
+spegnila	বন্ধ করুন
+UDP secondaria (ADIF)	দ্বিতীয় UDP (ADIF)
+Porta solo l'ADIF dei QSO a un altro log (Log4OM, N1MM, HRD…). Di base YA-GT non la tocca e segnala solo le scelte fuorvianti.	কেবল QSO-র ADIF অন্য লগে নিয়ে যায় (Log4OM, N1MM, HRD…). ডিফল্টভাবে YA-GT এটি ছোঁয় না, কেবল বিভ্রান্তিকর পছন্দ জানায়।
+Altri log di stazione	স্টেশনের অন্য লগ
+Aggiungi file…	ফাইল যোগ করুন…
+Log di stazione	স্টেশন লগ
+Trova i log sul computer	কম্পিউটারে লগ খুঁজুন
+Nessun log trovato nelle cartelle abituali.	সাধারণ ফোল্ডারে কোনো লগ পাওয়া যায়নি।
+Uno per riga (# = spenta): file ADIF, Cabrillo, SQLite o Access, oppure mysql:, wavelog:, qrz:. I file si rileggono quando cambiano, i log in rete ogni 30 minuti. I file degli altri programmi non vengono mai modificati.	প্রতি লাইনে একটি (# = বন্ধ): ADIF, Cabrillo, SQLite বা Access ফাইল, অথবা mysql:, wavelog:, qrz:. ফাইল বদলালে আবার পড়া হয়, অনলাইন লগ প্রতি 30 মিনিটে। অন্য প্রোগ্রামের ফাইল কখনো বদলানো হয় না।
+Porta della UDP secondaria non valida.	দ্বিতীয় UDP-এর পোর্ট অবৈধ।
+YA-GT — verifica UDP	YA-GT — UDP যাচাই
+YA-GT ascolta su {0}:{1}	YA-GT শোনে: {0}:{1}
+ e ritrasmette a {0}:{1}	 এবং পাঠায়: {0}:{1}
+ (rimbalzo UDP spento)	 (UDP রিলে বন্ধ)
+"Correggi" mette questi valori nei programmi chiusi, dopo averne copiato le impostazioni nella cartella Dati\copie-impostazioni. I programmi aperti vanno chiusi prima: alla chiusura riscrivono le loro impostazioni.	"ঠিক করুন" এই মানগুলো বন্ধ প্রোগ্রামে লেখে, তাদের সেটিংস Dati\copie-impostazioni ফোল্ডারে কপি করার পরে। খোলা প্রোগ্রাম আগে বন্ধ করতে হবে: বন্ধ হওয়ার সময় তারা নিজেদের সেটিংস আবার লেখে।
+Controllo in corso…	যাচাই চলছে…
+aperto	খোলা
+QSO dei log (QLog e altri)	লগের QSO (QLog ও অন্যান্য)
+Legge qlog.db e gli altri log scelti nelle Impostazioni (copie in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato	qlog.db ও সেটিংসে বাছা অন্য লগ পড়ে (কেবল-পড়ার কপি): সবুজ বর্গ = LoTW, নীল = QSL, কমলা = সম্পন্ন
+Legge qlog.db e gli altri log scelti nelle Impostazioni (copie in sola lettura)	qlog.db ও সেটিংসে বাছা অন্য লগ পড়ে (কেবল-পড়ার কপি)
+Quadrati (LoTW + log)	বর্গ (LoTW + লগ)
+Correggi	ঠিক করুন
+Ricontrolla	আবার যাচাই করুন
+Log (ADIF, Cabrillo, SQLite, Access)	লগ (ADIF, Cabrillo, SQLite, Access)
+CQRLOG: è aperto, chiudilo e riprova	CQRLOG: খোলা আছে, বন্ধ করে আবার চেষ্টা করুন
+CQRLOG: ora ascolta sulla {0} (copia in {1})	CQRLOG: এখন {0}-এ শোনে (কপি {1}-এ)

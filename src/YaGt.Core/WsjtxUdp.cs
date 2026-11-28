@@ -102,7 +102,7 @@ public sealed class WsjtxUdp
             try { _rx.Client.Bind(new IPEndPoint(multicast ? IPAddress.Any : listenIp, ListenPort)); }
             catch (SocketException)
             {
-                throw new Exception($"porta UDP {ListenPort} già occupata (forse da QLog o GridTracker): metti quel programma su un'altra porta, es. 2238, e scrivila tra gli inoltri");
+                throw new Exception(L.F("porta UDP {0} già occupata (forse da QLog o GridTracker): metti quel programma su un'altra porta, es. 2238, e scrivila tra gli inoltri", ListenPort));
             }
             if (multicast) _rx.JoinMulticastGroup(listenIp);
             _cts = new CancellationTokenSource();
@@ -111,7 +111,7 @@ public sealed class WsjtxUdp
             if (Forward)
                 foreach (var t in targets)
                 {
-                    if (t.Port == ListenPort && (IPAddress.IsLoopback(t.Address) || t.Address.Equals(listenIp))) { LastError = "l'inoltro non può puntare alla porta d'ascolto " + ListenPort; continue; }
+                    if (t.Port == ListenPort && (IPAddress.IsLoopback(t.Address) || t.Address.Equals(listenIp))) { LastError = L.T("l'inoltro non può puntare alla porta d'ascolto ") + ListenPort; continue; }
                     var r = new Relay { Target = t, Sock = new UdpClient(new IPEndPoint(IPAddress.Any, 0)) };
                     _relays.Add(r);
                     Task.Run(() => ReturnLoop(r, ct));

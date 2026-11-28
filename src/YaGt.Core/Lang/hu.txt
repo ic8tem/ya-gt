@@ -197,3 +197,104 @@ G7VRD: ricerca dei locatori per nominativo (api.g7vrd.co.uk)	G7VRD: lokátorok k
 cty.dat — Jim Reisert AD1C (country-files.com): prefissi e paesi DXCC	cty.dat — Jim Reisert AD1C (country-files.com): DXCC előtagok és országok
 Natural Earth: coste e confini (pubblico dominio)	Natural Earth: partvonalak és határok (közkincs)
 Codice ripreso da LIVETROPOVHF e LoTW Grid Map v2 (IC8TEM)	A LIVETROPOVHF-ből és a LoTW Grid Map v2-ből átvett kód (IC8TEM)
+: file non trovato	: a fájl nem található
+manca il driver di Microsoft Access (Access Database Engine) per questa versione di Windows	hiányzik a Microsoft Access illesztőprogram (Access Database Engine) ehhez a Windows-verzióhoz
+i database Access si leggono solo su Windows	az Access-adatbázisok csak Windowson olvashatók
+manca il driver di Microsoft Access a 64 bit (Microsoft Access Database Engine)	hiányzik a 64 bites Microsoft Access illesztőprogram (Microsoft Access Database Engine)
+: tabella del log non trovata	: a napló táblája nem található
+Wavelog: scrivi indirizzo, chiave API e numero della stazione	Wavelog: add meg a címet, az API-kulcsot és az állomás számát
+QRZ: manca la chiave API del logbook	QRZ: hiányzik a napló API-kulcsa
+risposta non valida	érvénytelen válasz
+invio dei QSO acceso ma senza destinazione (DestinationIPs vuoto)	a QSO-küldés be van kapcsolva, de nincs cél (DestinationIPs üres)
+manda l'XML alla porta {0}, dove ascolta YA-GT con il protocollo WSJT-X	az XML-t a(z) {0} portra küldi, ahol a YA-GT WSJT-X protokollal figyel
+manda l'XML alla porta WSJT-X di QLog ({0}): QLog non legge l'XML di N1MM	az XML-t a QLog WSJT-X portjára küldi ({0}): a QLog nem olvassa az N1MM XML-t
+manda l'XML al ricevitore ADIF di QLog ({0}): QLog lì aspetta l'ADIF, non l'XML di N1MM	az XML-t a QLog ADIF-vevőjére küldi ({0}): ott a QLog ADIF-et vár, nem N1MM XML-t
+nessun programma ascolta sulla porta {0}	egyetlen program sem figyel a(z) {0} porton
+in YA-GT hai scelto di spegnere gli invii secondari	a YA-GT-ben a másodlagos küldés kikapcsolását választottad
+manda i QSO a 	a QSO-kat ide küldi: 
+invio dei QSO spento	QSO-küldés kikapcsolva
+ (YA-GT non lo tocca)	 (a YA-GT nem nyúl hozzá)
+N1MM Logger+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe il file .ini)	N1MM Logger+: nyitva van, zárd be és próbáld újra (bezáráskor felülírná az .ini fájlt)
+N1MM Logger+: invio dei QSO spento (copia in {0})	N1MM Logger+: QSO-küldés kikapcsolva (másolat: {0})
+N1MM Logger+: tolte le destinazioni sbagliate	N1MM Logger+: hibás célok eltávolítva
+ e spento l'invio	 és a küldés kikapcsolva
+ (copia in {0})	 (másolat: {0})
+ — per farlo correggere scegli in Impostazioni "spegnila" o "mandala a" per la UDP secondaria	 — a javításhoz a Beállításokban válaszd a másodlagos UDP-nél a „kapcsold ki” vagy „küldd ide” lehetőséget
+non leggibile: 	olvashatatlan: 
+ — 2° server UDP (ADIF)	 — 2. UDP-szerver (ADIF)
+invio dei QSO spento (YA-GT non lo tocca)	QSO-küldés kikapcsolva (a YA-GT nem nyúl hozzá)
+Verifica	Ellenőrzés
+nessun programma trovato (WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+, CQRLOG, QLog)	nem található program (WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+, CQRLOG, QLog)
+ — invio ADIF "N1MM"	 — „N1MM” ADIF-küldés
+manda l'ADIF alla porta {0}, dove ascolta YA-GT con il protocollo WSJT-X: va su un'altra porta	az ADIF-et a(z) {0} portra küldi, ahol a YA-GT WSJT-X protokollal figyel: használj másik portot
+manda l'ADIF alla porta WSJT-X di QLog ({0}): QLog lì aspetta il protocollo WSJT-X, non l'ADIF	az ADIF-et a QLog WSJT-X portjára küldi ({0}): ott a QLog WSJT-X protokollt vár, nem ADIF-et
+manda l'ADIF a QLog ({0}) mentre QLog riceve già il QSO dal rimbalzo di YA-GT: rischio di QSO doppi	az ADIF-et a QLognak küldi ({0}), miközben a QLog már megkapja a QSO-t a YA-GT továbbításán át: dupla QSO-k veszélye
+nessun programma ascolta sulla porta {0} (log chiuso o porta sbagliata)	egyetlen program sem figyel a(z) {0} porton (napló bezárva vagy rossz port)
+in YA-GT hai scelto di mandarla a {0}:{1}	a YA-GT-ben azt választottad, hogy ide küldje: {0}:{1}
+in YA-GT hai scelto di spegnerla	a YA-GT-ben a kikapcsolását választottad
+ADIF a {0}:{1}	ADIF ide: {0}:{1}
+spenta	kikapcsolva
+ (YA-GT non la tocca)	 (a YA-GT nem nyúl hozzá)
+: è aperto, chiudilo e riprova	: nyitva van, zárd be és próbáld újra
+: ADIF verso {0}:{1}	: ADIF ide: {0}:{1}
+: UDP secondaria spenta	: másodlagos UDP kikapcsolva
+ — per farla correggere scegli in Impostazioni la destinazione della UDP secondaria (ora: solo avvisi)	 — a javításhoz a Beállításokban válaszd ki a másodlagos UDP célját (most: csak figyelmeztetések)
+manda a {0} invece di {1}	ide küld: {0}, nem ide: {1}
+porta {0} invece di {1}	{0}. port a(z) {1}. helyett
+"Accetta richieste UDP" spento (le risposte di QLog e degli altri vengono ignorate)	„UDP-kérések elfogadása” kikapcsolva (a QLog és a többiek válaszai figyelmen kívül maradnak)
+{0} altre configurazioni con un'altra porta	{0} további konfiguráció más porttal
+manda a {0}, richieste UDP accettate	ide küld: {0}, UDP-kérések elfogadva
+{0}: è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)	{0}: nyitva van, zárd be és próbáld újra (bezáráskor felülírná a beállításait)
+{0}: corretto (copia in {1})	{0}: javítva (másolat: {1})
+"Enable Decoded Text" spento (YA-GT non vede le decodifiche)	„Enable Decoded Text” kikapcsolva (a YA-GT nem látja a dekódolásokat)
+"Enable Logged QSO" spento (i QSO non arrivano a QLog)	„Enable Logged QSO” kikapcsolva (a QSO-k nem jutnak el a QLogba)
+manda a {0} decodifiche e QSO	dekódolásokat és QSO-kat küld ide: {0}
+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)	: nyitva van, zárd be és próbáld újra (bezáráskor felülírná a beállításait)
+invio UDP dei QSO spento	a QSO-k UDP-küldése kikapcsolva
+manda i QSO a {0}	a QSO-kat ide küldi: {0}
+server UDP primario spento	elsődleges UDP-szerver kikapcsolva
+"Accetta richieste UDP" spento	„UDP-kérések elfogadása” kikapcsolva
+Aurora: è aperta, chiudila e riprova	Aurora: nyitva van, zárd be és próbáld újra
+Aurora: corretta (copia in {0})	Aurora: javítva (másolat: {0})
+in YA-GT il rimbalzo UDP è spento: accendilo nelle Impostazioni, altrimenti a QLog non arriva nulla	a YA-GT-ben ki van kapcsolva az UDP-továbbítás: kapcsold be a Beállításokban, különben semmi sem jut el a QLogba
+ascolta sulla {0}, la stessa porta di YA-GT: i due programmi si rubano i pacchetti	a(z) {0} porton figyel, ugyanazon, mint a YA-GT: a két program ellopja egymás csomagjait
+ascolta sulla {0}, ma YA-GT ritrasmette sulla {1}	a(z) {0} porton figyel, de a YA-GT a(z) {1} portra továbbít
+ascolta sulla {0}, dove YA-GT ritrasmette	a(z) {0} porton figyel, ahová a YA-GT továbbít
+QLog: è aperto, chiudilo e riprova	QLog: nyitva van, zárd be és próbáld újra
+QLog: ora ascolta sulla {0} (copia in {1})	QLog: most a(z) {0} porton figyel (másolat: {1})
+ — accendi anche il rimbalzo UDP in YA-GT	 — kapcsold be a YA-GT UDP-továbbítását is
+Porta	Port
+qualcuno ascolta sulla porta di ritrasmissione (di solito QLog)	valaki figyel a továbbítási porton (általában a QLog)
+nessun programma ascolta sulla porta di ritrasmissione: apri QLog o controlla la sua porta	egyetlen program sem figyel a továbbítási porton: nyisd meg a QLogot, vagy ellenőrizd a portját
+porta UDP {0} già occupata (forse da QLog o GridTracker): metti quel programma su un'altra porta, es. 2238, e scrivila tra gli inoltri	a(z) {0} UDP-port már foglalt (talán a QLog vagy a GridTracker használja): tedd át azt a programot másik portra, pl. 2238, és vedd fel a továbbítások közé
+l'inoltro non può puntare alla porta d'ascolto 	a továbbítás nem mutathat a figyelő portra 
+Controlla all'avvio le impostazioni UDP degli altri programmi	Induláskor ellenőrizze a többi program UDP-beállításait
+Verifica UDP…	UDP-ellenőrzés…
+non toccarla, solo avvisi	ne nyúlj hozzá, csak figyelmeztetések
+mandala a	küldd ide
+spegnila	kapcsold ki
+UDP secondaria (ADIF)	Másodlagos UDP (ADIF)
+Porta solo l'ADIF dei QSO a un altro log (Log4OM, N1MM, HRD…). Di base YA-GT non la tocca e segnala solo le scelte fuorvianti.	Csak a QSO-k ADIF-jét viszi egy másik naplóba (Log4OM, N1MM, HRD…). Alapból a YA-GT nem nyúl hozzá, és csak a félrevezető beállításokat jelzi.
+Altri log di stazione	További állomásnaplók
+Aggiungi file…	Fájl hozzáadása…
+Log di stazione	Állomásnaplók
+Trova i log sul computer	Naplók keresése a számítógépen
+Nessun log trovato nelle cartelle abituali.	A szokásos mappákban nem található napló.
+Uno per riga (# = spenta): file ADIF, Cabrillo, SQLite o Access, oppure mysql:, wavelog:, qrz:. I file si rileggono quando cambiano, i log in rete ogni 30 minuti. I file degli altri programmi non vengono mai modificati.	Soronként egy (# = kikapcsolva): ADIF-, Cabrillo-, SQLite- vagy Access-fájlok, illetve mysql:, wavelog:, qrz:. A fájlokat változáskor újraolvassa, az online naplókat 30 percenként. Más programok fájljait soha nem módosítja.
+Porta della UDP secondaria non valida.	A másodlagos UDP portja érvénytelen.
+YA-GT — verifica UDP	YA-GT — UDP-ellenőrzés
+YA-GT ascolta su {0}:{1}	A YA-GT itt figyel: {0}:{1}
+ e ritrasmette a {0}:{1}	 és ide továbbít: {0}:{1}
+ (rimbalzo UDP spento)	 (UDP-továbbítás kikapcsolva)
+"Correggi" mette questi valori nei programmi chiusi, dopo averne copiato le impostazioni nella cartella Dati\copie-impostazioni. I programmi aperti vanno chiusi prima: alla chiusura riscrivono le loro impostazioni.	A „Javítás” beírja ezeket az értékeket a bezárt programokba, miután a beállításaikat a Dati\copie-impostazioni mappába másolta. A nyitott programokat előbb be kell zárni: bezáráskor felülírják a beállításaikat.
+Controllo in corso…	Ellenőrzés folyamatban…
+aperto	nyitva
+QSO dei log (QLog e altri)	QSO-k a naplókból (QLog és mások)
+Legge qlog.db e gli altri log scelti nelle Impostazioni (copie in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato	Olvassa a qlog.db-t és a Beállításokban választott többi naplót (csak olvasható másolatok): zöld négyzetek = LoTW, kék = QSL, narancs = forgalmazott
+Legge qlog.db e gli altri log scelti nelle Impostazioni (copie in sola lettura)	Olvassa a qlog.db-t és a Beállításokban választott többi naplót (csak olvasható másolatok)
+Quadrati (LoTW + log)	Négyzetek (LoTW + naplók)
+Correggi	Javítás
+Ricontrolla	Újraellenőrzés
+Log (ADIF, Cabrillo, SQLite, Access)	Napló (ADIF, Cabrillo, SQLite, Access)
+CQRLOG: è aperto, chiudilo e riprova	CQRLOG: nyitva van, zárd be és próbáld újra
+CQRLOG: ora ascolta sulla {0} (copia in {1})	CQRLOG: most a(z) {0} porton figyel (másolat: {1})

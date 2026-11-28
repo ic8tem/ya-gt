@@ -197,3 +197,104 @@ G7VRD: ricerca dei locatori per nominativo (api.g7vrd.co.uk)	G7VRD: 호출부호
 cty.dat — Jim Reisert AD1C (country-files.com): prefissi e paesi DXCC	cty.dat — Jim Reisert AD1C (country-files.com): DXCC 접두어와 나라
 Natural Earth: coste e confini (pubblico dominio)	Natural Earth: 해안선과 국경(퍼블릭 도메인)
 Codice ripreso da LIVETROPOVHF e LoTW Grid Map v2 (IC8TEM)	LIVETROPOVHF와 LoTW Grid Map v2에서 가져온 코드(IC8TEM)
+: file non trovato	: 파일을 찾을 수 없음
+manca il driver di Microsoft Access (Access Database Engine) per questa versione di Windows	이 Windows 버전용 Microsoft Access 드라이버(Access Database Engine)가 없습니다
+i database Access si leggono solo su Windows	Access 데이터베이스는 Windows에서만 읽을 수 있습니다
+manca il driver di Microsoft Access a 64 bit (Microsoft Access Database Engine)	64비트 Microsoft Access 드라이버(Microsoft Access Database Engine)가 없습니다
+: tabella del log non trovata	: 로그 테이블을 찾을 수 없음
+Wavelog: scrivi indirizzo, chiave API e numero della stazione	Wavelog: 주소, API 키, 국 번호를 입력하세요
+QRZ: manca la chiave API del logbook	QRZ: 로그북 API 키가 없습니다
+risposta non valida	잘못된 응답
+invio dei QSO acceso ma senza destinazione (DestinationIPs vuoto)	QSO 전송이 켜져 있지만 목적지가 없습니다(DestinationIPs 비어 있음)
+manda l'XML alla porta {0}, dove ascolta YA-GT con il protocollo WSJT-X	XML을 포트 {0}(으)로 보냅니다. 그곳에서 YA-GT가 WSJT-X 프로토콜로 수신합니다
+manda l'XML alla porta WSJT-X di QLog ({0}): QLog non legge l'XML di N1MM	XML을 QLog의 WSJT-X 포트({0})로 보냅니다: QLog는 N1MM의 XML을 읽지 못합니다
+manda l'XML al ricevitore ADIF di QLog ({0}): QLog lì aspetta l'ADIF, non l'XML di N1MM	XML을 QLog의 ADIF 수신기({0})로 보냅니다: QLog는 그곳에서 N1MM의 XML이 아니라 ADIF를 기다립니다
+nessun programma ascolta sulla porta {0}	포트 {0}에서 수신하는 프로그램이 없습니다
+in YA-GT hai scelto di spegnere gli invii secondari	YA-GT에서 보조 전송을 끄도록 선택했습니다
+manda i QSO a 	QSO를 보내는 곳: 
+invio dei QSO spento	QSO 전송 꺼짐
+ (YA-GT non lo tocca)	 (YA-GT는 건드리지 않음)
+N1MM Logger+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe il file .ini)	N1MM Logger+: 열려 있습니다. 닫고 다시 시도하세요(닫을 때 .ini 파일을 다시 씁니다)
+N1MM Logger+: invio dei QSO spento (copia in {0})	N1MM Logger+: QSO 전송을 껐습니다(사본: {0})
+N1MM Logger+: tolte le destinazioni sbagliate	N1MM Logger+: 잘못된 목적지를 제거했습니다
+ e spento l'invio	 그리고 전송을 껐습니다
+ (copia in {0})	 (사본: {0})
+ — per farlo correggere scegli in Impostazioni "spegnila" o "mandala a" per la UDP secondaria	 — 고치려면 설정에서 보조 UDP에 "끄기" 또는 "보낼 곳"을 선택하세요
+non leggibile: 	읽을 수 없음: 
+ — 2° server UDP (ADIF)	 — 두 번째 UDP 서버(ADIF)
+invio dei QSO spento (YA-GT non lo tocca)	QSO 전송 꺼짐 (YA-GT는 건드리지 않음)
+Verifica	검사
+nessun programma trovato (WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+, CQRLOG, QLog)	프로그램을 찾지 못했습니다(WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+, CQRLOG, QLog)
+ — invio ADIF "N1MM"	 — ADIF 전송 "N1MM"
+manda l'ADIF alla porta {0}, dove ascolta YA-GT con il protocollo WSJT-X: va su un'altra porta	ADIF를 포트 {0}(으)로 보냅니다. 그곳에서 YA-GT가 WSJT-X 프로토콜로 수신합니다: 다른 포트를 쓰세요
+manda l'ADIF alla porta WSJT-X di QLog ({0}): QLog lì aspetta il protocollo WSJT-X, non l'ADIF	ADIF를 QLog의 WSJT-X 포트({0})로 보냅니다: QLog는 그곳에서 ADIF가 아니라 WSJT-X 프로토콜을 기다립니다
+manda l'ADIF a QLog ({0}) mentre QLog riceve già il QSO dal rimbalzo di YA-GT: rischio di QSO doppi	ADIF를 QLog({0})로 보내지만 QLog는 이미 YA-GT 중계로 QSO를 받고 있습니다: QSO 중복 위험
+nessun programma ascolta sulla porta {0} (log chiuso o porta sbagliata)	포트 {0}에서 수신하는 프로그램이 없습니다(로그가 닫혔거나 포트가 틀림)
+in YA-GT hai scelto di mandarla a {0}:{1}	YA-GT에서 {0}:{1}(으)로 보내도록 선택했습니다
+in YA-GT hai scelto di spegnerla	YA-GT에서 끄도록 선택했습니다
+ADIF a {0}:{1}	ADIF → {0}:{1}
+spenta	꺼짐
+ (YA-GT non la tocca)	 (YA-GT는 건드리지 않음)
+: è aperto, chiudilo e riprova	: 열려 있습니다. 닫고 다시 시도하세요
+: ADIF verso {0}:{1}	: ADIF → {0}:{1}
+: UDP secondaria spenta	: 보조 UDP를 껐습니다
+ — per farla correggere scegli in Impostazioni la destinazione della UDP secondaria (ora: solo avvisi)	 — 고치려면 설정에서 보조 UDP의 목적지를 선택하세요(현재: 경고만)
+manda a {0} invece di {1}	{1} 대신 {0}(으)로 보냅니다
+porta {0} invece di {1}	{1} 대신 포트 {0}
+"Accetta richieste UDP" spento (le risposte di QLog e degli altri vengono ignorate)	"UDP 요청 수락" 꺼짐(QLog 등의 응답이 무시됩니다)
+{0} altre configurazioni con un'altra porta	다른 포트를 쓰는 설정이 {0}개 더 있음
+manda a {0}, richieste UDP accettate	{0}(으)로 보내며 UDP 요청을 수락합니다
+{0}: è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)	{0}: 열려 있습니다. 닫고 다시 시도하세요(닫을 때 설정을 다시 씁니다)
+{0}: corretto (copia in {1})	{0}: 수정됨(사본: {1})
+"Enable Decoded Text" spento (YA-GT non vede le decodifiche)	"Enable Decoded Text" 꺼짐(YA-GT가 디코드를 보지 못함)
+"Enable Logged QSO" spento (i QSO non arrivano a QLog)	"Enable Logged QSO" 꺼짐(QSO가 QLog에 도착하지 않음)
+manda a {0} decodifiche e QSO	디코드와 QSO를 {0}(으)로 보냅니다
+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)	: 열려 있습니다. 닫고 다시 시도하세요(닫을 때 설정을 다시 씁니다)
+invio UDP dei QSO spento	QSO UDP 전송 꺼짐
+manda i QSO a {0}	QSO를 {0}(으)로 보냅니다
+server UDP primario spento	기본 UDP 서버 꺼짐
+"Accetta richieste UDP" spento	"UDP 요청 수락" 꺼짐
+Aurora: è aperta, chiudila e riprova	Aurora: 열려 있습니다. 닫고 다시 시도하세요
+Aurora: corretta (copia in {0})	Aurora: 수정됨(사본: {0})
+in YA-GT il rimbalzo UDP è spento: accendilo nelle Impostazioni, altrimenti a QLog non arriva nulla	YA-GT의 UDP 중계가 꺼져 있습니다: 설정에서 켜세요. 그렇지 않으면 QLog에 아무것도 도착하지 않습니다
+ascolta sulla {0}, la stessa porta di YA-GT: i due programmi si rubano i pacchetti	{0}에서 수신합니다. YA-GT와 같은 포트입니다: 두 프로그램이 서로 패킷을 빼앗습니다
+ascolta sulla {0}, ma YA-GT ritrasmette sulla {1}	{0}에서 수신하지만 YA-GT는 {1}(으)로 중계합니다
+ascolta sulla {0}, dove YA-GT ritrasmette	{0}에서 수신합니다. YA-GT가 중계하는 곳입니다
+QLog: è aperto, chiudilo e riprova	QLog: 열려 있습니다. 닫고 다시 시도하세요
+QLog: ora ascolta sulla {0} (copia in {1})	QLog: 이제 {0}에서 수신합니다(사본: {1})
+ — accendi anche il rimbalzo UDP in YA-GT	 — YA-GT의 UDP 중계도 켜세요
+Porta	포트
+qualcuno ascolta sulla porta di ritrasmissione (di solito QLog)	중계 포트에서 수신하는 프로그램이 있습니다(보통 QLog)
+nessun programma ascolta sulla porta di ritrasmissione: apri QLog o controlla la sua porta	중계 포트에서 수신하는 프로그램이 없습니다: QLog를 열거나 포트를 확인하세요
+porta UDP {0} già occupata (forse da QLog o GridTracker): metti quel programma su un'altra porta, es. 2238, e scrivila tra gli inoltri	UDP 포트 {0}이(가) 이미 사용 중입니다(QLog 또는 GridTracker일 수 있음): 그 프로그램을 다른 포트(예: 2238)로 옮기고 전달 목록에 추가하세요
+l'inoltro non può puntare alla porta d'ascolto 	전달 대상을 수신 포트로 할 수 없습니다 
+Controlla all'avvio le impostazioni UDP degli altri programmi	시작할 때 다른 프로그램의 UDP 설정 검사
+Verifica UDP…	UDP 검사…
+non toccarla, solo avvisi	건드리지 않음, 경고만
+mandala a	보낼 곳
+spegnila	끄기
+UDP secondaria (ADIF)	보조 UDP(ADIF)
+Porta solo l'ADIF dei QSO a un altro log (Log4OM, N1MM, HRD…). Di base YA-GT non la tocca e segnala solo le scelte fuorvianti.	QSO의 ADIF만 다른 로그(Log4OM, N1MM, HRD…)로 보냅니다. 기본적으로 YA-GT는 건드리지 않고 오해를 부르는 설정만 알립니다.
+Altri log di stazione	다른 국 로그
+Aggiungi file…	파일 추가…
+Log di stazione	국 로그
+Trova i log sul computer	컴퓨터에서 로그 찾기
+Nessun log trovato nelle cartelle abituali.	일반 폴더에서 로그를 찾지 못했습니다.
+Uno per riga (# = spenta): file ADIF, Cabrillo, SQLite o Access, oppure mysql:, wavelog:, qrz:. I file si rileggono quando cambiano, i log in rete ogni 30 minuti. I file degli altri programmi non vengono mai modificati.	한 줄에 하나(# = 꺼짐): ADIF, Cabrillo, SQLite, Access 파일 또는 mysql:, wavelog:, qrz:. 파일은 바뀌면 다시 읽고 온라인 로그는 30분마다 읽습니다. 다른 프로그램의 파일은 절대 바꾸지 않습니다.
+Porta della UDP secondaria non valida.	보조 UDP 포트가 잘못되었습니다.
+YA-GT — verifica UDP	YA-GT — UDP 검사
+YA-GT ascolta su {0}:{1}	YA-GT 수신: {0}:{1}
+ e ritrasmette a {0}:{1}	 , 중계: {0}:{1}
+ (rimbalzo UDP spento)	 (UDP 중계 꺼짐)
+"Correggi" mette questi valori nei programmi chiusi, dopo averne copiato le impostazioni nella cartella Dati\copie-impostazioni. I programmi aperti vanno chiusi prima: alla chiusura riscrivono le loro impostazioni.	"수정"은 설정을 Dati\copie-impostazioni 폴더에 복사한 뒤 닫혀 있는 프로그램에 이 값들을 씁니다. 열려 있는 프로그램은 먼저 닫아야 합니다: 닫을 때 설정을 다시 씁니다.
+Controllo in corso…	검사 중…
+aperto	열림
+QSO dei log (QLog e altri)	로그의 QSO(QLog 등)
+Legge qlog.db e gli altri log scelti nelle Impostazioni (copie in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato	qlog.db와 설정에서 고른 다른 로그를 읽습니다(읽기 전용 사본): 초록 = LoTW, 파랑 = QSL, 주황 = 교신함
+Legge qlog.db e gli altri log scelti nelle Impostazioni (copie in sola lettura)	qlog.db와 설정에서 고른 다른 로그를 읽습니다(읽기 전용 사본)
+Quadrati (LoTW + log)	그리드(LoTW + 로그)
+Correggi	수정
+Ricontrolla	다시 검사
+Log (ADIF, Cabrillo, SQLite, Access)	로그(ADIF, Cabrillo, SQLite, Access)
+CQRLOG: è aperto, chiudilo e riprova	CQRLOG: 열려 있습니다. 닫고 다시 시도하세요
+CQRLOG: ora ascolta sulla {0} (copia in {1})	CQRLOG: 이제 {0}에서 수신합니다(사본: {1})

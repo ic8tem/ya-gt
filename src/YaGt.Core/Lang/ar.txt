@@ -197,3 +197,104 @@ G7VRD: ricerca dei locatori per nominativo (api.g7vrd.co.uk)	G7VRD: البحث �
 cty.dat — Jim Reisert AD1C (country-files.com): prefissi e paesi DXCC	cty.dat — Jim Reisert AD1C (country-files.com): بادئات وبلدان DXCC
 Natural Earth: coste e confini (pubblico dominio)	Natural Earth: السواحل والحدود (ملكية عامة)
 Codice ripreso da LIVETROPOVHF e LoTW Grid Map v2 (IC8TEM)	شيفرة مأخوذة من LIVETROPOVHF وLoTW Grid Map v2 (IC8TEM)
+: file non trovato	: الملف غير موجود
+manca il driver di Microsoft Access (Access Database Engine) per questa versione di Windows	برنامج تشغيل Microsoft Access (Access Database Engine) مفقود لهذا الإصدار من Windows
+i database Access si leggono solo su Windows	لا تُقرأ قواعد بيانات Access إلا في Windows
+manca il driver di Microsoft Access a 64 bit (Microsoft Access Database Engine)	برنامج تشغيل Microsoft Access بنظام 64 بت (Microsoft Access Database Engine) مفقود
+: tabella del log non trovata	: جدول السجل غير موجود
+Wavelog: scrivi indirizzo, chiave API e numero della stazione	Wavelog: اكتب العنوان ومفتاح API ورقم المحطة
+QRZ: manca la chiave API del logbook	QRZ: مفتاح API للسجل مفقود
+risposta non valida	رد غير صالح
+invio dei QSO acceso ma senza destinazione (DestinationIPs vuoto)	إرسال QSO مفعّل لكن دون وجهة (DestinationIPs فارغ)
+manda l'XML alla porta {0}, dove ascolta YA-GT con il protocollo WSJT-X	يرسل XML إلى المنفذ {0} حيث يستمع YA-GT ببروتوكول WSJT-X
+manda l'XML alla porta WSJT-X di QLog ({0}): QLog non legge l'XML di N1MM	يرسل XML إلى منفذ WSJT-X في QLog ‏({0}): لا يقرأ QLog ملفات XML من N1MM
+manda l'XML al ricevitore ADIF di QLog ({0}): QLog lì aspetta l'ADIF, non l'XML di N1MM	يرسل XML إلى مستقبل ADIF في QLog ‏({0}): ينتظر QLog هناك ADIF وليس XML من N1MM
+nessun programma ascolta sulla porta {0}	لا يستمع أي برنامج على المنفذ {0}
+in YA-GT hai scelto di spegnere gli invii secondari	اخترت في YA-GT إيقاف الإرسال الثانوي
+manda i QSO a 	يرسل QSO إلى 
+invio dei QSO spento	إرسال QSO متوقف
+ (YA-GT non lo tocca)	 (لا يغيّره YA-GT)
+N1MM Logger+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe il file .ini)	N1MM Logger+: مفتوح، أغلقه وحاول مجددًا (عند الإغلاق سيعيد كتابة ملف .ini)
+N1MM Logger+: invio dei QSO spento (copia in {0})	N1MM Logger+: أُوقف إرسال QSO (نسخة في {0})
+N1MM Logger+: tolte le destinazioni sbagliate	N1MM Logger+: أُزيلت الوجهات الخاطئة
+ e spento l'invio	 وأُوقف الإرسال
+ (copia in {0})	 (نسخة في {0})
+ — per farlo correggere scegli in Impostazioni "spegnila" o "mandala a" per la UDP secondaria	 — لتصحيحه اختر في الإعدادات «أوقفه» أو «أرسله إلى» لمنفذ UDP الثانوي
+non leggibile: 	غير مقروء: 
+ — 2° server UDP (ADIF)	 — خادم UDP الثاني (ADIF)
+invio dei QSO spento (YA-GT non lo tocca)	إرسال QSO متوقف (لا يغيّره YA-GT)
+Verifica	فحص
+nessun programma trovato (WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+, CQRLOG, QLog)	لم يُعثر على أي برنامج (WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+, CQRLOG, QLog)
+ — invio ADIF "N1MM"	 — إرسال ADIF «N1MM»
+manda l'ADIF alla porta {0}, dove ascolta YA-GT con il protocollo WSJT-X: va su un'altra porta	يرسل ADIF إلى المنفذ {0} حيث يستمع YA-GT ببروتوكول WSJT-X: استخدم منفذًا آخر
+manda l'ADIF alla porta WSJT-X di QLog ({0}): QLog lì aspetta il protocollo WSJT-X, non l'ADIF	يرسل ADIF إلى منفذ WSJT-X في QLog ‏({0}): ينتظر QLog هناك بروتوكول WSJT-X وليس ADIF
+manda l'ADIF a QLog ({0}) mentre QLog riceve già il QSO dal rimbalzo di YA-GT: rischio di QSO doppi	يرسل ADIF إلى QLog ‏({0}) بينما يتلقى QLog الـQSO من إعادة توجيه YA-GT: خطر تكرار QSO
+nessun programma ascolta sulla porta {0} (log chiuso o porta sbagliata)	لا يستمع أي برنامج على المنفذ {0} (السجل مغلق أو المنفذ خاطئ)
+in YA-GT hai scelto di mandarla a {0}:{1}	اخترت في YA-GT إرساله إلى {0}:{1}
+in YA-GT hai scelto di spegnerla	اخترت في YA-GT إيقافه
+ADIF a {0}:{1}	ADIF إلى {0}:{1}
+spenta	متوقف
+ (YA-GT non la tocca)	 (لا يغيّره YA-GT)
+: è aperto, chiudilo e riprova	: مفتوح، أغلقه وحاول مجددًا
+: ADIF verso {0}:{1}	: ADIF نحو {0}:{1}
+: UDP secondaria spenta	: أُوقف UDP الثانوي
+ — per farla correggere scegli in Impostazioni la destinazione della UDP secondaria (ora: solo avvisi)	 — لتصحيحه اختر في الإعدادات وجهة UDP الثانوي (الآن: تنبيهات فقط)
+manda a {0} invece di {1}	يرسل إلى {0} بدلًا من {1}
+porta {0} invece di {1}	المنفذ {0} بدلًا من {1}
+"Accetta richieste UDP" spento (le risposte di QLog e degli altri vengono ignorate)	«قبول طلبات UDP» متوقف (تُتجاهل ردود QLog والآخرين)
+{0} altre configurazioni con un'altra porta	{0} إعدادات أخرى بمنفذ آخر
+manda a {0}, richieste UDP accettate	يرسل إلى {0}، وطلبات UDP مقبولة
+{0}: è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)	{0}: مفتوح، أغلقه وحاول مجددًا (عند الإغلاق سيعيد كتابة إعداداته)
+{0}: corretto (copia in {1})	{0}: صُحّح (نسخة في {1})
+"Enable Decoded Text" spento (YA-GT non vede le decodifiche)	«Enable Decoded Text» متوقف (لا يرى YA-GT فك الترميز)
+"Enable Logged QSO" spento (i QSO non arrivano a QLog)	«Enable Logged QSO» متوقف (لا تصل الـQSO إلى QLog)
+manda a {0} decodifiche e QSO	يرسل فك الترميز والـQSO إلى {0}
+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)	: مفتوح، أغلقه وحاول مجددًا (عند الإغلاق سيعيد كتابة إعداداته)
+invio UDP dei QSO spento	إرسال QSO عبر UDP متوقف
+manda i QSO a {0}	يرسل QSO إلى {0}
+server UDP primario spento	خادم UDP الرئيسي متوقف
+"Accetta richieste UDP" spento	«قبول طلبات UDP» متوقف
+Aurora: è aperta, chiudila e riprova	Aurora: مفتوح، أغلقه وحاول مجددًا
+Aurora: corretta (copia in {0})	Aurora: صُحّح (نسخة في {0})
+in YA-GT il rimbalzo UDP è spento: accendilo nelle Impostazioni, altrimenti a QLog non arriva nulla	إعادة توجيه UDP متوقفة في YA-GT: فعّلها في الإعدادات وإلا فلن يصل شيء إلى QLog
+ascolta sulla {0}, la stessa porta di YA-GT: i due programmi si rubano i pacchetti	يستمع على {0}، المنفذ نفسه الذي يستخدمه YA-GT: البرنامجان يسرقان حزم بعضهما
+ascolta sulla {0}, ma YA-GT ritrasmette sulla {1}	يستمع على {0}، لكن YA-GT يعيد الإرسال على {1}
+ascolta sulla {0}, dove YA-GT ritrasmette	يستمع على {0}، حيث يعيد YA-GT الإرسال
+QLog: è aperto, chiudilo e riprova	QLog: مفتوح، أغلقه وحاول مجددًا
+QLog: ora ascolta sulla {0} (copia in {1})	QLog: يستمع الآن على {0} (نسخة في {1})
+ — accendi anche il rimbalzo UDP in YA-GT	 — فعّل أيضًا إعادة توجيه UDP في YA-GT
+Porta	المنفذ
+qualcuno ascolta sulla porta di ritrasmissione (di solito QLog)	هناك من يستمع على منفذ إعادة الإرسال (عادةً QLog)
+nessun programma ascolta sulla porta di ritrasmissione: apri QLog o controlla la sua porta	لا يستمع أي برنامج على منفذ إعادة الإرسال: افتح QLog أو تحقق من منفذه
+porta UDP {0} già occupata (forse da QLog o GridTracker): metti quel programma su un'altra porta, es. 2238, e scrivila tra gli inoltri	منفذ UDP ‏{0} مشغول (ربما من QLog أو GridTracker): انقل ذلك البرنامج إلى منفذ آخر، مثل 2238، وأضفه إلى إعادة التوجيه
+l'inoltro non può puntare alla porta d'ascolto 	لا يمكن أن تشير إعادة التوجيه إلى منفذ الاستماع 
+Controlla all'avvio le impostazioni UDP degli altri programmi	افحص عند التشغيل إعدادات UDP للبرامج الأخرى
+Verifica UDP…	فحص UDP…
+non toccarla, solo avvisi	لا تغيّره، تنبيهات فقط
+mandala a	أرسله إلى
+spegnila	أوقفه
+UDP secondaria (ADIF)	UDP الثانوي (ADIF)
+Porta solo l'ADIF dei QSO a un altro log (Log4OM, N1MM, HRD…). Di base YA-GT non la tocca e segnala solo le scelte fuorvianti.	ينقل فقط ADIF الخاص بالـQSO إلى سجل آخر (Log4OM, N1MM, HRD…). افتراضيًا لا يغيّره YA-GT وينبّه فقط إلى الخيارات المضللة.
+Altri log di stazione	سجلات أخرى للمحطة
+Aggiungi file…	إضافة ملف…
+Log di stazione	سجلات المحطة
+Trova i log sul computer	ابحث عن السجلات في الحاسوب
+Nessun log trovato nelle cartelle abituali.	لم يُعثر على أي سجل في المجلدات المعتادة.
+Uno per riga (# = spenta): file ADIF, Cabrillo, SQLite o Access, oppure mysql:, wavelog:, qrz:. I file si rileggono quando cambiano, i log in rete ogni 30 minuti. I file degli altri programmi non vengono mai modificati.	واحد في كل سطر (# = متوقف): ملفات ADIF أو Cabrillo أو SQLite أو Access، أو mysql:, wavelog:, qrz:. تُعاد قراءة الملفات عند تغيّرها، والسجلات عبر الإنترنت كل 30 دقيقة. لا تُعدَّل ملفات البرامج الأخرى أبدًا.
+Porta della UDP secondaria non valida.	منفذ UDP الثانوي غير صالح.
+YA-GT — verifica UDP	YA-GT — فحص UDP
+YA-GT ascolta su {0}:{1}	يستمع YA-GT على {0}:{1}
+ e ritrasmette a {0}:{1}	 ويعيد الإرسال إلى {0}:{1}
+ (rimbalzo UDP spento)	 (إعادة توجيه UDP متوقفة)
+"Correggi" mette questi valori nei programmi chiusi, dopo averne copiato le impostazioni nella cartella Dati\copie-impostazioni. I programmi aperti vanno chiusi prima: alla chiusura riscrivono le loro impostazioni.	«تصحيح» يكتب هذه القيم في البرامج المغلقة بعد نسخ إعداداتها إلى المجلد Dati\copie-impostazioni. يجب إغلاق البرامج المفتوحة أولًا: عند الإغلاق تعيد كتابة إعداداتها.
+Controllo in corso…	جارٍ الفحص…
+aperto	مفتوح
+QSO dei log (QLog e altri)	QSO من السجلات (QLog وغيره)
+Legge qlog.db e gli altri log scelti nelle Impostazioni (copie in sola lettura): quadratini verdi = LoTW, blu = QSL, arancio = lavorato	يقرأ qlog.db والسجلات الأخرى المختارة في الإعدادات (نسخ للقراءة فقط): المربعات الخضراء = LoTW، الزرقاء = QSL، البرتقالية = اتصال تم
+Legge qlog.db e gli altri log scelti nelle Impostazioni (copie in sola lettura)	يقرأ qlog.db والسجلات الأخرى المختارة في الإعدادات (نسخ للقراءة فقط)
+Quadrati (LoTW + log)	المربعات (LoTW + السجلات)
+Correggi	تصحيح
+Ricontrolla	افحص مجددًا
+Log (ADIF, Cabrillo, SQLite, Access)	سجل (ADIF, Cabrillo, SQLite, Access)
+CQRLOG: è aperto, chiudilo e riprova	CQRLOG: مفتوح، أغلقه وحاول مجددًا
+CQRLOG: ora ascolta sulla {0} (copia in {1})	CQRLOG: يستمع الآن على {0} (نسخة في {1})

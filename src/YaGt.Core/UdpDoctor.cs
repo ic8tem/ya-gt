@@ -234,34 +234,34 @@ public static class UdpDoctor
         var problems = new List<string>();
         if (on)
         {
-            if (dest.Count == 0) problems.Add("invio dei QSO acceso ma senza destinazione (DestinationIPs vuoto)");
+            if (dest.Count == 0) problems.Add(L.T("invio dei QSO acceso ma senza destinazione (DestinationIPs vuoto)"));
             foreach (var (h, pp) in dest)
             {
                 bool local = SameHost(h, "127.0.0.1");
                 if (!local) continue;
-                if (pp == t.ListenPort) problems.Add($"manda l'XML alla porta {pp}, dove ascolta YA-GT con il protocollo WSJT-X");
-                else if (t.QLogWsjtPort > 0 && pp == t.QLogWsjtPort) problems.Add($"manda l'XML alla porta WSJT-X di QLog ({pp}): QLog non legge l'XML di N1MM");
-                else if (t.QLogAdifPort > 0 && pp == t.QLogAdifPort) problems.Add($"manda l'XML al ricevitore ADIF di QLog ({pp}): QLog lì aspetta l'ADIF, non l'XML di N1MM");
-                else if (!Listening(pp)) problems.Add($"nessun programma ascolta sulla porta {pp}");
+                if (pp == t.ListenPort) problems.Add(L.F("manda l'XML alla porta {0}, dove ascolta YA-GT con il protocollo WSJT-X", pp));
+                else if (t.QLogWsjtPort > 0 && pp == t.QLogWsjtPort) problems.Add(L.F("manda l'XML alla porta WSJT-X di QLog ({0}): QLog non legge l'XML di N1MM", pp));
+                else if (t.QLogAdifPort > 0 && pp == t.QLogAdifPort) problems.Add(L.F("manda l'XML al ricevitore ADIF di QLog ({0}): QLog lì aspetta l'ADIF, non l'XML di N1MM", pp));
+                else if (!Listening(pp)) problems.Add(L.F("nessun programma ascolta sulla porta {0}", pp));
             }
         }
-        if (t.SecondaryMode == "off" && on) problems.Add("in YA-GT hai scelto di spegnere gli invii secondari");
+        if (t.SecondaryMode == "off" && on) problems.Add(L.T("in YA-GT hai scelto di spegnere gli invii secondari"));
         var f = new Finding { Program = name, File = file, Running = Running("n1mmlogger"), Ok = problems.Count == 0 };
-        f.Text = problems.Count == 0 ? (on ? "manda i QSO a " + string.Join(", ", dest.Select(d => d.host + ":" + d.port)) : "invio dei QSO spento") + (t.SecondaryMode == "warn" ? " (YA-GT non lo tocca)" : "") : string.Join("; ", problems);
+        f.Text = problems.Count == 0 ? (on ? L.T("manda i QSO a ") + string.Join(", ", dest.Select(d => d.host + ":" + d.port)) : L.T("invio dei QSO spento")) + (t.SecondaryMode == "warn" ? L.T(" (YA-GT non lo tocca)") : "") : string.Join("; ", problems);
         if (problems.Count > 0 && t.SecondaryMode == "off")
             f.Fix = () =>
             {
-                if (Running("n1mmlogger")) return "N1MM Logger+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe il file .ini)";
+                if (Running("n1mmlogger")) return L.T("N1MM Logger+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe il file .ini)");
                 var bak = Backup(file, "N1MM");
                 var w = new QtIni(File.ReadAllText(file));
                 w.Set("ExternalBroadcast", "IsBroadcastContact", "False");
                 File.WriteAllText(file, w.ToString(), new UTF8Encoding(false));
-                return $"N1MM Logger+: invio dei QSO spento (copia in {Path.GetFileName(bak)})";
+                return L.F("N1MM Logger+: invio dei QSO spento (copia in {0})", Path.GetFileName(bak));
             };
         else if (problems.Count > 0 && t.SecondaryMode == "set" && dest.Count > 0)
             f.Fix = () =>
             {
-                if (Running("n1mmlogger")) return "N1MM Logger+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe il file .ini)";
+                if (Running("n1mmlogger")) return L.T("N1MM Logger+: è aperto, chiudilo e riprova (alla chiusura riscriverebbe il file .ini)");
                 var bak = Backup(file, "N1MM");
                 var w = new QtIni(File.ReadAllText(file));
                 // si tengono le destinazioni giuste, si tolgono quelle che vanno a YA-GT o a QLog (protocollo sbagliato)
@@ -269,10 +269,45 @@ public static class UdpDoctor
                 w.Set("ExternalBroadcast", "DestinationIPs", string.Join(" ", keep.Select(d => d.host + ":" + d.port)));
                 if (keep.Count == 0) w.Set("ExternalBroadcast", "IsBroadcastContact", "False");
                 File.WriteAllText(file, w.ToString(), new UTF8Encoding(false));
-                return "N1MM Logger+: tolte le destinazioni sbagliate" + (keep.Count == 0 ? " e spento l'invio" : "") + $" (copia in {Path.GetFileName(bak)})";
+                return L.T("N1MM Logger+: tolte le destinazioni sbagliate") + (keep.Count == 0 ? L.T(" e spento l'invio") : "") + L.F(" (copia in {0})", Path.GetFileName(bak));
             };
-        else if (problems.Count > 0) f.Text += " — per farlo correggere scegli in Impostazioni \"spegnila\" o \"mandala a\" per la UDP secondaria";
+        else if (problems.Count > 0) f.Text += L.T(" — per farlo correggere scegli in Impostazioni \"spegnila\" o \"mandala a\" per la UDP secondaria");
         return f;
+    }
+
+    /// <summary>CQRLOG (Linux): ~/.config/cqrlog/[n]cqrlog.cfg e [n]local.cfg, sezione [wsjt] port (ascolto del protocollo WSJT-X).</summary>
+    public static List<string> CqrlogFiles()
+    {
+        var home = Env(Environment.SpecialFolder.UserProfile);
+        var dir = Path.Combine(home, ".config", "cqrlog");
+        return Files(dir, "*cqrlog.cfg").Concat(Files(dir, "*local.cfg")).ToList();
+    }
+
+    static Finding CheckCqrlog(List<string> files, Target t)
+    {
+        string file = null; int port = 2237;
+        foreach (var f in files)
+        {
+            var v = new QtIni(File.ReadAllText(f)).Get("wsjt", "port");
+            if (v != null && int.TryParse(v, out var p)) { file = f; port = p; }
+        }
+        file = file ?? files.FirstOrDefault(f => f.EndsWith("cqrlog.cfg"));
+        var problems = new List<string>();
+        if (port == t.ListenPort) problems.Add(L.F("ascolta sulla {0}, la stessa porta di YA-GT: i due programmi si rubano i pacchetti", port));
+        else if (t.Forward && port != t.ForwardPort) problems.Add(L.F("ascolta sulla {0}, ma YA-GT ritrasmette sulla {1}", port, t.ForwardPort));
+        var f0 = new Finding { Program = "CQRLOG", File = file ?? "", Running = Running("cqrlog"), Ok = problems.Count == 0 };
+        f0.Text = f0.Ok ? L.F("ascolta sulla {0}, dove YA-GT ritrasmette", port) : string.Join("; ", problems);
+        if (!f0.Ok && file != null && t.Forward)
+            f0.Fix = () =>
+            {
+                if (Running("cqrlog")) return L.T("CQRLOG: è aperto, chiudilo e riprova");
+                var bak = Backup(file, "CQRLOG");
+                var w = new QtIni(File.ReadAllText(file));
+                w.Set("wsjt", "port", t.ForwardPort.ToString(CultureInfo.InvariantCulture));
+                File.WriteAllText(file, w.ToString(), new UTF8Encoding(false));
+                return L.F("CQRLOG: ora ascolta sulla {0} (copia in {1})", t.ForwardPort, Path.GetFileName(bak));
+            };
+        return f0;
     }
 
     public static List<string> AuroraFiles()
@@ -310,7 +345,7 @@ public static class UdpDoctor
                     res.Add(a);
                     res.Add(SecondaryWsjt(app, f, t, a.Program, a.Running));
                 }
-                catch (Exception ex) { res.Add(new Finding { Program = app, File = f, Text = "non leggibile: " + ex.Message }); }
+                catch (Exception ex) { res.Add(new Finding { Program = app, File = f, Text = L.T("non leggibile: ") + ex.Message }); }
         foreach (var f in MshvFiles(extra))
             try
             {
@@ -320,7 +355,7 @@ public static class UdpDoctor
                 var parts = (l == null ? "127.0.0.1#2333#0" : l.Substring(15).Trim('"')).Split('#');
                 int.TryParse(parts.Length > 1 ? parts[1] : "2333", out var p2);
                 string file = f;
-                res.Add(Secondary(a.Program + " — 2° server UDP (ADIF)", f, t, parts.Length > 2 && parts[2] == "1", parts[0], p2, a.Running, "mshv", (h, pp, e) =>
+                res.Add(Secondary(a.Program + L.T(" — 2° server UDP (ADIF)"), f, t, parts.Length > 2 && parts[2] == "1", parts[0], p2, a.Running, "mshv", (h, pp, e) =>
                 {
                     var lines = File.ReadAllLines(file).ToList();
                     var v = "udp2_broad_all=" + h + "#" + pp.ToString(CultureInfo.InvariantCulture) + "#" + (e ? "1" : "0");
@@ -330,9 +365,9 @@ public static class UdpDoctor
                     File.WriteAllText(file, string.Join("\n", lines) + "\n", new UTF8Encoding(false));
                 }));
             }
-            catch (Exception ex) { res.Add(new Finding { Program = "MSHV", File = f, Text = "non leggibile: " + ex.Message }); }
+            catch (Exception ex) { res.Add(new Finding { Program = "MSHV", File = f, Text = L.T("non leggibile: ") + ex.Message }); }
         foreach (var f in MadModemFiles(extra))
-            try { res.Add(CheckMadModem(f, t, sendHost)); } catch (Exception ex) { res.Add(new Finding { Program = "MadModem", File = f, Text = "non leggibile: " + ex.Message }); }
+            try { res.Add(CheckMadModem(f, t, sendHost)); } catch (Exception ex) { res.Add(new Finding { Program = "MadModem", File = f, Text = L.T("non leggibile: ") + ex.Message }); }
         foreach (var f in AuroraFiles())
             try
             {
@@ -342,7 +377,7 @@ public static class UdpDoctor
                 string V(string k, string d) => vals?[k]?.GetValue<string>() ?? d;
                 int.TryParse(V("UDP2ServerPort", "2237"), out var p2);
                 string file = f;
-                res.Add(Secondary("Aurora — 2° server UDP (ADIF)", f, t, V("EnableUDP2adifBroadcast", "false").Equals("true", StringComparison.OrdinalIgnoreCase), V("UDP2Server", "127.0.0.1"), p2, a.Running, "aurora", (h, pp, e) =>
+                res.Add(Secondary("Aurora" + L.T(" — 2° server UDP (ADIF)"), f, t, V("EnableUDP2adifBroadcast", "false").Equals("true", StringComparison.OrdinalIgnoreCase), V("UDP2Server", "127.0.0.1"), p2, a.Running, "aurora", (h, pp, e) =>
                 {
                     var r2 = (JsonObject)JsonNode.Parse(File.ReadAllText(file));
                     var v2 = (JsonObject)r2["values"];
@@ -351,14 +386,17 @@ public static class UdpDoctor
                     File.WriteAllText(file, r2.ToJsonString(new JsonSerializerOptions { WriteIndented = true }), new UTF8Encoding(false));
                 }));
             }
-            catch (Exception ex) { res.Add(new Finding { Program = "Aurora", File = f, Text = "non leggibile: " + ex.Message }); }
+            catch (Exception ex) { res.Add(new Finding { Program = "Aurora", File = f, Text = L.T("non leggibile: ") + ex.Message }); }
+        var cq = CqrlogFiles();
+        if (cq.Count > 0)
+            try { res.Add(CheckCqrlog(cq, t)); } catch (Exception ex) { res.Add(new Finding { Program = "CQRLOG", File = cq[0], Text = L.T("non leggibile: ") + ex.Message }); }
         foreach (var f in N1mmFiles())
-            try { var n = CheckN1mm(f, t); if (n.Text != "invio dei QSO spento (YA-GT non lo tocca)") res.Add(n); } catch (Exception ex) { res.Add(new Finding { Program = "N1MM Logger+", File = f, Text = "non leggibile: " + ex.Message }); }
+            try { var n = CheckN1mm(f, t); if (n.Text != L.T("invio dei QSO spento (YA-GT non lo tocca)")) res.Add(n); } catch (Exception ex) { res.Add(new Finding { Program = "N1MM Logger+", File = f, Text = L.T("non leggibile: ") + ex.Message }); }
         var qdb = string.IsNullOrWhiteSpace(qlogPath) ? QLogDb.DefaultPath() : qlogPath;
         if (File.Exists(qdb))
-            try { res.Insert(0, CheckQLog(qdb, t)); } catch (Exception ex) { res.Add(new Finding { Program = "QLog", File = qdb, Text = "non leggibile: " + ex.Message }); }
+            try { res.Insert(0, CheckQLog(qdb, t)); } catch (Exception ex) { res.Add(new Finding { Program = "QLog", File = qdb, Text = L.T("non leggibile: ") + ex.Message }); }
         res.AddRange(CheckPorts(t));
-        if (res.Count == 0) res.Add(new Finding { Program = "Verifica", Ok = true, Text = "nessun programma trovato (WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+, QLog)" });
+        if (res.Count == 0) res.Add(new Finding { Program = L.T("Verifica"), Ok = true, Text = L.T("nessun programma trovato (WSJT-X, JTDX, MSHV, MadModem, Aurora, N1MM Logger+, CQRLOG, QLog)") });
         return res;
     }
 
@@ -372,7 +410,7 @@ public static class UdpDoctor
         var host = ini.Get("Configuration", kh) ?? "127.0.0.1";
         int.TryParse(ini.Get("Configuration", kp) ?? "2333", out var port);
         bool on = (ini.Get("Configuration", ke) ?? "false").Equals("true", StringComparison.OrdinalIgnoreCase);
-        return Secondary(name + (app == "JTDX" ? " — 2° server UDP (ADIF)" : " — invio ADIF \"N1MM\""), file, t, on, host, port, running, app == "JTDX" ? "jtdx" : "wsjtx",
+        return Secondary(name + (app == "JTDX" ? L.T(" — 2° server UDP (ADIF)") : L.T(" — invio ADIF \"N1MM\"")), file, t, on, host, port, running, app == "JTDX" ? "jtdx" : "wsjtx",
             (h, p2, e) =>
             {
                 var w = new QtIni(File.ReadAllText(file));
@@ -390,24 +428,24 @@ public static class UdpDoctor
         bool local = SameHost(host, "127.0.0.1");
         if (on)
         {
-            if (local && port == t.ListenPort) problems.Add($"manda l'ADIF alla porta {port}, dove ascolta YA-GT con il protocollo WSJT-X: va su un'altra porta");
-            if (local && t.QLogWsjtPort > 0 && port == t.QLogWsjtPort) problems.Add($"manda l'ADIF alla porta WSJT-X di QLog ({port}): QLog lì aspetta il protocollo WSJT-X, non l'ADIF");
-            if (local && t.QLogAdifPort > 0 && port == t.QLogAdifPort && t.Forward) problems.Add($"manda l'ADIF a QLog ({port}) mentre QLog riceve già il QSO dal rimbalzo di YA-GT: rischio di QSO doppi");
-            if (local && !Listening(port)) problems.Add($"nessun programma ascolta sulla porta {port} (log chiuso o porta sbagliata)");
+            if (local && port == t.ListenPort) problems.Add(L.F("manda l'ADIF alla porta {0}, dove ascolta YA-GT con il protocollo WSJT-X: va su un'altra porta", port));
+            if (local && t.QLogWsjtPort > 0 && port == t.QLogWsjtPort) problems.Add(L.F("manda l'ADIF alla porta WSJT-X di QLog ({0}): QLog lì aspetta il protocollo WSJT-X, non l'ADIF", port));
+            if (local && t.QLogAdifPort > 0 && port == t.QLogAdifPort && t.Forward) problems.Add(L.F("manda l'ADIF a QLog ({0}) mentre QLog riceve già il QSO dal rimbalzo di YA-GT: rischio di QSO doppi", port));
+            if (local && !Listening(port)) problems.Add(L.F("nessun programma ascolta sulla porta {0} (log chiuso o porta sbagliata)", port));
         }
         bool want = t.SecondaryMode == "set", off = t.SecondaryMode == "off";
-        if (want && (!on || !SameHost(host, t.SecondaryHost) || port != t.SecondaryPort)) problems.Add($"in YA-GT hai scelto di mandarla a {t.SecondaryHost}:{t.SecondaryPort}");
-        if (off && on) problems.Add("in YA-GT hai scelto di spegnerla");
+        if (want && (!on || !SameHost(host, t.SecondaryHost) || port != t.SecondaryPort)) problems.Add(L.F("in YA-GT hai scelto di mandarla a {0}:{1}", t.SecondaryHost, t.SecondaryPort));
+        if (off && on) problems.Add(L.T("in YA-GT hai scelto di spegnerla"));
         var f = new Finding { Program = name, File = file, Running = running, Ok = problems.Count == 0 };
-        f.Text = problems.Count == 0 ? (on ? $"ADIF a {host}:{port}" : "spenta") + (t.SecondaryMode == "warn" ? " (YA-GT non la tocca)" : "") : string.Join("; ", problems);
+        f.Text = problems.Count == 0 ? (on ? L.F("ADIF a {0}:{1}", host, port) : L.T("spenta")) + (t.SecondaryMode == "warn" ? L.T(" (YA-GT non la tocca)") : "") : string.Join("; ", problems);
         if (problems.Count > 0 && (want || off))
             f.Fix = () =>
             {
-                if (Running(proc)) return name + ": è aperto, chiudilo e riprova";
+                if (Running(proc)) return name + L.T(": è aperto, chiudilo e riprova");
                 apply(want ? t.SecondaryHost : host, want ? t.SecondaryPort : port, want);
-                return name + (want ? $": ADIF verso {t.SecondaryHost}:{t.SecondaryPort}" : ": UDP secondaria spenta");
+                return name + (want ? L.F(": ADIF verso {0}:{1}", t.SecondaryHost, t.SecondaryPort) : L.T(": UDP secondaria spenta"));
             };
-        else if (problems.Count > 0) f.Text += " — per farla correggere scegli in Impostazioni la destinazione della UDP secondaria (ora: solo avvisi)";
+        else if (problems.Count > 0) f.Text += L.T(" — per farla correggere scegli in Impostazioni la destinazione della UDP secondaria (ora: solo avvisi)");
         return f;
     }
 
@@ -445,25 +483,25 @@ public static class UdpDoctor
         string accept = ini.Get("Configuration", "AcceptUDPRequests") ?? "false";
         int.TryParse(portS, out var port);
         var problems = new List<string>();
-        if (!SameHost(host, sendHost)) problems.Add($"manda a {host} invece di {sendHost}");
-        if (port != t.ListenPort) problems.Add($"porta {port} invece di {t.ListenPort}");
-        if (!accept.Equals("true", StringComparison.OrdinalIgnoreCase)) problems.Add("\"Accetta richieste UDP\" spento (le risposte di QLog e degli altri vengono ignorate)");
+        if (!SameHost(host, sendHost)) problems.Add(L.F("manda a {0} invece di {1}", host, sendHost));
+        if (port != t.ListenPort) problems.Add(L.F("porta {0} invece di {1}", port, t.ListenPort));
+        if (!accept.Equals("true", StringComparison.OrdinalIgnoreCase)) problems.Add(L.T("\"Accetta richieste UDP\" spento (le risposte di QLog e degli altri vengono ignorate)"));
         var others = ini.Find("MultiSettings", "UDPServerPort", true).Where(x => x.value != t.ListenPort.ToString(CultureInfo.InvariantCulture)).Count();
-        if (others > 0) problems.Add($"{others} altre configurazioni con un'altra porta");
+        if (others > 0) problems.Add(L.F("{0} altre configurazioni con un'altra porta", others));
         bool running = Running(app == "JTDX" ? "jtdx" : "wsjtx");
         var name = app + (Path.GetFileNameWithoutExtension(file).Length > app.Length ? " (" + Path.GetFileNameWithoutExtension(file).Substring(app.Length).Trim(' ', '-') + ")" : "");
         var f = new Finding { Program = name, File = file, Running = running, Ok = problems.Count == 0 };
-        f.Text = f.Ok ? $"manda a {Want(t, sendHost)}, richieste UDP accettate" : string.Join("; ", problems);
+        f.Text = f.Ok ? L.F("manda a {0}, richieste UDP accettate", Want(t, sendHost)) : string.Join("; ", problems);
         if (!f.Ok)
             f.Fix = () =>
             {
-                if (Running(app == "JTDX" ? "jtdx" : "wsjtx")) return $"{name}: è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)";
+                if (Running(app == "JTDX" ? "jtdx" : "wsjtx")) return L.F("{0}: è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)", name);
                 var bak = Backup(file, app);
                 var w = new QtIni(File.ReadAllText(file));
                 foreach (var (k, v) in new[] { ("UDPServer", sendHost), ("UDPServerPort", t.ListenPort.ToString(CultureInfo.InvariantCulture)), ("AcceptUDPRequests", "true") })
                 { w.Set("Configuration", k, v); w.SetNested("MultiSettings", k, v); }
                 File.WriteAllText(file, w.ToString(), new UTF8Encoding(false));
-                return $"{name}: corretto (copia in {Path.GetFileName(bak)})";
+                return L.F("{0}: corretto (copia in {1})", name, Path.GetFileName(bak));
             };
         return f;
     }
@@ -477,18 +515,18 @@ public static class UdpDoctor
         var flags = (Val("udp_broad_log_all") ?? "0#0#0").Split('#');
         bool logQso = flags.Length > 0 && flags[0] == "1", dec = flags.Length > 2 && flags[2] == "1";
         var problems = new List<string>();
-        if (!SameHost(host, sendHost)) problems.Add($"manda a {host} invece di {sendHost}");
-        if (port != t.ListenPort) problems.Add($"porta {port} invece di {t.ListenPort}");
-        if (!dec) problems.Add("\"Enable Decoded Text\" spento (YA-GT non vede le decodifiche)");
-        if (!logQso) problems.Add("\"Enable Logged QSO\" spento (i QSO non arrivano a QLog)");
+        if (!SameHost(host, sendHost)) problems.Add(L.F("manda a {0} invece di {1}", host, sendHost));
+        if (port != t.ListenPort) problems.Add(L.F("porta {0} invece di {1}", port, t.ListenPort));
+        if (!dec) problems.Add(L.T("\"Enable Decoded Text\" spento (YA-GT non vede le decodifiche)"));
+        if (!logQso) problems.Add(L.T("\"Enable Logged QSO\" spento (i QSO non arrivano a QLog)"));
         var dir = Path.GetDirectoryName(Path.GetDirectoryName(file)) ?? "";
         var name = "MSHV (" + Path.GetFileName(dir) + ")";
         var f = new Finding { Program = name, File = file, Running = Running("mshv"), Ok = problems.Count == 0 };
-        f.Text = f.Ok ? $"manda a {Want(t, sendHost)} decodifiche e QSO" : string.Join("; ", problems);
+        f.Text = f.Ok ? L.F("manda a {0} decodifiche e QSO", Want(t, sendHost)) : string.Join("; ", problems);
         if (!f.Ok)
             f.Fix = () =>
             {
-                if (Running("mshv")) return name + ": è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)";
+                if (Running("mshv")) return name + L.T(": è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)");
                 var bak = Backup(file, "MSHV");
                 var l2 = File.ReadAllLines(file).ToList();
                 void Put(string k, string v)
@@ -503,7 +541,7 @@ public static class UdpDoctor
                 Put("udp_broad_port", t.ListenPort.ToString(CultureInfo.InvariantCulture));
                 Put("udp_broad_log_all", string.Join("#", fl));
                 File.WriteAllText(file, string.Join("\n", l2) + "\n", new UTF8Encoding(false));
-                return $"{name}: corretto (copia in {Path.GetFileName(bak)})";
+                return L.F("{0}: corretto (copia in {1})", name, Path.GetFileName(bak));
             };
         return f;
     }
@@ -516,23 +554,23 @@ public static class UdpDoctor
         int.TryParse(ini.Get("Logbook", "udpPort") ?? "2237", out var port);
         // MadModem manda solo il QSO registrato (e il segnale di vita): conviene mandarlo dove ascolta QLog o a YA-GT che lo rimbalza
         var problems = new List<string>();
-        if (!on) problems.Add("invio UDP dei QSO spento");
-        if (!SameHost(host, sendHost)) problems.Add($"manda a {host} invece di {sendHost}");
-        if (port != t.ListenPort) problems.Add($"porta {port} invece di {t.ListenPort}");
+        if (!on) problems.Add(L.T("invio UDP dei QSO spento"));
+        if (!SameHost(host, sendHost)) problems.Add(L.F("manda a {0} invece di {1}", host, sendHost));
+        if (port != t.ListenPort) problems.Add(L.F("porta {0} invece di {1}", port, t.ListenPort));
         var name = "MadModem (" + Path.GetFileName(Path.GetDirectoryName(file)) + ")";
         var f = new Finding { Program = name, File = file, Running = Running("madmodem"), Ok = problems.Count == 0 };
-        f.Text = f.Ok ? $"manda i QSO a {Want(t, sendHost)}" : string.Join("; ", problems);
+        f.Text = f.Ok ? L.F("manda i QSO a {0}", Want(t, sendHost)) : string.Join("; ", problems);
         if (!f.Ok)
             f.Fix = () =>
             {
-                if (Running("madmodem")) return name + ": è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)";
+                if (Running("madmodem")) return name + L.T(": è aperto, chiudilo e riprova (alla chiusura riscriverebbe le impostazioni)");
                 var bak = Backup(file, "MadModem");
                 var w = new QtIni(File.ReadAllText(file));
                 w.Set("Logbook", "udpEnabled", "true");
                 w.Set("Logbook", "udpServer", sendHost);
                 w.Set("Logbook", "udpPort", t.ListenPort.ToString(CultureInfo.InvariantCulture));
                 File.WriteAllText(file, w.ToString(), new UTF8Encoding(false));
-                return $"{name}: corretto (copia in {Path.GetFileName(bak)})";
+                return L.F("{0}: corretto (copia in {1})", name, Path.GetFileName(bak));
             };
         return f;
     }
@@ -546,16 +584,16 @@ public static class UdpDoctor
         int.TryParse(V("UDPServerPort", "2237"), out var port);
         bool accept = V("AcceptUDPRequests", "false").Equals("true", StringComparison.OrdinalIgnoreCase);
         var problems = new List<string>();
-        if (host == "") problems.Add("server UDP primario spento");
-        else if (!SameHost(host, sendHost)) problems.Add($"manda a {host} invece di {sendHost}");
-        if (port != t.ListenPort) problems.Add($"porta {port} invece di {t.ListenPort}");
-        if (!accept) problems.Add("\"Accetta richieste UDP\" spento");
+        if (host == "") problems.Add(L.T("server UDP primario spento"));
+        else if (!SameHost(host, sendHost)) problems.Add(L.F("manda a {0} invece di {1}", host, sendHost));
+        if (port != t.ListenPort) problems.Add(L.F("porta {0} invece di {1}", port, t.ListenPort));
+        if (!accept) problems.Add(L.T("\"Accetta richieste UDP\" spento"));
         var f = new Finding { Program = "Aurora", File = file, Running = Running("aurora"), Ok = problems.Count == 0 };
-        f.Text = f.Ok ? $"manda a {Want(t, sendHost)}, richieste UDP accettate" : string.Join("; ", problems);
+        f.Text = f.Ok ? L.F("manda a {0}, richieste UDP accettate", Want(t, sendHost)) : string.Join("; ", problems);
         if (!f.Ok)
             f.Fix = () =>
             {
-                if (Running("aurora")) return "Aurora: è aperta, chiudila e riprova";
+                if (Running("aurora")) return L.T("Aurora: è aperta, chiudila e riprova");
                 var bak = Backup(file, "Aurora");
                 var r2 = JsonNode.Parse(File.ReadAllText(file)) as JsonObject;
                 var v2 = (JsonObject)r2["values"];
@@ -563,7 +601,7 @@ public static class UdpDoctor
                 v2["UDPServerPort"] = t.ListenPort.ToString(CultureInfo.InvariantCulture);
                 v2["AcceptUDPRequests"] = "true";
                 File.WriteAllText(file, r2.ToJsonString(new JsonSerializerOptions { WriteIndented = true }), new UTF8Encoding(false));
-                return $"Aurora: corretta (copia in {Path.GetFileName(bak)})";
+                return L.F("Aurora: corretta (copia in {0})", Path.GetFileName(bak));
             };
         return f;
     }
@@ -584,15 +622,15 @@ public static class UdpDoctor
         }
         var f = new Finding { Program = "QLog", File = db, Running = Running("qlog") };
         var problems = new List<string>();
-        if (!t.Forward) problems.Add("in YA-GT il rimbalzo UDP è spento: accendilo nelle Impostazioni, altrimenti a QLog non arriva nulla");
-        if (port == t.ListenPort) problems.Add($"ascolta sulla {port}, la stessa porta di YA-GT: i due programmi si rubano i pacchetti");
-        else if (port != t.ForwardPort) problems.Add($"ascolta sulla {port}, ma YA-GT ritrasmette sulla {t.ForwardPort}");
+        if (!t.Forward) problems.Add(L.T("in YA-GT il rimbalzo UDP è spento: accendilo nelle Impostazioni, altrimenti a QLog non arriva nulla"));
+        if (port == t.ListenPort) problems.Add(L.F("ascolta sulla {0}, la stessa porta di YA-GT: i due programmi si rubano i pacchetti", port));
+        else if (port != t.ForwardPort) problems.Add(L.F("ascolta sulla {0}, ma YA-GT ritrasmette sulla {1}", port, t.ForwardPort));
         f.Ok = problems.Count == 0;
-        f.Text = f.Ok ? $"ascolta sulla {port}, dove YA-GT ritrasmette" : string.Join("; ", problems);
+        f.Text = f.Ok ? L.F("ascolta sulla {0}, dove YA-GT ritrasmette", port) : string.Join("; ", problems);
         if (!f.Ok && (port != t.ForwardPort))
             f.Fix = () =>
             {
-                if (Running("qlog")) return "QLog: è aperto, chiudilo e riprova";
+                if (Running("qlog")) return L.T("QLog: è aperto, chiudilo e riprova");
                 var bak = Backup(db, "QLog");
                 using (var con = new SqliteConnection(new SqliteConnectionStringBuilder { DataSource = db, Mode = SqliteOpenMode.ReadWrite, Pooling = false }.ToString()))
                 {
@@ -604,7 +642,7 @@ public static class UdpDoctor
                         cmd.ExecuteNonQuery();
                     }
                 }
-                return $"QLog: ora ascolta sulla {t.ForwardPort} (copia in {Path.GetFileName(bak)})" + (t.Forward ? "" : " — accendi anche il rimbalzo UDP in YA-GT");
+                return L.F("QLog: ora ascolta sulla {0} (copia in {1})", t.ForwardPort, Path.GetFileName(bak)) + (t.Forward ? "" : L.T(" — accendi anche il rimbalzo UDP in YA-GT"));
             };
         return f;
     }
@@ -616,7 +654,7 @@ public static class UdpDoctor
         try { eps = IPGlobalProperties.GetIPGlobalProperties().GetActiveUdpListeners(); } catch { yield break; }
         bool fw = eps.Any(e => e.Port == t.ForwardPort);
         if (t.Forward && SameHost(t.ForwardHost, "127.0.0.1"))
-            yield return new Finding { Program = "Porta " + t.ForwardPort, Ok = fw, Text = fw ? "qualcuno ascolta sulla porta di ritrasmissione (di solito QLog)" : "nessun programma ascolta sulla porta di ritrasmissione: apri QLog o controlla la sua porta" };
+            yield return new Finding { Program = L.T("Porta") + " " + t.ForwardPort, Ok = fw, Text = fw ? L.T("qualcuno ascolta sulla porta di ritrasmissione (di solito QLog)") : L.T("nessun programma ascolta sulla porta di ritrasmissione: apri QLog o controlla la sua porta") };
     }
 
     /// <summary>Le correzioni possibili, una per programma; restituisce l'esito di ognuna.</summary>
